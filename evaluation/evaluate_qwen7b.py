@@ -15,10 +15,14 @@ def load_config(config_path="config.yaml"):
 # Load config at module level
 import argparse
 
+# Qwen local API server
+QWEN_API_BASE_URL = "http://localhost:8004"
+
 parser = argparse.ArgumentParser()
 # parser.add_argument("--config", type=str, default="config.yaml", help="Path to config YAML file")
 parser.add_argument("--dir_path", type=str, default="", help="Path to directory")
 parser.add_argument("--use_day", type=bool, default=False, help="Use day images")
+parser.add_argument("--api_url", type=str, default=QWEN_API_BASE_URL, help="Qwen API base URL (default: http://localhost:8004)")
 
 args = parser.parse_args()
 dir_path = args.dir_path
@@ -85,8 +89,8 @@ class QADataset:
             'end_idx': end_idx
         }
 
-def call_qwen_model(start_idx, end_idx, image_buffers, prompt):
-
+def call_qwen_model(start_idx, end_idx, image_buffers, prompt, api_url=None):
+        api_url = api_url or args.api_url
         end_idx = min(end_idx + 1, len(image_buffers))
 
         image_buffers_used = image_buffers
@@ -111,7 +115,7 @@ def call_qwen_model(start_idx, end_idx, image_buffers, prompt):
                     }
                 ]
                 response = requests.post(
-                    "http://localhost:8004/v1/chat/completions",
+                    f"{api_url.rstrip('/')}/v1/chat/completions",
                     json={
                         "model": "qwen2.5-vl-7b-instruct",
                         "messages": messages,
@@ -124,7 +128,7 @@ def call_qwen_model(start_idx, end_idx, image_buffers, prompt):
                 time.sleep(wait_time)
         return  response.json()["choices"][0]["message"]["content"]
 
-def process_qa_item(batch, existing_entries, image_buffers):
+def process_qa_item(batch, existing_entries, image_buffers, api_url=None):
     question = batch['question']
     question_answer = batch['question_answer']
     category = batch['category']
@@ -134,7 +138,7 @@ def process_qa_item(batch, existing_entries, image_buffers):
         return None
 
     try:
-        output_text = call_qwen_model(batch['start_idx'], batch['end_idx'], image_buffers, question_answer)
+        output_text = call_qwen_model(batch['start_idx'], batch['end_idx'], image_buffers, question_answer, api_url=api_url)
         print(output_text)
     except Exception as e:
         print(f"Error processing {question}: {e}")
@@ -150,7 +154,7 @@ def process_qa_item(batch, existing_entries, image_buffers):
     }
 
 from concurrent.futures import ThreadPoolExecutor, as_completed
-def perform_bulk_inference(dataset, output_file_path, image_buffers):
+def perform_bulk_inference(dataset, output_file_path, image_buffers, api_url=None):
     results = []
     existing_entries = set()
 
@@ -165,7 +169,7 @@ def perform_bulk_inference(dataset, output_file_path, image_buffers):
 
     with ThreadPoolExecutor(max_workers=5) as executor:
         futures = {
-            executor.submit(process_qa_item, dataset[i], existing_entries, image_buffers): i
+            executor.submit(process_qa_item, dataset[i], existing_entries, image_buffers, api_url): i
             for i in range(len(dataset))
         }
 
@@ -204,7 +208,7 @@ def main():
                 print(f"{output_file_path} exists but has only {len(existing_data)} entries (dataset has {len(dataset)}). Will continue inference.")
         except Exception as e:
             print(f"Error reading {output_file_path}: {e}. Will continue inference.")
-    perform_bulk_inference(dataset, output_file_path, image_buffers)
+    perform_bulk_inference(dataset, output_file_path, image_buffers, api_url=args.api_url)
 
 if __name__ == "__main__":
     main()
