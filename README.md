@@ -54,6 +54,13 @@ Each evaluation sample is a subfolder with:
     └── Day/                       # Day images (optional)
 ```
 
+### Frame sampling
+
+- **EgoNight-Sofia** and **EgoNight-Oxford**: frames sampled at 1 fps
+- **EgoNight-Synthetic**: frames sampled at 2 fps
+
+Evaluators infer the dataset from the path and use the correct sampling rate in the prompt.
+
 ### all_qa_filtered.json
 
 List of objects with fields:
