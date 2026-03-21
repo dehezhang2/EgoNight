@@ -293,7 +293,7 @@ We thank the following projects and resources:
 - **[Oxford day and night dataset](https://oxdan.active.vision/)** for providing day and night egocentric sequences used in EgoNight-Oxford.
 - **[LLaMA Factory](https://github.com/hiyouga/LlamaFactory)** for the unified API server enabling efficient evaluation of open-source vision-language models.
 - **[Blender](https://www.blender.org/)** for the open-source 3D creation suite used to render synthetic day–night aligned videos in EgoNight-Synthetic.
-
+- **[Infinigen](https://github.com/princeton-vl/infinigen)**  for the indoor scene generation used in EgoNight-Synthetic
 ---
 
 ## Citation
@@ -309,12 +309,6 @@ If you find EgoNight useful for your research, please cite our paper:
   url={https://openreview.net/forum?id=DKD4QbOKBN}
 }
 ```
-
-**Links**
-
-- [arXiv](https://arxiv.org/abs/2510.06218)
-- [ICLR 2026 (OpenReview)](https://openreview.net/forum?id=DKD4QbOKBN)
-- [Hugging Face Dataset](https://huggingface.co/datasets/dehezhang2/EgoNight)
 
 ---
 
