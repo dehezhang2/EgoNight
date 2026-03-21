@@ -204,11 +204,6 @@ Start the API server (default port 8000):
 ```bash
 API_PORT=8000 llamafactory-cli api examples/inference/qwen2_5vl_7B.yaml
 ```
-
-### 4. Qwen 2.5 VL 7B (Optional)
-
-`evaluate_qwen7b.py` expects a local API server at `http://localhost:8004` serving `qwen2.5-vl-7b-instruct`. Start your inference server before running that evaluator.
-
 ---
 
 ## Usage
