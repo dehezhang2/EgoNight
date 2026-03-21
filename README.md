@@ -1,29 +1,37 @@
 <p align="center">
-
-<h1>EgoNight: Towards Egocentric Vision Understanding at Night with a Challenging Benchmark</h1>
-
-<img src="fig/icon.png" width="480" alt="EgoNight"><br><br>
-
-Deheng Zhang*, Yuqian Fu*✉, Runyi Yang, Yang Miao, Tianwen Qian, Xu Zheng, Guolei Sun, Ajad Chhatkuli, Xuanjing Huang, Yu-Gang Jiang, Luc Van Gool, Danda Pani Paudel
-
-<br>
-<em>*Equal Contribution* &nbsp; &nbsp; *Corresponding Author* ✉</em>
-<br><br>
-
-<img src="fig/institute.png" width="600" alt="Institutions">
-<br><br>
-
-<a href="https://arxiv.org/abs/2510.06218"><img src="https://img.shields.io/badge/arXiv-2510.06218-b31b1b.svg" alt="arXiv"></a>
-<a href="https://openreview.net/forum?id=DKD4QbOKBN"><img src="https://img.shields.io/badge/ICLR-2026-blue.svg" alt="ICLR 2026"></a>
-<a href="https://huggingface.co/datasets/dehezhang2/EgoNight"><img src="https://img.shields.io/badge/🤗%20Hugging%20Face-EgoNight-yellow.svg" alt="Hugging Face"></a>
-
+    <img src="fig/icon.png" alt="EgoNight" width="70">
 </p>
 
----
+<div align="center">
 
-[News](#news) | [Overview](#overview) | [TODO](#todo) | [Acknowledgement](#acknowledgement) | [Citation](#citation) | [License](#license)
+<h1 align="center">EgoNight: Towards Egocentric Vision Understanding at Night with a Challenging Benchmark</h1>
 
----
+<h4 align="center"><em>Deheng Zhang*, Yuqian Fu*✉, Runyi Yang, Yang Miao, Tianwen Qian, Xu Zheng,</em></h4>
+<h4 align="center"><em>Guolei Sun, Ajad Chhatkuli, Xuanjing Huang, Yu-Gang Jiang, Luc Van Gool, Danda Pani Paudel</em></h4>
+
+<p align="center">
+    <img src="fig/institute.png" alt="Institutions" width="600">
+</p>
+
+\* *Equal Contribution* &nbsp; &nbsp; *Corresponding Author* ✉
+
+</div>
+
+<p align="center">
+    <a href="https://arxiv.org/abs/2510.06218"><img src="https://img.shields.io/badge/arXiv-2510.06218-b31b1b.svg" alt="arXiv"></a>
+    <a href="https://openreview.net/forum?id=DKD4QbOKBN"><img src="https://img.shields.io/badge/ICLR-2026-blue.svg" alt="ICLR 2026"></a>
+    <a href="https://huggingface.co/datasets/dehezhang2/EgoNight"><img src="https://img.shields.io/badge/🤗%20Hugging%20Face-EgoNight-yellow.svg" alt="Hugging Face"></a>
+</p>
+
+<p align="center">
+  <a href="#news">News</a> |
+  <a href="#dataset">Dataset</a> |
+  <a href="#overview">Overview</a> |
+  <a href="#todo">TODO</a> |
+  <a href="#acknowledgement">Acknowledgement</a> |
+  <a href="#citation">Citation</a> |
+  <a href="#license">License</a>
+</p>
 
 ## News
 
