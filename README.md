@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="fig/icon.png" alt="EgoNight" width="70">
+    <img src="fig/icon.png" alt="EgoNight" width="100">
 </p>
 
 <div align="center">
