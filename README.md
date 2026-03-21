@@ -25,7 +25,6 @@
 
 <p align="center">
   <a href="#news">News</a> |
-  <a href="#dataset">Dataset</a> |
   <a href="#overview">Overview</a> |
   <a href="#todo">TODO</a> |
   <a href="#acknowledgement">Acknowledgement</a> |
