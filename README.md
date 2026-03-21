@@ -1,10 +1,38 @@
-# EgoNight
+# EgoNight: Towards Egocentric Vision Understanding at Night with a Challenging Benchmark
 
-EgoNight is the first comprehensive benchmark designed to evaluate egocentric vision understanding in low-light and nighttime conditions—a critical gap in current research.
+Deheng Zhang*, Yuqian Fu*✉, Runyi Yang, Yang Miao, Tianwen Qian, Xu Zheng, Guolei Sun, Ajad Chhatkuli, Xuanjing Huang, Yu-Gang Jiang, Luc Van Gool, Danda Pani Paudel
+
+\* *Equal Contribution* &nbsp; &nbsp; *Corresponding Author* ✉
+
+[![arXiv](https://img.shields.io/badge/arXiv-2510.06218-b31b1b.svg)](https://arxiv.org/abs/2510.06218)
+[![ICLR 2026](https://img.shields.io/badge/ICLR-2026-blue.svg)](https://openreview.net/forum?id=DKD4QbOKBN)
+[![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-EgoNight-yellow.svg)](https://huggingface.co/datasets/dehezhang2/EgoNight)
+
+---
+
+[News](#news) | [Dataset](#dataset) | [TODO](#todo) | [Setup](#setup) | [Usage](#usage) | [Acknowledgement](#acknowledgement) | [Citation](#citation)
+
+---
+
+## News
+
+- **[2026]** EgoNight is accepted by **ICLR 2026**. 
+- **[2025/10]** Our paper "[EgoNight: Towards Egocentric Vision Understanding at Night with a Challenging Benchmark](https://arxiv.org/abs/2510.06218)" is available on [arXiv](https://arxiv.org/abs/2510.06218).
+- **[2025/10]** Paper and supplementary materials available on [OpenReview](https://openreview.net/forum?id=DKD4QbOKBN).
+
+## Dataset
+
+The EgoNight benchmark is available on Hugging Face for easy access:
+
+### EgoNight-VQA
+
+- **[Hugging Face Dataset](https://huggingface.co/datasets/dehezhang2/EgoNight)**: `dehezhang2/EgoNight`
+
+---
 
 ## Overview
 
-The benchmark assesses vision-language models on egocentric video question answering across diverse scenarios. It supports both **night** (default) and **day** imagery, with a curated subset of question types for paired day/night comparison.
+The benchmark assesses vision-language models on egocentric video question answering across diverse scenarios. It supports both **night** (default) and **day** imagery, with a curated subset of question types for paired day/night comparison. Open-source VLMs (GLM-4V, Qwen2.5-VL, InternVL, LLaVA-NeXT-Video, etc.) are evaluated using the [LLaMA Factory](https://github.com/hiyouga/LlamaFactory) API server.
 
 ### Question Types
 
@@ -19,6 +47,22 @@ The benchmark assesses vision-language models on egocentric video question answe
 
 ---
 
+## TODO
+
+### Done
+
+- [x] **VQA evaluation** — Full pipeline for EgoNight-VQA (GPT, Gemini, Qwen, scoring, summarization).
+- [x] **[LLaMA Factory](https://github.com/hiyouga/LlamaFactory)** — Open-source VLM evaluation via API server (GLM-4V, Qwen2.5-VL, InternVL, LLaVA-NeXT-Video).
+
+### Planned
+
+- [ ] **Depth evaluation** — Evaluation pipeline for egocentric depth estimation at night (auxiliary task from the paper).
+- [ ] **Retrieval evaluation** — Evaluation pipeline for day–night correspondence retrieval (auxiliary task from the paper).
+- [ ] **[LMMs-Eval](https://github.com/EvolvingLMMs-Lab/lmms-eval)** — Integrate EgoNight as a task in the unified multimodal evaluation toolkit.
+- [ ] **[VLMEvalKit](https://github.com/open-compass/VLMEvalKit)** — Add EgoNight benchmark support to the OpenCompass VLM evaluation toolkit.
+
+---
+
 ## Project Structure
 
 ```
@@ -26,7 +70,7 @@ EgoNight/
 ├── evaluation/
 │   ├── evaluate_gemini.py    # Gemini 2.5 Pro inference
 │   ├── evaluate_gpt.py       # GPT-4.1 inference
-│   ├── evaluate_qwen7b.py    # Qwen 2.5 VL 7B inference (local API)
+│   ├── evaluate_qwen7b.py    # Qwen 2.5 VL 7B inference (LLaMA Factory API)
 │   ├── score_gpt.py          # GPT-4o as judge scoring (correct/incorrect, 0–5)
 │   ├── summarize_accuracy.py # Per-dataset and overall accuracy summary
 │   ├── evaluate_all.sh       # Batch evaluation over subfolders
@@ -97,7 +141,59 @@ pip install openai google-generativeai tqdm pyyaml numpy pillow requests
 
    Alternatively, set `OPENAI_API_KEY` and `GEMINI_API_KEY` as environment variables.
 
-### 3. Qwen 2.5 VL 7B (Optional)
+### 3. Open-Source VLMs via LLaMA Factory (Optional)
+
+Part of the open-source VLM evaluation relies on the [LLaMA Factory](https://github.com/hiyouga/LlamaFactory?tab=readme-ov-file#deploy-with-openai-style-api-and-vllm) API server. Others are evaluated using the official repo. Start the API server with the desired model before running the corresponding evaluator. 
+
+Example configs for supported VLMs (based on LLaMA Factory [`examples/inference/`](https://github.com/hiyouga/LlamaFactory/tree/main/examples/inference)):
+
+| Model | Config | Hugging Face Model |
+|-------|--------|--------------------|
+| **GLM-4V** | `glm4v.yaml` | `zai-org/GLM-4.1V-9B-Base` |
+| **Qwen2.5-VL-7B** | `qwen2_5vl_7B.yaml` | `Qwen/Qwen2.5-VL-7B-Instruct` |
+| **InternVL3** | `intern_vl.yaml` | `OpenGVLab/InternVL3-8B-hf` |
+| **LLaVA-NeXT-Video** | `llava_video.yaml` | `llava-hf/LLaVA-NeXT-Video-7B-32K-hf` |
+
+**Example configs** (save as YAML and run `llamafactory-cli api <config.yaml>`):
+
+```yaml
+# glm4v.yaml
+model_name_or_path: zai-org/GLM-4.1V-9B-Base
+template: glm4v
+infer_backend: huggingface
+trust_remote_code: true
+```
+
+```yaml
+# qwen2_5vl_7B.yaml
+model_name_or_path: Qwen/Qwen2.5-VL-7B-Instruct
+template: qwen2_vl
+infer_backend: huggingface  # choices: [huggingface, vllm, sglang]
+trust_remote_code: true
+```
+
+```yaml
+# intern_vl.yaml
+model_name_or_path: OpenGVLab/InternVL3-8B-hf
+template: intern_vl
+infer_backend: huggingface
+trust_remote_code: true
+```
+
+```yaml
+# llava_video.yaml
+model_name_or_path: llava-hf/LLaVA-NeXT-Video-7B-32K-hf
+template: llava_next_video
+infer_backend: huggingface
+trust_remote_code: true
+```
+
+Start the API server (default port 8000):
+```bash
+API_PORT=8000 llamafactory-cli api examples/inference/qwen2_5vl_7B.yaml
+```
+
+### 4. Qwen 2.5 VL 7B (Optional)
 
 `evaluate_qwen7b.py` expects a local API server at `http://localhost:8004` serving `qwen2.5-vl-7b-instruct`. Start your inference server before running that evaluator.
 
@@ -174,6 +270,38 @@ python evaluation/summarize_accuracy.py \
 Each result JSON contains entries with `Q` (question), `A` (prediction), `C` (ground truth), `M` (category), and frame indices.
 
 Scoring produces `*_scores.json` with GPT-4o evaluations: correct/incorrect, 0–5 score, and reasoning.
+
+---
+
+## Acknowledgement
+
+We thank the following projects and resources:
+
+- **[Oxford day and night dataset](https://oxdan.active.vision/)** for providing day and night egocentric sequences used in EgoNight-Oxford.
+- **[LLaMA Factory](https://github.com/hiyouga/LlamaFactory)** for the unified API server enabling efficient evaluation of open-source vision-language models.
+- **[Blender](https://www.blender.org/)** for the open-source 3D creation suite used to render synthetic day–night aligned videos in EgoNight-Synthetic.
+
+---
+
+## Citation
+
+If you find EgoNight useful for your research, please cite our paper:
+
+```bibtex
+@inproceedings{zhang2026egonight,
+  title={EgoNight: Towards Egocentric Vision Understanding at Night with a Challenging Benchmark},
+  author={Zhang, Deheng and Fu, Yuqian and Yang, Runyi and Miao, Yang and Qian, Tianwen and Zheng, Xu and Sun, Guolei and Chhatkuli, Ajad and Huang, Xuanjing and Jiang, Yu-Gang and Van Gool, Luc and Paudel, Danda Pani},
+  booktitle={International Conference on Learning Representations (ICLR)},
+  year={2026},
+  url={https://openreview.net/forum?id=DKD4QbOKBN}
+}
+```
+
+**Links**
+
+- [arXiv](https://arxiv.org/abs/2510.06218)
+- [ICLR 2026 (OpenReview)](https://openreview.net/forum?id=DKD4QbOKBN)
+- [Hugging Face Dataset](https://huggingface.co/datasets/dehezhang2/EgoNight)
 
 ---
 
