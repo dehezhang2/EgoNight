@@ -6,8 +6,8 @@
 
 <h1 align="center">EgoNight: Towards Egocentric Vision Understanding at Night with a Challenging Benchmark</h1>
 
-<h4 align="center"><em>Deheng Zhang*, Yuqian Fu*✉, Runyi Yang, Yang Miao, Tianwen Qian, Xu Zheng,</em></h4>
-<h4 align="center"><em>Guolei Sun, Ajad Chhatkuli, Xuanjing Huang, Yu-Gang Jiang, Luc Van Gool, Danda Pani Paudel</em></h4>
+<h4 align="center"><em><a href="https://dehezhang2.github.io/">Deheng Zhang</a>*, <a href="https://yuqianfu.com/">Yuqian Fu</a>*✉, <a href="https://runyiyang.github.io/">Runyi Yang</a>, <a href="https://y9miao.github.io/">Yang Miao</a>, <a href="https://qiantianwen.github.io/">Tianwen Qian</a>, <a href="https://zhengxujosh.github.io/">Xu Zheng</a>,</em></h4>
+<h4 align="center"><em><a href="https://guoleisun.github.io/">Guolei Sun</a>, <a href="https://ajadchhatkuli.github.io/">Ajad Chhatkuli</a>, <a href="https://xuanjing-huang.github.io/">Xuanjing Huang</a>, <a href="https://www.yugangjiang.info/">Yu-Gang Jiang</a>, <a href="https://insait.ai/prof-luc-van-gool/">Luc Van Gool</a>, <a href="https://people.ee.ethz.ch/~paudeld/">Danda Pani Paudel</a></em></h4>
 
 <p align="center">
     <img src="fig/institute.png" alt="Institutions" width="600">
