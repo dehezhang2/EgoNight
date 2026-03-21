@@ -1,16 +1,27 @@
-# EgoNight: Towards Egocentric Vision Understanding at Night with a Challenging Benchmark
+<p align="center">
+
+<h1>EgoNight: Towards Egocentric Vision Understanding at Night with a Challenging Benchmark</h1>
+
+<img src="fig/icon.png" width="480" alt="EgoNight"><br><br>
 
 Deheng Zhang*, Yuqian Fu*✉, Runyi Yang, Yang Miao, Tianwen Qian, Xu Zheng, Guolei Sun, Ajad Chhatkuli, Xuanjing Huang, Yu-Gang Jiang, Luc Van Gool, Danda Pani Paudel
 
-\* *Equal Contribution* &nbsp; &nbsp; *Corresponding Author* ✉
+<br>
+<em>*Equal Contribution* &nbsp; &nbsp; *Corresponding Author* ✉</em>
+<br><br>
 
-[![arXiv](https://img.shields.io/badge/arXiv-2510.06218-b31b1b.svg)](https://arxiv.org/abs/2510.06218)
-[![ICLR 2026](https://img.shields.io/badge/ICLR-2026-blue.svg)](https://openreview.net/forum?id=DKD4QbOKBN)
-[![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-EgoNight-yellow.svg)](https://huggingface.co/datasets/dehezhang2/EgoNight)
+<img src="fig/institute.png" width="600" alt="Institutions">
+<br><br>
+
+<a href="https://arxiv.org/abs/2510.06218"><img src="https://img.shields.io/badge/arXiv-2510.06218-b31b1b.svg" alt="arXiv"></a>
+<a href="https://openreview.net/forum?id=DKD4QbOKBN"><img src="https://img.shields.io/badge/ICLR-2026-blue.svg" alt="ICLR 2026"></a>
+<a href="https://huggingface.co/datasets/dehezhang2/EgoNight"><img src="https://img.shields.io/badge/🤗%20Hugging%20Face-EgoNight-yellow.svg" alt="Hugging Face"></a>
+
+</p>
 
 ---
 
-[News](#news) | [Dataset](#dataset) | [TODO](#todo) | [Setup](#setup) | [Usage](#usage) | [Acknowledgement](#acknowledgement) | [Citation](#citation)
+[News](#news) | [Overview](#overview) | [TODO](#todo) | [Acknowledgement](#acknowledgement) | [Citation](#citation) | [License](#license)
 
 ---
 
@@ -20,13 +31,7 @@ Deheng Zhang*, Yuqian Fu*✉, Runyi Yang, Yang Miao, Tianwen Qian, Xu Zheng, Guo
 - **[2025/10]** Our paper "[EgoNight: Towards Egocentric Vision Understanding at Night with a Challenging Benchmark](https://arxiv.org/abs/2510.06218)" is available on [arXiv](https://arxiv.org/abs/2510.06218).
 - **[2025/10]** Paper and supplementary materials available on [OpenReview](https://openreview.net/forum?id=DKD4QbOKBN).
 
-## Dataset
 
-The EgoNight benchmark is available on Hugging Face for easy access:
-
-### EgoNight-VQA
-
-- **[Hugging Face Dataset](https://huggingface.co/datasets/dehezhang2/EgoNight)**: `dehezhang2/EgoNight`
 
 ---
 
