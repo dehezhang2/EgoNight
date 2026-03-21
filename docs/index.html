@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EgoNight: Towards Egocentric Vision Understanding at Night</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <img src="fig/icon.png" alt="EgoNight" class="hero-logo">
+      <h1>EgoNight</h1>
+      <p class="hero-subtitle">Towards Egocentric Vision Understanding at Night with a Challenging Benchmark</p>
+      <p class="hero-venues">ICLR 2026</p>
+      <div class="hero-authors">
+        <p>Deheng Zhang*, Yuqian Fu*&dagger;, Runyi Yang, Yang Miao, Tianwen Qian, Xu Zheng,</p>
+        <p>Guolei Sun, Ajad Chhatkuli, Xuanjing Huang, Yu-Gang Jiang, Luc Van Gool, Danda Pani Paudel</p>
+      </div>
+      <p class="hero-affiliation"><em>*Equal Contribution &nbsp; &nbsp; &dagger;Corresponding Author</em></p>
+      <img src="fig/institute.png" alt="Institutions" class="institute-logo">
+      <div class="hero-links">
+        <a href="https://arxiv.org/abs/2510.06218" class="btn">Paper</a>
+        <a href="https://github.com/dehezhang2/EgoNight" class="btn">Code</a>
+        <a href="https://huggingface.co/datasets/dehezhang2/EgoNight" class="btn">Dataset</a>
+        <a href="https://openreview.net/forum?id=DKD4QbOKBN" class="btn">OpenReview</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="#abstract">Abstract</a>
+    <a href="#dataset">Dataset</a>
+    <a href="#benchmark">Benchmark</a>
+    <a href="#results">Results</a>
+    <a href="#citation">Citation</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <!-- Abstract -->
+    <section id="abstract" class="section">
+      <h2>Abstract</h2>
+      <p>Most existing benchmarks for understanding egocentric vision focus primarily on daytime scenarios, overlooking the low-light conditions that are inevitable in real-world applications. To investigate this gap, we present <strong>EgoNight</strong>, the first comprehensive benchmark for nighttime egocentric vision, with visual question answering (VQA) as the core task.</p>
+      <p>A key feature of EgoNight is the introduction of <strong>day&ndash;night aligned videos</strong>, which enhance night annotation quality using the daytime data and reveal clear performance gaps between lighting conditions. We collect both synthetic videos rendered by Blender and real-world recordings, ensuring scenes and actions are visually and temporally aligned.</p>
+      <p>EgoNight-VQA contains <strong>3,658 QA pairs</strong> across <strong>90 videos</strong>, spanning <strong>12 diverse QA types</strong>, with more than 300 hours of human work. Evaluations of state-of-the-art MLLMs reveal substantial performance drops when transferring from day to night.</p>
+      <div class="teaser">
+        <img src="fig/icon.png" alt="EgoNight Teaser" class="teaser-img">
+      </div>
+    </section>
+
+    <!-- Dataset -->
+    <section id="dataset" class="section">
+      <h2>Dataset</h2>
+      <p>EgoNight comprises three subsets with day&ndash;night aligned videos:</p>
+      <div class="dataset-grid">
+        <div class="dataset-card">
+          <h3>EgoNight-Sofia</h3>
+          <p>Real-world indoor/outdoor egocentric recordings</p>
+        </div>
+        <div class="dataset-card">
+          <h3>EgoNight-Oxford</h3>
+          <p>Day and night driving sequences from Oxford</p>
+        </div>
+        <div class="dataset-card">
+          <h3>EgoNight-Synthetic</h3>
+          <p>Blender-rendered synthetic scenes with Infinigen</p>
+        </div>
+      </div>
+      <div class="figure-block">
+        <h4>Data Collection Pipeline</h4>
+        <iframe src="fig/data_collection_v2.pdf" class="pdf-embed" title="Data collection pipeline"></iframe>
+        <p class="caption">Day&ndash;night aligned data collection pipeline.</p>
+      </div>
+      <div class="figure-block">
+        <h4>QA Examples</h4>
+        <div class="figure-row">
+          <div>
+            <iframe src="fig/QA_examples_Sofia.pdf" class="pdf-embed small" title="Sofia QA examples"></iframe>
+            <p class="caption">EgoNight-Sofia</p>
+          </div>
+          <div>
+            <iframe src="fig/QA_examples_synthetic.pdf" class="pdf-embed small" title="Synthetic QA examples"></iframe>
+            <p class="caption">EgoNight-Synthetic</p>
+          </div>
+        </div>
+      </div>
+      <div class="figure-block">
+        <img src="fig/more_synthetic.png" alt="Synthetic examples" class="wide-img">
+        <p class="caption">More synthetic day&ndash;night examples.</p>
+      </div>
+    </section>
+
+    <!-- Benchmark -->
+    <section id="benchmark" class="section">
+      <h2>Benchmark & Question Types</h2>
+      <p>EgoNight-VQA covers 12 question types for fine-grained evaluation:</p>
+      <ul class="qa-types">
+        <li>Object Recognition</li>
+        <li>Spatial Reasoning</li>
+        <li>Scene Sequence</li>
+        <li>Non Common</li>
+        <li>Counting</li>
+        <li>Navigation</li>
+        <li>Text Recognition</li>
+        <li>Action</li>
+      </ul>
+      <p>Beyond VQA, EgoNight introduces two auxiliary tasks:</p>
+      <ul>
+        <li><strong>Day&ndash;night correspondence retrieval</strong></li>
+        <li><strong>Egocentric depth estimation at night</strong></li>
+      </ul>
+      <div class="figure-block">
+        <h4>Main Pipeline</h4>
+        <iframe src="fig/main_pipeline.pdf" class="pdf-embed" title="Main pipeline"></iframe>
+      </div>
+      <div class="figure-block">
+        <h4>Depth Estimation Examples</h4>
+        <div class="figure-row">
+          <iframe src="fig/Depth_synthetic.pdf" class="pdf-embed small" title="Synthetic depth"></iframe>
+          <iframe src="fig/depth_oxford.pdf" class="pdf-embed small" title="Oxford depth"></iframe>
+          <iframe src="fig/depth_sofia_indoor.pdf" class="pdf-embed small" title="Sofia indoor depth"></iframe>
+        </div>
+      </div>
+      <div class="figure-block">
+        <img src="fig/SpatialRetrievalQualitative.png" alt="Spatial retrieval" class="wide-img">
+        <p class="caption">Day&ndash;night correspondence retrieval qualitative results.</p>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section id="results" class="section">
+      <h2>Results</h2>
+      <p>State-of-the-art MLLMs show substantial performance drops when transferring from day to night, underscoring the challenges of reasoning under low-light conditions.</p>
+      <div class="figure-block">
+        <h4>Day&ndash;Night Performance Gap</h4>
+        <iframe src="fig/new_gap.pdf" class="pdf-embed" title="Performance gap"></iframe>
+      </div>
+      <div class="figure-block">
+        <iframe src="fig/more_gaps.pdf" class="pdf-embed" title="More performance gaps"></iframe>
+      </div>
+      <div class="figure-block">
+        <h4>Statistics</h4>
+        <iframe src="fig/statistics.pdf" class="pdf-embed" title="Dataset statistics"></iframe>
+      </div>
+    </section>
+
+    <!-- Download -->
+    <section class="section highlight">
+      <h2>Download</h2>
+      <p>EgoNight is available on Hugging Face:</p>
+      <a href="https://huggingface.co/datasets/dehezhang2/EgoNight" class="btn btn-large">Download from Hugging Face</a>
+    </section>
+
+    <!-- Citation -->
+    <section id="citation" class="section">
+      <h2>Citation</h2>
+      <pre class="bibtex"><code>@inproceedings{zhang2026egonight,
+  title={EgoNight: Towards Egocentric Vision Understanding at Night with a Challenging Benchmark},
+  author={Zhang, Deheng and Fu, Yuqian and Yang, Runyi and Miao, Yang and Qian, Tianwen and Zheng, Xu and Sun, Guolei and Chhatkuli, Ajad and Huang, Xuanjing and Jiang, Yu-Gang and Van Gool, Luc and Paudel, Danda Pani},
+  booktitle={International Conference on Learning Representations (ICLR)},
+  year={2026},
+  url={https://openreview.net/forum?id=DKD4QbOKBN}
+}</code></pre>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>For questions and collaboration, please reach out:</p>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <strong>Yuqian Fu</strong>
+          <p>yuqian.fu.ai@gmail.com</p>
+        </div>
+        <div class="contact-card">
+          <strong>Deheng Zhang</strong>
+          <p>Corresponding author</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 EgoNight. ICLR 2026.</p>
+  </footer>
+</body>
+</html>

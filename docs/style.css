@@ -1,0 +1,353 @@
+/* EgoNight Project Website - Inspired by VIGA, EgoCross, V2-SAM */
+
+:root {
+  --color-bg: #0a0a0f;
+  --color-surface: #12121a;
+  --color-surface-hover: #1a1a24;
+  --color-text: #e8e8ed;
+  --color-text-muted: #9898a8;
+  --color-accent: #6366f1;
+  --color-accent-hover: #818cf8;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem 3rem;
+  background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-bg) 100%);
+}
+
+.hero-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+  max-width: 640px;
+  margin: 0 auto 1rem;
+  font-weight: 500;
+}
+
+.hero-venues {
+  font-size: 0.95rem;
+  color: var(--color-accent);
+  font-weight: 600;
+  margin: 0 0 1rem;
+}
+
+.hero-authors {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin: 0 0 0.5rem;
+}
+
+.hero-authors p {
+  margin: 0.2rem 0;
+}
+
+.hero-affiliation {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin: 0 0 1.5rem;
+}
+
+.institute-logo {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 2rem;
+  display: block;
+}
+
+.hero-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: var(--color-accent);
+  color: white !important;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: var(--color-accent-hover);
+}
+
+.btn-large {
+  padding: 0.9rem 1.8rem;
+  font-size: 1rem;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  background: var(--color-surface);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: var(--color-accent);
+}
+
+/* Sections */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.section {
+  margin-bottom: 4rem;
+}
+
+.section h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.section h3 {
+  font-size: 1.2rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.section h4 {
+  font-size: 1rem;
+  margin: 2rem 0 1rem;
+  color: var(--color-text-muted);
+}
+
+.section p {
+  margin: 0 0 1rem;
+  color: var(--color-text);
+}
+
+.section ul {
+  margin: 0 0 1rem;
+  padding-left: 1.5rem;
+}
+
+.section li {
+  margin: 0.3rem 0;
+}
+
+/* Dataset grid */
+.dataset-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.dataset-card {
+  background: var(--color-surface);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.dataset-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.dataset-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+/* QA types */
+.qa-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.qa-types li {
+  background: var(--color-surface);
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Figures */
+.figure-block {
+  margin: 2.5rem 0;
+}
+
+.figure-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.pdf-embed {
+  width: 100%;
+  min-height: 500px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  background: var(--color-surface);
+}
+
+.pdf-embed.small {
+  min-height: 400px;
+  flex: 1;
+  min-width: 280px;
+}
+
+.wide-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.caption {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.teaser {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.teaser-img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Highlight section */
+.section.highlight {
+  text-align: center;
+  padding: 2rem;
+  background: var(--color-surface);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* BibTeX */
+.bibtex {
+  background: var(--color-surface);
+  padding: 1.5rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: 'Monaco', 'Menlo', monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.bibtex code {
+  color: var(--color-text-muted);
+}
+
+/* Contact */
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.contact-card {
+  background: var(--color-surface);
+  padding: 1.2rem 1.5rem;
+  border-radius: 8px;
+  min-width: 200px;
+}
+
+.contact-card strong {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.contact-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .nav {
+    gap: 1rem;
+  }
+  
+  .pdf-embed.small {
+    min-width: 100%;
+  }
+}
