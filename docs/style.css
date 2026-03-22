@@ -1,13 +1,14 @@
-/* EgoNight Project Website - Inspired by VIGA, EgoCross, V2-SAM */
+/* EgoNight Project Website - Light Theme */
 
 :root {
-  --color-bg: #0a0a0f;
-  --color-surface: #12121a;
-  --color-surface-hover: #1a1a24;
-  --color-text: #e8e8ed;
-  --color-text-muted: #9898a8;
-  --color-accent: #6366f1;
-  --color-accent-hover: #818cf8;
+  --color-bg: #ffffff;
+  --color-surface: #f8f9fa;
+  --color-surface-hover: #e9ecef;
+  --color-text: #212529;
+  --color-text-muted: #6c757d;
+  --color-accent: #4f46e5;
+  --color-accent-hover: #4338ca;
+  --color-border: #dee2e6;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
@@ -31,17 +32,27 @@ body {
   background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-bg) 100%);
 }
 
+.hero-title-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
 .hero-logo {
-  width: 100px;
-  height: auto;
-  margin-bottom: 1rem;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .hero h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  margin: 0 0 0.5rem;
+  margin: 0;
   letter-spacing: -0.02em;
+  color: var(--color-text);
+  line-height: 1;
 }
 
 .hero-subtitle {
@@ -83,11 +94,108 @@ body {
   display: block;
 }
 
-.hero-links {
+/* VIGA-style links - exact match */
+.links {
   display: flex;
-  gap: 1rem;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 0;
+}
+
+.link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  color: #374151;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.link-btn:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+}
+
+.link-btn i {
+  font-size: 1rem;
+}
+
+/* Paper button - Berkeley Blue */
+.link-btn.paper {
+  background: #003262;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.link-btn.paper i {
+  color: #fff;
+}
+
+.link-btn.paper:hover {
+  background: #002147;
+}
+
+/* Code button - dark gray/black (GitHub style) */
+.link-btn.code {
+  background: #24292f;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.link-btn.code i {
+  color: #fff;
+}
+
+.link-btn.code:hover {
+  background: #32383f;
+}
+
+/* Benchmark/Dataset button - Berkeley Gold */
+.link-btn.benchmark {
+  background: #FDB515;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.link-btn.benchmark i,
+.link-btn.benchmark .link-btn-logo {
+  color: #000;
+}
+
+.link-btn.benchmark .link-btn-logo {
+  display: inline-block;
+  vertical-align: middle;
+  object-fit: contain;
+}
+
+.link-btn.benchmark:hover {
+  background: #E8A700;
+}
+
+/* OpenReview button - red (navbar-inverse style) */
+.link-btn.openreview {
+  background: #a94442;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.link-btn.openreview i {
+  color: #fff;
+}
+
+.link-btn.openreview:hover {
+  background: #8b3636;
 }
 
 .btn {
@@ -118,7 +226,7 @@ body {
   gap: 2rem;
   padding: 1rem 2rem;
   background: var(--color-surface);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid var(--color-border);
   flex-wrap: wrap;
 }
 
@@ -130,6 +238,24 @@ body {
 }
 
 .nav a:hover {
+  color: var(--color-accent);
+}
+
+.hero-authors a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+.hero-authors a:hover {
+  color: var(--color-accent);
+}
+
+.contact-card strong a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.contact-card strong a:hover {
   color: var(--color-accent);
 }
 
@@ -150,11 +276,13 @@ main {
   margin: 0 0 1.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--color-accent);
+  color: var(--color-text);
 }
 
 .section h3 {
   font-size: 1.2rem;
   margin: 1.5rem 0 0.5rem;
+  color: var(--color-text);
 }
 
 .section h4 {
@@ -165,6 +293,17 @@ main {
 
 .section p {
   margin: 0 0 1rem;
+  color: var(--color-text);
+}
+
+/* TL;DR callout */
+.tldr {
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.06) 0%, rgba(79, 70, 229, 0.02) 100%);
+  border-left: 4px solid var(--color-accent);
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.25rem;
+  margin: 0 0 1.5rem !important;
+  font-size: 0.95rem;
   color: var(--color-text);
 }
 
@@ -189,7 +328,7 @@ main {
   background: var(--color-surface);
   padding: 1.5rem;
   border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid var(--color-border);
 }
 
 .dataset-card h3 {
@@ -201,6 +340,21 @@ main {
   margin: 0;
   font-size: 0.9rem;
   color: var(--color-text-muted);
+}
+
+.dataset-attribution {
+  margin-top: 0.75rem !important;
+  font-size: 0.7rem !important;
+}
+
+.dataset-attribution a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+.dataset-attribution a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
 }
 
 /* QA types */
@@ -219,6 +373,7 @@ main {
   border-radius: 6px;
   font-size: 0.9rem;
   margin: 0;
+  border: 1px solid var(--color-border);
 }
 
 /* Figures */
@@ -234,16 +389,19 @@ main {
   align-items: flex-start;
 }
 
-.pdf-embed {
-  width: 100%;
-  min-height: 500px;
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 8px;
-  background: var(--color-surface);
+.figure-row > div {
+  flex: 1;
+  min-width: 280px;
 }
 
-.pdf-embed.small {
-  min-height: 400px;
+.figure-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+}
+
+.figure-img.small {
   flex: 1;
   min-width: 280px;
 }
@@ -252,7 +410,7 @@ main {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid var(--color-border);
 }
 
 .caption {
@@ -260,6 +418,13 @@ main {
   color: var(--color-text-muted);
   margin-top: 0.5rem;
   text-align: center;
+}
+
+.figure-note {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+  font-style: italic;
 }
 
 .teaser {
@@ -280,7 +445,7 @@ main {
   padding: 2rem;
   background: var(--color-surface);
   border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid var(--color-border);
 }
 
 /* BibTeX */
@@ -292,10 +457,11 @@ main {
   font-family: 'Monaco', 'Menlo', monospace;
   font-size: 0.85rem;
   line-height: 1.5;
+  border: 1px solid var(--color-border);
 }
 
 .bibtex code {
-  color: var(--color-text-muted);
+  color: var(--color-text);
 }
 
 /* Contact */
@@ -307,10 +473,27 @@ main {
 }
 
 .contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   background: var(--color-surface);
   padding: 1.2rem 1.5rem;
   border-radius: 8px;
-  min-width: 200px;
+  min-width: 280px;
+  border: 1px solid var(--color-border);
+}
+
+.contact-photo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 0;
 }
 
 .contact-card strong {
@@ -324,17 +507,55 @@ main {
   color: var(--color-text-muted);
 }
 
+.contact-card a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
 /* Footer */
 footer {
   text-align: center;
   padding: 2rem;
   color: var(--color-text-muted);
   font-size: 0.9rem;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid var(--color-border);
+}
+
+/* Scroll reveal animation (VIGA-style) */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* Responsive */
 @media (max-width: 640px) {
+  .hero-title-row {
+    gap: 0.5rem;
+  }
+  
+  .hero-logo {
+    width: 36px;
+    height: 36px;
+  }
+  
   .hero h1 {
     font-size: 1.8rem;
   }
@@ -347,7 +568,7 @@ footer {
     gap: 1rem;
   }
   
-  .pdf-embed.small {
+  .figure-img.small {
     min-width: 100%;
   }
 }
