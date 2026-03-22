@@ -299,8 +299,7 @@ If you find EgoNight useful for your research, please cite our paper:
   title={EgoNight: Towards Egocentric Vision Understanding at Night with a Challenging Benchmark},
   author={Zhang, Deheng and Fu, Yuqian and Yang, Runyi and Miao, Yang and Qian, Tianwen and Zheng, Xu and Sun, Guolei and Chhatkuli, Ajad and Huang, Xuanjing and Jiang, Yu-Gang and Van Gool, Luc and Paudel, Danda Pani},
   booktitle={International Conference on Learning Representations (ICLR)},
-  year={2026},
-  url={https://openreview.net/forum?id=DKD4QbOKBN}
+  year={2026}
 }
 ```
 
