@@ -69,7 +69,7 @@ body {
 }
 
 .hero-venues {
-  font-size: 0.95rem;
+  font-size: 1.75rem;
   color: var(--color-accent);
   font-weight: 600;
   margin: 0 0 1rem;
@@ -327,10 +327,22 @@ main {
 
 /* Dataset grid */
 .dataset-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   margin: 2rem 0;
+}
+
+.dataset-card-wrapper {
+  flex: 1 1 220px;
+  min-width: 220px;
+  position: relative;
+  transition: flex 0.4s ease;
+}
+
+.dataset-card-wrapper:hover {
+  flex: 2 1 420px;
+  z-index: 1;
 }
 
 .dataset-card {
@@ -338,6 +350,195 @@ main {
   padding: 1.5rem;
   border-radius: 12px;
   border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  height: 100%;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.dataset-card-wrapper:hover .dataset-card {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-color: var(--color-accent);
+}
+
+/* Dropdown expand - tabs only visible on hover */
+.dataset-card-expand {
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.35s ease, margin 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.dataset-card-wrapper:hover .dataset-card-expand {
+  max-height: 380px;
+  opacity: 1;
+  margin-top: 1rem;
+  border-top: 1px solid var(--color-border);
+  padding-top: 1rem;
+}
+
+/* Tab dots */
+.dataset-tab-dots {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.dataset-tab-dot {
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-border);
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.dataset-tab-dot:hover {
+  background: var(--color-text-muted);
+}
+
+.dataset-tab-dot.active {
+  background: var(--color-accent);
+  transform: scale(1.2);
+}
+
+/* Tab panels */
+.dataset-tab-panels {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+}
+
+.dataset-tab-panel {
+  display: none;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  animation: tabFadeIn 0.3s ease;
+}
+
+.dataset-tab-panel.active {
+  display: flex;
+}
+
+@keyframes tabFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.dataset-tab-placeholder,
+.dataset-tab-panel video {
+  width: 100%;
+  max-width: 520px;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  background: var(--color-border);
+}
+
+.dataset-tab-placeholder {
+  height: auto;
+}
+
+/* Comparison slider - fills dataset-card-expand width */
+.comparison-slider {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 640 / 427;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.comparison-slider-before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.comparison-slider-after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  clip-path: inset(0 calc(100% - var(--slider-pos, 50%)) 0 0);
+}
+
+.comparison-slider-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.comparison-slider-input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: ew-resize;
+  z-index: 3;
+}
+
+.comparison-slider-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--slider-pos, 50%);
+  width: 4px;
+  transform: translateX(-50%);
+  background: white;
+  box-shadow: 0 0 0 2px var(--color-accent);
+  border-radius: 2px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.comparison-slider-handle::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  border: 2px solid var(--color-accent);
+}
+
+.dataset-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dataset-card .dataset-icon {
+  width: 44px;
+  height: 44px;
+  display: block;
+  margin: 0 auto;
 }
 
 .dataset-card h3 {
@@ -345,10 +546,67 @@ main {
   font-size: 1.1rem;
 }
 
-.dataset-card p {
+.dataset-card-content p {
   margin: 0;
   font-size: 0.9rem;
   color: var(--color-text-muted);
+}
+
+/* Comparison panel - expands on hover */
+.dataset-card-comparison {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.35s ease, margin 0.35s ease;
+}
+
+.dataset-card-wrapper:hover .dataset-card-comparison {
+  max-height: 320px;
+  opacity: 1;
+  margin-top: 1rem;
+}
+
+.dataset-card-comparison.content {
+  padding: 0;
+  border-top: 1px solid var(--color-border);
+  padding-top: 1rem;
+}
+
+.dataset-card-comparison.has-text-centered {
+  text-align: center;
+}
+
+.comparison-images {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.comparison-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 120px;
+  max-width: 180px;
+}
+
+.comparison-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.comparison-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
 }
 
 .dataset-attribution {
@@ -388,6 +646,67 @@ main {
 /* Figures */
 .figure-block {
   margin: 2.5rem 0;
+}
+
+/* Collapsible (Auxiliary Tasks) */
+.collapsible-block {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  overflow: hidden;
+}
+
+.collapsible-summary {
+  cursor: pointer;
+  padding: 1rem 1.25rem;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.2s ease;
+}
+
+.collapsible-summary::-webkit-details-marker {
+  display: none;
+}
+
+.collapsible-title-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.collapsible-arrow {
+  font-size: 0.7rem;
+  color: var(--color-accent);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.collapsible-block[open] .collapsible-arrow {
+  transform: rotate(90deg);
+}
+
+.collapsible-summary:hover {
+  background: var(--color-surface-hover);
+}
+
+.collapsible-summary h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.collapsible-hint {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.collapsible-content {
+  padding: 0 1.25rem 1.25rem;
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.25rem;
+  margin-top: 0;
 }
 
 .figure-row {

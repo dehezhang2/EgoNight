@@ -70,35 +70,153 @@
     <!-- Dataset -->
     <section id="dataset" class="section scroll-reveal">
       <h2>Dataset</h2>
-      <p>EgoNight comprises three subsets with day&ndash;night aligned videos:</p>
+      <p>EgoNight comprises two subsets with day&ndash;night aligned videos, and one subset with night-only videos:</p>
       <div class="dataset-grid">
-        <div class="dataset-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-          <div>
-            <img src="fig/alexander-nevsky-cathedral.png" alt="" class="dataset-icon" aria-hidden="true" style="width:44px; height:44px; display:block; margin: 0 auto;">
-          </div>
-          <div class="dataset-card-content">
-            <h3>EgoNight-Sofia</h3>
-            <p>Real-world indoor/outdoor egocentric recordings</p>
+        <div class="dataset-card-wrapper">
+          <div class="dataset-card">
+            <div class="dataset-card-content">
+              <img src="fig/alexander-nevsky-cathedral.png" alt="" class="dataset-icon" aria-hidden="true">
+              <h3>EgoNight-Sofia</h3>
+              <p>Real-world indoor/outdoor egocentric recordings</p>
+            </div>
+            <div class="dataset-card-expand">
+            <div class="dataset-tab-dots">
+              <button type="button" class="dataset-tab-dot active" aria-label="Overview" data-tab="0"></button>
+              <button type="button" class="dataset-tab-dot" aria-label="Day view" data-tab="1"></button>
+              <button type="button" class="dataset-tab-dot" aria-label="Night view" data-tab="2"></button>
+            </div>
+            <div class="dataset-tab-panels">
+              <div class="dataset-tab-panel active">
+                <div class="comparison-slider">
+                  <img src="fig/teaser_v3.png" alt="Day" class="comparison-slider-before">
+                  <div class="comparison-slider-after">
+                    <img src="fig/teaser_v3.png" alt="Night" class="comparison-slider-img">
+                  </div>
+                  <input type="range" min="0" max="100" value="50" class="comparison-slider-input" aria-label="Compare Day and Night">
+                  <div class="comparison-slider-handle"></div>
+                </div>
+              </div>
+              <div class="dataset-tab-panel">
+                <div class="comparison-slider">
+                  <img src="fig/teaser_v3.png" alt="Day" class="comparison-slider-before">
+                  <div class="comparison-slider-after">
+                    <img src="fig/teaser_v3.png" alt="Night" class="comparison-slider-img">
+                  </div>
+                  <input type="range" min="0" max="100" value="50" class="comparison-slider-input" aria-label="Compare Day and Night">
+                  <div class="comparison-slider-handle"></div>
+                </div>
+              </div>
+              <div class="dataset-tab-panel">
+                <div class="comparison-slider">
+                  <img src="fig/teaser_v3.png" alt="Day" class="comparison-slider-before">
+                  <div class="comparison-slider-after">
+                    <img src="fig/teaser_v3.png" alt="Night" class="comparison-slider-img">
+                  </div>
+                  <input type="range" min="0" max="100" value="50" class="comparison-slider-input" aria-label="Compare Day and Night">
+                  <div class="comparison-slider-handle"></div>
+                </div>
+              </div>
+            </div>
+            </div>
           </div>
         </div>
-        <div class="dataset-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-          <div>
-            <img src="fig/oxford.png" alt="" class="dataset-icon" aria-hidden="true" style="width:44px; height:44px; display:block; margin: 0 auto;">
-          </div>
-          <div class="dataset-card-content">
-            <h3>EgoNight-Oxford</h3>
-            <p>Day and night driving sequences from Oxford</p>
+        <div class="dataset-card-wrapper">
+          <div class="dataset-card">
+            <div class="dataset-card-content">
+              <img src="fig/game-console.png" alt="" class="dataset-icon" aria-hidden="true">
+              <h3>EgoNight-Synthetic</h3>
+              <p>Blender-rendered synthetic scenes with Infinigen</p>
+            </div>
+            <div class="dataset-card-expand">
+            <div class="dataset-tab-dots">
+              <button type="button" class="dataset-tab-dot active" aria-label="Overview" data-tab="0"></button>
+              <button type="button" class="dataset-tab-dot" aria-label="Day view" data-tab="1"></button>
+              <button type="button" class="dataset-tab-dot" aria-label="Night view" data-tab="2"></button>
+            </div>
+            <div class="dataset-tab-panels">
+              <div class="dataset-tab-panel active">
+                <div class="comparison-slider">
+                  <img src="fig/teaser_v3.png" alt="Day" class="comparison-slider-before">
+                  <div class="comparison-slider-after">
+                    <img src="fig/teaser_v3.png" alt="Night" class="comparison-slider-img">
+                  </div>
+                  <input type="range" min="0" max="100" value="50" class="comparison-slider-input" aria-label="Compare Day and Night">
+                  <div class="comparison-slider-handle"></div>
+                </div>
+              </div>
+              <div class="dataset-tab-panel">
+                <div class="comparison-slider">
+                  <img src="fig/teaser_v3.png" alt="Day" class="comparison-slider-before">
+                  <div class="comparison-slider-after">
+                    <img src="fig/teaser_v3.png" alt="Night" class="comparison-slider-img">
+                  </div>
+                  <input type="range" min="0" max="100" value="50" class="comparison-slider-input" aria-label="Compare Day and Night">
+                  <div class="comparison-slider-handle"></div>
+                </div>
+              </div>
+              <div class="dataset-tab-panel">
+                <div class="comparison-slider">
+                  <img src="fig/teaser_v3.png" alt="Day" class="comparison-slider-before">
+                  <div class="comparison-slider-after">
+                    <img src="fig/teaser_v3.png" alt="Night" class="comparison-slider-img">
+                  </div>
+                  <input type="range" min="0" max="100" value="50" class="comparison-slider-input" aria-label="Compare Day and Night">
+                  <div class="comparison-slider-handle"></div>
+                </div>
+              </div>
+            </div>
+            </div>
           </div>
         </div>
-        <div class="dataset-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-          <div>
-            <img src="fig/game-console.png" alt="" class="dataset-icon" aria-hidden="true" style="width:44px; height:44px; display:block; margin: 0 auto;">
-          </div>
-          <div class="dataset-card-content">
-            <h3>EgoNight-Synthetic</h3>
-            <p>Blender-rendered synthetic scenes with Infinigen</p>
+        <div class="dataset-card-wrapper">
+          <div class="dataset-card">
+            <div class="dataset-card-content">
+              <img src="fig/oxford.png" alt="" class="dataset-icon" aria-hidden="true">
+              <h3>EgoNight-Oxford</h3>
+              <p>Night-only video sequences from Oxford</p>
+            </div>
+            <div class="dataset-card-expand">
+            <div class="dataset-tab-dots">
+              <button type="button" class="dataset-tab-dot active" aria-label="Overview" data-tab="0"></button>
+              <button type="button" class="dataset-tab-dot" aria-label="Day view" data-tab="1"></button>
+              <button type="button" class="dataset-tab-dot" aria-label="Night view" data-tab="2"></button>
+            </div>
+            <div class="dataset-tab-panels">
+              <div class="dataset-tab-panel active">
+                <div class="comparison-slider">
+                  <img src="fig/teaser_v3.png" alt="Day" class="comparison-slider-before">
+                  <!-- <div class="comparison-slider-after">
+                    <img src="fig/teaser_v3.png" alt="Night" class="comparison-slider-img">
+                  </div>
+                  <input type="range" min="0" max="100" value="50" class="comparison-slider-input" aria-label="Compare Day and Night">
+                  <div class="comparison-slider-handle"></div> -->
+                </div>
+              </div>
+              <div class="dataset-tab-panel">
+                <div class="comparison-slider">
+                  <img src="fig/teaser_v3.png" alt="Day" class="comparison-slider-before">
+                  <!-- <div class="comparison-slider-after">
+                    <img src="fig/teaser_v3.png" alt="Night" class="comparison-slider-img">
+                  </div>
+                  <input type="range" min="0" max="100" value="50" class="comparison-slider-input" aria-label="Compare Day and Night">
+                  <div class="comparison-slider-handle"></div> -->
+                </div>
+              </div>
+              <div class="dataset-tab-panel">
+                <div class="comparison-slider">
+                  <img src="fig/teaser_v3.png" alt="Day" class="comparison-slider-before">
+                  <!-- <div class="comparison-slider-after">
+                    <img src="fig/teaser_v3.png" alt="Night" class="comparison-slider-img">
+                  </div>
+                  <input type="range" min="0" max="100" value="50" class="comparison-slider-input" aria-label="Compare Day and Night">
+                  <div class="comparison-slider-handle"></div> -->
+                </div>
+              </div>
+            </div>
+            </div>
           </div>
         </div>
+        
       </div>
       <div class="figure-block">
         <h4>Main Pipeline</h4>
@@ -152,22 +270,42 @@
         <img src="fig/data_collection_v2.png" alt="QA Examples" class="wide-img">
         <p class="caption">QA Examples</p>
       </div>
-      <div class="figure-block">
-        <h4>Auxiliary Tasks</h4>
-        <p>
-          Beyond VQA, EgoNight introduces two auxiliary tasks: <strong>Day&ndash;night correspondence retrieval</strong>, and <strong>egocentric depth estimation at night</strong> (evaluated on EgoNight-Synthetic only, with ground-truth depth available from the Blender-rendered scenes).
-        </p>
-        <div class="figure-row">
-          <div class="figure-col">
-            <img src="fig/Depth_synthetic.png" alt="Synthetic depth estimation" class="figure-img">
-            <p class="caption">Egocentric depth estimation at night on EgoNight-Synthetic.</p>
+      <details class="collapsible-block figure-block">
+        <summary class="collapsible-summary">
+          <span class="collapsible-title-row">
+            <span class="collapsible-arrow">▶</span>
+            <h4>Auxiliary Tasks</h4>
+          </span>
+          <span class="collapsible-hint">Depth Estimation &amp; Day–night Retrieval — click to expand</span>
+        </summary>
+        <div class="collapsible-content">
+          <p>
+            Beyond VQA, EgoNight introduces two auxiliary tasks: <strong>egocentric depth estimation at night</strong> and <strong>day&ndash;night correspondence retrieval</strong> (evaluated on EgoNight-Synthetic only for depth, with ground-truth available from Blender-rendered scenes).
+          </p>
+
+          <h4 style="margin-top: 2rem;">Depth Estimation</h4>
+          <p>
+            We estimate scene geometry from monocular egocentric frames by predicting depth and inpainting regions occluded by the wearer, yielding a complete background depth map.
+          </p>
+          <div class="figure-row">
+            <div class="figure-col">
+              <img src="fig/Depth_synthetic.png" alt="Synthetic depth estimation" class="figure-img">
+              <p class="caption">Egocentric depth estimation at night on EgoNight-Synthetic.</p>
+            </div>
           </div>
-          <div class="figure-col">
-            <img src="fig/SpatialRetrievalQualitative.png" alt="Spatial retrieval" class="figure-img">
-            <p class="caption">Day&ndash;night correspondence retrieval qualitative results.</p>
+
+          <h4 style="margin-top: 2rem;">Retrieval (Spatial &amp; Temporal)</h4>
+          <p>
+            We perform cross-condition (day&ndash;night) retrieval using features robust to illumination changes: <strong>spatial retrieval</strong> matches frames from the same location, while <strong>temporal retrieval</strong> aligns frames corresponding to the same moment in time.
+          </p>
+          <div class="figure-row">
+            <div class="figure-col">
+              <img src="fig/SpatialRetrievalQualitative.png" alt="Spatial retrieval" class="figure-img">
+              <p class="caption">Day&ndash;night correspondence retrieval qualitative results.</p>
+            </div>
           </div>
         </div>
-      </div>
+      </details>
     </section>
 
     <!-- Results -->
@@ -416,6 +554,29 @@
         });
       }, { rootMargin: '0px 0px -100px 0px', threshold: 0.1 });
       animates.forEach(function(el) { animateObserver.observe(el); });
+
+      // Dataset card tab dots
+      document.querySelectorAll('.dataset-card').forEach(function(card) {
+        var dots = card.querySelectorAll('.dataset-tab-dot');
+        var panels = card.querySelectorAll('.dataset-tab-panel');
+        dots.forEach(function(dot, i) {
+          dot.addEventListener('click', function() {
+            dots.forEach(function(d) { d.classList.remove('active'); });
+            panels.forEach(function(p) { p.classList.remove('active'); });
+            dot.classList.add('active');
+            if (panels[i]) panels[i].classList.add('active');
+          });
+        });
+      });
+
+      // Comparison slider
+      document.querySelectorAll('.comparison-slider').forEach(function(slider) {
+        var input = slider.querySelector('.comparison-slider-input');
+        function updateSlider() {
+          slider.style.setProperty('--slider-pos', input.value + '%');
+        }
+        input.addEventListener('input', updateSlider);
+      });
     })();
   </script>
 </body>
