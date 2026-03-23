@@ -63,7 +63,7 @@
       <p class="tldr"><strong>TL;DR:</strong> EgoNight is the first benchmark for nighttime egocentric vision, with day–night aligned videos and 3,658 VQA pairs. SOTA MLLMs struggle to generalize from day to night.</p>
 <p>Existing egocentric vision benchmarks focus on daytime, overlooking low-light conditions common in real-world settings. We introduce <strong>EgoNight</strong>, the first benchmark for nighttime egocentric vision, centered on visual question answering (VQA). EgoNight features <strong>day–night aligned videos</strong>, combining synthetic (Blender) and real-world data to ensure aligned scenes and actions, improving annotation quality and enabling direct comparison across lighting conditions. EgoNight-VQA includes <strong>3,658 QA pairs</strong> from <strong>90 videos</strong> across <strong>12 QA types</strong>. Evaluations show significant performance drops for state-of-the-art MLLMs when moving from day to night.</p>
       <div class="teaser">
-        <img src="fig/teaser_v3.png" alt="EgoNight Teaser" class="teaser-img" style="width: 105%; max-width: 800px;">
+        <img src="fig/teaser_v3.png" alt="EgoNight Teaser" class="teaser-img" style="width: 105%; max-width: 900px;">
       </div>
     </section>
 
@@ -171,9 +171,186 @@
     </section>
 
     <!-- Results -->
-    <section id="results" class="section scroll-reveal">
+    <section id="results" class="section section--wide scroll-reveal">
       <h2>Results</h2>
       <p>State-of-the-art MLLMs show substantial performance drops when transferring from day to night, underscoring the challenges of reasoning under low-light conditions.</p>
+      
+      <div class="table-card scroll-animate">
+        <div class="table-header">
+          <h3 style="font-size: 2rem;">Leaderboard on EgoNight-VQA</h3>
+          <p class="table-caption" style="text-align:center;">Accuracies (%) of OpenQA results across three datasets and three difficulty levels.</p>
+        </div>
+        <div class="table-wrapper">
+          <table class="results-table">
+            <colgroup>
+              <col class="col-models">
+              <col class="col-easy">
+              <col class="col-mid">
+              <col class="col-hard">
+              <col class="col-easy">
+              <col class="col-mid">
+              <col class="col-hard">
+              <col class="col-easy">
+              <col class="col-mid">
+              <col class="col-hard">
+              <col class="col-avg">
+            </colgroup>
+            <thead>
+              <tr>
+                <th rowspan="2" class="col-models">Models</th>
+                <th colspan="3" class="col-group"><img src="fig/game-console.png" alt="" class="dataset-header-icon">EgoNight-Synthetic</th>
+                <th colspan="3" class="col-group"><img src="fig/alexander-nevsky-cathedral.png" alt="" class="dataset-header-icon">EgoNight-Sofia</th>
+                <th colspan="3" class="col-group"><img src="fig/oxford.png" alt="" class="dataset-header-icon">EgoNight-Oxford</th>
+                <th rowspan="2" class="col-avg">Avg.</th>
+              </tr>
+              <tr>
+                <th class="col-sub">Easy</th>
+                <th class="col-sub">Medium</th>
+                <th class="col-sub">Hard</th>
+                <th class="col-sub">Easy</th>
+                <th class="col-sub">Medium</th>
+                <th class="col-sub">Hard</th>
+                <th class="col-sub">Easy</th>
+                <th class="col-sub">Medium</th>
+                <th class="col-sub">Hard</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="row-closed-source best-closed">
+                <td><img src="fig/chatgpt-logo-chat-gpt-icon-on-white-background-free-vector.jpg" alt="" class="model-icon"><strong>GPT-4.1</strong></td>
+                <td>29.30</td>
+                <td class="highlight-red"><strong>26.87</strong></td>
+                <td class="highlight-red"><strong>18.87</strong></td>
+                <td>32.04</td>
+                <td class="highlight-red"><strong>29.35</strong></td>
+                <td class="highlight-red"><strong>31.69</strong></td>
+                <td class="highlight-red"><strong>39.72</strong></td>
+                <td class="highlight-red"><strong>37.13</strong></td>
+                <td class="highlight-red"><strong>40.72</strong></td>
+                <td class="highlight-red"><strong>30.93</strong></td>
+              </tr>
+              <tr class="row-closed-source">
+                <td><img src="fig/gemini-color.png" alt="" class="model-icon"><strong>Gemini 2.5 Pro</strong></td>
+                <td class="highlight-red"><strong>31.05</strong></td>
+                <td>24.81</td>
+                <td>16.51</td>
+                <td class="highlight-red"><strong>38.24</strong></td>
+                <td>26.81</td>
+                <td>28.87</td>
+                <td>36.75</td>
+                <td>36.81</td>
+                <td>27.88</td>
+                <td>30.60</td>
+              </tr>
+              <tr class="row-open-source best-open">
+                <td><img src="fig/internvl.jpg" alt="" class="model-icon"><strong>InternVL3-8B</strong></td>
+                <td class="highlight-green">20.21</td>
+                <td class="highlight-green">15.50</td>
+                <td class="highlight-green">16.98</td>
+                <td class="highlight-green">24.03</td>
+                <td class="highlight-green">21.74</td>
+                <td class="highlight-green">20.42</td>
+                <td>22.90</td>
+                <td>20.85</td>
+                <td>16.36</td>
+                <td class="highlight-green">20.06</td>
+              </tr>
+              <tr class="row-open-source">
+                <td><img src="fig/qwen-color.png" alt="" class="model-icon"><strong>Qwen2.5-VL-72B</strong></td>
+                <td>18.39</td>
+                <td>15.25</td>
+                <td>12.26</td>
+                <td class="highlight-green">24.03</td>
+                <td>17.03</td>
+                <td class="highlight-green">20.42</td>
+                <td class="highlight-green">24.81</td>
+                <td class="highlight-green">22.80</td>
+                <td>16.36</td>
+                <td>18.99</td>
+              </tr>
+              <tr class="row-open-source">
+                <td><img src="fig/glm.png" alt="" class="model-icon"><strong>GLM-4.1V-9B-Base</strong></td>
+                <td>19.09</td>
+                <td>13.70</td>
+                <td>15.57</td>
+                <td>18.60</td>
+                <td>18.48</td>
+                <td>16.20</td>
+                <td>17.15</td>
+                <td>22.15</td>
+                <td class="highlight">18.79</td>
+                <td>18.20</td>
+              </tr>
+              <tr class="row-open-source">
+                <td><img src="fig/llama.png" alt="" class="model-icon"><strong>VideoLLaMA3-7B</strong></td>
+                <td>16.85</td>
+                <td>13.44</td>
+                <td>14.62</td>
+                <td>11.11</td>
+                <td>10.87</td>
+                <td>9.15</td>
+                <td>12.26</td>
+                <td>10.46</td>
+                <td>9.15</td>
+                <td>13.64</td>
+              </tr>
+              <tr class="row-open-source">
+                <td><img src="fig/qwen-color.png" alt="" class="model-icon"><strong>Qwen2.5-VL-7B</strong></td>
+                <td>13.01</td>
+                <td>13.95</td>
+                <td>13.68</td>
+                <td>15.44</td>
+                <td>12.68</td>
+                <td>12.68</td>
+                <td>13.74</td>
+                <td>13.36</td>
+                <td>12.73</td>
+                <td>13.44</td>
+              </tr>
+              <tr class="row-open-source">
+                <td><img src="fig/qwen-color.png" alt="" class="model-icon"><strong>Qwen2.5-VL-3B</strong></td>
+                <td>14.69</td>
+                <td>10.34</td>
+                <td>7.08</td>
+                <td>15.50</td>
+                <td>13.04</td>
+                <td>12.68</td>
+                <td>17.18</td>
+                <td>11.40</td>
+                <td>12.12</td>
+                <td>13.41</td>
+              </tr>
+              <tr class="row-open-source">
+                <td><img src="fig/llava.webp" alt="" class="model-icon"><strong>LLaVA-NeXT-Video-7B</strong></td>
+                <td>6.36</td>
+                <td>11.37</td>
+                <td>1.89</td>
+                <td>13.95</td>
+                <td>9.78</td>
+                <td>14.79</td>
+                <td>3.05</td>
+                <td>2.61</td>
+                <td>3.03</td>
+                <td>7.28</td>
+              </tr>
+              <tr class="row-egocentric best-egocentric">
+                <td><img src="fig/egogpt.png" alt="" class="model-icon"><strong>EgoGPT</strong></td>
+                <td class="highlight-blue">15.79</td>
+                <td class="highlight-blue">13.55</td>
+                <td class="highlight-blue">12.04</td>
+                <td class="highlight-blue">12.41</td>
+                <td class="highlight-blue">12.13</td>
+                <td class="highlight-blue">10.36</td>
+                <td class="highlight-blue">12.37</td>
+                <td class="highlight-blue">13.58</td>
+                <td class="highlight-blue">13.68</td>
+                <td class="highlight-blue">14.29</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
       <div class="figure-block">
         <h4>Day&ndash;Night Performance Gap</h4>
         <img src="fig/new_gap.png" alt="Performance gap" class="wide-img">
@@ -228,6 +405,17 @@
         });
       }, { rootMargin: '0px 0px -60px 0px', threshold: 0.1 });
       reveals.forEach(function(el) { observer.observe(el); });
+
+      // Table scroll animation
+      var animates = document.querySelectorAll('.scroll-animate');
+      var animateObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { rootMargin: '0px 0px -100px 0px', threshold: 0.1 });
+      animates.forEach(function(el) { animateObserver.observe(el); });
     })();
   </script>
 </body>

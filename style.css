@@ -32,6 +32,11 @@ body {
   background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-bg) 100%);
 }
 
+.hero-content {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
 .hero-title-row {
   display: inline-flex;
   align-items: center;
@@ -58,7 +63,7 @@ body {
 .hero-subtitle {
   font-size: 1.2rem;
   color: var(--color-text-muted);
-  max-width: 640px;
+  max-width: 900px;
   margin: 0 auto 1rem;
   font-weight: 500;
 }
@@ -87,7 +92,7 @@ body {
 }
 
 .institute-logo {
-  max-width: 500px;
+  max-width: 700px;
   width: 100%;
   height: auto;
   margin: 0 auto 2rem;
@@ -261,9 +266,13 @@ body {
 
 /* Sections */
 main {
-  max-width: 900px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 3rem 2rem;
+}
+
+.section--wide .table-card {
+  max-width: 100%;
 }
 
 .section {
@@ -537,8 +546,365 @@ footer {
   transform: translateY(0);
 }
 
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.scroll-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Table card - VIGA-style */
+.table-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 2.5rem 0;
+}
+
+.table-header {
+  padding: 24px 32px;
+  border-bottom: 2px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.table-header h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 6px;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+.table-caption {
+  font-size: 0.85rem;
+  color: #6b7280;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.table-wrapper {
+  padding: 24px 32px;
+  overflow-x: auto;
+}
+
+.results-table {
+  width: 100%;
+  min-width: 920px;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums lining-nums;
+  table-layout: fixed;
+}
+
+/* Column widths: Easy narrower (was too wide); Mid/Hard slightly wider for 2-digit scores */
+.results-table col.col-models { width: 200px; min-width: 200px; }
+.results-table col.col-easy { width: 58px; min-width: 58px; max-width: 58px; }
+.results-table col.col-mid,
+.results-table col.col-hard { width: 68px; min-width: 68px; max-width: 68px; }
+.results-table col.col-avg { width: 72px; min-width: 72px; max-width: 72px; }
+
+.results-table th,
+.results-table td {
+  padding: 10px 8px;
+  text-align: center;
+  border: 1px solid #d1d5db;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+/* Numeric cells: tight horizontal padding so Easy aligns with header */
+.results-table td:nth-child(n+2):nth-child(-n+10),
+.results-table thead tr:last-child th {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+/* Models column - fixed width, left aligned */
+.results-table .col-models,
+.results-table th:first-child,
+.results-table td:first-child {
+  text-align: left;
+  padding-left: 20px;
+  width: 200px;
+  min-width: 200px;
+  border-right: 1px solid #d1d5db;
+}
+
+.results-table .col-models {
+  text-transform: none;
+  font-size: 0.95rem;
+  letter-spacing: normal;
+}
+
+.results-table td:first-child {
+  font-weight: 500;
+  color: #111827;
+  font-size: 0.9rem;
+}
+
+/* Model icons in table */
+.results-table .model-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  vertical-align: middle;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+/* Group headers span 3 cols — width follows colgroup */
+.results-table .col-group {
+  text-align: center;
+}
+
+.results-table .dataset-header-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  vertical-align: middle;
+  margin-right: 6px;
+  display: inline-block;
+}
+
+.results-table .col-sub {
+  text-align: center;
+}
+
+/* Explicit center for Easy columns (Synthetic, Sofia, Oxford) */
+.results-table thead tr:last-child th:nth-child(1),
+.results-table thead tr:last-child th:nth-child(4),
+.results-table thead tr:last-child th:nth-child(7),
+.results-table td:nth-child(2),
+.results-table td:nth-child(5),
+.results-table td:nth-child(8) {
+  text-align: center;
+}
+
+/* Dataset group separators */
+.results-table th:nth-child(5),
+.results-table th:nth-child(8),
+.results-table td:nth-child(5),
+.results-table td:nth-child(8) {
+  border-left: 1px solid #d1d5db;
+}
+
+/* Avg column */
+.results-table .col-avg,
+.results-table th:last-child,
+.results-table td:last-child {
+  border-left: 1px solid #d1d5db;
+}
+
+.results-table th {
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  background: #f9fafb;
+}
+
+.results-table thead tr:first-child th {
+  border-bottom: 1px solid #e5e7eb;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.results-table thead tr:last-child th {
+  font-weight: 500;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.results-table td {
+  color: #374151;
+  font-size: 0.85rem;
+  transition: background-color 0.15s ease;
+}
+
+.results-table tbody tr:hover td {
+  background: #f9fafb;
+}
+
+/* Section headers - distinct colors + clear separation */
+.results-table .section-header.section-closed-source {
+  background: #fef2f2;
+}
+
+.results-table .section-header.section-closed-source td {
+  color: #b91c1c;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  border-top: 1px solid #d1d5db;
+}
+
+.results-table .section-header:first-child td {
+  border-top: none;
+}
+
+.results-table .section-header.section-open-source {
+  background: #f0fdf4;
+}
+
+.results-table .section-header.section-open-source td {
+  color: #15803d;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  border-top: 1px solid #d1d5db;
+}
+
+.results-table .section-header.section-egocentric {
+  background: #eff6ff;
+}
+
+.results-table .section-header.section-egocentric td {
+  color: #1d4ed8;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  border-top: 1px solid #d1d5db;
+}
+
+.results-table .section-header td {
+  padding: 14px 24px;
+  text-align: left;
+  border: 1px solid #d1d5db;
+}
+
+.results-table .section-header.section-closed-source:hover td {
+  background: #fef2f2;
+}
+
+.results-table .section-header.section-open-source:hover td {
+  background: #f0fdf4;
+}
+
+.results-table .section-header.section-egocentric:hover td {
+  background: #eff6ff;
+}
+
+/* Row backgrounds: Closed=light red, Open=light green, Egocentric=light blue */
+.results-table .row-closed-source td {
+  background: #fef2f2;
+}
+
+.results-table .row-closed-source:hover td {
+  background: #fecaca;
+}
+
+.results-table .row-open-source td {
+  background: #f0fdf4;
+}
+
+.results-table .row-open-source:hover td {
+  background: #dcfce7;
+}
+
+.results-table .row-egocentric td {
+  background: #eff6ff;
+}
+
+.results-table .row-egocentric:hover td {
+  background: #dbeafe;
+}
+
+/* Best model in each category - accent colors */
+.results-table .best-closed td {
+  background: #fee2e2 !important;
+}
+
+.results-table .best-closed td:first-child {
+  border-left: 4px solid #dc2626;
+}
+
+.results-table .best-closed:hover td {
+  background: #fecaca !important;
+}
+
+.results-table .best-open td {
+  background: #dcfce7 !important;
+}
+
+.results-table .best-open td:first-child {
+  border-left: 4px solid #16a34a;
+}
+
+.results-table .best-open:hover td {
+  background: #bbf7d0 !important;
+}
+
+.results-table .best-egocentric td {
+  background: #dbeafe !important;
+}
+
+.results-table .best-egocentric td:first-child {
+  border-left: 4px solid #2563eb;
+}
+
+.results-table .best-egocentric:hover td {
+  background: #bfdbfe !important;
+}
+
+/* Best score highlighting - VIGA-style green accent */
+.results-table .highlight-red {
+  color: #dc2626;
+  font-weight: 600;
+}
+.results-table .highlight-blue {
+  color: #2563eb;
+  font-weight: 600;
+}
+.results-table .highlight-green {
+  color: #059669;
+  font-weight: 600;
+}
+
+.results-table tbody tr:hover .highlight {
+  color: #047857;
+}
+
+.results-table .row-egocentric .highlight {
+  color: #047857;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+  .table-header {
+    padding: 16px 20px;
+  }
+
+  .table-wrapper {
+    padding: 12px 16px;
+  }
+  
+  .results-table {
+    font-size: 0.75rem;
+  }
+  
+  .results-table th,
+  .results-table td {
+    padding: 8px 10px;
+  }
+  
+  .table-caption {
+    font-size: 0.8rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .scroll-animate {
     opacity: 1;
     transform: none;
     transition: none;
