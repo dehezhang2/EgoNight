@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EgoNight: Towards Egocentric Vision Understanding at Night</title>
   <link rel="icon" href="fig/icon.png" type="image/png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=2">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -88,9 +88,9 @@
             <div class="dataset-tab-panels">
               <div class="dataset-tab-panel active">
                 <div class="comparison-slider">
-                  <img src="fig/teaser_v3.png" alt="Day" class="comparison-slider-before">
+                  <img src="fig/Apartment1_day.gif" alt="Day" class="comparison-slider-before">
                   <div class="comparison-slider-after">
-                    <img src="fig/teaser_v3.png" alt="Night" class="comparison-slider-img">
+                    <img src="fig/Apartment1_night.gif" alt="Night" class="comparison-slider-img">
                   </div>
                   <input type="range" min="0" max="100" value="50" class="comparison-slider-input" aria-label="Compare Day and Night">
                   <div class="comparison-slider-handle"></div>
@@ -251,24 +251,38 @@
     <section id="benchmark" class="section scroll-reveal">
       <h2>Benchmark & Question Types</h2>
       <p>EgoNight-VQA covers 12 question types for fine-grained evaluation:</p>
-      <ul class="qa-types">
-        <li>Object Recognition</li>
-        <li>Text Recognition</li>
-        <li>Spatial Reasoning</li>
-        <li>Scene Sequence</li>
-        <li>Navigation</li>
-        <li>Counting of Static</li>
-        <li>Action Recognition</li>
-        <li>Non-Common-Sense Reasoning</li>
-        <li>Lighting Recognition</li>
-        <li>Lighting Dynamic</li>
-        <li>Dynamic Detection</li>
-        <li>Counting of Dynamic</li>
-      </ul>
-      <div class="figure-block">
-        <h4>QA Examples</h4>
-        <img src="fig/data_collection_v2.png" alt="QA Examples" class="wide-img">
-        <p class="caption">QA Examples</p>
+      <div class="qa-examples-block">
+        <ul class="qa-types">
+          <li data-qa-image="fig/qa_example_object_recognition.png" class="qa-type-active" >Object Recognition</li>
+          <li data-qa-image="fig/qa_example_text_recognition.png" >Text Recognition</li>
+          <li data-qa-image="fig/qa_example_spatial_reasoning.png" >Spatial Reasoning</li>
+          <li data-qa-image="fig/qa_example_scene_sequence.png" >Scene Sequence</li>
+          <li data-qa-image="fig/qa_example_navigation.png" >Navigation</li>
+          <li data-qa-image="fig/qa_example_counting_of_static.png" >Counting of Static</li>
+          <li data-qa-image="fig/qa_example_action_recognition.png" >Action Recognition</li>
+          <li data-qa-image="fig/qa_example_non_common.png" >Non-Common-Sense Reasoning</li>
+          <li data-qa-image="fig/qa_example_light_recognition.png" >Lighting Recognition</li>
+          <li data-qa-image="fig/qa_example_light_dynamic.png" >Lighting Dynamic</li>
+          <li data-qa-image="fig/qa_example_dynamic_detection.png" >Dynamic Detection</li>
+          <li data-qa-image="fig/qa_example_counting_of_dynamic.png" >Counting of Dynamic</li>
+        </ul>
+        <div class="figure-block qa-examples-figure">
+          <h4>QA Examples <span class="qa-example-current" id="qa-example-current">(Object Recognition)</span></h4>
+          <img src="fig/qa_example_object_recognition.png" alt="Object Recognition QA Example" class="wide-img qa-example-img" data-qa-image="fig/qa_example_object_recognition.png">
+          <img src="fig/qa_example_text_recognition.png" alt="Text Recognition QA Example" class="wide-img qa-example-img" data-qa-image="fig/qa_example_text_recognition.png" hidden>
+          <img src="fig/qa_example_spatial_reasoning.png" alt="Spatial Reasoning QA Example" class="wide-img qa-example-img" data-qa-image="fig/qa_example_spatial_reasoning.png" hidden>
+          <img src="fig/qa_example_scene_sequence.png" alt="Scene Sequence QA Example" class="wide-img qa-example-img" data-qa-image="fig/qa_example_scene_sequence.png" hidden>
+          <img src="fig/qa_example_navigation.png" alt="Navigation QA Example" class="wide-img qa-example-img" data-qa-image="fig/qa_example_navigation.png" hidden>
+          <img src="fig/qa_example_counting_of_static.png" alt="Counting of Static QA Example" class="wide-img qa-example-img" data-qa-image="fig/qa_example_counting_of_static.png" hidden>
+          <img src="fig/qa_example_action_recognition.png" alt="Action Recognition QA Example" class="wide-img qa-example-img" data-qa-image="fig/qa_example_action_recognition.png" hidden>
+          <img src="fig/qa_example_non_common.png" alt="Non-Common-Sense Reasoning QA Example" class="wide-img qa-example-img" data-qa-image="fig/qa_example_non_common.png" hidden>
+          <img src="fig/qa_example_light_recognition.png" alt="Lighting Recognition QA Example" class="wide-img qa-example-img" data-qa-image="fig/qa_example_light_recognition.png" hidden>
+          <img src="fig/qa_example_light_dynamic.png" alt="Lighting Dynamic QA Example" class="wide-img qa-example-img" data-qa-image="fig/qa_example_light_dynamic.png" hidden>
+          <img src="fig/qa_example_dynamic_detection.png" alt="Dynamic Detection QA Example" class="wide-img qa-example-img" data-qa-image="fig/qa_example_dynamic_detection.png" hidden>
+          <img src="fig/qa_example_counting_of_dynamic.png" alt="Counting of Dynamic QA Example" class="wide-img qa-example-img" data-qa-image="fig/qa_example_counting_of_dynamic.png" hidden>
+          <img src="fig/qa_example_annotation.png" alt="QA annotation" class="wide-img qa-example-annotation">
+          <p class="caption">QA Examples — hover a question type above to view</p>
+        </div>
       </div>
       <details class="collapsible-block figure-block">
         <summary class="collapsible-summary">
@@ -315,7 +329,7 @@
       
       <div class="table-card scroll-animate">
         <div class="table-header">
-          <h3 style="font-size: 2rem;">Leaderboard on EgoNight-VQA</h3>
+          <h3 style="font-size: 2rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;"><img src="fig/icon.png" alt="" class="leaderboard-logo" aria-hidden="true">Leaderboard on EgoNight-VQA</h3>
           <p class="table-caption" style="text-align:center;">Accuracies (%) of OpenQA results across three datasets and three difficulty levels.</p>
         </div>
         <div class="table-wrapper">
@@ -534,6 +548,35 @@
   </footer>
   <script>
     (function() {
+      // QA examples: hover to show corresponding image
+      (function() {
+        var qaItems = document.querySelectorAll('.qa-types li[data-qa-image]');
+        var firstLi = qaItems[0];
+        function setQaExample(li) {
+          var qaCurrent = document.getElementById('qa-example-current');
+          var qaImgs = document.querySelectorAll('.qa-examples-figure .qa-example-img');
+          if (!li || !qaImgs.length) return;
+          var src = li.getAttribute('data-qa-image');
+          var label = li.textContent.trim();
+          qaImgs.forEach(function(img) {
+            if (img.getAttribute('data-qa-image') === src) {
+              img.removeAttribute('hidden');
+            } else {
+              img.setAttribute('hidden', '');
+            }
+          });
+          if (qaCurrent) qaCurrent.textContent = '(' + label + ')';
+          qaItems.forEach(function(item) { item.classList.remove('qa-type-active'); });
+          li.classList.add('qa-type-active');
+        }
+        qaItems.forEach(function(li) {
+          li.addEventListener('mouseenter', function() { setQaExample(li); });
+        });
+        document.querySelector('.qa-types').addEventListener('mouseleave', function() {
+          if (firstLi) setQaExample(firstLi);
+        });
+      })();
+
       var reveals = document.querySelectorAll('.scroll-reveal');
       var observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
@@ -577,6 +620,7 @@
         }
         input.addEventListener('input', updateSlider);
       });
+
     })();
   </script>
 </body>
