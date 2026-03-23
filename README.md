@@ -20,6 +20,7 @@
 <p align="center">
     <a href="https://arxiv.org/abs/2510.06218"><img src="https://img.shields.io/badge/arXiv-2510.06218-b31b1b.svg" alt="arXiv"></a>
     <a href="https://openreview.net/forum?id=DKD4QbOKBN"><img src="https://img.shields.io/badge/ICLR-2026-blue.svg" alt="ICLR 2026"></a>
+    <a href="https://dehezhang2.github.io/EgoNight/"><img src="https://img.shields.io/badge/🌐%20Project%20Page-EgoNight-4f46e5.svg" alt="Project Page"></a>
     <a href="https://huggingface.co/datasets/dehezhang2/EgoNight"><img src="https://img.shields.io/badge/🤗%20Hugging%20Face-EgoNight-yellow.svg" alt="Hugging Face"></a>
 </p>
 
