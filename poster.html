@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EgoNight Poster - ICLR 2026</title>
+  <link rel="icon" href="fig/icon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="poster.css">
+</head>
+<body>
+  <main class="poster">
+    <header class="poster-header scroll-reveal">
+      <div class="header-band"></div>
+      <div class="header-content">
+        <div class="header-top">
+          <div class="header-main">
+            <div class="title-row">
+              <img src="fig/icon.png" alt="EgoNight logo" class="poster-logo">
+              <div class="title-block">
+                <h1>EgoNight: Towards Egocentric Vision Understanding at Night with a Challenging Benchmark</h1>
+              </div>
+            </div>
+            <p class="authors">
+              Deheng Zhang<sup>1</sup>*, Yuqian Fu<sup>1</sup>* <i class="fas fa-envelope corresponding-icon" aria-label="Corresponding author"></i>, Runyi Yang<sup>1</sup>, Yang Miao<sup>1</sup>, Tianwen Qian<sup>2</sup>, Xu Zheng<sup>1,3</sup>, Guolei Sun<sup>4</sup>, Ajad Chhatkuli<sup>1</sup>, Xuanjing Huang<sup>5</sup>, Yu-Gang Jiang<sup>5</sup>, Luc Van Gool<sup>1</sup>, Danda Pani Paudel<sup>1</sup>
+            </p>
+            <p class="affiliations"><strong>1</strong> INSAIT, Sofia University &nbsp;&nbsp; <strong>2</strong> East China Normal University &nbsp;&nbsp; <strong>3</strong> HKUST(GZ) &nbsp;&nbsp; <strong>4</strong> Nankai University &nbsp;&nbsp; <strong>5</strong> Fudan University</p>
+            <div class="partner-row">
+              <img src="fig/institute.png" alt="Participating institutes" class="institutes-strip">
+              <img src="https://actu.epfl.ch/image/160654/1108x622.jpg" alt="ICLR 2026 logo" class="iclr-2026-logo">
+            </div>
+          </div>
+          <aside class="qr-card">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https%3A%2F%2Fdehezhang2.github.io%2FEgoNight%2F" alt="QR code linking to dehezhang2.github.io/EgoNight">
+            <p>Scan for project page</p>
+            <a href="https://dehezhang2.github.io/EgoNight/" target="_blank" rel="noopener noreferrer">dehezhang2.github.io/EgoNight</a>
+          </aside>
+        </div>
+        <div class="scroll-cue" aria-hidden="true">
+          <span>Scroll</span>
+          <i class="fas fa-angles-down"></i>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero-figure panel scroll-reveal">
+      <div class="panel-heading">
+        <h2><i class="fas fa-compass title-icon" aria-hidden="true"></i> Overview</h2>
+      </div>
+      <div class="hero-layout">
+        <div>
+          <p>
+            EgoNight is the first benchmark suite for <strong>nighttime egocentric vision</strong>, centered on VQA and extended with retrieval and depth estimation.
+          </p>
+          <ul>
+            <li>Most egocentric benchmarks emphasize daytime scenes and miss low-light deployment realities.</li>
+            <li>Nighttime assistive agents face visibility drop, uneven lighting, and noisy first-person motion.</li>
+            <li>Aligned day-night videos enable cleaner annotation and fair illumination-gap analysis.</li>
+          </ul>
+          <div class="stat-row">
+            <div class="stat-box"><span>90</span> videos</div>
+            <div class="stat-box"><span>3,658</span> QA pairs</div>
+            <div class="stat-box"><span>12</span> QA types</div>
+          </div>
+          <img src="fig/statistics.png" alt="EgoNight dataset statistics" class="overview-stats">
+        </div>
+        <div>
+          <div class="hero-visuals">
+            <img src="fig/teaser_v3.png" alt="EgoNight teaser overview figure" class="teaser-plain">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="poster-grid">
+      <article class="panel dataset-card scroll-reveal">
+        <div class="panel-heading">
+          <h2><i class="fas fa-database title-icon" aria-hidden="true"></i> Dataset Design</h2>
+        </div>
+        <p>EgoNight combines aligned synthetic and real-world sources with diverse scenes, illumination types, and easy/medium/hard difficulty levels.</p>
+        <div class="dataset-sources">
+          <div class="dataset-source-item"><img src="fig/game-console.png" alt="Synthetic icon" class="dataset-source-icon"><strong>Synthetic:</strong> 50 aligned pairs</div>
+          <div class="dataset-source-item"><img src="fig/alexander-nevsky-cathedral.png" alt="Sofia icon" class="dataset-source-icon"><strong>Sofia:</strong> 20 aligned pairs</div>
+          <div class="dataset-source-item"><img src="fig/oxford.png" alt="Oxford icon" class="dataset-source-icon"><strong>Oxford:</strong> 20 night videos</div>
+        </div>
+        <img src="fig/data_collection_v2.png" alt="EgoNight QA taxonomy and examples" class="dataset-large-figure">
+      </article>
+
+      <article class="panel annotation-card scroll-reveal">
+        <div class="panel-heading">
+          <h2><i class="fas fa-diagram-project title-icon" aria-hidden="true"></i> Annotation Pipeline</h2>
+        </div>
+        <ul class="annotation-steps">
+          <li>Generate nighttime captions with QA-type-specific prompts.</li>
+          <li>Create diverse candidate QA pairs from clips and captions.</li>
+          <li>Use day-augmented synthesis for paired QA types.</li>
+        </ul>
+        <p class="callout">All 3,658 QA pairs are manually verified. Total annotation effort: <strong>300+ hours</strong>.</p>
+        <img src="fig/main_pipeline_poster.png" alt="EgoNight data and annotation pipeline" class="annotation-figure">
+      </article>
+
+      <article class="panel scroll-reveal">
+        <div class="panel-heading">
+          <h2><i class="fas fa-chart-column title-icon" aria-hidden="true"></i> Main VQA Results</h2>
+        </div>
+        <p>Even top MLLMs struggle under nighttime egocentric settings.</p>
+        <table>
+          <thead>
+            <tr><th>Category</th><th>Best model</th><th>Avg. Acc (%)</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Closed-source</td>
+              <td><img src="fig/chatgpt-logo-chat-gpt-icon-on-white-background-free-vector.jpg" alt="GPT-4.1 icon" class="best-model-icon"> GPT-4.1</td>
+              <td>30.93</td>
+            </tr>
+            <tr>
+              <td>Open-source</td>
+              <td><img src="fig/internvl.jpg" alt="InternVL3-8B icon" class="best-model-icon"> InternVL3-8B</td>
+              <td>20.06</td>
+            </tr>
+            <tr>
+              <td>Egocentric</td>
+              <td><img src="fig/egogpt.png" alt="EgoGPT icon" class="best-model-icon"> EgoGPT</td>
+              <td>14.29</td>
+            </tr>
+          </tbody>
+        </table>
+        <ul>
+          <li>Day-to-night drop: <strong>32.8%</strong> on Synthetic, <strong>25.0%</strong> on Sofia.</li>
+          <li>New QA types (lighting/navigation/non-common-sense) remain hardest.</li>
+        </ul>
+        <img src="fig/new_gap.png" alt="Day-night performance gap across QA types">
+      </article>
+
+      <article class="panel scroll-reveal">
+        <div class="panel-heading">
+          <h2><i class="fas fa-shuffle title-icon" aria-hidden="true"></i> Day-night Correspondence Retrieval</h2>
+        </div>
+        <ul>
+          <li><strong>Spatial retrieval (R@1, Night->Day):</strong> GPT-4.1 leads on both Synthetic (54.1) and Sofia (84.5).</li>
+          <li><strong>Temporal localization (mIoU, Night->Day):</strong> feature encoders are more stable than MLLMs.</li>
+          <li>GPT-4.1 drops from Day->Day to Night->Day by 21.5 points (Synthetic) and 8.0 points (Sofia).</li>
+        </ul>
+        <table class="retrieval-table">
+          <thead>
+            <tr><th>Model</th><th>Spatial N->D (Syn/Sofia)</th><th>Temporal N->D (Syn/Sofia)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>GPT-4.1</td><td>54.1 / 84.5</td><td>10.0 / 15.5</td></tr>
+            <tr><td>Percep. Enc.</td><td>41.6 / 80.9</td><td>32.9 / 33.4</td></tr>
+            <tr><td>DINOv2</td><td>28.7 / 74.5</td><td>33.7 / 33.1</td></tr>
+            <tr><td>InternVL3-8B</td><td>27.7 / 56.3</td><td>9.9 / 13.3</td></tr>
+          </tbody>
+        </table>
+        <img src="fig/SpatialRetrievalQualitative.png" alt="Qualitative day-night retrieval examples">
+      </article>
+
+      <article class="panel depth-card scroll-reveal">
+        <div class="panel-heading">
+          <h2><i class="fas fa-layer-group title-icon" aria-hidden="true"></i> Depth Estimation at Night</h2>
+        </div>
+        <ul>
+          <li>Best overall: <strong>UniK3D</strong> (Night AbsRel 0.253, delta1 0.254).</li>
+          <li>Fisheye-aware methods outperform generic depth estimators.</li>
+          <li>A clear day-night gap persists across all methods.</li>
+        </ul>
+        <table class="depth-table">
+          <thead>
+            <tr><th>Method</th><th>AbsRel D/N</th><th>delta1 D/N</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Depth Anything</td><td>0.297 / 0.302</td><td>0.249 / 0.237</td></tr>
+            <tr><td>VGGTStream</td><td>0.293 / 0.298</td><td>0.234 / 0.232</td></tr>
+            <tr><td>DAC</td><td>0.245 / 0.292</td><td>0.255 / 0.216</td></tr>
+            <tr><td>UniK3D</td><td>0.224 / 0.253</td><td>0.280 / 0.254</td></tr>
+          </tbody>
+        </table>
+        <img src="fig/Depth_synthetic.png" alt="Nighttime egocentric depth estimation examples">
+      </article>
+    </section>
+
+    <section class="panel final-panel scroll-reveal">
+      <div class="panel-heading">
+        <h2><i class="fas fa-lightbulb title-icon" aria-hidden="true"></i> Takeaways</h2>
+      </div>
+      <ul class="takeaways-grid">
+        <li>EgoNight introduces a practical benchmark protocol for illumination-robust egocentric AI.</li>
+        <li>Current MLLMs are far from solved for nighttime perception and reasoning.</li>
+        <li>Aligned synthetic + real data offers a strong path for annotation and evaluation.</li>
+        <li>Synthetic and real performance are strongly correlated.</li>
+        <li>Synthetic-only fine-tuning transfers well to real night data.</li>
+        <li>Full fine-tuning works best; vision-only tuning helps perception, while LLM-only tuning improves both.</li>
+      </ul>
+      <p class="footnote">Copyright (c) 2026 EgoNight authors. All rights reserved.</p>
+    </section>
+  </main>
+  <script>
+    (function() {
+      var reveals = document.querySelectorAll('.scroll-reveal');
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.14, rootMargin: '0px 0px -40px 0px' });
+
+      reveals.forEach(function(el, i) {
+        el.style.setProperty('--reveal-delay', (i * 55) + 'ms');
+        observer.observe(el);
+      });
+    })();
+  </script>
+</body>
+</html>
