@@ -1,0 +1,26 @@
+task: egonight
+task_alias: EgoNight
+tag:
+  - egonight_vqa
+dataset_path: json
+dataset_kwargs:
+  data_files: /ABS/PATH/TO/EgoNight/exports/generated/egonight_lmms_eval.jsonl
+test_split: train
+output_type: generate_until
+doc_to_visual: !function utils.egonight_doc_to_visual
+doc_to_text: !function utils.egonight_doc_to_text
+doc_to_messages: !function utils.egonight_doc_to_messages
+doc_to_target: answer
+generation_kwargs:
+  max_new_tokens: 64
+  temperature: 0
+  top_p: 1.0
+  num_beams: 1
+  do_sample: false
+process_results: !function utils.egonight_process_results
+metric_list:
+  - metric: exact_match
+    aggregation: !function utils.egonight_aggregate_exact_match
+    higher_is_better: true
+metadata:
+  - version: 1.0

@@ -71,8 +71,8 @@ The benchmark assesses vision-language models on egocentric video question answe
 
 - [ ] **Depth evaluation** — Evaluation pipeline for egocentric depth estimation at night (auxiliary task from the paper).
 - [ ] **Retrieval evaluation** — Evaluation pipeline for day–night correspondence retrieval (auxiliary task from the paper).
-- [ ] **[LMMs-Eval](https://github.com/EvolvingLMMs-Lab/lmms-eval)** — Integrate EgoNight as a task in the unified multimodal evaluation toolkit.
-- [ ] **[VLMEvalKit](https://github.com/open-compass/VLMEvalKit)** — Add EgoNight benchmark support to the OpenCompass VLM evaluation toolkit.
+- [x] **[LMMs-Eval](https://github.com/EvolvingLMMs-Lab/lmms-eval)** — Added EgoNight export pipeline and drop-in task scaffold under `exports/lmms_eval_task/egonight/`.
+- [x] **[VLMEvalKit](https://github.com/open-compass/VLMEvalKit)** — Added EgoNight export pipeline and custom dataset scaffold under `exports/vlmevalkit/egonight_dataset.py`.
 
 ---
 
@@ -80,6 +80,16 @@ The benchmark assesses vision-language models on egocentric video question answe
 
 ```
 EgoNight/
+├── exports/
+│   ├── build_egonight_exports.py          # Build JSONL/TSV exports for external eval toolkits
+│   ├── README.md                          # Integration steps for LMMs-Eval and VLMEvalKit
+│   ├── generated/                         # Generated files: egonight_lmms_eval.jsonl, EgoNight.tsv, stats
+│   ├── lmms_eval_task/
+│   │   └── egonight/
+│   │       ├── egonight.yaml              # Drop-in lmms-eval task config
+│   │       └── utils.py                   # Prompt/visual mapping and metric aggregation
+│   └── vlmevalkit/
+│       └── egonight_dataset.py            # Drop-in VLMEvalKit dataset class
 ├── evaluation/
 │   ├── evaluate_gemini.py    # Gemini 2.5 Pro inference
 │   ├── evaluate_gpt.py       # GPT-4.1 inference
@@ -264,6 +274,28 @@ python evaluation/summarize_accuracy.py \
 | `--split` | `night` or `day` (default: `night`) |
 | `--output` | Path to save JSON summary |
 | `--oxford_score_dir` | Score directory for Oxford: `qa_result` or `final_score` (default: `qa_result`) |
+
+### Export for LMMs-Eval and VLMEvalKit
+
+Build EgoNight exports from local dataset roots:
+
+```bash
+python exports/build_egonight_exports.py \
+  --oxford /data/Night_Ego_Dataset/EgoNight/EgoNight_Oxford \
+  --sofia /data/Night_Ego_Dataset/EgoNight/EgoNight_Sofia \
+  --synthetic /data/Night_Ego_Dataset/EgoNight/EgoNight_synthetic \
+  --output_dir exports/generated
+```
+
+This generates:
+
+- `exports/generated/egonight_lmms_eval.jsonl` (for LMMs-Eval)
+- `exports/generated/EgoNight.tsv` (for VLMEvalKit)
+- `exports/generated/egonight_export_stats.json`
+
+LMMs-Eval scaffold files are under `exports/lmms_eval_task/egonight/`.
+VLMEvalKit scaffold file is under `exports/vlmevalkit/egonight_dataset.py`.
+Detailed integration steps are in `exports/README.md`.
 
 ---
 
