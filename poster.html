@@ -30,7 +30,7 @@
             <p class="affiliations"><strong>1</strong> INSAIT, Sofia University &nbsp;&nbsp; <strong>2</strong> East China Normal University &nbsp;&nbsp; <strong>3</strong> HKUST(GZ) &nbsp;&nbsp; <strong>4</strong> Nankai University &nbsp;&nbsp; <strong>5</strong> Fudan University</p>
             <div class="partner-row">
               <img src="fig/institute.png" alt="Participating institutes" class="institutes-strip">
-              <img src="https://actu.epfl.ch/image/160654/1108x622.jpg" alt="ICLR 2026 logo" class="iclr-2026-logo">
+              <span class="iclr-badge">ICLR 2026</span>
             </div>
           </div>
           <aside class="qr-card">
@@ -107,6 +107,7 @@
           <h2><i class="fas fa-chart-column title-icon" aria-hidden="true"></i> Main VQA Results</h2>
         </div>
         <p>Even top MLLMs struggle under nighttime egocentric settings.</p>
+        <div class="table-scroll">
         <table>
           <thead>
             <tr><th>Category</th><th>Best model</th><th>Avg. Acc (%)</th></tr>
@@ -129,6 +130,7 @@
             </tr>
           </tbody>
         </table>
+        </div>
         <ul>
           <li>Day-to-night drop: <strong>32.8%</strong> on Synthetic, <strong>25.0%</strong> on Sofia.</li>
           <li>New QA types (lighting/navigation/non-common-sense) remain hardest.</li>
@@ -145,6 +147,7 @@
           <li><strong>Temporal localization (mIoU, Night->Day):</strong> feature encoders are more stable than MLLMs.</li>
           <li>GPT-4.1 drops from Day->Day to Night->Day by 21.5 points (Synthetic) and 8.0 points (Sofia).</li>
         </ul>
+        <div class="table-scroll">
         <table class="retrieval-table">
           <thead>
             <tr><th>Model</th><th>Spatial N->D (Syn/Sofia)</th><th>Temporal N->D (Syn/Sofia)</th></tr>
@@ -156,6 +159,7 @@
             <tr><td>InternVL3-8B</td><td>27.7 / 56.3</td><td>9.9 / 13.3</td></tr>
           </tbody>
         </table>
+        </div>
         <img src="fig/SpatialRetrievalQualitative.png" alt="Qualitative day-night retrieval examples">
       </article>
 
@@ -168,6 +172,7 @@
           <li>Fisheye-aware methods outperform generic depth estimators.</li>
           <li>A clear day-night gap persists across all methods.</li>
         </ul>
+        <div class="table-scroll">
         <table class="depth-table">
           <thead>
             <tr><th>Method</th><th>AbsRel D/N</th><th>delta1 D/N</th></tr>
@@ -179,6 +184,7 @@
             <tr><td>UniK3D</td><td>0.224 / 0.253</td><td>0.280 / 0.254</td></tr>
           </tbody>
         </table>
+        </div>
         <img src="fig/Depth_synthetic.png" alt="Nighttime egocentric depth estimation examples">
       </article>
     </section>

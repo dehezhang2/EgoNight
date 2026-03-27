@@ -559,6 +559,11 @@ main {
   height: 44px;
   display: block;
   margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.dataset-card-wrapper:hover .dataset-icon {
+  transform: scale(1.15) rotate(-3deg);
 }
 
 .dataset-card h3 {
@@ -790,6 +795,12 @@ main {
   height: auto;
   border-radius: 8px;
   border: 1px solid var(--color-border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.figure-img:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
 .figure-img.small {
@@ -802,6 +813,12 @@ main {
   height: auto;
   border-radius: 8px;
   border: 1px solid var(--color-border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wide-img:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
 .caption {
@@ -828,6 +845,37 @@ main {
   width: 100%;
   height: auto;
   border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.teaser-img:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* Video embed */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 16 / 9;
+  transition: box-shadow 0.3s ease;
+}
+
+.video-container:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+}
+
+.video-container iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 /* Highlight section */
@@ -872,6 +920,13 @@ main {
   border-radius: 8px;
   min-width: 280px;
   border: 1px solid var(--color-border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-color: var(--color-accent);
 }
 
 .contact-photo {
@@ -880,6 +935,12 @@ main {
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover .contact-photo {
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .contact-info {
@@ -946,6 +1007,12 @@ footer {
   border-radius: 8px;
   overflow: hidden;
   margin: 2.5rem 0;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.table-card:hover {
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.09);
+  border-color: var(--color-accent);
 }
 
 .table-header {

@@ -128,10 +128,11 @@ body {
 h1 {
   margin: 0;
   font-family: var(--title-font);
-  font-size: clamp(1.15rem, 1.8vw, 1.8rem);
-  line-height: 1.05;
+  font-size: clamp(1.05rem, 2.5vw + 0.3rem, 1.8rem);
+  line-height: 1.15;
   letter-spacing: -0.01em;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: break-word;
 }
 
 .authors,
@@ -143,8 +144,8 @@ h1 {
 
 .authors {
   margin-bottom: 0.12rem;
-  line-height: 1.2;
-  white-space: nowrap;
+  line-height: 1.4;
+  white-space: normal;
   font-size: 0.84rem;
   text-align: center;
 }
@@ -181,15 +182,17 @@ h1 {
   background: transparent;
 }
 
-.iclr-2026-logo {
-  width: auto;
-  max-width: 150px;
-  height: auto;
-  object-fit: contain;
-  border: none;
-  background: transparent;
-  margin-top: 0;
-  border-radius: 0;
+.iclr-badge {
+  display: inline-block;
+  background: #7c3aed;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.25em 0.7em;
+  border-radius: 6px;
+  white-space: nowrap;
+  vertical-align: middle;
 }
 
 .qr-card {
@@ -364,7 +367,8 @@ h2 {
   padding: 0.3rem 0.4rem;
   font-size: 0.72rem;
   color: var(--muted);
-  white-space: nowrap;
+  white-space: normal;
+  word-break: break-word;
 }
 
 .annotation-tag strong {
@@ -393,7 +397,7 @@ h2 {
   background: linear-gradient(145deg, #f2f8fb, #f8fcfd);
   padding: 0.48rem 0.55rem;
   min-height: 58px;
-  white-space: nowrap;
+  white-space: normal;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -595,7 +599,6 @@ th {
   }
 
   h1 {
-    white-space: normal;
     font-size: 1.05rem;
   }
 
@@ -610,16 +613,17 @@ th {
   }
 
   .partner-row {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .iclr-2026-logo {
-    width: 120px;
-    justify-self: start;
+  .iclr-badge {
+    font-size: 0.75rem;
   }
 
   .qr-card {
     max-width: 260px;
+    margin: 0 auto;
   }
 
   .stat-row {
@@ -655,6 +659,65 @@ th {
 
   .hero-layout {
     grid-template-columns: 1fr;
+  }
+}
+
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 480px) {
+  .poster {
+    padding: 0.5rem;
+  }
+
+  .header-content {
+    padding: 0.4rem 0.5rem 0.45rem;
+  }
+
+  .poster-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .title-row {
+    gap: 0.4rem;
+  }
+
+  .stat-row {
+    grid-template-columns: 1fr;
+  }
+
+  .dataset-sources {
+    grid-template-columns: 1fr;
+  }
+
+  .dataset-source-item {
+    white-space: normal;
+    min-height: auto;
+  }
+
+  .annotation-tags {
+    grid-template-columns: 1fr;
+  }
+
+  .qr-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .takeaways-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-box {
+    padding: 0.35rem 0.4rem;
+  }
+
+  .stat-box span {
+    font-size: 1.4rem;
   }
 }
 
