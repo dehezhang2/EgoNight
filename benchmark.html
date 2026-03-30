@@ -196,10 +196,10 @@
   <div class="bx-wrap">
     <div id="server-banner">
       <div style="flex:1">
-        <strong><i class="fas fa-server" style="margin-right:6px"></i>Flask server required.</strong>
-        Run <code>python evaluation/server.py --sofia_path data/Sofia_server --oxford_path data/Oxford_server --synthetic_path data/synthetic_server</code> then set the server URL below.
+        <strong><i class="fas fa-server" style="margin-right:6px"></i>Live demo available.</strong>
+        Default server: <code>https://dehezhang2-egonight.hf.space</code>. To use a local server, run <code>python evaluation/server.py --sofia_path data/Sofia_server ...</code> and enter the URL below.
         <div id="server-url-form">
-          <input type="text" id="server-url-input" placeholder="http://localhost:5000" value="">
+          <input type="text" id="server-url-input" placeholder="https://dehezhang2-egonight.hf.space" value="">
           <button onclick="setServerUrl()">Connect</button>
         </div>
       </div>
@@ -303,7 +303,7 @@
   </div>
 
   <script>
-    var SERVER_URL = localStorage.getItem('bx_server_url') || 'http://localhost:5000';
+    var SERVER_URL = localStorage.getItem('bx_server_url') || 'https://dehezhang2-egonight.hf.space';
     var currentPage = 1;
     var totalPages = 1;
 
