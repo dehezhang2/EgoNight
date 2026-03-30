@@ -255,25 +255,79 @@ python evaluation/score_gpt.py --dir_path /path/to/results_directory
 
 ### Summarize Accuracy
 
-`summarize_accuracy.py` computes per-dataset (Sofia, Oxford, Synthetic) and overall accuracy by QA type. It reads `*_scores_*.json` from each subfolder and filters by `all_qa_filtered.json` (Sofia/Oxford) or `qa_human.json` (Synthetic).
+`summarize_accuracy.py` computes per-dataset (Sofia, Oxford, Synthetic) and overall accuracy by QA type, and also breaks down accuracy by **difficulty level** (easy/medium/hard) using built-in scene difficulty metadata. It reads `*_scores_*.json` from each subfolder and filters by `all_qa_filtered.json` (Sofia/Oxford) or scores all entries (Synthetic). This difficulty summary is included in both console and JSON output.
+
+difficulty results are reported per dataset and overall.
+
+difficulty levels are easy, medium, and hard.
 
 ```bash
 python evaluation/summarize_accuracy.py \
     --sofia_path /path/to/Sofia_server \
     --oxford_path /path/to/Oxford_server \
-    --synthetic_path /path/to/synthetic_server \
-    [--model gpt] [--split night] [--output summary.json]
+    --synthetic_path /path/to/Synthetic_server \
+    [--model gpt] [--split night] \
+    [--output results/summary.json]
 ```
 
-| Option | Description |
-|--------|-------------|
-| `--sofia_path` | Path to Sofia_server parent directory |
-| `--oxford_path` | Path to Oxford_server parent directory |
-| `--synthetic_path` | Path to synthetic_server parent directory |
-| `--model` | Model name: `gpt`, `gemini`, `qwen7b`, etc. (default: `gpt`) |
-| `--split` | `night` or `day` (default: `night`) |
-| `--output` | Path to save JSON summary |
-| `--oxford_score_dir` | Score directory for Oxford: `qa_result` or `final_score` (default: `qa_result`) |
+Example output:
+```
+=== Model: gpt | Split: night ===
+
+--- Sofia ---
+  Action: 72.50% (29/40)
+  Counting: 68.00% (17/25)
+  ...
+  OVERALL: 70.00% (105/150)
+
+--- OVERALL (all datasets combined) ---
+  Action: 71.00% (..)
+  ...
+  OVERALL: 69.50% (..)
+
+--- DIFFICULTY BREAKDOWN (per dataset) ---
+  Sofia:
+    easy:   75.00% (60/80)
+    medium: 65.00% (26/40)
+    hard:   55.00% (11/20)
+  Oxford:
+    easy:   70.00% (..)
+    medium: 62.00% (..)
+    hard:   50.00% (..)
+  Synthetic:
+    easy:   80.00% (..)
+    medium: 68.00% (..)
+    hard:   52.00% (..)
+
+--- DIFFICULTY BREAKDOWN (overall) ---
+  easy:   78.00% (..)
+  medium: 65.00% (..)
+  hard:   52.00% (..)
+```
+
+The output JSON (via `--output`) includes `per_dataset`, `overall`, `per_dataset_difficulty`, and `overall_difficulty` keys.
+
+### Visualization Server
+
+`evaluation/server.py` launches an interactive Flask web server that reads pre-computed score files on disk and serves a dark-theme single-page application for exploring benchmark results.
+
+**Features:**
+- Filter by split (day/night), dataset (Sofia/Oxford/Synthetic), difficulty (easy/medium/hard), and QA type
+- Accuracy overview with stat cards and per-QA-type progress bars
+- Individual QA pair drill-down: question, ground truth, model prediction, score, correct/incorrect
+- Paginated results table with color-coded rows
+
+**Start the server:**
+
+```bash
+python evaluation/server.py \
+    --sofia_path /path/to/Sofia_server \
+    --oxford_path /path/to/Oxford_server \
+    --synthetic_path /path/to/synthetic_server \
+    [--model gpt] [--port 5000]
+```
+
+Then open `http://localhost:5000` in your browser. Requires `flask` (`pip install flask`).
 
 ### Export for LMMs-Eval and VLMEvalKit
 
