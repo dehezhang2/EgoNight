@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Benchmark Explorer — EgoNight</title>
+  <link rel="icon" href="fig/icon.png" type="image/png">
+  <link rel="stylesheet" href="style.css?v=2">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    /* ── Page shell ── */
+    .bx-hero {
+      text-align: center;
+      padding: 3rem 2rem 2rem;
+      background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-bg) 100%);
+    }
+    .bx-hero h1 { font-size: 2rem; font-weight: 700; margin: 0 0 0.4rem; color: var(--color-text); }
+    .bx-hero p  { color: var(--color-text-muted); margin: 0 0 1.2rem; font-size: 0.95rem; }
+    .bx-back { display: inline-flex; align-items: center; gap: 6px; color: var(--color-accent); text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+    .bx-back:hover { text-decoration: underline; }
+
+    /* ── Server config banner ── */
+    #server-banner {
+      background: #fff3cd;
+      border: 1px solid #ffc107;
+      border-radius: 8px;
+      padding: 0.75rem 1.25rem;
+      margin: 0 auto 1.5rem;
+      max-width: 900px;
+      font-size: 0.875rem;
+      color: #664d03;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    #server-banner.hidden { display: none; }
+    #server-url-form { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-top: 0.5rem; }
+    #server-url-form input {
+      flex: 1;
+      min-width: 220px;
+      padding: 6px 10px;
+      border: 1px solid #ffc107;
+      border-radius: 6px;
+      font-size: 0.875rem;
+      color: #333;
+    }
+    #server-url-form button {
+      padding: 6px 14px;
+      background: var(--color-accent);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+    #server-url-form button:hover { background: var(--color-accent-hover); }
+
+    /* ── Explorer layout ── */
+    .bx-wrap { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem 3rem; }
+
+    /* ── Filter bar ── */
+    .bx-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: flex-end;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .bx-filter-group { display: flex; flex-direction: column; gap: 4px; }
+    .bx-filter-group label { font-size: 0.75rem; font-weight: 600; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+    .bx-filter-group select, .bx-filter-group input[type=text] {
+      padding: 7px 10px;
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      font-size: 0.875rem;
+      color: var(--color-text);
+      background: #fff;
+      min-width: 130px;
+    }
+    .bx-apply {
+      padding: 8px 20px;
+      background: var(--color-accent);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      align-self: flex-end;
+      transition: background 0.2s;
+    }
+    .bx-apply:hover { background: var(--color-accent-hover); }
+
+    /* ── Tabs ── */
+    .bx-tabs { display: flex; gap: 4px; margin-bottom: 1.25rem; border-bottom: 2px solid var(--color-border); }
+    .bx-tab {
+      padding: 8px 18px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+      cursor: pointer;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .bx-tab.active { color: var(--color-accent); border-bottom-color: var(--color-accent); }
+    .bx-tab:hover { color: var(--color-accent); }
+    .bx-pane { display: none; }
+    .bx-pane.active { display: block; }
+
+    /* ── Stat cards ── */
+    .bx-stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 1.5rem; }
+    .bx-stat-card {
+      background: #fff;
+      border: 1px solid var(--color-border);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      text-align: center;
+    }
+    .bx-stat-card .bx-stat-label { font-size: 0.75rem; font-weight: 600; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
+    .bx-stat-card .bx-stat-val { font-size: 1.75rem; font-weight: 700; color: var(--color-accent); }
+    .bx-stat-card .bx-stat-sub { font-size: 0.75rem; color: var(--color-text-muted); margin-top: 2px; }
+
+    /* ── Progress bars ── */
+    .bx-bar-table { width: 100%; border-collapse: collapse; }
+    .bx-bar-table th { text-align: left; font-size: 0.75rem; font-weight: 600; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.05em; padding: 6px 10px; border-bottom: 1px solid var(--color-border); }
+    .bx-bar-table td { padding: 8px 10px; vertical-align: middle; font-size: 0.875rem; }
+    .bx-bar-table tr:hover td { background: var(--color-surface); }
+    .bx-bar-wrap { width: 100%; background: #e9ecef; border-radius: 99px; overflow: hidden; height: 14px; }
+    .bx-bar-fill { height: 14px; border-radius: 99px; background: linear-gradient(90deg, #4f46e5, #818cf8); transition: width 0.4s ease; }
+    .bx-bar-pct { font-weight: 600; color: var(--color-accent); min-width: 48px; text-align: right; }
+    .bx-section-head { font-size: 0.85rem; font-weight: 700; color: var(--color-text-muted); padding: 12px 10px 4px; text-transform: uppercase; letter-spacing: 0.06em; }
+
+    /* ── Difficulty pills ── */
+    .diff-easy   { color: #166534; background: #dcfce7; padding: 2px 8px; border-radius: 99px; font-size: 0.75rem; font-weight: 600; }
+    .diff-medium { color: #92400e; background: #fef3c7; padding: 2px 8px; border-radius: 99px; font-size: 0.75rem; font-weight: 600; }
+    .diff-hard   { color: #991b1b; background: #fee2e2; padding: 2px 8px; border-radius: 99px; font-size: 0.75rem; font-weight: 600; }
+
+    /* ── QA pairs table ── */
+    .bx-pairs-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+    .bx-pairs-table th { text-align: left; font-size: 0.75rem; font-weight: 600; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.05em; padding: 8px 10px; border-bottom: 2px solid var(--color-border); white-space: nowrap; }
+    .bx-pairs-table td { padding: 8px 10px; border-bottom: 1px solid var(--color-border); vertical-align: top; }
+    .bx-pairs-table tr.correct-yes td { border-left: 3px solid #22c55e; }
+    .bx-pairs-table tr.correct-no  td { border-left: 3px solid #ef4444; }
+    .bx-pairs-table tr:hover td { background: var(--color-surface); }
+    .bx-pairs-table .col-q { max-width: 260px; }
+    .bx-pairs-table .col-ans { max-width: 180px; word-break: break-word; }
+    .correct-badge-yes { color: #166534; font-weight: 700; }
+    .correct-badge-no  { color: #991b1b; font-weight: 700; }
+
+    /* ── Pagination ── */
+    .bx-pagination { display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 1.25rem; }
+    .bx-pagination button {
+      padding: 6px 14px;
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      background: #fff;
+      color: var(--color-text);
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: background 0.15s;
+    }
+    .bx-pagination button:hover { background: var(--color-surface); }
+    .bx-pagination button.active { background: var(--color-accent); color: #fff; border-color: var(--color-accent); }
+    .bx-pagination button:disabled { opacity: 0.4; cursor: default; }
+    .bx-pagination .bx-page-info { font-size: 0.85rem; color: var(--color-text-muted); }
+
+    /* ── Empty / loading states ── */
+    .bx-empty { text-align: center; padding: 3rem 1rem; color: var(--color-text-muted); font-size: 0.95rem; }
+    .bx-loading { text-align: center; padding: 2rem; color: var(--color-text-muted); }
+    .bx-error { background: #fee2e2; border: 1px solid #fca5a5; border-radius: 8px; padding: 1rem 1.25rem; color: #7f1d1d; font-size: 0.875rem; margin-bottom: 1rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <div class="bx-hero">
+    <a href="index.html" class="bx-back"><i class="fas fa-arrow-left"></i> Back to Project Page</a>
+    <div style="display:flex;align-items:center;justify-content:center;gap:0.6rem;margin:0.8rem 0 0.3rem">
+      <img src="fig/icon.png" alt="EgoNight" style="width:36px;height:36px;object-fit:contain;">
+      <h1 style="margin:0">EgoNight — Benchmark Explorer</h1>
+    </div>
+    <p>Interactive exploration of benchmark results. Use filters to drill down by model, split, dataset, difficulty, and QA type.</p>
+  </div>
+
+  <!-- Server config banner -->
+  <div class="bx-wrap">
+    <div id="server-banner">
+      <div style="flex:1">
+        <strong><i class="fas fa-server" style="margin-right:6px"></i>Flask server required.</strong>
+        Run <code>python evaluation/server.py --sofia_path data/Sofia_server --oxford_path data/Oxford_server --synthetic_path data/synthetic_server</code> then set the server URL below.
+        <div id="server-url-form">
+          <input type="text" id="server-url-input" placeholder="http://localhost:5000" value="">
+          <button onclick="setServerUrl()">Connect</button>
+        </div>
+      </div>
+      <button onclick="document.getElementById('server-banner').classList.add('hidden')" style="background:none;border:none;cursor:pointer;font-size:1.1rem;color:#664d03;padding:0">&#x2715;</button>
+    </div>
+
+    <!-- Filters -->
+    <div class="bx-filters">
+      <div class="bx-filter-group">
+        <label>Model</label>
+        <select id="f-model"></select>
+      </div>
+      <div class="bx-filter-group">
+        <label>Split</label>
+        <select id="f-split">
+          <option value="all">All (Day + Night)</option>
+          <option value="day">Day</option>
+          <option value="night">Night</option>
+        </select>
+      </div>
+      <div class="bx-filter-group">
+        <label>Dataset</label>
+        <select id="f-dataset">
+          <option value="all">All Datasets</option>
+          <option value="sofia">EgoNight-Sofia</option>
+          <option value="oxford">EgoNight-Oxford</option>
+          <option value="synthetic">EgoNight-Synthetic</option>
+        </select>
+      </div>
+      <div class="bx-filter-group">
+        <label>Difficulty</label>
+        <select id="f-difficulty">
+          <option value="all">All Difficulties</option>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+      <div class="bx-filter-group">
+        <label>QA Type</label>
+        <select id="f-qatype">
+          <option value="all">All Types</option>
+          <option value="Object Recognition">Object Recognition</option>
+          <option value="Spatial Reasoning">Spatial Reasoning</option>
+          <option value="Scene Sequence">Scene Sequence</option>
+          <option value="Non Common">Non Common</option>
+          <option value="Counting">Counting</option>
+          <option value="Navigation">Navigation</option>
+          <option value="Text Recognition">Text Recognition</option>
+          <option value="Action">Action</option>
+        </select>
+      </div>
+      <button class="bx-apply" onclick="applyFilters()"><i class="fas fa-filter" style="margin-right:6px"></i>Apply</button>
+    </div>
+
+    <!-- Tabs -->
+    <div class="bx-tabs">
+      <button class="bx-tab active" data-tab="summary" onclick="switchTab('summary', this)"><i class="fas fa-chart-bar" style="margin-right:6px"></i>Summary</button>
+      <button class="bx-tab" data-tab="pairs" onclick="switchTab('pairs', this)"><i class="fas fa-list" style="margin-right:6px"></i>QA Pairs</button>
+    </div>
+
+    <!-- Summary pane -->
+    <div id="pane-summary" class="bx-pane active">
+      <div id="summary-loading" class="bx-loading"><i class="fas fa-spinner fa-spin"></i> Loading...</div>
+      <div id="summary-error" class="bx-error" style="display:none"></div>
+      <div id="summary-content" style="display:none">
+        <!-- Overall stat cards -->
+        <div id="summary-stat-row" class="bx-stat-row"></div>
+        <!-- Per-QA-type bars -->
+        <div class="table-card" style="background:#fff;border:1px solid var(--color-border);border-radius:10px;padding:1.25rem;">
+          <table class="bx-bar-table" id="summary-bar-table">
+            <thead><tr>
+              <th>QA Type</th>
+              <th>Accuracy</th>
+              <th style="width:50%">Progress</th>
+              <th>Correct / Total</th>
+            </tr></thead>
+            <tbody id="summary-bar-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div id="pane-pairs" class="bx-pane">
+      <div id="pairs-loading" class="bx-loading"><i class="fas fa-spinner fa-spin"></i> Loading...</div>
+      <div id="pairs-error" class="bx-error" style="display:none"></div>
+      <div id="pairs-content" style="display:none">
+        <div style="overflow-x:auto">
+          <table class="bx-pairs-table">
+            <thead><tr>
+              <th>Dataset</th><th>Scene</th><th>Split</th><th>Difficulty</th><th>QA Type</th>
+              <th class="col-q">Question</th><th class="col-ans">Ground Truth</th><th class="col-ans">Prediction</th>
+              <th>Score</th><th>Correct</th>
+            </tr></thead>
+            <tbody id="pairs-body"></tbody>
+          </table>
+        </div>
+        <div class="bx-pagination" id="pairs-pagination"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var SERVER_URL = localStorage.getItem('bx_server_url') || 'http://localhost:5000';
+    var currentPage = 1;
+    var totalPages = 1;
+
+    (function init() {
+      var saved = localStorage.getItem('bx_server_url');
+      if (saved) {
+        document.getElementById('server-url-input').value = saved;
+      }
+      fetchModels();
+    })();
+
+    function setServerUrl() {
+      var v = document.getElementById('server-url-input').value.trim().replace(/\/$/, '');
+      if (v) { SERVER_URL = v; localStorage.setItem('bx_server_url', v); }
+      applyFilters();
+    }
+
+    function api(path) {
+      return SERVER_URL + path;
+    }
+
+    function fetchModels() {
+      fetch(api('/api/models'))
+        .then(function(r){ return r.json(); })
+        .then(function(d){
+          var sel = document.getElementById('f-model');
+          sel.innerHTML = '';
+          (d.models || []).forEach(function(m){
+            var o = document.createElement('option');
+            o.value = m; o.textContent = m;
+            sel.appendChild(o);
+          });
+          if (d.default) sel.value = d.default;
+          applyFilters();
+        })
+        .catch(function(){ applyFilters(); });
+    }
+
+    function getFilters() {
+      return {
+        model:      document.getElementById('f-model').value,
+        split:      document.getElementById('f-split').value,
+        dataset:    document.getElementById('f-dataset').value,
+        difficulty: document.getElementById('f-difficulty').value,
+        qatype:     document.getElementById('f-qatype').value
+      };
+    }
+
+    function qs(params) {
+      return '?' + Object.keys(params).map(function(k){ return encodeURIComponent(k)+'='+encodeURIComponent(params[k]); }).join('&');
+    }
+
+    function applyFilters() {
+      currentPage = 1;
+      fetchSummary();
+      fetchPairs(1);
+    }
+
+    function switchTab(tab, btn) {
+      document.querySelectorAll('.bx-tab').forEach(function(b){ b.classList.remove('active'); });
+      document.querySelectorAll('.bx-pane').forEach(function(p){ p.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById('pane-' + tab).classList.add('active');
+    }
+
+    function fetchSummary() {
+      var f = getFilters();
+      showLoading('summary');
+      fetch(api('/api/summary' + qs(f)))
+        .then(function(r){ if(!r.ok) throw new Error(r.statusText); return r.json(); })
+        .then(function(d){ renderSummary(d); })
+        .catch(function(e){ showError('summary', 'Could not connect to server: ' + e.message + '. Check the server URL above.'); });
+    }
+
+    function fetchPairs(page) {
+      var f = getFilters();
+      f.page = page || currentPage;
+      f.per_page = 25;
+      showLoading('pairs');
+      fetch(api('/api/pairs' + qs(f)))
+        .then(function(r){ if(!r.ok) throw new Error(r.statusText); return r.json(); })
+        .then(function(d){ renderPairs(d); })
+        .catch(function(e){ showError('pairs', 'Could not connect to server: ' + e.message + '. Check the server URL above.'); });
+    }
+
+    function showLoading(pane) {
+      document.getElementById(pane+'-loading').style.display = 'block';
+      document.getElementById(pane+'-error').style.display = 'none';
+      document.getElementById(pane+'-content').style.display = 'none';
+    }
+
+    function showError(pane, msg) {
+      document.getElementById(pane+'-loading').style.display = 'none';
+      document.getElementById(pane+'-error').style.display = 'block';
+      document.getElementById(pane+'-error').textContent = msg;
+      document.getElementById(pane+'-content').style.display = 'none';
+    }
+
+    function showContent(pane) {
+      document.getElementById(pane+'-loading').style.display = 'none';
+      document.getElementById(pane+'-error').style.display = 'none';
+      document.getElementById(pane+'-content').style.display = 'block';
+    }
+
+    function diffPill(d) {
+      var cls = {easy:'diff-easy', medium:'diff-medium', hard:'diff-hard'}[d] || '';
+      return '<span class="'+cls+'">'+(d||'-')+'</span>';
+    }
+
+    function pct(v) { return typeof v === 'number' ? (v*100).toFixed(1)+'%' : '-'; }
+
+    function renderSummary(data) {
+      var overall = data.overall || {};
+      var byDiff  = data.by_difficulty || {};
+      var statRow = document.getElementById('summary-stat-row');
+      statRow.innerHTML = '';
+
+      function makeCard(label, val, sub) {
+        var acc = typeof val === 'number' ? (val*100).toFixed(1)+'%' : '-';
+        return '<div class="bx-stat-card"><div class="bx-stat-label">'+label+'</div><div class="bx-stat-val">'+acc+'</div>'+(sub?'<div class="bx-stat-sub">'+sub+'</div>':'')+'</div>';
+      }
+
+      var ov = overall['OVERALL'] || {};
+      statRow.innerHTML += makeCard('Overall', ov.accuracy, (ov.correct||0)+' / '+(ov.total||0)+' correct');
+      ['easy','medium','hard'].forEach(function(lvl){
+        var d = (byDiff[lvl] || {})['OVERALL'] || {};
+        statRow.innerHTML += makeCard(lvl.charAt(0).toUpperCase()+lvl.slice(1), d.accuracy, (d.correct||0)+' / '+(d.total||0)+' correct');
+      });
+
+      var tbody = document.getElementById('summary-bar-body');
+      tbody.innerHTML = '';
+      var types = Object.keys(overall).filter(function(k){ return k !== 'OVERALL'; });
+      types.sort();
+      types.forEach(function(t){
+        var row = overall[t] || {};
+        var fillPct = typeof row.accuracy === 'number' ? (row.accuracy*100).toFixed(1) : 0;
+        tbody.innerHTML += '<tr>'
+          + '<td style="font-weight:500">'+t+'</td>'
+          + '<td class="bx-bar-pct">'+fillPct+'%</td>'
+          + '<td><div class="bx-bar-wrap"><div class="bx-bar-fill" style="width:'+fillPct+'%"></div></div></td>'
+          + '<td style="color:var(--color-text-muted)">'+((row.correct||0)+' / '+(row.total||0))+'</td>'
+          + '</tr>';
+      });
+
+      showContent('summary');
+    }
+
+    function renderPairs(data) {
+      var pairs = data.pairs || [];
+      totalPages = data.pages || 1;
+      currentPage = data.page || 1;
+      var tbody = document.getElementById('pairs-body');
+      tbody.innerHTML = '';
+      if (!pairs.length) {
+        tbody.innerHTML = '<tr><td colspan="10" style="text-align:center;color:var(--color-text-muted);padding:2rem">No results found.</td></tr>';
+      } else {
+        pairs.forEach(function(p){
+          var isCorrect = p.correct === true || p.correct === 'correct';
+          tbody.innerHTML += '<tr class="'+(isCorrect?'correct-yes':'correct-no')+'">'
+            + '<td>'+escHtml(p.dataset||'-')+'</td>'
+            + '<td style="white-space:nowrap">'+escHtml(p.scene||'-')+'</td>'
+            + '<td style="white-space:nowrap">'+escHtml(p.split||'-')+'</td>'
+            + '<td>'+diffPill(p.difficulty)+'</td>'
+            + '<td style="white-space:nowrap">'+escHtml(p.qa_type||'-')+'</td>'
+            + '<td class="col-q">'+escHtml(p.question||'-')+'</td>'
+            + '<td class="col-ans">'+escHtml(p.ground_truth||'-')+'</td>'
+            + '<td class="col-ans">'+escHtml(p.prediction||'-')+'</td>'
+            + '<td style="text-align:center">'+((p.score!=null)?Number(p.score).toFixed(1):'-')+'</td>'
+            + '<td class="'+(isCorrect?'correct-badge-yes':'correct-badge-no')+'">'+(isCorrect?'Yes':'No')+'</td>'
+            + '</tr>';
+        });
+      }
+      renderPagination();
+      showContent('pairs');
+    }
+
+    function renderPagination() {
+      var pg = document.getElementById('pairs-pagination');
+      pg.innerHTML = '';
+      if (totalPages <= 1) return;
+      function mkBtn(label, page, disabled, active) {
+        var b = document.createElement('button');
+        b.innerHTML = label;
+        if (disabled) b.disabled = true;
+        if (active) b.classList.add('active');
+        b.onclick = function(){ fetchPairs(page); };
+        return b;
+      }
+      pg.appendChild(mkBtn('&laquo;', 1, currentPage===1, false));
+      pg.appendChild(mkBtn('&lsaquo;', currentPage-1, currentPage===1, false));
+      var start = Math.max(1, currentPage-2);
+      var end   = Math.min(totalPages, currentPage+2);
+      for (var i=start; i<=end; i++) { pg.appendChild(mkBtn(i, i, false, i===currentPage)); }
+      pg.appendChild(mkBtn('&rsaquo;', currentPage+1, currentPage===totalPages, false));
+      pg.appendChild(mkBtn('&raquo;', totalPages, currentPage===totalPages, false));
+      var info = document.createElement('span');
+      info.className = 'bx-page-info';
+      info.textContent = 'Page '+currentPage+' of '+totalPages;
+      pg.appendChild(info);
+    }
+
+    function escHtml(s) {
+      return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+  </script>
+</body>
+</html>
