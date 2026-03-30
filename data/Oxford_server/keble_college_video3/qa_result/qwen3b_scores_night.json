@@ -1,0 +1,992 @@
+[
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer '2' does not match the ground truth answer '3'. In counting tasks, the exact number is crucial. However, the prediction is close, hence a score of 2 is given."
+    },
+    {
+      "Q": "How many times can you spot a railing in the video?  ",
+      "A": "2",
+      "C": "Based on the video sequence, a railing is spotted 3 times in the video.",
+      "M": "Counting ",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer is \"2\", which matches the ground truth answer indicating there are two separate staircases visible throughout the video. Therefore, the prediction is fully correct."
+    },
+    {
+      "Q": "How many separate staircases are visible throughout the video?  ",
+      "A": "2",
+      "C": "Based on the video sequence, I can see two separate staircases throughout the video.",
+      "M": "Counting ",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is 1, while the ground truth is 4. The predicted number of doorways does not fall within the range of the ground truth number (since it is a specific number and not a range), therefore the prediction is fully incorrect."
+    },
+    {
+      "Q": "How many doorways are visible from the start of the video until the end? ",
+      "A": "1",
+      "C": "Based on the video sequence, 4 doorways are visible from the start to the end of the video.",
+      "M": "Counting ",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer claims there are no repeated patterns, while the ground-truth states there is one pattern on the walls and one on the floor. This directly contradicts the ground-truth, making the prediction fully incorrect."
+    },
+    {
+      "Q": "Are there any repeated patterns on the floors or walls? If so, how many distinct patterns can you count?  ",
+      "A": "No, there are no repeated patterns on the floors or walls.",
+      "C": "Based on the video sequence, there is one distinct repeated pattern on the walls and one on the floor.",
+      "M": "Counting ",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted number of lit street lamps is 1, which does not fall within the range of 5-7 as specified in the ground truth answer. Therefore, the prediction is incorrect, and the score is fully wrong."
+    },
+    {
+      "Q": "Count the number of lit street lamps outside the building.  ",
+      "A": "1",
+      "C": "Based on the video sequence, there are 5-7 lit street lamps outside the building.",
+      "M": "Counting ",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that two buildings are visible, while the ground truth states that four buildings are visible. The prediction does not fall within the range of the ground truth answer, making it incorrect."
+    },
+    {
+      "Q": "How many buildings are visible once you are outside?  ",
+      "A": "Two buildings are visible once you are outside.",
+      "C": "Based on the video sequence, 4 buildings are visible once outside.",
+      "M": "Counting ",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground truth answer in meaning and accurately confirms that the interior lights increased in brightness as the subject moved closer to the doorway. The minor omission at the end does not impact the correctness of the prediction with respect to the ground truth."
+    },
+    {
+      "Q": "Did the interior lights increase in brightness as I moved closer to the doorway?  ",
+      "A": "Yes, the interior lights increased in brightness as you moved closer to the doorway.",
+      "C": "Yes, the interior lights increased in brightness as you moved closer to the doorway, making the area more visible.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer identifies 3 arched doorways in total, with 1 inside and 2 outside, whereas the ground truth specifies 4 arched doorways both inside and outside. The prediction is partially correct since it counts 3 arched doorways, but it does not fully match the total count of 4 given in the ground truth."
+    },
+    {
+      "Q": "How many arched doorways do you encounter inside and outside the building in the video?  ",
+      "A": "Inside the building, there is one arched doorway, and outside the building, there are two arched doorways.",
+      "C": "Based on the video sequence, I encounter 4 arched doorways both inside and outside.",
+      "M": "Counting ",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies the contrast between the ambient light from the streetlights and the dawn sky, which aligns with the ground truth. The use of \"deep blue dawn sky\" in the predicted answer still effectively conveys the idea of the dawn sky being a different source of light, thereby creating contrast as described in the ground truth."
+    },
+    {
+      "Q": "As I stepped outside, did the ambient light from the streetlights contrast with the dawn sky?  ",
+      "A": "Yes, the ambient light from the streetlights contrasted with the deep blue dawn sky.",
+      "C": "As you stepped outside, the ambient light from the streetlights provided a gentle contrast with the dawn sky, highlighting both sources of light.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer 'yes' captures the general sentiment of the ground truth but lacks specifics. The ground truth answer provides detail about the light becoming more prominent and illuminating the surroundings. The predicted answer is partially correct since it affirms the prominence of the warm light but does not address the additional contextual details."
+    },
+    {
+      "Q": "When I reached the doorway, did the warm light from the entrance become more prominent?  ",
+      "A": "yes",
+      "C": "When you reached the doorway, the warm light from the entrance became more prominent, illuminating the immediate surroundings.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer directly contradicts the ground truth answer. The ground truth states that the sky became lighter, indicating the progression of dawn, while the prediction says the opposite. Therefore, the prediction is fully incorrect."
+    },
+    {
+      "Q": "Is the sky getting lighter as I continue moving outdoors, indicating the progression of dawn?  ",
+      "A": "No, the sky is not getting lighter as you continue moving outdoors, indicating the progression of dawn.",
+      "C": "The sky became lighter as you continued moving outdoors, indicating the progression of dawn.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'No' contradicts the ground truth, which states that the buildings' appearance became clearer and more details were visible. Therefore, the prediction is fully incorrect."
+    },
+    {
+      "Q": "Did the appearance of the buildings become clearer as the outdoor light changed?  ",
+      "A": "No",
+      "C": "The appearance of the buildings became clearer as the outdoor light changed, with more details visible against the lighter sky.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that additional light sources were noticed turning on during the transition, which directly contradicts the ground truth answer that no additional light sources were observed turning on or off. Therefore, the prediction is incorrect."
+    },
+    {
+      "Q": "During my transition from inside to outside, did I notice any additional light sources turning on or off?  ",
+      "A": "Yes, I noticed some additional light sources turning on during your transition from inside to outside.",
+      "C": "No additional light sources were observed turning on or off during your transition from inside to outside.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the light transition was abrupt, which directly contradicts the ground truth answer that describes the light transition as even and gradual. Therefore, the prediction is incorrect."
+    },
+    {
+      "Q": "As I moved through the doorway, did I feel like the light transitioned evenly or abruptly?  ",
+      "A": "The light transitioned abruptly.",
+      "C": "As you moved through the doorway, the transition of light felt even and gradual, allowing for a smooth adjustment from interior to exterior lighting.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer claims that dawn minimized the shadows, whereas the ground truth states that the streetlights cast distinct shadows, although they were somewhat softened by the dawn. The predicted answer partially captures the effect of dawn but misses the existence of distinct shadows, warranting a partial score."
+    },
+    {
+      "Q": "Did the streetlights cast distinct shadows or did light from the dawn minimize them?  ",
+      "A": "Light from the dawn minimized the shadows cast by the streetlights.",
+      "C": "The streetlights cast distinct shadows, though they were somewhat softened by the increasing light from the dawn.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer suggests the ambient light source is coming from the upper right side, while the ground truth specifies it's coming from above. Although both directions involve 'above', the predicted direction is more specific and somewhat deviates from the generic 'above' direction, indicating a partial correctness."
+    },
+    {
+      "Q": "What is the primary direction of the ambient light source in the video frames?",
+      "A": "The primary direction of the ambient light source in the video frames appears to be coming from the upper right side.",
+      "C": "The ambient light source in the video frames is primarily coming from the above.",
+      "M": "Light Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer exactly matches the ground-truth answer, indicating that the prediction is fully correct."
+    },
+    {
+      "Q": "What is the primary color of the light source illuminating the hallway?",
+      "A": "The primary color of the light source illuminating the hallway is yellow.",
+      "C": "The primary color of the light source illuminating the hallway is yellow.",
+      "M": "Light Recognition",
+      "start_idx": 6,
+      "end_idx": 8
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states the shape as 'rectangular', while the ground truth answer states it as 'square'. These shapes are distinct and different, making the prediction incorrect."
+    },
+    {
+      "Q": "What is the shape of the main overhead light source in the passageway?",
+      "A": "The shape of the main overhead light source in the passageway is rectangular.",
+      "C": "The shape of the main overhead light source in the passageway is square.",
+      "M": "Light Recognition",
+      "start_idx": 12,
+      "end_idx": 14
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the shadow appears longer as the person progresses towards the light source, which is the opposite of the ground truth answer. According to the ground truth, the shadow should appear shorter as the person gets closer to the light source, making the predicted answer completely incorrect."
+    },
+    {
+      "Q": "As the person ahead of you progresses towards the light source on the left, does their shadow appear longer or shorter, the closer they are to the lamp?",
+      "A": "The shadow appears longer as the person progresses towards the light source on the left.",
+      "C": "As the person ahead progresses towards the light source on the left, their shadow appears to get shorter.",
+      "M": "Light Recognition",
+      "start_idx": 36,
+      "end_idx": 38
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer states there are three streetlights visible, while the ground truth answer states there are four streetlights. The prediction is close but not fully correct, as it undercounts the streetlights by one."
+    },
+    {
+      "Q": "How many streetlights are visible in the scene, providing light along the pathway and courtyard area?",
+      "A": "There are three streetlights visible in the scene, providing light along the pathway and courtyard area.",
+      "C": "There are 4 streetlights visible along the pathway and courtyard area.",
+      "M": "Light Recognition",
+      "start_idx": 42,
+      "end_idx": 44
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer incorrectly instructs turning left at an archway, whereas the ground truth answer specifically mentions walking straight until reaching the stairs and then exiting the building to find the courtyard. The directions given in the predicted answer do not align with the steps required to reach the courtyard as described in the ground truth answer."
+    },
+    {
+      "Q": "How do I reach the courtyard from the starting point in the hallway?  ",
+      "A": "Walk straight ahead in the hallway and turn left when you reach the archway.",
+      "C": "Walk straight down the hallway until you reach the stairs, then exit the building to find the courtyard.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer suggests turning right, which contradicts the ground truth answer of going straight and then left. Thus, the prediction is fully incorrect."
+    },
+    {
+      "Q": "Once I reach the bottom of the stairs, which direction should I turn to continue?  ",
+      "A": "You should turn right to continue.",
+      "C": "After reaching the bottom of the stairs, keep going straight and then left.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer is partially correct as it suggests to \u2018Continue walking straight ahead,\u2019 which aligns with the initial action described in the ground truth. However, the predicted answer lacks the additional detail about following the buildings on the left as a guide, which is a significant part of the ground truth answer. Hence, the prediction captures part of the correct action but misses critical navigation details."
+    },
+    {
+      "Q": "After exiting the archway, what should I do next to navigate across the courtyard?  ",
+      "A": "Continue walking straight ahead.",
+      "C": "Continue walking straight across the courtyard, following the buildings on your left as a guide.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer suggests turning right at the bottom of the staircase, whereas the ground truth instructs to continue straight through the archway. The directions given in the prediction differ completely from the ground-truth answer."
+    },
+    {
+      "Q": "How do I determine where to turn after reaching the bottom of the staircase?  ",
+      "A": "You need to turn right after reaching the bottom of the staircase.",
+      "C": "After reaching the bottom, continue straight through the archway.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer suggests using a 'lighted entrance' as a guide, which differs from the ground truth answer that recommends using 'the buildings on either side' for guidance. Although both answers suggest different focal points for maintaining a straight path, the predicted answer does not align with the specific guidance provided in the ground truth."
+    },
+    {
+      "Q": "As I move across the courtyard, what should I look for to ensure I keep a straight path?  ",
+      "A": "As you move across the courtyard, you should look for the lighted entrance to ensure you keep a straight path.",
+      "C": "Use the buildings on either side as a guide to maintain a straight path.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies that the pattern formed by the bricks on the walls is a striped pattern. However, it lacks the additional detail provided in the ground-truth answer regarding the horizontal orientation and the alternation between darker and lighter bands. This makes the prediction mostly correct but missing some specific details."
+    },
+    {
+      "Q": "What pattern is created by the bricks on the walls?  ",
+      "A": "The bricks on the walls form a striped pattern.",
+      "C": "The bricks on the walls create a horizontal striped pattern, alternating between darker and lighter bands.",
+      "M": "Object Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies the railing as being made of metal, which aligns with the ground truth answer. However, it lacks the specific details (iron or steel) mentioned in the ground truth, which slightly reduces its accuracy."
+    },
+    {
+      "Q": "What material is the railing made of?  ",
+      "A": "The railing is made of metal.",
+      "C": "The railing in the video appears to be made of metal, likely iron or steel, based on its design and structure.",
+      "M": "Object Recognition",
+      "start_idx": 6,
+      "end_idx": 8
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer captures some details of tiles being arranged in a pattern and uses terms like 'grid', similar to the ground truth. However, it inaccurately describes the tile colors as shades of red and beige, missing the green, black, and yellow colors mentioned in the ground truth. Moreover, it does not specify the arrangement details, such as red squares bordered by green and black tiles, nor does it mention the yellow tiles at regular intervals. The prediction is missing these key color and arrangement details, so it does not accurately reflect the ground truth."
+    },
+    {
+      "Q": "What are the colors and arrangement of the tiles on the floor?  ",
+      "A": "The floor features a pattern of square tiles arranged in a grid. The tiles are primarily in shades of red and beige, with some areas containing darker, possibly black or dark brown tiles. The overall arrangement creates a visually appealing and somewhat patterned surface.",
+      "C": "The tiles on the floor are primarily arranged in a pattern of larger red squares, each bordered by smaller green and black tiles. Within the borders, there are yellow square tiles positioned at regular intervals, creating a grid-like appearance across the floor.",
+      "M": "Object Recognition",
+      "start_idx": 12,
+      "end_idx": 14
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer mentions 'steeply pitched roofs', which is not specific enough compared to the ground truth that specifies 'gable-style roofs with chimneys'. While a steeply pitched roof could describe a gable roof, the predicted answer lacks specificity and does not mention chimneys, which are part of the ground truth."
+    },
+    {
+      "Q": "What type of roofs do the buildings have?  ",
+      "A": "The buildings in the image have steeply pitched roofs.",
+      "C": "The buildings appear to have gable-style roofs with chimneys.",
+      "M": "Object Recognition",
+      "start_idx": 24,
+      "end_idx": 26
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer states three chimneys, whereas the ground truth answer states there are four chimneys visible. Since the predicted number does not match the ground truth and does not fall within a range of permitted answers that includes the ground truth (in this instance, only four is correct without explicit range), the prediction is incorrect. However, the prediction is reasonably close to the correct answer, so it receives a middle score."
+    },
+    {
+      "Q": "How many chimneys are visible in the silhouetted view of the buildings?  ",
+      "A": "Three chimneys are visible in the silhouetted view of the buildings.",
+      "C": "There are four chimneys visible in the silhouetted view of the buildings.",
+      "M": "Object Recognition",
+      "start_idx": 30,
+      "end_idx": 32
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer mentions 'light shining through the windows' as the distinguishing feature, while the ground truth answer focuses on the silhouettes and their visibility against the night sky. The predicted feature doesn't match the ground truth, which emphasizes the contrast with the dimly lit background rather than light from windows."
+    },
+    {
+      "Q": "What feature distinguishes some of the buildings against the night sky?  ",
+      "A": "The feature that distinguishes some of the buildings against the night sky is the light shining through the windows.",
+      "C": "The silhouettes of the buildings are distinctly visible against the night sky, which provides a dark outline that contrasts with the dimly lit background.",
+      "M": "Object Recognition",
+      "start_idx": 36,
+      "end_idx": 38
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground truth answer exactly, both stating that the building's arched entrance is primarily constructed from stone."
+    },
+    {
+      "Q": "What material is the building's arched entrance primarily constructed from?  ",
+      "A": "The building's arched entrance is primarily constructed from stone.",
+      "C": "The building's arched entrance is primarily constructed from stone.",
+      "M": "Object Recognition",
+      "start_idx": 42,
+      "end_idx": 44
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer describes a setting that is significantly different from the ground-truth description. The ground truth mentions a room with brick walls and a plain floor, while the prediction describes a dimly lit area with a view of the exterior and no mention of brick walls or flooring. These differences indicate that the predicted answer does not match the ground-truth setting, leading to a score of 0."
+    },
+    {
+      "Q": "What is the initial setting of the sequence before reaching the stairs?  ",
+      "A": "The initial setting of the sequence before reaching the stairs is a dark, dimly lit area with a view of a building's exterior through an arched entrance. The surroundings are mostly obscured due to the low lighting, but the building appears to be illuminated by a few lights, giving it a silhouette against the night sky. The atmosphere suggests a quiet, possibly early evening or nighttime setting.",
+      "C": "The initial setting shows a room with brick walls featuring horizontal stripes and a plain floor.  ",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer focuses on a transition related to lighting and visibility from shadows to an illuminated area, which is not addressed in the ground truth answer. The ground truth specifically describes a transition involving descending steps, a visible handrail, and a balustrade, which are not mentioned in the predicted answer. There may be some overlap in describing a transition, but the details provided do not match the key elements of the ground truth answer."
+    },
+    {
+      "Q": "Describe the transition seen at the staircase.  ",
+      "A": "The transition seen at the staircase is from a dark, shadowy area to a more illuminated space. Initially, the area is very dark, making it difficult to discern details. As the camera moves forward, the light gradually becomes more prominent, revealing the architectural features of the building and the patterned ground. The transition is smooth, moving from the shadows to the illuminated area, providing a clear and defined path through the darkened space.",
+      "C": "As I approach the staircase, I begin descending steps with a handrail visible on the side and a detailed balustrade above.  ",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies the archway but does not mention the patterned floor tiles and brick wall design that are also mentioned in the ground truth answer. Instead, it inaccurately describes illuminated windows, which are not part of the ground truth answer."
+    },
+    {
+      "Q": "After the staircase, what key architectural features become visible?  ",
+      "A": "The archway and the illuminated windows of the building become visible after the staircase.",
+      "C": "After descending the stairs, an archway and patterned floor tiles become visible, along with more of the brick wall design.  ",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the key feature mentioned in the ground-truth answer, which is moving through an archway. Both answers highlight the concept of passing through an archway as the distinct path, making the prediction fully correct."
+    },
+    {
+      "Q": "What distinct path is taken to transition from the interior to the exterior courtyard?  ",
+      "A": "The distinct path taken to transition from the interior to the exterior courtyard involves moving through an archway or entrance.",
+      "C": "I walk through an arched passageway leading outside to the courtyard.  ",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the transition in flooring pattern from a patterned surface to a plain surface, which aligns with the ground truth answer. It provides additional context about the potential materials and setting, but these do not contradict the ground truth description."
+    },
+    {
+      "Q": "Can you explain the change in flooring pattern observed during the transition outside?  ",
+      "A": "The change in flooring pattern observed during the transition outside is from a patterned surface to a plain surface. The patterned surface is likely a mosaic or tiled floor, which is visible in the initial frames. As the video progresses, the camera moves to a different location, and the flooring transitions to a plain surface, which could be a smooth or solid material, such as concrete or a polished stone floor. This transition suggests a change in the environment or setting, possibly moving from an outdoor area with decorative flooring to a more utilitarian or less ornate surface.",
+      "C": "The flooring changes from patterned tiles to a simpler, flat surface as I move into the courtyard.  ",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer mentions an 'archway illuminated by a lamp' and a 'dark environment with faint lights,' which only partially aligns with the ground truth. While both the predictions and the ground truth describe a view through an archway, the predicted answer does not explicitly mention 'buildings with illuminated windows and a courtyard space,' as stated in the ground truth. The overall scene structure somewhat shares the night-time setting, hence a score of 2 is given, acknowledging partial correctness due to the mention of lights in the environment."
+    },
+    {
+      "Q": "What do you see through the archway as you exit the building?  ",
+      "A": "The image shows a view through an archway as you exit a building at night. The archway is illuminated by a lamp, and beyond it, there is a dark, possibly urban environment with some faint lights visible in the distance. The overall scene is dark, with the only sources of light being the lamp in the archway and the distant lights.",
+      "C": "Through the archway, buildings with illuminated windows and a courtyard space are visible.  ",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer describes the transition to an open and illuminated courtyard, which aligns partially with the ground truth about the view opening up to include buildings around an open space. However, it adds details about lighting and specific elements like a paved courtyard, warm artificial light, and structures, none of which are specifically mentioned in the ground truth. The core element of transitioning to a more open area with surrounding buildings is captured, but additional details and interpretations compromise the precision. Hence, it is marked incorrect with a moderate score."
+    },
+    {
+      "Q": "How does the scene change once you reach the courtyard?  ",
+      "A": "The scene transitions from a dimly lit corridor to a well-lit courtyard. The transition is marked by a significant increase in lighting and a change in the environment from enclosed and shadowy to open and illuminated. The courtyard is bathed in warm, artificial light, contrasting sharply with the previous darkness. The courtyard is likely paved and open, with a building or structure visible in the background, possibly a main building or a historical site. The change in lighting and environment suggests a move from an indoor to an outdoor setting, likely providing a clearer view of the surroundings and possibly revealing more details about the location.",
+      "C": "Upon reaching the courtyard, the view opens up to include several buildings surrounding an open space.  ",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer contains partial correctness. It accurately mentions the buildings with lit windows, which matches the ground truth. However, it incorrectly or vaguely describes the setting as 'a dimly lit outdoor area, possibly a courtyard or park,' without specifically acknowledging the 'wide-open courtyard space' stated in the ground truth. The mention of nighttime and the overall scene being dark with minimal activity, while not incorrect, is additional information not present or required in the ground truth."
+    },
+    {
+      "Q": "What are the key features visible in the final setting of the video?  ",
+      "A": "The key features visible in the final setting of the video are:\n\n1. A dimly lit outdoor area, possibly a courtyard or a park, with a building in the background.\n2. The sky is dark, indicating it is nighttime.\n3. The building in the background has lit windows, suggesting it is inhabited or used.\n4. The overall scene is dark and quiet, with minimal visible movement or activity.",
+      "C": "The final setting includes distant buildings with several windows lit and a wide-open courtyard space.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer \"The stripes on the walls are perpendicular to the steps\" effectively conveys the same spatial relationship as the ground truth answer. Perpendicularity of the stripes with the vertical steps implies horizontal orientation relative to them, matching the ground-truth information."
+    },
+    {
+      "Q": "What are the orientations of the stripes on the walls relative to the steps?",
+      "A": "The stripes on the walls are perpendicular to the steps.",
+      "C": "The stripes on the walls are oriented horizontally relative to the steps, which run vertically.",
+      "M": "Spatial Reasoning",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies an archway beneath the railing leading to a brightly lit area, which aligns partially with the ground truth. However, it fails to mention the staircase leading down to the archway and corridor. As such, while some elements are correct, it misses key details about the staircase present in the ground truth answer."
+    },
+    {
+      "Q": "Based on your position, what is directly beneath the railing?",
+      "A": "The image set shows a dark, possibly indoor scene with a balcony or platform at the top. Directly beneath the railing, there is a doorway or archway that appears to lead to a brightly lit area. The lighting creates a stark contrast between the illuminated space and the surrounding darkness.",
+      "C": "Based on my position behind the camera in the video, directly beneath the railing is a staircase leading down to an archway and a corridor.",
+      "M": "Spatial Reasoning",
+      "start_idx": 6,
+      "end_idx": 8
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer incorrectly states that you encounter a building with lit windows immediately outside, while the ground truth states that you encounter an open outdoor area with buildings visible in the distance. The presence of buildings is a commonality, but the specifics differ significantly, resulting in a low score."
+    },
+    {
+      "Q": "If I pass through the archway, what do I encounter immediately outside?",
+      "A": "You encounter a building with lit windows immediately outside.",
+      "C": "As you pass through the archway, you immediately encounter an open outdoor area with buildings visible in the distance.",
+      "M": "Spatial Reasoning",
+      "start_idx": 12,
+      "end_idx": 14
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer \"A door\" does not match the ground truth answer that describes a section of the building wall with several vertical rows of windows located between the windows with light. The prediction is fully incorrect compared to the ground truth."
+    },
+    {
+      "Q": "What is located between the leftmost window with light and the middle window with light?",
+      "A": "A door",
+      "C": "Between the leftmost window with light and the middle window with light, there is a section of the building wall with several vertical rows of windows.",
+      "M": "Spatial Reasoning",
+      "start_idx": 18,
+      "end_idx": 20
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer states that the nearest streetlight is directly beneath the window, while the ground-truth specifies it is slightly to the right. Although the predicted answer captures the general position, it misses the nuance of the slight rightward alignment. Thus, it is partially correct."
+    },
+    {
+      "Q": "What is the relative position of the nearest streetlight to the window above it?",
+      "A": "The relative position of the nearest streetlight to the window above it is directly beneath it.",
+      "C": "The nearest streetlight is positioned approximately below and slightly to the right of the illuminated window above it.",
+      "M": "Spatial Reasoning",
+      "start_idx": 30,
+      "end_idx": 32
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer focuses on the lateral positioning of the left building relative to the lamp post, stating that it is to the left, while the ground truth emphasizes the proximity and attachment of the lamp post to the building, in front or attached to the facade. Therefore, the predicted answer only partially aligns with the ground-truth answer."
+    },
+    {
+      "Q": "What is the spatial relationship between the left building and the lamp post?",
+      "A": "The left building is to the left of the lamp post.",
+      "C": "The lamp post is positioned in front of the left building, attached to it or in close proximity along the building\u2019s facade. ",
+      "M": "Spatial Reasoning",
+      "start_idx": 36,
+      "end_idx": 38
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there is a light fixture above the entrance archway, which is different from the ground truth answer that specifies a window is present. This indicates a discrepancy in identified features, leading to a fully wrong prediction."
+    },
+    {
+      "Q": "What building feature is directly above the entrance archway?",
+      "A": "The building feature directly above the entrance archway is a light fixture.",
+      "C": "Above the entrance archway, there is a window.",
+      "M": "Spatial Reasoning",
+      "start_idx": 42,
+      "end_idx": 44
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer specifies an inscription 'AD 1323,' while the ground truth states that there is no identifiable text on the building's entrance in the video. Therefore, the predictions contradict the ground truth, making it fully incorrect."
+    },
+    {
+      "Q": "What specific text can you identify on the building's entrance in this video?  ",
+      "A": "The specific text that can be identified on the building's entrance in this video is:\n\nThe inscription reads: \"AD 1323\"",
+      "C": "There is no identifiable text on the building's entrance in this video.",
+      "M": "Text Recognition ",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer '0' indicates that the word 'EXIT' does not appear in the video, which aligns with the ground truth answer stating that the word 'EXIT' doesn't seem to appear throughout the video."
+    },
+    {
+      "Q": "How many times does the word \"EXIT\" appear throughout the video?  ",
+      "A": "0",
+      "C": "The word \"EXIT\" doesn\u2019t seem to appear throughout the video.",
+      "M": "Text Recognition ",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'No' aligns with the ground truth, which states that there seems to be no text indicating the name or number of the building. Both convey the same meaning that there is no relevant text found."
+    },
+    {
+      "Q": "Can you find any text indicating the name or number of the building?  ",
+      "A": "No",
+      "C": "There seems to be not text indicating the name or number of the building.",
+      "M": "Text Recognition ",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately mirrors the ground truth answer, asserting that no text suggests the area is restricted or requires authorization for entry. Both the meaning and specifics align perfectly."
+    },
+    {
+      "Q": "Is there any text that suggests this area is restricted or requires authorization for entry?  ",
+      "A": "No, there is no text in the image that suggests this area is restricted or requires authorization for entry.",
+      "C": "No text that suggests this area is restricted or requires authorization for entry is visible.",
+      "M": "Text Recognition ",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately matches the ground truth answer. Both indicate that no specific information about operating hours or schedules is visible in the video."
+    },
+    {
+      "Q": "What information about operating hours or schedules is visible in the video?  ",
+      "A": "No specific operating hours or schedules are visible in the video.",
+      "C": "No information about operating hours or schedules is visible in the video.",
+      "M": "Text Recognition ",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer is correct as it accurately matches the ground-truth answer. Both answers state that there are no text-based clues indicating which department or faculty is located there."
+    },
+    {
+      "Q": "Are there any text-based clues that suggest which department or faculty might be located here?  ",
+      "A": "No, there are no text-based clues visible in the image that suggest which department or faculty might be located here.",
+      "C": "There are no text-based clues that suggest which department or faculty might be located here.",
+      "M": "Text Recognition ",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer describes the transition from interior to exterior in terms of lighting and environment but does not mention specific architectural features such as brick walls, decorative patterns, intricate railings, or a concrete staircase that are highlighted in the ground-truth answer. It did note similarity in mentioning stone walls but overall, lacks detail on specific architectural elements described in the ground truth."
+    },
+    {
+      "Q": "What architectural features did you notice as you moved from the building's interior to the exterior?",
+      "A": "I noticed a transition from a dimly lit, enclosed space to an outdoor area with a more open, illuminated space. The interior features archways and light fixtures that provide a warm, welcoming glow. As I moved outside, the scene became brighter, revealing more of the building's architectural details, including its stone walls and windows. The transition was marked by a change from the enclosed, shadowy interior to the more open, illuminated exterior, highlighting the contrast between the two environments.",
+      "C": "As I moved from the building's interior to the exterior, I noticed brick walls with horizontal lines, likely made from different shades of brick and stone for a decorative pattern, intricate railings and  a concrete staircase.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer describes using a flashlight to navigate a dark, narrow staircase, mentioning uneven steps, a wooden handrail on the left side, and materials like wood and brick. In contrast, the ground truth states a straightforward staircase with railings on either side and wide steps. The predicted answer diverges significantly from the ground truth, mentioning entirely different conditions and structures."
+    },
+    {
+      "Q": "How did you interact with the staircase while descending, and what was its structure like?",
+      "A": "I descended the staircase using a flashlight, which helped me navigate the dark, narrow steps. The staircase had a wooden handrail on the left side, and the steps were uneven, with some having small wooden platforms. The structure was made of wood and brick, and the area was dimly lit by the flashlight, revealing the texture of the wooden steps and the rough surface of the brick walls.",
+      "C": "While descending, I followed a staircase with railings on either side. The structure was straightforward with wide steps, fitting for a transition from indoors to outdoors.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer identifies landmarks and structures, such as a stone archway with carvings and a lantern, and a building with windows. The ground truth mentions buildings with multiple windows and arched doorways with lights. While there is some overlap in mentioning windows and lights, the specific details differ. The ground truth does not mention a stone archway, ornate carvings, or a building silhouette, which are key elements in the predicted answer."
+    },
+    {
+      "Q": "Upon reaching the courtyard, did you identify any landmarks or notable structures around you?",
+      "A": "Yes, upon reaching the courtyard, I identified a prominent stone archway and a building with a dark silhouette against the night sky. The archway had ornate carvings and a lantern hanging from it, and the building had a series of windows with lights on, creating a warm glow.",
+      "C": "Upon reaching the courtyard, I observed a large, open space surrounded by buildings with multiple windows, some with arched doorways and lights.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer captures the essence of the terrain change from a structured building environment to a more open courtyard. Although it lacks the specific detail of \"staircase\" and \"flat ground\", it accurately describes the transition observed in terms of open and less structured terrain."
+    },
+    {
+      "Q": "Did you observe any changes in terrain when moving from the building to the courtyard?",
+      "A": "Yes, I observed a change in terrain when moving from the building to the courtyard. The ground appeared to become more open and less structured as I moved further away from the building.",
+      "C": "Moving from the building to the courtyard, the terrain transitioned from the solid structure of the staircase to the open flat ground of the courtyard.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer mentions the presence of a safety or accessibility feature, which aligns with the intent of the ground-truth answer. However, it lacks the specificity regarding the railings on the staircase, which is an important detail supporting accessibility and safety."
+    },
+    {
+      "Q": "Are there any safety or accessibility features you noted during your transition from indoors to outdoors?",
+      "A": "Yes, there is a safety or accessibility feature noted during the transition from indoors to outdoors.",
+      "C": "The staircase was equipped with railings, indicating provisions for safe descent, supporting accessibility and safety during the transition.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer \"entering\" matches the essence of the ground-truth answer, which states \"The person ahead of me is entering the building.\" Both indicate the action of entering, and no additional context from the ground truth contradicts this interpretation."
+    },
+    {
+      "Q": "Is the person in front of you entering or exiting the building?",
+      "A": "entering",
+      "C": "The person ahead of me is entering the building.",
+      "M": "Dynamic",
+      "start_idx": 8,
+      "end_idx": 10
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer correctly identifies the presence of a moving shadow on the right side of the ground, but it provides multiple possibilities for what the shadow indicates (person, animal, or vehicle) instead of clearly confirming it as a human-like shadow. The ground-truth answer specifies it is a human-like shadow indicating the presence of someone behind the camera. The prediction lacks this specificity and certainty, hence only partially correct."
+    },
+    {
+      "Q": "What kind of a moving shadow is seen on the right side of the ground and what does it indicate?",
+      "A": "The moving shadow on the right side of the ground appears to be a figure walking or moving. It indicates that someone is moving across the frame from right to left, possibly a person, animal, or vehicle.",
+      "C": "There is a human-like moving shadow is seen on the right side of the ground, indicating the presence of someone behind the camera.",
+      "M": "Dynamic",
+      "start_idx": 14,
+      "end_idx": 16
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer 'I am facing forward' does not address the direction the person in front is headed, which is the key focus of the question. It focuses on the position of the speaker rather than the direction of the person in question."
+    },
+    {
+      "Q": "In what direction is the person in front of you headed?",
+      "A": "I am facing forward.",
+      "C": "The person in front of me is headed in the same direction as me.",
+      "M": "Dynamic",
+      "start_idx": 34,
+      "end_idx": 36
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately states that there are no vehicles visible in the distance, which aligns perfectly with the ground-truth answer."
+    },
+    {
+      "Q": "Are there any vehicles. Seen in the distance?",
+      "A": "No, there are no vehicles visible in the distance.",
+      "C": "There are no vehicles in the distance.",
+      "M": "Dynamic",
+      "start_idx": 46,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer of 0 people is not in the range of the ground truth answer of 2 people. Therefore, the prediction is fully incorrect."
+    },
+    {
+      "Q": "How many people walked past you?",
+      "A": "0",
+      "C": "2 people walked past me.",
+      "M": "Dynamic Counting",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer indicates uncertainty about the number of people entering or exiting the building due to poor visibility. The ground-truth answer clearly states that 1 person entered the building. Therefore, the prediction is incorrect because it does not provide the correct number of people as specified in the ground-truth answer."
+    },
+    {
+      "Q": "How many people entered or exited the initial building?",
+      "A": "The image is quite dark and unclear, making it difficult to determine the number of people entering or exiting the initial building.",
+      "C": "1 person entered the initial building.",
+      "M": "Dynamic Counting",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer is numerically identical to the ground truth correct answer, indicating accurate prediction."
+    },
+    {
+      "Q": "How many people were there behind the camera, based on the number of human shadows seen in the frames?",
+      "A": "1",
+      "C": "There was 1 person behind the camera.",
+      "M": "Dynamic Counting",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer exactly matches the ground-truth answer, indicating that the prediction is fully correct based on the provided comparison criteria."
+    },
+    {
+      "Q": "How many vehicles passed by?",
+      "A": "0",
+      "C": "0 vehicles passed by,",
+      "M": "Dynamic Counting",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ]
+]

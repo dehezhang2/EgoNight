@@ -1,0 +1,917 @@
+[
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer partially matches the ground truth by mentioning an emergency exit sign. However, it does not describe the corridor with doors on both sides, and it suggests an absence of detail due to low lighting, which contrasts with the ground truth that specifies a glowing green emergency exit sign and specific layout details. Hence, it only captures some elements of the ground truth but misses key details about the environment."
+    },
+    {
+      "Q": "What was the layout like as I moved past the emergency exit sign?",
+      "A": "The layout as you moved past the emergency exit sign was characterized by the hallway being dimly lit, with the exit sign being a notable feature in the darkness. The surroundings were mostly obscured by the low light, making it difficult to discern specific details of the environment.",
+      "C": "The layout featured a narrow corridor with doors on both sides and a glowing green emergency exit sign on the right.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer, 'The living room', does not match the ground truth answer, which describes 'rooms with tables, chairs, and scattered personal items like cups and paper' directly after the whiteboard area. Therefore, the prediction is fully incorrect."
+    },
+    {
+      "Q": "Which space did I encounter directly after the whiteboard area?",
+      "A": "The living room",
+      "C": "After the whiteboard area, you entered rooms with tables, chairs, and scattered personal items like cups and paper.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted sequence does not align well with the ground truth. The prediction starts correctly with a dark room and a hallway but deviates thereafter. It misses significant elements like the emergency exit sign, the whiteboard area, and the specific door in the ground truth sequence. The prediction's path and landmarks are different from those in the ground-truth."
+    },
+    {
+      "Q": "What's the sequence of rooms and corridors I moved through from the start to the end?",
+      "A": "You moved through the following sequence of rooms and corridors:\n\n1. Start in a dimly lit room with a dark hallway.\n2. Walked through a hallway with a door on the right.\n3. Entered a room with a desk and a chair.\n4. Walked through another dark hallway.\n5. Reached the end of the hallway.",
+      "C": "You moved from a dark office with a glass wall \u2192 down a hallway with an emergency exit sign \u2192 past a whiteboard area \u2192 through several rooms (some with furniture, some empty) \u2192 approached a specific door \u2192 ended at a brighter space.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer focuses on the dim lighting and lack of visible details, which is not mentioned in the ground truth. The ground truth emphasizes the arrangement and apparent use of the tables and chairs (some pushed together or isolated, with papers and cups indicating recent use). There is no overlap in content, and the core observation in the predicted answer does not address the arrangement or usage signs noted in the ground truth."
+    },
+    {
+      "Q": "What details did I notice about the tables and chairs in the adjacent rooms I passed through?",
+      "A": "You noticed that the tables and chairs in the adjacent rooms you passed through were dimly lit and had few details visible due to the low lighting.",
+      "C": "The tables and chairs were arranged casually, some pushed together for collaboration, others isolated; papers and cups suggested recent use.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies the transition into a scene of a hallway right before approaching the specific door, which aligns with the ground truth description of a long corridor with doors on either side. However, the prediction lacks specific details about the symmetry and additional doors mentioned in the ground truth."
+    },
+    {
+      "Q": "Which scene did I transition into right before approaching the specific door?",
+      "A": "You transitioned into the scene of a hallway right before approaching the specific door.",
+      "C": "Right before the specific door, you passed through a long corridor with a symmetrical layout and more doors on either side.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer accurately contrasts the two rooms, noting that the room with scattered papers was disorganized while the office space with the glass wall was neatly arranged. However, the predicted answer does not explicitly mention the informal nature of the room with scattered papers or the structured characteristic of the office space as indicated in the ground truth. Hence, it receives a score of 4."
+    },
+    {
+      "Q": "How was the room with scattered papers arranged compared to the office space with the glass wall?",
+      "A": "The room with scattered papers was more disorganized compared to the office space with the glass wall, which was neatly arranged.",
+      "C": "The room with scattered papers was more cluttered and informal than the clean, structured office space behind the glass wall.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer mentions a dark hallway, a dimly lit room, and a corridor before the brighter area. The ground truth specifies a sequence including a glass-walled office, hallway with exit sign, whiteboard zone, rooms with furniture, final corridor, and brighter area. The prediction covers the final corridor to some extent but misses several specific elements mentioned in the ground truth, such as the glass-walled office, hallway with exit sign, whiteboard zone, and rooms with furniture."
+    },
+    {
+      "Q": "What sequence of spaces did I pass before reaching the brighter area towards the end?",
+      "A": "You passed through a dark hallway, then a dimly lit room, and finally a corridor before reaching the brighter area towards the end.",
+      "C": "You passed the glass-walled office \u2192 hallway with exit sign \u2192 whiteboard zone \u2192 rooms with furniture \u2192 final corridor \u2192 brighter area at the end.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer mentions entering a \"dark hallway\" while the ground truth specifies a \"narrow corridor\" with emphasis on it being a transition to the next focal point. The descriptions differ in terms of detail and context. While both involve moving through a passageway after rooms with tables and chairs, the predicted answer lacks the specific function as a transition and detail provided in the ground truth."
+    },
+    {
+      "Q": "What scene followed after I moved through the rooms with tables and chairs?",
+      "A": "You entered a dark hallway.",
+      "C": "After the rooms with furniture, you entered a narrow corridor that served as a transition to the next focal point.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer provides a description of the location of the door within the room but does not specify which room it is, as required by the question. The ground truth answer specifies \"Room 23\", which is missing in the predicted answer."
+    },
+    {
+      "Q": "Which door of room you opened?",
+      "A": "I opened the door on the right side of the room.",
+      "C": "Room 23.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the color of the glass as 'clear,' which matches the ground truth answer that states 'It is a clear glass.' Both the wording and the meaning are aligned, hence the prediction is fully correct."
+    },
+    {
+      "Q": "What is the color of the glass you poured water into?",
+      "A": "The glass you poured water into is clear.",
+      "C": "It is a clear glass.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states the lid color as blue, while the ground truth states it is green. The prediction does not match the ground truth."
+    },
+    {
+      "Q": "What is the color of the lid of the bottle you poured water from?",
+      "A": "The color of the lid of the bottle you poured water from is blue.",
+      "C": "It has a green lid.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer of 4 does not match the ground truth answer of 3 rooms. Since the prediction is not within the range of the ground truth, it is considered incorrect."
+    },
+    {
+      "Q": "How many rooms did I pass through in the entire video?",
+      "A": "4",
+      "C": "From the frames provided, it appears you passed through 3 different rooms.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there are 4 chairs visible, while the ground truth states there are at least 57 chairs visible. The predicted number falls significantly outside the range of the ground truth answer, making the prediction incorrect."
+    },
+    {
+      "Q": "Can you count the total number of chairs visible throughout the video?",
+      "A": "Yes, I can count the total number of chairs visible throughout the video. The total number of chairs visible is 4.",
+      "C": "There are at least 57 chairs visible throughout the video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is 2, while the ground-truth states that at least 6 tables are encountered. The prediction does not fall within the range provided by the ground truth."
+    },
+    {
+      "Q": "How many tables do I encounter as I move through different rooms?",
+      "A": "2",
+      "C": "You encounter at least 6 tables as you move through the rooms.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately matches the ground-truth answer in describing the number of couches or sofas present in the video, both stating there is one. Thus, the prediction is fully correct."
+    },
+    {
+      "Q": "What is the total number of couches or sofas present in the video?",
+      "A": "There is one couch or sofa present in the video.",
+      "C": "There is 1 couch or sofa present in the video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there are two bean bags seen, while the ground truth states that there is only one bean bag visible. Since the predicted number of bean bags does not match the ground truth, the prediction is incorrect."
+    },
+    {
+      "Q": "Could you count how many bean bags are seen across the video?",
+      "A": "There are two bean bags seen across the video.",
+      "C": "There is 1 bean bag visible across the video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer \"1\" matches the ground truth answer, which indicates there is 1 lamp visible in the sequence."
+    },
+    {
+      "Q": "How many different lamps did I see in the sequence?",
+      "A": "1",
+      "C": "There is 1 lamp visible in the sequence.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states 3 as the total count of mugs and glasses, whereas the ground truth specifies a total of 7 (5 glasses and 2 mugs). The prediction does not match the ground truth, and there is a significant difference in numbers provided."
+    },
+    {
+      "Q": "How many mugs and glasses are visible on the tables in total?",
+      "A": "3",
+      "C": "There are 5 glasses and 2 mugs visible on the tables, totaling 7.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is 4, while the ground truth answer is 3. The prediction does not fall within the ground truth range, leading to it being considered incorrect."
+    },
+    {
+      "Q": "What is the total number of distinct rooms that contain visible seating arrangements?",
+      "A": "4",
+      "C": "There are 3 distinct rooms containing visible seating arrangements.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the lights turned on, which directly contradicts the ground truth answer stating that no lights turned on or off. Therefore, the prediction is fully incorrect."
+    },
+    {
+      "Q": "Did any lights turn on or off in the indoor environment during the sequence?",
+      "A": "The lights turned on in the indoor environment during the sequence.",
+      "C": "No lights turned on or off in the indoor environment during the sequence.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer claims there was a change in the brightness of the room, which directly contradicts the ground truth that states there was no noticeable change in brightness. Thus, the prediction is incorrect."
+    },
+    {
+      "Q": "Was there a moment when the room became noticeably brighter or darker?",
+      "A": "Yes, there was a moment when the room became noticeably brighter.",
+      "C": "The room did not become noticeably brighter or darker during the sequence.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly interpreted that the spotlight did not specifically move closer to or farther away from a specific object, although it did not mention the movement around. Both answers indicate no specific change in proximity to objects."
+    },
+    {
+      "Q": "At any point, did you observe the spotlight moving closer to or farther away from a specific object?",
+      "A": "No, I did not observe the spotlight moving closer to or farther away from a specific object.",
+      "C": "The spotlight moved around but did not specifically move closer to or farther away from a particular object.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the reflections of city lights became more pronounced, which is contrary to the ground truth stating that there were no reflections that became more pronounced or faded. Thus, the predicted answer is fully incorrect."
+    },
+    {
+      "Q": "Were there any reflections of city lights that became more pronounced or faded throughout the video?",
+      "A": "The reflections of city lights became more pronounced throughout the video, especially as the camera moved closer to the window.",
+      "C": "There were no reflections of city lights that became more pronounced or faded throughout the video.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately states that the intensity of the emergency exit signs' lights did not change, which is consistent with the ground truth answer. Both answers are in complete agreement."
+    },
+    {
+      "Q": "Did the intensity of the emergency exit signs' lights change at all?",
+      "A": "No, the intensity of the emergency exit signs' lights did not change at all.",
+      "C": "The intensity of the emergency exit signs' lights did not change during the video.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer claims a sudden increase in ambient light levels near the windows while the ground truth states there was no such change. This is a direct contradiction, resulting in a fully incorrect prediction."
+    },
+    {
+      "Q": "Was there a sudden increase or decrease in ambient light levels near the windows?",
+      "A": "There was a sudden increase in ambient light levels near the windows.",
+      "C": "There was no sudden increase or decrease in ambient light levels near the windows.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer \"No\" is partially aligned with the ground truth answer since it suggests that no new areas were noticeably illuminated. However, the ground truth provides additional information about how the flashlight or spotlight did illuminate some areas and objects as it moved, which is not conveyed in the predicted answer."
+    },
+    {
+      "Q": "Did the flashlight or spotlight illuminate any new areas or objects by the end of the sequence?",
+      "A": "No",
+      "C": "The flashlight or spotlight illuminated some areas and objects as it moved around, but no new areas were noticeably illuminated by the end of the sequence.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'Yes' contradicts the ground-truth answer, which clearly states that there was no moment when a passing car's headlights were visible. Thus, the prediction is fully wrong."
+    },
+    {
+      "Q": "Was there a moment when a passing car's headlights were visible within the reflections or through the windows?",
+      "A": "Yes",
+      "C": "There was no moment when a passing car's headlights were visible within the reflections or through the windows.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer lacks specificity and details compared to the ground truth. The ground truth describes a detailed path with several specific actions and locations like 'darker area', 'narrow corridor with glass walls', and 'long hallway with doors' before reaching the exit, while the predicted answer only mentions 'follow the hallway to the door' which is overly simplistic and does not capture the steps outlined in the ground truth."
+    },
+    {
+      "Q": "1. What path should I follow from the cozy room to exit?",
+      "A": "Follow the hallway to the door.",
+      "C": "1. From the cozy room, walk forward into a darker area, turn right into the narrow corridor with glass walls, pass through the room with the large table and chairs, proceed along the long hallway with doors, and finally enter the illuminated exit zone.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer 'Go down the hallway' lacks detail and specificity compared to the ground truth answer. The ground truth provides a step-by-step direction, specifying the turns and number of steps needed to reach the room. The predicted answer does not convey the necessary information to accurately navigate to the specified room, resulting in a partially correct answer."
+    },
+    {
+      "Q": "2. How do I get to the room with the large table and chairs?",
+      "A": "Go down the hallway.",
+      "C": "2. Move straight from the cozy room, turn right into the corridor, and after about 10 steps you\u2019ll arrive at the broader space with the large table and chairs.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer is partially aligned with the ground truth in terms of going back after reaching the dead-end corridor. However, it lacks the detailed instructions provided in the ground truth, such as walking back through the narrow corridor, hallway, and into more open rooms. Also, the predicted action of opening a door is not mentioned in the ground truth."
+    },
+    {
+      "Q": "3. What should I do after reaching the dead-end corridor?",
+      "A": "Go back and open the door.",
+      "C": "3. After reaching the dark dead-end, turn around and walk back the same way\u2014through the narrow corridor, along the hallway, and back into the more open rooms.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer directs to 'go through the room with the couch', which does not match the ground truth path of 'walking straight through the room with the table and chairs until the hallway with multiple doors becomes visible'. The directions to reach the corridor with multiple doors are not aligned, making the prediction incorrect."
+    },
+    {
+      "Q": "4. What\u2019s the correct path from the large table room to the hallway with many doors?",
+      "A": "Go through the room with the couch.",
+      "C": "4. Walk straight through the room with the table and chairs until the hallway becomes visible\u2014this is the corridor with multiple doors on each side.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer does not accurately describe the specific direction or details provided in the ground-truth answer. The predicted answer focuses on a green exit sign, which is not mentioned in the ground-truth answer. The ground-truth specifies a left turn into a narrower corridor leading directly into the dark dead-end space, whereas the prediction lacks mention of the turn's direction and the nature of the corridor."
+    },
+    {
+      "Q": "5. What turn leads from the hallway into the dead-end space?",
+      "A": "The turn that leads from the hallway into the dead-end space is the one with a green exit sign above it.",
+      "C": "5. At the hallway, turn left into a narrower corridor that leads directly into the dark dead-end space.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer suggests turning right at the end of the corridor, which deviates from the ground truth's instructions of 'turning back from the dead-end and proceeding through the same hallway to a well-lit area'. The directions are not aligned with the ground truth for reaching the exit."
+    },
+    {
+      "Q": "6. After backtracking from the dead-end, how do I reach the exit area?",
+      "A": "Walk to the end of the corridor and turn right.",
+      "C": "6. Turn back from the dead-end, walk through the same hallway and rooms, and proceed into the well-lit area at the far end to reach the exit.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer identifies different text ('N') than the ground-truth answer ('INSAIT'). Additionally, the predicted significance is unrelated to the ground truth, which refers to an organization or event name, possibly related to science or technology. The prediction may capture a part of the text, but does not align overall with the ground-truth."
+    },
+    {
+      "Q": "What is the partial text visible on the right side in frame 0, and what do you think it signifies?",
+      "A": "The partial text visible on the right side in frame 0 is 'N'. This signifies a possible indication of a number or a label, possibly related to a room number or a section identifier in the facility.",
+      "C": "\"INSAIT.\" It likely signifies an organization or event name, possibly related to science or technology.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted text \"Fitzsimmons\" does not match the ground truth text \"Fibank.\" Since the predicted location is based on incorrect text extraction, it is considered fully incorrect."
+    },
+    {
+      "Q": "From frame 18 onwards, what is the text visible outside the window, and what might it indicate about the location?",
+      "A": "The text visible outside the window is \"Fitzsimmons.\" This might indicate that the location is near or associated with the Fitzsimmons area, which could be a residential, commercial, or industrial zone.",
+      "C": "From frame 18 onwards, the text visible outside the window is \u201cFibank.\u201d.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer does not match the ground truth. The ground truth specifies that 'INS' appears in frames 0, 12, and 21, and extrapolates it could be part of 'INSAIT'. The predicted answer lists different frames entirely and fails to provide any extrapolation or context regarding what 'INS' could be part of."
+    },
+    {
+      "Q": "In which frames does the text \u201cINS\u201d appear, and can you extrapolate what it could be part of?",
+      "A": "The text \"INS\" appears in the following frames:\n\n1. [Frame 125, 150]\n2. [Frame 200, 225]\n3. [Frame 250, 275]\n4. [Frame 300, 325]\n5. [Frame 350, 375]\n6. [Frame 400, 425]\n7. [Frame 450, 475]\n8. [Frame 500, 525]\n9. [Frame 550, 575]\n10. [Frame 600, 625]\n11. [Frame 650, 675]\n12. [Frame 700, 725]\n13. [Frame 750, 775]\n14. [Frame 800, 825]\n15. [Frame 850, 875]\n16. [Frame 885, 900]\n17. [Frame 915, 930]\n18. [Frame 945, 960]\n19. [Frame 975, 990]\n20. [Frame 1000, 1015]",
+      "C": "The text \u201cINS\u201d appears in frames 0, 12, and 21. It could be part of \u201cINSAIT,\u201d which is visible in full in some frames at the start of the video.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The ground truth indicates several occurrences of text with specific examples like 'INSAIT,' 'Fibank,' and room numbers '23' and '17,' while the predicted answer only identifies 2 occurrences. The significant discrepancy in the number of occurrences identified makes the prediction incorrect, but since two occurrences are mentioned, it provides partial correctness."
+    },
+    {
+      "Q": "How many occurrences of text can you identify throughout the video?",
+      "A": "There are 2 occurrences of text in the video.",
+      "C": "There are several occurrences of text throughout the video, including \"INSAIT,\" \"Fibank,\" and room numbers like \"23\" and \"17.\"",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies visible elements of the cityscape, such as buildings and streetlights, which align with the ground-truth's description of a skyline with various buildings. However, the predicted answer does not mention the window blinds, which partially obscure the view. This omission impacts the accuracy slightly."
+    },
+    {
+      "Q": "What is visible through the glass wall in terms of the cityscape?",
+      "A": "The cityscape visible through the glass wall includes various illuminated buildings and streetlights.",
+      "C": "Through the glass wall, you can see a view of the cityscape. It includes a skyline with various buildings visible in the distance. The view is through window blinds, which partially obscure the scene outside.",
+      "M": "Object Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the bean bag is orange, whereas the ground truth states it is yellow. Since these are distinctly different colors, the prediction is fully incorrect."
+    },
+    {
+      "Q": "What color is the bean bag visible near the round white table?",
+      "A": "The bean bag visible near the round white table is orange.",
+      "C": "The bean bag near the round white table is yellow.",
+      "M": "Object Recognition",
+      "start_idx": 10,
+      "end_idx": 12
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer states that the furniture is a chair, while the ground truth describes the furniture as low, rectangular pieces, which could be bench seating or low tables. The predicted answer does not match the description provided in the ground truth."
+    },
+    {
+      "Q": "What type of furniture is barely visible near the windows?",
+      "A": "The type of furniture barely visible near the windows is a chair.",
+      "C": "The furniture barely visible near the windows appears to be low, rectangular pieces, possibly bench seating or low tables.",
+      "M": "Object Recognition",
+      "start_idx": 20,
+      "end_idx": 22
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the light source is green, which directly contradicts the ground truth answer specifying a warm, yellowish hue. The two answers describe completely different colors, leaving no room for partial correctness."
+    },
+    {
+      "Q": "What is the color of the light source casting a glow on the ceiling and wall?",
+      "A": "The light source casting a glow on the ceiling and wall is green.",
+      "C": "The color of the light source casting a glow on the ceiling and wall is a warm, yellowish hue, likely from sunlight.",
+      "M": "Object Recognition",
+      "start_idx": 30,
+      "end_idx": 32
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the covers of the papers or notebooks are white, while the ground truth indicates they are black. The predicted color does not match the ground truth, making the prediction incorrect."
+    },
+    {
+      "Q": "What color are the covers of the papers or notebooks on the table?",
+      "A": "The covers of the papers or notebooks on the table are white.",
+      "C": "The cover of the notebook or paper on the table is black.",
+      "M": "Object Recognition",
+      "start_idx": 40,
+      "end_idx": 42
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer 'shapes' is too vague and does not provide specific details about the shapes identified in the video frames, which is required for it to be considered correct. The ground truth provides specific types of shapes like rectangles, circles, squares, cylinders, and lines, and the predicted answer does not align with this detailed identification."
+    },
+    {
+      "Q": "What shapes can be faintly identified in the video frames?",
+      "A": "shapes",
+      "C": "In the video frames, you can identify several shapes:\n\n1. **Rectangles**: The ceiling tiles and the windows are rectangular.\n2. **Circles**: The chairs and the table have circular elements.\n3. **Squares**: The light fixtures on the ceiling appear to be square.\n4. **Cylinders**: The coat rack base is cylindrical.\n5. **Lines**: The shadows on the floor form linear patterns.\n\nThese shapes contribute to the overall structure and layout of the room.",
+      "M": "Object Recognition",
+      "start_idx": 50,
+      "end_idx": 52
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'The shelf in the hallway is made of wood' is correct as it matches the ground truth answer 'The shelf in the hallway appears to be made of wood'. Both indicate that the shelf is made of wood."
+    },
+    {
+      "Q": "What is the material of the shelf in the hallway?",
+      "A": "The shelf in the hallway is made of wood.",
+      "C": "The shelf in the hallway appears to be made of wood.",
+      "M": "Object Recognition",
+      "start_idx": 60,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'Car' does not match the ground truth answer, which describes a room with a table and a chair visible. The prediction is completely unrelated to the context described in the ground truth."
+    },
+    {
+      "Q": "What appears to be located beyond the opening on the right side in the third frame?",
+      "A": "Car",
+      "C": "In the third frame, beyond the opening on the right side, there is a room with a table and a chair visible.",
+      "M": "Object Recognition",
+      "start_idx": 70,
+      "end_idx": 72
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the object positioned to the left is a mirror, which does not match the ground truth answer. The ground truth states that the object to the left is a black circular object, potentially a small trash bin or container. Thus, the prediction is entirely incorrect compared to the ground truth."
+    },
+    {
+      "Q": "What object is positioned to the left when you're seated on the sofa with the pillows?",
+      "A": "The object positioned to the left when you're seated on the sofa with the pillows is the mirror.",
+      "C": "When seated on the sofa with the pillows, the object positioned to your left is a black circular object, which appears to be a small trash bin or container.",
+      "M": "Spatial Reasoning",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer is 3 steps, which falls outside the ground truth range of 4 to 6 steps. Since the predicted answer does not fall within the specified range, it is considered incorrect. However, it is close to the range, hence the score is 2."
+    },
+    {
+      "Q": "Based on the spatial relationships provided, how many steps would you approximately take to move from the chair in front of the table to the window?",
+      "A": "You would approximately take 3 steps to move from the chair in front of the table to the window.",
+      "C": "Based on the images, the chair in front of the table is located near the left side. The windows are situated directly in front, past the table. To move from the chair to the window, you would likely take around 4 to 6 steps, depending on the stride length.",
+      "M": "Spatial Reasoning",
+      "start_idx": 10,
+      "end_idx": 12
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the object adjacent to the window is a chair, while the ground truth indicates it is a white radiator or heater. The predicted object does not match the ground truth, making the prediction incorrect."
+    },
+    {
+      "Q": "What object is located directly adjacent to the window, providing a view of the cityscape?",
+      "A": "The object located directly adjacent to the window, providing a view of the cityscape, is a chair.",
+      "C": "A white radiator or heater.",
+      "M": "Spatial Reasoning",
+      "start_idx": 20,
+      "end_idx": 22
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer states that the window would be on the right side, which aligns with the ground truth answer. However, it omits the information that the window is also in the front as per the ground truth. Therefore, the predicted answer is partially correct but missing some detail."
+    },
+    {
+      "Q": "If you were to walk from the center of the room toward the illuminated sign, which side would the window be on?",
+      "A": "The window would be on the right side if you were to walk from the center of the room toward the illuminated sign.",
+      "C": "The window would be on your right and front.",
+      "M": "Spatial Reasoning",
+      "start_idx": 30,
+      "end_idx": 32
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that a pair of sunglasses is closer to the wall, while the ground truth specifies that the row of colored markers, with the red one being the closest, is the correct answer. The objects mentioned in the predicted answer and the ground truth do not match."
+    },
+    {
+      "Q": "What object is positioned closer to the wall on the table?",
+      "A": "The object positioned closer to the wall on the table is a pair of sunglasses.",
+      "C": "The object positioned closest to the wall on the table is the row of colored markers, the red one is the closest.",
+      "M": "Spatial Reasoning",
+      "start_idx": 40,
+      "end_idx": 42
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the object is circular in shape, whereas the ground truth answer clearly specifies that the object is a flat-screen television with a rectangular shape. These shapes do not match, so the prediction is fully incorrect."
+    },
+    {
+      "Q": "What is the shape of the object that appears closest to the camera?",
+      "A": "The object that appears closest to the camera is a circular shape.",
+      "C": "The object that appears closest to the camera is a flat-screen television mounted on a stand. The screen is rectangular in shape.",
+      "M": "Spatial Reasoning",
+      "start_idx": 50,
+      "end_idx": 52
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer of '1 step' does not fall within the ground truth range of '2-3 steps'. Therefore, it is considered incorrect as it does not match the expected answer range."
+    },
+    {
+      "Q": "How many steps would you take to reach the shelving unit from the paper on the floor?",
+      "A": "1 step.",
+      "C": "To reach the shelving unit from the paper on the floor, you would take approximately 2-3 steps.",
+      "M": "Spatial Reasoning",
+      "start_idx": 60,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is entirely different from the ground-truth answer. The ground truth states there is nothing on the left side except a wall, while the prediction incorrectly mentions a vehicle."
+    },
+    {
+      "Q": "What is located on the left side of the corridor toward the end?",
+      "A": "A vehicle is located on the left side of the corridor toward the end.",
+      "C": "As you move toward the end of the corridor, there is a door labeled \"18\" located at the end, but nothing on the left side except the wall.",
+      "M": "Spatial Reasoning",
+      "start_idx": 70,
+      "end_idx": 72
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'The light emitted by the emergency exit sign is green.' matches exactly with the ground truth answer, confirming the prediction is fully correct."
+    },
+    {
+      "Q": "What color is the light emitted by the emergency exit sign?",
+      "A": "The light emitted by the emergency exit sign is green.",
+      "C": "The light emitted by the emergency exit sign is green.",
+      "M": "Light Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The ground truth specifies that the primary source of ambient light is the floor lamp visible in the reflection on the right side of the images. The predicted answer includes the reflection from the glass wall, which is not mentioned in the ground truth. Even though the lamp is included, the additional element makes the prediction partially incorrect."
+    },
+    {
+      "Q": "What is the primary source of ambient light in the room?",
+      "A": "The primary source of ambient light in the room is the reflection from the glass wall and the lamp.",
+      "C": "The primary source of ambient light in the room is a floor lamp visible in the reflection on the right side of the images.",
+      "M": "Light Recognition",
+      "start_idx": 10,
+      "end_idx": 12
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer states that the lights are created by neon lights, whereas the ground truth specifies LED light fixtures. LED lights and neon lights are different in technology and usage; LED lights are known for their energy efficiency and brightness, which aligns with the detailed ground truth explanation. The prediction does not match the key characteristics of the ground truth provided, leading to a low score."
+    },
+    {
+      "Q": "What type of lights create the vertical illuminated strips on the buildings outside?",
+      "A": "The vertical illuminated strips on the buildings outside are created by neon lights.",
+      "C": "The vertical illuminated strips on the buildings outside are likely created by LED light fixtures. These are commonly used for architectural lighting to enhance the appearance of buildings at night due to their brightness, energy efficiency, and ability to produce a continuous stripe of light.",
+      "M": "Light Recognition",
+      "start_idx": 20,
+      "end_idx": 22
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground truth answer exactly, indicating a fully correct prediction."
+    },
+    {
+      "Q": "What color is the light emitted by the emergency exit sign in the interior space?",
+      "A": "The light emitted by the emergency exit sign in the interior space is green.",
+      "C": "The light emitted by the emergency exit sign in the interior space is green.",
+      "M": "Light Recognition",
+      "start_idx": 30,
+      "end_idx": 32
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches exactly with the ground truth answer, both stating that the most prominent light reflection on the whiteboard is green."
+    },
+    {
+      "Q": "What color is the most prominent light reflection on the whiteboard?",
+      "A": "The most prominent light reflection on the whiteboard is green.",
+      "C": "The most prominent light reflection on the whiteboard is green.",
+      "M": "Light Recognition",
+      "start_idx": 40,
+      "end_idx": 42
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer only mentions the color green, whereas the ground truth specifies that the light points are multicolored, including both green and purple. The prediction partially captures the presence of green but misses the multicolored aspect, resulting in a score of 2 for partial correctness."
+    },
+    {
+      "Q": "What is the color of the small, scattered light points visible on the right side in frame 2?",
+      "A": "The color of the small, scattered light points visible on the right side in frame 2 is green.",
+      "C": "The small, scattered light points visible on the right side in frame 2 are multicolored, including green and purple.",
+      "M": "Light Recognition",
+      "start_idx": 50,
+      "end_idx": 52
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground truth answer exactly, indicating that the prediction is fully correct."
+    },
+    {
+      "Q": "What is the primary color of the emergency exit signs illuminating the hallway?",
+      "A": "The primary color of the emergency exit signs illuminating the hallway is green.",
+      "C": "The primary color of the emergency exit signs illuminating the hallway is green.",
+      "M": "Light Recognition",
+      "start_idx": 60,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer identifies the flashlight as the source of light, which aligns perfectly with the ground truth answer. The detail about the light being concentrated in a circular pattern, though not explicitly mentioned in the prediction, does not contradict the core information that the light source is a flashlight. Therefore, the prediction is considered fully correct."
+    },
+    {
+      "Q": "What is the source of light illuminating the hallway in the video frames?",
+      "A": "The source of light illuminating the hallway in the video frames is a flashlight.",
+      "C": "The source of light illuminating the hallway in the video frames appears to be from a flashlight or a small portable light source that I am carrying. The light is concentrated in a circular pattern on the walls and floor, indicating it\u2019s originating from close to my position.",
+      "M": "Light Recognition",
+      "start_idx": 70,
+      "end_idx": 72
+    }
+  ]
+]

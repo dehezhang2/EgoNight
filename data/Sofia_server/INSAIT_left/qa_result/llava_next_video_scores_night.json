@@ -1,0 +1,947 @@
+[
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer does not match the sequence of rooms and areas in the ground truth answer. The predicted sequence includes a dark hallway, a room with a coffee machine, a balcony, and a room with a coffee machine, while the ground truth specifies a sequence through a hallway, kitchen, hallway, vending machine, and resting area with a table and chairs. There is no overlap in the sequences provided."
+    },
+    {
+      "Q": "1. What is the sequence of rooms and areas I pass through during the video?",
+      "A": "You pass through the following rooms and areas in sequence: a dark hallway, a room with a coffee machine, a balcony, and a room with a coffee machine.",
+      "C": "1. You start in a hallway, enter the kitchen, return to the hallway, pass the vending machine, and end at a resting area with a table and chairs.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer 'kitchen' correctly identifies the room entered after turning right, matching the main aspect of the ground-truth answer. However, it lacks the detailed description provided in the ground-truth, which is why it does not receive a perfect score."
+    },
+    {
+      "Q": "3. What room do I enter after turning right from the hallway?",
+      "A": "kitchen",
+      "C": "3. After turning right, you enter a small kitchen equipped with a refrigerator, countertop, and coffee machine.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer does not align with the ground-truth answer. The ground-truth describes looking inside the refrigerator, closing it, and then moving on, whereas the predicted answer describes walking to a balcony and placing a coffee cup on a table."
+    },
+    {
+      "Q": "4. Describe what I do after opening the refrigerator in the video.",
+      "A": "After opening the refrigerator, you walk outside to a balcony with a view of the city lights at night. You place a coffee cup on a table and then sit down to enjoy the view.",
+      "C": "4. You open the refrigerator, pause to look inside, then close it and proceed with your movement.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer mentions a cup being passed on the left side, which does not match the ground-truth answer that specifies a faintly lit wall panel or indicator near the left wall. The objects described in both answers are different in nature and location."
+    },
+    {
+      "Q": "5. What object do I pass that is illuminated on the left side before reaching the kitchen?",
+      "A": "You pass a cup on the left side before reaching the kitchen.",
+      "C": "5. A faintly lit wall panel or indicator near the left wall\u2014possibly informational or functional signage.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer mentions encountering a coffee machine, whereas the ground truth states walking past closed office doors and corridor elements. There is no mention of a coffee machine in the ground truth, indicating that the prediction is not aligned with the expected answer."
+    },
+    {
+      "Q": "6. As I retrace my steps back through the hallway, what do I encounter before reaching the vending machine?",
+      "A": "You encounter the coffee machine before reaching the vending machine.",
+      "C": "6. Before reaching the vending machine, you walk past the same closed office doors and corridor elements previously seen.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer mentions a lit exit sign and a door on the left side, which partially aligns with the ground truth of a 'green EXIT sign'. However, it misses key elements such as 'glass office doors' and a 'softly lit wall panel or signage near a side door', resulting in some degree of inaccuracy."
+    },
+    {
+      "Q": "2. Before entering the kitchen, what features are noticeable in the hallway?",
+      "A": "Before entering the kitchen, the hallway features a lit exit sign and a door on the left side.",
+      "C": "2. The hallway has a green EXIT sign, glass office doors, and a softly lit wall panel or signage near a side door.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer, \"The city lights are visible through the windows,\" captures the essence of the ground truth answer. It correctly identifies that city lights are visible, which is a component of the description \"A wide city skyline at night.\" While it does not mention the skyline, it is reasonably implied by the mention of city lights and windows."
+    },
+    {
+      "Q": "7. What is visible through the windows when I reach the room with the table and chairs?",
+      "A": "The city lights are visible through the windows.",
+      "C": "7. A wide city skyline at night, visible through tall windows in the rest area.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer captures the essence of the scene ending in a meeting or pause by describing the person sitting at a table with two mugs. Although it does not explicitly mention placing a mug beside another as the ground truth does, it conveys a similar scenario involving two mugs and a sense of pause or rest."
+    },
+    {
+      "Q": "8. What action suggests that the scene ends in a meeting or pause?",
+      "A": "The scene ends in a meeting or pause when the person records themselves sitting at a table with two mugs, facing the camera and holding the camera in a way that captures the reflection in the table's surface.",
+      "C": "8. You place a mug on a table beside another cup, suggesting a brief pause, quiet meeting, or moment of rest.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer aligns well with the ground truth answer by identifying the focus on searching for a drink or food item. While the predicted answer does not specify exact items like 'cold water, juice, or milk,' it correctly interprets the general action of searching for a beverage or food."
+    },
+    {
+      "Q": "What was I likely searching for in the refrigerator?",
+      "A": "You were likely searching for a specific drink or food item in the refrigerator.",
+      "C": "You were likely searching for something to drink\u2014perhaps cold water, juice, or milk to go with a coffee.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer describes a different interaction with the water machine compared to the ground truth. The ground truth mentions positioning in front of the machine and selecting an option, while the prediction talks about removing and inserting a cup. Some steps like activating the machine and filling the cup are consistent, but key actions differ significantly."
+    },
+    {
+      "Q": "Describe how I interacted with the water machine.",
+      "A": "You opened the water machine and took out a cup. You then inserted the cup into the machine, activated it, and took the filled cup.",
+      "C": "You positioned yourself in front of the machine, selected a drink option, ambiance water, and operated it until a cup was filled.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer captures the main idea of taking a break with a cup, which aligns with the ground truth mentioning a moment of refreshment. The predicted answer adds the detail of observing the night view, which is not in the ground truth but does not contradict or change the essence of why you returned to the office area with a cup."
+    },
+    {
+      "Q": "Why did I return to the office area with a cup?",
+      "A": "To take a break and enjoy a cup of coffee while observing the night view.",
+      "C": "You returned with the cup to enjoy the resting, indicating a short break or moment of refreshment.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer captures the core elements of the ground truth, which are enjoying the city lights and relaxing. While it does not explicitly mention reducing stress or regaining focus, the intention of relaxing is strongly related to these aspects. Thus, the prediction is mostly correct."
+    },
+    {
+      "Q": "What was my intention in sitting at the table with a view of the city lights?",
+      "A": "To enjoy the view of the city lights and relax.",
+      "C": "Your intention was likely to take a brief mental break while enjoying the calming view, helping to reduce stress or regain focus.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer captures some elements of the ground truth, like going to the refrigerator to get a drink, but misses other key actions such as checking the cabinet for supplies and using a water machine. Additionally, the predicted answer mentions using a flashlight and checking the coffee machine, which are not mentioned in the ground-truth answer. Hence, the prediction only partially aligns with the ground truth."
+    },
+    {
+      "Q": "What actions did I take to ensure I had the necessary items for a break?",
+      "A": "You used a flashlight to check the coffee machine, opened the refrigerator to get a drink, and took a mug to ensure you had the necessary items for a break.",
+      "C": "You first checked the cabinet for supplies, then went to the fridge to find a drink base, used the water machine, and carried the filled cup, preparing for a short break.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer '2' exactly matches the ground-truth answer 'You encountered 2 coffee machines.' Therefore, the prediction is fully correct."
+    },
+    {
+      "Q": "How many coffee machines did I encounter throughout the video?",
+      "A": "2",
+      "C": "You encountered 2 coffee machines.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that it is unable to count the fridges, whereas the ground truth answer clearly states that there was 1 fridge visible in the sequence. The prediction does not attempt to provide a count and therefore does not align with the ground truth."
+    },
+    {
+      "Q": "Can you count the number of fridges in the entire sequence?",
+      "A": "No, I cannot count the number of fridges in the entire sequence.",
+      "C": "There was 1 fridge visible in the sequence.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there were two chairs visible, whereas the ground truth states there were ten chairs visible. Since the predicted number does not fall within the range of the ground truth number, the prediction is incorrect."
+    },
+    {
+      "Q": "How many chairs were visible in total during the video?",
+      "A": "There were a total of two chairs visible during the video.",
+      "C": "There were 10 chairs visible in total.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The ground truth answer states that there was 1 sink seen, while the predicted answer states that there were two sinks. Since the prediction does not match the ground truth and is outside the specified range of correctness, it is considered incorrect."
+    },
+    {
+      "Q": "How many sinks were there in the area I explored?",
+      "A": "There were two sinks in the area you explored.",
+      "C": "You saw 1 sink.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is 2 while the ground truth answer is 3, indicating the prediction does not fall within the correct range. Therefore, it is incorrect."
+    },
+    {
+      "Q": "How many rooms did I pass through or see in the video?",
+      "A": "2",
+      "C": "You passed through or saw a total of 3 rooms.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states two tables were visible, while the ground-truth states four tables were visible. Since the prediction falls outside the range of the ground-truth answer, it is evaluated as incorrect."
+    },
+    {
+      "Q": "How many tables were visible in the sequence?",
+      "A": "Two tables were visible in the sequence.",
+      "C": "There were 4 tables visible in the sequence.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is 2, which does not match the ground truth answer of 1. The correct count should be exactly 1, making the prediction fully wrong."
+    },
+    {
+      "Q": "Can you count the number of mugs I used or interacted with?",
+      "A": "2",
+      "C": "You interacted with 1 mug.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there was one air conditioning/heater unit noticed, whereas the ground truth states there were three. Therefore, the prediction does not match the ground truth, leading to a score of 0."
+    },
+    {
+      "Q": "How many air conditioning/heater units did I notice in the environment?",
+      "A": "You noticed one air conditioning/heater unit in the environment.",
+      "C": "There were 3 air conditioning/heater units visible.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly states that the lighting conditions did not change, aligning with the ground truth answer which mentions that the distant green lights remained visible throughout the progression down the hallway."
+    },
+    {
+      "Q": "As I progressed down the hallway, did the lighting conditions change from seeing distant green lights to experiencing more direct reflections?",
+      "A": "No, the lighting conditions did not change from seeing distant green lights to experiencing more direct reflections. The video description states that the lighting conditions remained the same throughout the progression down the hallway.",
+      "C": "As you progressed down the hallway, the lighting conditions remained mostly the same with the distant green lights visible throughout.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly indicates that the brightness remained consistent with the hallway ambiance when approaching the shelving unit, which matches the ground truth answer stating there was no noticeable increase in brightness."
+    },
+    {
+      "Q": "Was there a noticeable increase in brightness when I approached the shelving unit or did it remain consistent with the hallway's ambiance?",
+      "A": "The brightness remained consistent with the hallway's ambiance when you approached the shelving unit.",
+      "C": "Upon approaching the shelving unit, there wasn\u2019t a noticeable increase in brightness; it remained consistent with the overall dim hallway ambiance.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 4,
+      "reason": "The predicted answer correctly states that opening the refrigerator significantly brightened the area. However, it inaccurately describes the surrounding shadows as 'dramatically illuminated,' which contradicts the ground truth that the shadows became 'less pronounced.' The variation in the description of shadows affects the accuracy of the answer."
+    },
+    {
+      "Q": "Did opening the refrigerator significantly brighten the area, and if so, how did the surrounding shadows react?",
+      "A": "Yes, opening the refrigerator significantly brightened the area. The surrounding shadows were dramatically illuminated, creating a stark contrast with the previously dimly lit environment.",
+      "C": "Opening the refrigerator significantly brightened the area, making the surrounding shadows less pronounced.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately states that no additional light sources turned on and that the lighting primarily came from the refrigerator, which matches the ground truth answer."
+    },
+    {
+      "Q": "When transitioning to the kitchen area, did any additional light sources turn on, or was the lighting primarily from the refrigerator?",
+      "A": "The lighting in the kitchen area primarily came from the refrigerator, and no additional light sources turned on.",
+      "C": "When transitioning to the kitchen area, no additional light sources turned on; the lighting was primarily from the refrigerator.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer incorrectly states that the city lights did not contribute to any interior illumination, whereas the ground truth answer indicates that the city lights slightly contributed. However, both answers agree on the fact that indoor lights maintained a consistent low level."
+    },
+    {
+      "Q": "Did the city lights contribute to any interior illumination, or did the indoor lights maintain a consistent low level?",
+      "A": "The city lights did not contribute to any interior illumination; the indoor lights maintained a consistent low level.",
+      "C": "The city lights slightly contributed to the interior illumination, but the indoor lights maintained a consistent low level.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer states that the existing ambient light was sufficient, which aligns partially with the ground truth that mentions the ambient light and light from the coffee machine. However, the prediction disregards the mention of the light from the coffee machine, resulting in a partially correct interpretation."
+    },
+    {
+      "Q": "As I interacted with the coffee machine, did a different light source help improve visibility, or was it just the existing ambient light?",
+      "A": "The video description does not mention any additional light source being used to improve visibility while interacting with the coffee machine. The existing ambient light was sufficient for the task.",
+      "C": "While interacting with the coffee machine, the existing ambient light and light from the coffee machine helped improve visibility.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is directly contradictory to the ground truth answer. The ground truth states that there was no moment when all lights turned off, while the predicted answer asserts that such a moment occurred."
+    },
+    {
+      "Q": "During the entire scene, was there any moment where all lights turned off, leaving only the emergency signs?",
+      "A": "Yes, during the entire scene, there was a moment where all lights turned off, leaving only the emergency signs.",
+      "C": "There was no moment where all lights turned off; the emergency signs remained on throughout the scene.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'No' aligns with the ground truth answer indicating that the external light from the windows didn't significantly overcome the dim interior lighting. Both answers convey the same outcome."
+    },
+    {
+      "Q": "As I moved towards the seating area, did the external light from the windows start to overcome the dim interior lighting?",
+      "A": "No",
+      "C": "As you moved towards the seating area, the external light from the windows didn\u2019t significantly overcome the dim interior lighting.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer lacks the detailed directional instructions found in the ground-truth answer. It does not specify the direction or path needed to reach the coffee machine, making it largely unhelpful for someone trying to follow directions."
+    },
+    {
+      "Q": "Which direction should I go to reach the room with the coffee machine?",
+      "A": "Go to the coffee machine.",
+      "C": "Move forward down the corridor, then turn slightly left toward the glass-panel door. Enter and continue straight ahead to reach the coffee machine near the windows.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer states 4 steps, which is significantly different from the ground-truth answer stating approximately 20 steps. The predicted range does not fall within the acceptable range provided by the ground-truth answer. This large discrepancy results in an almost fully wrong prediction."
+    },
+    {
+      "Q": "How many steps should I take to reach the door with glass panels directly ahead after starting?",
+      "A": "You should take 4 steps to reach the door with glass panels directly ahead after starting.",
+      "C": "Approximately 20 steps forward will bring you directly in front of the door with glass panels.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'Place the mug on the table.' does not align with the ground-truth answer which specifies to 'turn 180 degrees to face the exit' and 'retrace your path through the corridor'. The prediction completely misses the directional and positional information required to ensure that the user is heading the right way back."
+    },
+    {
+      "Q": "What should be my final movement after interacting with the coffee machine to ensure I am heading the right way back?",
+      "A": "Place the mug on the table.",
+      "C": "After using the coffee machine, turn 180 degrees to face the exit. Retrace your path through the corridor about 35 steps to return to the starting point.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer only mentions an exit sign above the door, whereas the ground truth specifies a glowing emergency exit sign on the right and a door with glass panels directly ahead. Although the exit sign is mentioned, the direction and additional reference to the door with glass panels in the ground truth are missing, making the prediction partially correct but incomplete."
+    },
+    {
+      "Q": "Before entering the well-lit room, what should I notice that indicates I am on the right path?",
+      "A": "Before entering the well-lit room, you should notice the exit sign above the door to indicate you are on the right path.",
+      "C": "You should see a glowing emergency exit sign on your right and a door with glass panels directly ahead\u2014these confirm you're heading correctly toward the coffee area.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground-truth answer in both aspects: the number of times the text 'INSAIT' appears and its location on the wall. Although the predicted answer adds the detail 'in the dark hallway', it does not contradict the ground truth, as it still accurately describes the location on the wall."
+    },
+    {
+      "Q": "How many times does the text 'INSAIT' appear, and where is it located?",
+      "A": "The text 'INSAIT' appears once, located on the wall in the dark hallway.",
+      "C": "The text 'INSAIT' appears once in the video, on the wall.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer indicates that the text '13' signifies a social distancing measure, whereas the ground truth specifies that it indicates the room or office number. These are entirely different interpretations and purposes, therefore the prediction is fully incorrect."
+    },
+    {
+      "Q": "What does the text '13' on the glass door indicate?",
+      "A": "The text '13' on the glass door indicates the number of people allowed to enter the building at once, as part of a social distancing measure to prevent overcrowding.",
+      "C": "The number '13' indicates the room or office number, used for spatial orientation inside the building.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies the 'EXIT' text as an indicator of an exit point, which aligns with the purpose of the ground truth answer as an emergency sign guiding to a safe exit route. However, the predicted answer discusses additional context about navigation or rooms and corridors, which is not mentioned in the ground truth. Despite this, the core purpose is captured well."
+    },
+    {
+      "Q": "What is the significance of the 'EXIT' text above the door?",
+      "A": "The 'EXIT' text above the door likely indicates an exit point, suggesting that this area might be part of a building or facility where multiple rooms or corridors lead to different exits. This could be important for navigation or emergency situations.",
+      "C": "The 'EXIT' text is an emergency sign, guiding people to a safe exit route.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'AEG' does not match the ground-truth answer 'Gorenje'. The brand name on the refrigerator is a specific piece of information that needs to be accurately identified, and the predicted brand does not align with the ground truth."
+    },
+    {
+      "Q": "Identify the brand name seen on the refrigerator in the video.",
+      "A": "AEG",
+      "C": "The refrigerator bears the brand name 'Gorenje,' indicating the kitchen/pantry zone in the office.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'RIO' does not match the ground-truth answer, which states that the mug has the 'ddp' logo. The prediction does not align with the provided ground-truth, thus it is fully incorrect."
+    },
+    {
+      "Q": "Describe the logo or text found on the mug towards the end of the video.",
+      "A": "The mug has the text 'RIO' written on it.",
+      "C": "The mug displays the familiar 'ddp' logo, likely a company-branded or promotional item.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there is no theme or pattern, which directly contradicts the ground truth answer. The ground truth specifies a common theme of functional labeling relevant to an office setting, indicating that the predicted answer is fully incorrect."
+    },
+    {
+      "Q": "Is there a theme or pattern connecting the texts seen in the video?",
+      "A": "No, there is no theme or pattern connecting the texts seen in the video.",
+      "C": "The texts share a common theme of functional labeling: room numbers, safety signs, and branded utilities\u2014all supporting everyday navigation and recognition in an office setting.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly states the primary color of the emergency exit sign as green, which matches the ground truth answer."
+    },
+    {
+      "Q": "What is the primary color of the emergency exit sign visible in the scene?",
+      "A": "The primary color of the emergency exit sign visible in the scene is green.",
+      "C": "The primary color of the emergency exit sign visible in the scene is green.",
+      "M": "Object Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer does not match the ground truth. The predicted answer mentions books and a box, which differ from the table tennis paddles, pack of balls, and fly swatter mentioned in the ground truth. The few small objects mention is too vague and does not align with the specific items listed in the ground truth."
+    },
+    {
+      "Q": "What items are visible on the middle shelf of the wooden shelving unit?",
+      "A": "The items visible on the middle shelf of the wooden shelving unit include a collection of books, a box, and a few small objects that are not clearly identifiable.",
+      "C": "On the middle shelf of the wooden shelving unit, I can see several table tennis paddles, a pack of table tennis balls, a colorful fly swatter, and a few other small miscellaneous items.",
+      "M": "Object Recognition",
+      "start_idx": 15,
+      "end_idx": 17
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'City lights' does not match the ground truth answer. The ground truth describes visible features as a room with large windows showing a view of the outside and a white bench or radiator, which are not mentioned in the prediction."
+    },
+    {
+      "Q": "What is visible through the open door at the end of the hallway?",
+      "A": "City lights",
+      "C": "Through the open door at the end of the hallway, you can see a room with large windows showing a view of the outside. There is also a white bench or radiator near the windows.",
+      "M": "Object Recognition",
+      "start_idx": 30,
+      "end_idx": 32
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer \"wooden\" is a specific form of flooring that is mentioned in the ground truth answer \"wood or laminate flooring\". Although the ground truth includes two possibilities (wood or laminate), \"wooden\" aligns with one of them, thus making the prediction largely correct but not fully so, as it does not acknowledge the complete range mentioned."
+    },
+    {
+      "Q": "What type of flooring is visible at the bottom of the refrigerator scene?",
+      "A": "wooden",
+      "C": "The type of flooring visible at the bottom of the refrigerator scene appears to be wood or laminate flooring.",
+      "M": "Object Recognition",
+      "start_idx": 45,
+      "end_idx": 47
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states \"cabinet\" is beside the table, whereas the ground truth states \"a row of chairs\" is beside the table. The predicted object does not match the ground-truth object, resulting in a fully incorrect prediction."
+    },
+    {
+      "Q": "What type of furniture is visible beside the table in the interior space?",
+      "A": "cabinet",
+      "C": "In the interior space, beside the table, there is a row of chairs.",
+      "M": "Object Recognition",
+      "start_idx": 60,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer \"fire equipment\" is very close to the ground truth \"fire hose equipment\". Both answers correctly identify that the red symbols are related to fire safety equipment. However, the predicted answer is slightly less specific since it does not specify \"hose\", hence the score is 4."
+    },
+    {
+      "Q": "What type of equipment is indicated by the red symbols on the white wall panel?",
+      "A": "The red symbols on the white wall panel indicate fire equipment.",
+      "C": "The red symbols on the white wall panel indicate fire hose equipment.",
+      "M": "Object Recognition",
+      "start_idx": 75,
+      "end_idx": 77
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that a flashlight is creating the shadow, which is different from the ground-truth answer that specifies the shadow is created by an open doorway. The answer does not align with the ground truth at all."
+    },
+    {
+      "Q": "What object is creating a shadow on the right wall of the corridor?",
+      "A": "The flashlight is creating a shadow on the right wall of the corridor.",
+      "C": "The shadow on the right wall of the corridor appears to be created by the open doorway on the left.",
+      "M": "Object Recognition",
+      "start_idx": 90,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer is exactly the same as the ground-truth answer, indicating a fully correct prediction."
+    },
+    {
+      "Q": "What type of surface texture does the table appear to have?",
+      "A": "The table appears to have a smooth surface texture.",
+      "C": "The table appears to have a smooth surface texture.",
+      "M": "Object Recognition",
+      "start_idx": 105,
+      "end_idx": 107
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer states a distance of 2 feet, which is significantly lower than the ground truth answer of 4-5 meters. The metric and imperial units conversion shows that 2 feet is approximately 0.6 meters, not aligning with the range given in the ground truth. Therefore, the prediction is incorrect."
+    },
+    {
+      "Q": "How far would you need to move to reach the wall with text on it?",
+      "A": "You would need to move 2 feet to reach the wall with text on it.",
+      "C": "To reach the wall with text on it, you would need to move about 4-5 meters forward.",
+      "M": "Spatial Reasoning",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer states that the yellow object is on the bottom shelf, whereas the ground-truth answer specifies it is on the middle shelf. Additionally, the predicted answer does not mention the proximity to table tennis paddles, which is highlighted in the ground-truth. The substantial difference in shelf position and lack of detail alignment with the ground truth results in a low score."
+    },
+    {
+      "Q": "What is the position of the yellow object in relation to the stacked boxes on the shelf?",
+      "A": "The yellow object is positioned on the bottom shelf of the stacked boxes on the shelf.",
+      "C": "The yellow object is on the middle shelf of the wooden shelf. It is located towards the right side, just below a few table tennis paddles.",
+      "M": "Spatial Reasoning",
+      "start_idx": 15,
+      "end_idx": 17
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately matches the ground-truth answer by stating that the door handle is on the right side of the door. Both descriptions focus on the position of the handle relative to the door, and there are no discrepancies between them."
+    },
+    {
+      "Q": "What is the position of the door handle relative to the door in the video?",
+      "A": "The door handle is positioned on the right side of the door in the video.",
+      "C": "The door handle is on the right side of the door as you approach it.",
+      "M": "Spatial Reasoning",
+      "start_idx": 30,
+      "end_idx": 32
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'A bottle of milk' aligns with the ground truth answer 'a milk carton', as both refer to milk being directly below the egg carton. The distinction between 'bottle' and 'carton' does not alter the correctness regarding the presence of milk."
+    },
+    {
+      "Q": "What is located directly below the egg carton in the fridge door?",
+      "A": "A bottle of milk.",
+      "C": "Directly below the egg carton in the fridge door, there is a milk carton.",
+      "M": "Spatial Reasoning",
+      "start_idx": 45,
+      "end_idx": 47
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The ground-truth answer explicitly states that it is not possible to determine the exact number of steps from the video, while the predicted answer provides a specific number. Hence, the prediction is incorrect as it contradicts the ground truth."
+    },
+    {
+      "Q": "From my current position, how many steps would I need to take to reach the chair in front of the balcony railing?",
+      "A": "4",
+      "C": "I'm sorry, but I'm unable to determine the exact number of steps you would need to take to reach the chair in front of the balcony railing from the video frames.",
+      "M": "Spatial Reasoning",
+      "start_idx": 60,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer mentions only one fire extinguisher, while the ground truth specifies there are three. The prediction is partially correct as it identified the correct object but not the correct quantity."
+    },
+    {
+      "Q": "What object is directly to the right of the coffee machine?",
+      "A": "A fire extinguisher is directly to the right of the coffee machine.",
+      "C": "Directly to the right of the coffee machine, there are three fire extinguishers.",
+      "M": "Spatial Reasoning",
+      "start_idx": 75,
+      "end_idx": 77
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer of \"1 step\" falls within the range specified by the ground truth answer of \"1 to 2 steps\", therefore it is considered correct."
+    },
+    {
+      "Q": "How many steps will it take for me to reach the right wall from my current position?",
+      "A": "1 step",
+      "C": "To provide an estimate, it looks like you're around 1 to 2 steps away from the right wall.",
+      "M": "Spatial Reasoning",
+      "start_idx": 90,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The ground truth answer explicitly states that the number of steps cannot be determined from the available images, while the predicted answer provides a specific number. The prediction does not align with the ground truth, which indicates a lack of sufficient information to make a precise determination."
+    },
+    {
+      "Q": "How many steps would you need to take to reach the window if you start from the table?",
+      "A": "2",
+      "C": "I can't determine the number of steps needed to reach the window from the table based solely on these images. Generally, it would depend on the actual distance between the table and the window, but this information isn\u2019t clear from the pictures.",
+      "M": "Spatial Reasoning",
+      "start_idx": 105,
+      "end_idx": 107
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground-truth answer exactly, both stating that the glow emitted by the emergency exit sign is green."
+    },
+    {
+      "Q": "What color is the glow emitted by the emergency exit sign?",
+      "A": "The glow emitted by the emergency exit sign is green.",
+      "C": "The glow emitted by the emergency exit sign is green.",
+      "M": "Light Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches exactly with the ground truth answer. Both specify that the primary light source illuminating the hallway is green, indicating a fully correct prediction."
+    },
+    {
+      "Q": "What is the color of the primary light source illuminating the hallway in the video frames?",
+      "A": "The primary light source illuminating the hallway in the video frames is green.",
+      "C": "The primary light source illuminating the hallway is green.",
+      "M": "Light Recognition",
+      "start_idx": 15,
+      "end_idx": 17
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer \"flashlight\" matches the key element of the ground-truth answer, which identifies a flashlight as the light source causing the concentrated illumination. The ground truth explanation details why it is a flashlight, but the predicted answer still correctly identifies the light source type."
+    },
+    {
+      "Q": "What type of light source is creating the concentrated illumination on the hallway walls and floor?",
+      "A": "flashlight",
+      "C": "The concentrated illumination on the hallway walls and floor appears to be created by a flashlight. The light is focused and directed, which suggests a handheld light source.",
+      "M": "Light Recognition",
+      "start_idx": 30,
+      "end_idx": 32
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies the color of the refrigerator's internal light as white, which matches the ground truth answer. Therefore, the prediction is fully correct."
+    },
+    {
+      "Q": "What is the color of the refrigerator's internal light that primarily illuminates the scene?",
+      "A": "The color of the refrigerator's internal light is white.",
+      "C": "The color of the refrigerator's internal light that primarily illuminates the scene is white.",
+      "M": "Light Recognition",
+      "start_idx": 45,
+      "end_idx": 47
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies the flashlight as the primary source of illumination in the video frames. It also provides additional detail by mentioning it is being held by the person, which does not contradict the ground truth answer."
+    },
+    {
+      "Q": "What is the primary source of illumination in the video frames?",
+      "A": "The primary source of illumination in the video frames is the flashlight being held by the person.",
+      "C": "The primary source of illumination in the video frames is the flashlight.",
+      "M": "Light Recognition",
+      "start_idx": 60,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground truth answer exactly in terms of the color of the light emitted by the LED light ring, which is blue."
+    },
+    {
+      "Q": "What color is the light emitted by the LED light ring surrounding the button on the appliance?",
+      "A": "The light emitted by the LED light ring surrounding the button on the appliance is blue.",
+      "C": "The light emitted by the LED light ring surrounding the button on the appliance is blue.",
+      "M": "Light Recognition",
+      "start_idx": 75,
+      "end_idx": 77
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'a circle' is semantically the same as the ground truth answer 'circular.' Both responses accurately describe the shape of the illuminated area created by the flashlight."
+    },
+    {
+      "Q": "What is the shape of the illuminated area on the ground created by the flashlight?",
+      "A": "The shape of the illuminated area on the ground created by the flashlight is a circle.",
+      "C": "The shape of the illuminated area on the ground created by the flashlight is circular.",
+      "M": "Light Recognition",
+      "start_idx": 90,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the primary light source is coming from the right side of the frame, which directly contradicts the ground truth answer, where it is mentioned that the light source is coming from the camera's direction. Therefore, the prediction is fully incorrect, resulting in a score of 0."
+    },
+    {
+      "Q": "What is the direction of the primary light source illuminating the table and cups?",
+      "A": "The primary light source illuminating the table and cups appears to be coming from the right side of the frame.",
+      "C": "The primary light source illuminating the table and cups is coming from the camera\u2019s direction. The light is directed towards the table and cups, highlighting them against the dark background.",
+      "M": "Light Recognition",
+      "start_idx": 105,
+      "end_idx": 107
+    }
+  ]
+]

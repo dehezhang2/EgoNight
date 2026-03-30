@@ -1,0 +1,692 @@
+[
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies that more than one statue or monument is visible in the video, which matches the ground truth answer. The additional details in the prediction do not contradict the ground truth."
+    },
+    {
+      "Q": "Is there more than one statue or monument visible in the entire video sequence?  ",
+      "A": "Yes, there is more than one statue or monument visible in the video sequence. The video begins by focusing on a statue of a historical figure (Tsar Samuil of Bulgaria), and as the camera pans and moves through the park, several other monuments and sculptures come into view.",
+      "C": "Yes, more than one statue or monument is visible.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer of 3 trash bins does not match the ground truth answer of 2 trash bins. Since the predicted count does not fall within the range of the ground truth count, it is considered incorrect."
+    },
+    {
+      "Q": "How many trash bins are seen in the complete video sequence?  ",
+      "A": "3",
+      "C": "2 trash bins are visible.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer states that there are 6 benches visible, while the ground truth indicates there are 9 benches. Since the predicted count is outside the range of the ground-truth answer, the prediction is incorrect. The prediction partially matches the ground truth since it identifies benches, hence the score of 2."
+    },
+    {
+      "Q": "Can you count the number of benches present in the series of video frames?  ",
+      "A": "Based on the visual evidence in the video frames, there are 6 benches.",
+      "C": "There are 9 benches visible.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer states that a total of 8 buildings are visible, which falls within the ground truth range of 5-10 buildings. Thus, the prediction is considered correct."
+    },
+    {
+      "Q": "How many buildings are visible at different points in the video sequence?  ",
+      "A": "At different points in the video, a total of 8 buildings are visible.",
+      "C": "There are 5-10 buildings visible at different points.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer provides a list of structures that appear multiple times throughout the video, but it does not mention streetlights and benches specifically, which are mentioned in the ground truth answer. However, the presence of \"ornate black lampposts\" can potentially correspond to streetlights. This partial match merits a score that reflects partial correctness."
+    },
+    {
+      "Q": "Are there any noticeable structures that appear more than once throughout the video?  ",
+      "A": "Yes, several noticeable structures appear more than once in the video:\n\n*   **A large, pale yellow, two-story building** is visible across the street in many shots as the camera pans and moves.\n*   **A yellow tower with a green dome** can be seen in the background throughout much of the video.\n*   **Ornate black lampposts** are present in almost every frame of the video.\n*   **A monument of a soldier holding a flag** is visible in the distance initially and becomes the focus of the camera towards the end of the video.\n*   **The statue of Tsar Samuil**, which is the initial focus, is seen again from a distance as the camera moves away.",
+      "C": "Yes, streetlights and benches appear more than once.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 4,
+      "reason": "The predicted answer counts 5 planter boxes, while the ground truth states there are 6. The prediction is close but not exact, and since it doesn't fall within an acceptable range of the exact count (i.e., the same number as the ground truth), it's considered incorrect. However, the close proximity grants a partial score."
+    },
+    {
+      "Q": "Can you count the number of planter boxes visible in the video?  ",
+      "A": "There are 5 planter boxes visible in the video.",
+      "C": "There are 6 planter boxes visible.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground truth answer exactly in content, identifying the shape of the tiles as rectangular. Both specify that the tiles are rectangular without any discrepancies."
+    },
+    {
+      "Q": "What is the shape of the tiles on the paved pathway?  ",
+      "A": "The shape of the tiles on the paved pathway is rectangular.",
+      "C": "The tiles on the paved pathway are rectangular.",
+      "M": "Object Recognition",
+      "start_idx": 6,
+      "end_idx": 8
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the textured path on the sidewalk is yellow, which does not match the ground truth answer of light beige. There is a clear discrepancy in color identification."
+    },
+    {
+      "Q": "What is the color of the textured path on the sidewalk?  ",
+      "A": "The color of the textured path on the sidewalk is yellow.",
+      "C": "The textured path on the sidewalk is a light beige color.",
+      "M": "Object Recognition",
+      "start_idx": 18,
+      "end_idx": 20
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies the use of tactile paving on the sidewalk for assisting visually impaired pedestrians. The description of tactile paving with raised, parallel bars aligns with the ground truth answer's description of tactile paving with raised bumps or ridges. Both answers accurately describe the function of such paving in providing tactile feedback for safety."
+    },
+    {
+      "Q": "What type of paving is used on the sidewalk to assist visually impaired pedestrians?  ",
+      "A": "Based on the visual evidence, the sidewalk uses tactile paving to assist visually impaired pedestrians. Specifically, it is a guidance path consisting of a strip of pavers with raised, parallel bars that indicate a safe direction of travel.",
+      "C": "The paving used on the sidewalk to assist visually impaired pedestrians is tactile paving. It is the strip with raised bumps or ridges, typically in a contrasting color, which provides tactile feedback underfoot or with a cane.",
+      "M": "Object Recognition",
+      "start_idx": 12,
+      "end_idx": 14
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there are 11 visible streetlights, whereas the ground truth indicates there are 8 visible streetlights. The numbers do not match, and the predicted answer does not fall within the range of the ground truth. Therefore, the prediction is incorrect."
+    },
+    {
+      "Q": "How many streetlights are visible throughout the entire video sequence?  ",
+      "A": "11",
+      "C": "There are 8 visible streetlights.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'The sidewalk is paved with cobblestones.' matches exactly with the ground truth answer, indicating full correctness."
+    },
+    {
+      "Q": "What type of surface is the sidewalk paved with?  ",
+      "A": "The sidewalk is paved with cobblestones.",
+      "C": "The sidewalk is paved with cobblestones.",
+      "M": "Object Recognition",
+      "start_idx": 24,
+      "end_idx": 26
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer describes the texture as 'cobblestone', which is inconsistent with the ground truth answer that describes the surface as 'smooth and flat' and possibly made of 'concrete slabs or tiles'. The textures are distinctly different, leading to an incorrect prediction."
+    },
+    {
+      "Q": "What is the texture of the surface on the paved pathway in the foreground?  ",
+      "A": "The paved pathway in the foreground has a cobblestone texture, made up of small, squarish stones fitted together.",
+      "C": "The texture of the surface on the paved pathway in the foreground appears to be smooth and flat, likely made of concrete slabs or tiles.",
+      "M": "Object Recognition",
+      "start_idx": 36,
+      "end_idx": 38
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer lists 3 intersections while the ground truth specifies 2. One intersection mentioned in the prediction may not be distinct or significant enough to be counted, leading to a discrepancy. Since the predicted number is close to the ground truth but not within its range, it's partially correct but not fully accurate."
+    },
+    {
+      "Q": "How many intersections with streets or paths are shown in the video?  ",
+      "A": "Based on the visual evidence in the video, there are 3 intersections shown:\n\n1.  A T-intersection for vehicles is visible at the corner of the large yellow building.\n2.  The intersection of the main pedestrian path leading into the park with the surrounding sidewalk/plaza.\n3.  The intersection of the paved area around the first statue (Tsar Samuil) with the main sidewalk.",
+      "C": "There are 2 intersections with streets or paths shown.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer mentions 'paving stones or paving bricks,' which is consistent with the material types 'brick or cobblestone' mentioned in the ground truth. Although not identical, the terms used are closely related and suggest similar materials used in paths. Thus, the prediction is largely correct."
+    },
+    {
+      "Q": "What material is the path in the park made of?  ",
+      "A": "Based on the visual evidence, the path in the park is made of paving stones or paving bricks.",
+      "C": "The path in the park is made of brick or cobblestone.",
+      "M": "Object Recognition",
+      "start_idx": 42,
+      "end_idx": 44
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer indicated 'cobblestones', which is different from the ground truth answer of 'brick pavers'. The material type is crucial to the answer's correctness, and the predicted response does not match the ground truth."
+    },
+    {
+      "Q": "What type of paving material is the path made from?  ",
+      "A": "Based on the visual information, the path is made from cobblestones.",
+      "C": "The path is made from brick pavers, arranged in a rectangular pattern.",
+      "M": "Object Recognition",
+      "start_idx": 48,
+      "end_idx": 50
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer \"09-08-18\" does not match the ground truth answer \"09.08 -11.08\" and \"1877\". The year is entirely incorrect, and the format of the dates differs. While the day and month appear similar at first glance, they are represented differently, and there is no indication that \"18\" could be related to the year \"1877\". Thus, the prediction is mostly incorrect with only minor possible relation in day and month, resulting in a low score."
+    },
+    {
+      "Q": "What date is inscribed on the brick paving in front of the statue?  ",
+      "A": "09-08-18",
+      "C": "The date inscribed on the brick paving in front of the statue is \"09.08 -11.08\u201d and under that \u201c1877.\u201d",
+      "M": "Object Recognition",
+      "start_idx": 54,
+      "end_idx": 56
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that low stone curbs lined the path, whereas the ground truth answer states that streetlights lined the path. The structural elements mentioned in the prediction and the ground truth are different, making the prediction incorrect."
+    },
+    {
+      "Q": "What structural element consistently lined the path throughout the walk?",
+      "A": "Based on the visual evidence, low stone curbs consistently lined the path throughout the walk.",
+      "C": "The streetlights consistently lined the path throughout the walk.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer includes specific details about the scenes, such as the statue of Tsar Samuil and a yellow building, which are not mentioned in the ground truth. While the general pathway direction (alleyway towards the street and turning towards the park) aligns somewhat, the predicted answer adds unnecessary details and doesn't clearly follow the same progression as specified in the ground truth."
+    },
+    {
+      "Q": "What was the sequence of scenes from the beginning to the end of the park pathway?",
+      "A": "Based on the visual evidence, the sequence of scenes along the park pathway is as follows:\n\n1.  The scene starts with a view of the statue of Tsar Samuil of Bulgaria.\n2.  The camera pans away from the statue and moves along a paved path next to a street, showing a yellow building across the way.\n3.  The camera then turns and proceeds down a central path within the park.\n4.  The view moves towards another monument at the end of the path, which is a statue of a soldier holding a flag.\n5.  The scene ends with a close-up view of the soldier monument.",
+      "C": "From the initial statue the scene sequence follows down the alleyway towards the street and then turns towards the park with the other statues.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer describes a specific monument, whereas the ground truth refers to the last statue approached as the focal point. The predicted answer might use different terms to describe the landmark, which might make partial sense if the described monument of a soldier is indeed the last statue approached in the given context. However, without specific confirmation that they refer to the same object, the prediction cannot be considered entirely correct."
+    },
+    {
+      "Q": "What prominent landmark serves as the focal point when I reach the open plaza area?",
+      "A": "The prominent landmark that serves as the focal point in the open plaza area is the monument of a soldier holding a flag, which stands on a large, stepped pedestal.",
+      "C": "The focal point is the last statue you approached.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately matches the ground truth answer. Both identify the material of the tiles as stone or concrete, which confirms the prediction as correct."
+    },
+    {
+      "Q": "What is the material of the tiles on the walkway and around the pedestal?  ",
+      "A": "Based on the visual information, the tiles on the walkway and around the pedestal are made of stone or concrete paving slabs.",
+      "C": "The tiles on the walkway and around the pedestal appear to be made of stone or concrete.",
+      "M": "Object Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer mentions park benches, additional trees, and grassy areas, which don't match the key elements in the ground truth answer: street lights and small trees. The mention of additional trees has partial alignment with the ground truth, but the majority of the predicted elements do not match."
+    },
+    {
+      "Q": "After passing the first statue, what landscape elements became more prominent along the path?",
+      "A": "After passing the first statue, the landscape elements that became more prominent were park benches, additional trees, and grassy areas lining the paved walkway.",
+      "C": "After passing the first statue, the street lights and the small trees became more prominent along the path.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer mentions a gray stone or concrete ledge/bench which is not present in the ground truth. Both answers mention grass to the right, which partially matches the ground truth."
+    },
+    {
+      "Q": "What is directly adjacent to the right of where you\u2019re standing?  ",
+      "A": "Based on the visual evidence, a gray stone or concrete ledge/bench and a patch of grass are directly adjacent to the right of where I am standing.",
+      "C": "You're standing on a paved surface with a grass area to your right.",
+      "M": "Spatial Reasoning",
+      "start_idx": 6,
+      "end_idx": 8
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer states that the planters are positioned 'in front of the streetlights' without specifying their positions relative to the cobblestone area or the street. The ground truth describes the planters as being 'on the cobblestone area, closer to you,' while the streetlights are 'further away, along the edge of the street.' "
+    },
+    {
+      "Q": "What is the spatial relationship between the planters and the streetlights?  ",
+      "A": "Based on the visual information from the images, the planters are positioned in front of the streetlights.",
+      "C": "The planters are positioned on the cobblestone area, closer to you, while the streetlights are located further away, along the edge of the street.",
+      "M": "Spatial Reasoning",
+      "start_idx": 30,
+      "end_idx": 32
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies a large, grey lamppost as being located directly next to the trash can, which matches the ground truth answer."
+    },
+    {
+      "Q": "What is located directly next to the trash can as you walk along the path?  ",
+      "A": "Based on the visual evidence from the video frames, a large, grey lamppost is located directly next to the trash can.",
+      "C": ": Directly next to the trash can, as you walk along the path, is a lamp post.  ",
+      "M": "Spatial Reasoning",
+      "start_idx": 24,
+      "end_idx": 26
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer states that the bench is in front of the tree on the right, while the ground truth states that the bench is to the left of the tree from the viewer's perspective. The positioning relative to the tree is not aligned with the ground truth, but there is partial alignment in identifying the bench and the tree."
+    },
+    {
+      "Q": "What is the position of the bench relative to the tree?  ",
+      "A": "A bench is positioned in front of the large tree on the right.",
+      "C": "The bench is positioned to the left of the tree when viewing from your perspective in the video.  ",
+      "M": "Spatial Reasoning",
+      "start_idx": 48,
+      "end_idx": 50
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer describes the presence of a statue on the right side, which is completely different from the ground truth answer that mentions textured tiles for visually impaired pedestrians. There is no overlap or similarity between the predicted answer and the ground truth answer."
+    },
+    {
+      "Q": "As I walked down the pathway, what was on the right side before reaching the green area?",
+      "A": "On the right side of the pathway, before reaching the main green park area, there was a statue of Tsar Samuil of Bulgaria on a stone pedestal, surrounded by trees and bushes.",
+      "C": "The textured tiles for visually impaired pedestrians were on the right side before reaching the green area.  ",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground truth answer in terms of the key elements: it mentions a grassy area, a sculpture/dark-colored statue, and a flower bed/flowers. Both descriptions accurately convey what is directly to the right before reaching the open area, with no significant discrepancies in details."
+    },
+    {
+      "Q": "As you walk along the pathway, what is directly to your right before reaching the open area?  ",
+      "A": "Based on the visual evidence, directly to your right, before you reach the open area of the park, is a grassy section with a dark-colored statue and a small flower bed.",
+      "C": "As you walk along the pathway, directly to your right there is a sculpture in a grassy area with flowers nearby.  ",
+      "M": "Spatial Reasoning",
+      "start_idx": 36,
+      "end_idx": 38
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer analyzes the frames and concludes that the person is initially approximately 4 steps away from the statue, which falls within the range of the ground-truth answer (4 to 5 steps). Therefore, the predicted answer is considered correct."
+    },
+    {
+      "Q": "How many steps away is the statue base from where you are standing?  ",
+      "A": "Based on the visual information from the three frames, the person is walking towards the statue.\n\n1.  **Frame 1:** The person is at a starting distance from the statue base.\n2.  **Frame 2 (1 second later):** The person has moved closer, indicating at least one step has been taken.\n3.  **Frame 3 (2 seconds later):** The person is even closer, indicating a second step has been taken.\n\nIn the final frame, the person is very close to the base of the statue, approximately 1-2 steps away. Since about 2 steps were taken to reach this point, the initial distance from the starting position (in the first frame) was approximately **4 steps**.",
+      "C": "Based on the video frames, you are approximately 4 to 5 steps away from the base of the statue.  ",
+      "M": "Spatial Reasoning",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there are 5 steps between the ground level and the platform of the statue, which doesn't align with the ground truth stating approximately three steps away. There is a discrepancy in the interpretation of distance, resulting in a fully wrong assessment."
+    },
+    {
+      "Q": "How many steps are between you and the statue?  ",
+      "A": "Based on the visual information in the images, there are 5 steps between the ground level and the platform of the statue.",
+      "C": "Based on the frames provided, it seems you are approximately three steps away from the statue.  ",
+      "M": "Spatial Reasoning",
+      "start_idx": 54,
+      "end_idx": 56
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer provides a calculation based on the available information, resulting in a distance of 3 steps. This falls just below the ground truth range of 4-6 steps. While slightly underestimating, the prediction process and context are reasonable, thus partly aligning with the ground truth."
+    },
+    {
+      "Q": "What is the distance in steps between the two young trees with supports along the path?  ",
+      "A": "Based on the video frames, the person walks from the first young tree to the second one.\n\n- At the start (first frame), the person is next to the first tree.\n- Two seconds later (third frame), the person has just passed the second tree.\n\nAssuming a normal walking pace of 1.5 to 2 steps per second, the time taken to cover the distance between the two trees is approximately 2 seconds.\n\nTherefore, the estimated distance is 2 seconds * 1.5 steps/second = 3 steps.",
+      "C": "The distance in steps is 4-6 steps.",
+      "M": "Spatial Reasoning",
+      "start_idx": 12,
+      "end_idx": 14
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies the direction ('to your right') where the pedestrian crossing is located, which is a part of the ground truth answer. However, it is missing the part about heading straight from the intersection first, resulting in a slightly incomplete response."
+    },
+    {
+      "Q": "From the intersection, which direction should I take to find the pedestrian crossing?",
+      "A": "From the intersection, you should take the direction to your right to find the pedestrian crossing.",
+      "C": "From the intersection head straight and turn right to find the pedestrian crossing.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer suggests going up steps, which contradicts the ground truth answer of continuing straight without any turns. Therefore, the prediction does not match the ground truth at all."
+    },
+    {
+      "Q": "After the pedestrian crossing, what is the next step to entering the park?",
+      "A": "After the pedestrian crossing, the next step to entering the park is to go up the steps.",
+      "C": "Keep walking straight without any turns.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer provides directions that start from a statue and head straight across an open square to a park area. However, it does not mention the key step of turning left and passing the planter boxes to find the reddish paved road as described in the ground-truth answer. The predicted path seems to lead to a different part of the park rather than the specific area with more trees mentioned in the ground truth."
+    },
+    {
+      "Q": "How do I get to the park area with more trees from the first statue?",
+      "A": "Based on the video, here is how to get to the park area with more trees from the first statue:\n\n1.  Starting from the statue of Tsar Samuil, turn around and walk away from it, heading towards the open square.\n2.  Walk straight across the paved square.\n3.  You will see a park area with a central path directly ahead. Enter this park by walking onto the path.",
+      "C": "From the first statue go towards the street, turn left and pass the planter boxes until you see the reddish paved road that leads to the park area with more trees.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground truth answer in identifying \"\u0421\u0410\u041c\u0423\u0418\u041b\" as Tsar Samuil of Bulgaria, an important historical figure. It also includes additional relevant details about his reign from 997 to 1014, which further supports the identification. Hence, the prediction is fully correct."
+    },
+    {
+      "Q": "What is the significance of the name \"\u0421\u0410\u041c\u0423\u0418\u041b\" mentioned in the video?  ",
+      "A": "Based on the text inscribed on the monument in the video, \"\u0421\u0410\u041c\u0423\u0418\u041b\" (Samuil) is the name of a historical figure. The full inscription reads:\n\n\u0421\u0410\u041c\u0423\u0418\u041b\n\u0426\u0410\u0420 \u041d\u0410 \u0411\u042a\u041b\u0413\u0410\u0420\u0418\u042f\n997 - 1014\n\nThis translates to:\n\nSAMUIL\nTSAR OF BULGARIA\n997 - 1014\n\nTherefore, the significance of the name is that it belongs to Samuil, who was the Tsar (Emperor) of Bulgaria during the years 997 to 1014, and the statue is a monument dedicated to him.",
+      "C": "The name \"\u0421\u0410\u041c\u0423\u0418\u041b\" refers to Tsar Samuil of Bulgaria, an important historical figure, indicating the statue is likely a tribute to his reign.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer misses key details from the ground truth, particularly the mention of the planter boxes as a significant point for turning. While the general idea of retracing steps is present, the specific instructions and landmarks differ, leading to potential confusion in following directions."
+    },
+    {
+      "Q": "If I\u2019m at the statue, how do I get back to the starting paved path?",
+      "A": "Based on the video provided, to get back to the starting paved path from the final statue you arrive at, you need to reverse your steps:\n\n1.  Turn around from the statue of the soldier holding a flag.\n2.  Walk straight down the paved path through the park.\n3.  When you reach the end of the path, cross the street in front of you.\n4.  After crossing the street, turn right and walk along the sidewalk.\n5.  Continue walking until you reach the paved area on your left, where the statue of Tsar Samuil is located. This is the starting path.",
+      "C": "Turn around and retrace your steps until you see the planter boxes, then turn right and you towards the starting paved path.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly includes the dates \"09.08-11.08 / 1877\" mentioned in the ground-truth answer which are set on the ground near the monument. The prediction is detailed and mentions standing in front of a bronze statue, which is set on a pedestal and aligns appropriately as a marker for reaching the large monument. The mention of seeing the statue of Tsar Samuil and a path leading into the park adds extra but not detrimental information. Therefore, the prediction is mostly correct with details supporting how one would know they reached the large monument."
+    },
+    {
+      "Q": "How do I know when I've reached the park's large monument?",
+      "A": "After passing the statue of Tsar Samuil, you will walk along a path into a park. You have reached the large monument when you are standing in front of a bronze statue of a soldier holding a flag, which is set on a tall, dark pedestal with a wide, multi-stepped base. The dates \"09.08-11.08 / 1877\" are set into the paving stones in front of the steps.",
+      "C": "You will know when you see the red road and the date written on the ground.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer and the ground truth both identify the date \"09.08-11.08 1877\" being associated with a monument. However, the predicted answer specifies the location of the date display as \"on the ground in front of the monument depicting a soldier holding a flag,\" while the ground truth simply indicates the date is on the monument shown towards the end of the video, without specifying its location as being on the ground in front. The core information about which monument is being referenced is correct, but there is a discrepancy in the specific location of the date. Therefore, the prediction is partially correct."
+    },
+    {
+      "Q": "On which monument do you see the date \"09.08-11.08 1877\" displayed?  ",
+      "A": "The date \"09.08-11.08 1877\" is displayed on the ground in front of the monument depicting a soldier holding a flag.",
+      "C": "The date \"09.08-11.08 1877\" is displayed on the monument shown towards the end of the video.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer suggests a different set of actions: leaving the statue by turning left and following a sidewalk before eventually turning left again to find the main path. The ground truth simply states turning around to head directly towards the main path after circling the statue. These actions are not fully aligned but rather suggest a different sequence and path to reach the main path."
+    },
+    {
+      "Q": "What should I do after circling the statue to return to the main path?",
+      "A": "After circling the statue, turn left to walk along the sidewalk bordering the park. Continue walking for a short distance, then turn left again to enter the main path that runs through the middle of the park, and proceed straight ahead.",
+      "C": "Turn around and head towards the main path.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer provides additional information about other monuments and texts visible in the video, but does not address the specific question of other text on the statue of Tsar Samuil itself. The ground-truth answer specifies that no additional text is visible on the statue, which directly contradicts the premise of identifying other text on the statue in the predicted answer."
+    },
+    {
+      "Q": "Can you identify any other text on the statue besides the name and reign of Tsar Samuil?  ",
+      "A": "Yes, although no other text is visible on the statue of Tsar Samuil itself, the video pans to a different monument later on. In front of this second monument, the dates \"09-08-1877\" and \"11-08-1877\" are visible on the paving stones. This second monument also has a plaque with more text, but it is not legible in the video.",
+      "C": "Besides the name and reign, no additional text is visible on the statue of Tsar Samuil in the images.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes how the statue of Samuil is visually distinguished in its environment, including its elevated position on a pedestal, the contrast between the statue and its surroundings, the dedicated space it occupies, and additional details like the inscription. These factors align well with the ground-truth answer which emphasizes the statue's prominent and elevated position in a landscaped, park-like environment."
+    },
+    {
+      "Q": "How is the statue of Samuil visually distinguished in the environment it is located?  ",
+      "A": "Based on the visual information, the statue of Samuil is distinguished in its environment in the following ways:\n\n*   **Elevation:** It is set upon a tall, multi-tiered grey stone pedestal, which elevates it significantly above the ground level of the park.\n*   **Material and Color Contrast:** The dark bronze of the statue contrasts sharply with the lighter grey color of its stone pedestal and the surrounding pavement, as well as the green of the nearby trees and lawn.\n*   **Dedicated Space:** The statue and its pedestal are situated on a dedicated paved platform, enclosed by a low stone border, separating it as a distinct focal point from the rest of the park.\n*   **Inscription:** The pedestal has a clearly carved inscription in Cyrillic script (\"\u0421\u0410\u041c\u0423\u0418\u041b / \u0426\u0410\u0420 \u041d\u0410 \u0411\u042a\u041b\u0413\u0410\u0420\u0418\u042f / 997 - 1014\"), which explicitly identifies the figure and marks its historical importance.",
+      "C": "The statue of Samuil is distinguished by its prominent and elevated position on a pedestal in a landscaped, park-like environment.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies the event as the Defense of Shipka Pass during the Russo-Turkish War and provides additional context that aligns with the ground truth answer. Both answers refer to the same historical event within the specified date range."
+    },
+    {
+      "Q": "What historical event could the date range \"09.08-11.08 1877\" possibly refer to?  ",
+      "A": "The date range \"09.08-11.08 1877\" refers to the heroic **Defense of Shipka Pass** during the Russo-Turkish War (1877-1878).\n\nThese dates, based on the Old Style calendar, mark the beginning of a crucial battle where a small contingent of Russian soldiers and Bulgarian volunteers held the strategic Shipka Pass against a significantly larger Ottoman army. Their successful defense was a pivotal moment in the war, ultimately contributing to the liberation of Bulgaria from Ottoman rule.",
+      "C": "The date range \"09.08-11.08 1877\" likely refers to a specific event during the Russo-Turkish War (1877\u20131878), possibly the Battle of Shipka Pass.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer identifies two specific monuments and provides detailed explanations of their significance, whereas the ground truth answer only refers to a single statue, emphasizing its role as a historical or cultural monument. The prediction partially aligns with the ground truth by acknowledging the significance of the monuments but diverges in the details, mentioning multiple monuments instead of a singular statue."
+    },
+    {
+      "Q": "What type of monument am I photographing, and why might it be significant?  ",
+      "A": "Based on the visual evidence, you are photographing two significant historical monuments located within the same public park or square.\n\n1.  **Statue of a Medieval Ruler:** The first monument shown is a statue dedicated to **Tsar Samuil of Bulgaria**. The inscription on the pedestal is in Cyrillic and clearly reads \"\u0421\u0410\u041c\u0423\u0418\u041b\" (Samuil) and \"\u0426\u0410\u0420 \u041d\u0410 \u0411\u042a\u041b\u0413\u0410\u0420\u0418\u042f\" (Tsar of Bulgaria), with the years of his reign, 997-1014. This monument is significant as it honors a key figure from the First Bulgarian Empire, representing a period of national sovereignty and resistance against the Byzantine Empire.\n\n2.  **War Memorial:** The second, larger monument in the center of the park is a **war memorial**. It features a statue of a soldier holding a flag. The dates \"1877\" inlaid on the ground in front of it are a crucial clue. This year marks the Russo-Turkish War, which led to the liberation of Bulgaria from Ottoman rule. The monument likely commemorates the Bulgarian volunteers (Opalchentsi) who fought in this pivotal war, making it highly significant to Bulgarian national identity and independence.",
+      "C": "You are photographing a statue, which appears to be a significant historical or cultural monument. Statues like this often commemorate important figures or events, offering insight into the local or national history.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately addresses the reason for photographing the area around statues multiple times. It cites multiple subjects of interest, exploring different compositions, and capturing both detail and context, which aligns well with the ground truth mentioning capturing different angles and details for a comprehensive visual record."
+    },
+    {
+      "Q": "Why do I might choose to photograph the area around the statues multiple times?  ",
+      "A": "Based on the visual evidence, you might choose to photograph the area around the statues multiple times for several reasons:\n\n1.  **Multiple Subjects of Interest:** The area contains several distinct monuments. The sequence begins with a close-up of a statue of Tsar Samuil and then reveals a larger park with a central, more prominent monument of a soldier holding a flag, as well as other smaller sculptures. Each of these is a separate photographic subject.\n2.  **Exploring Different Compositions:** You are moving through the space, changing your position and angle relative to the statues. This suggests an effort to find the best composition, capturing the monuments from various perspectives\u2014some with the surrounding trees, others with the historic buildings or the open square in the background.\n3.  **Capturing Both Detail and Context:** You start with a detailed shot of the inscription on the first statue's pedestal and then pull back to show the entire park. A photographer would take multiple shots to capture both these close-up details and the wider contextual views that show how the monuments fit into the overall environment.",
+      "C": "Photographing the area multiple times allows you to capture different angles and details, ensuring that you have a comprehensive visual record of the statue and its surroundings.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately identifies the historical figure, Tsar Samuel, mentioned in the inscription, aligning with the ground-truth, which specifies understanding the identity, historical period, or event commemorated by the inscription."
+    },
+    {
+      "Q": "What historical or cultural information am I likely to be capturing in these images based on the inscription?  ",
+      "A": "Based on the inscription visible on the statue's pedestal, you are likely capturing information related to Bulgarian history. The inscription reads:\n\n**\u0421\u0410\u041c\u0423\u0418\u041b** (SAMUIL)\n**\u0426\u0410\u0420 \u041d\u0410 \u0411\u042a\u041b\u0413\u0410\u0420\u0418\u042f** (TSAR OF BULGARIA)\n**997 - 1014**\n\nThis indicates the statue is of **Tsar Samuel**, who was the ruler of the First Bulgarian Empire from 997 to 1014. Therefore, the images are capturing a monument dedicated to this significant medieval historical figure and the history of Bulgaria during that period.",
+      "C": "The inscription likely provides valuable information about the identity of the figure represented in the statue, the historical period they are from, or the event commemorated, adding a layer of context and meaning to your photographs.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer covers all aspects mentioned in the ground truth answer, such as using lampposts for leading lines to guide the viewer's eye and adding balance to the composition. Additionally, it expands on other potential effects on framing like obstruction and visual clutter, which enhances the explanation."
+    },
+    {
+      "Q": "How might the placement of the lampposts affect the framing of my photographs?  ",
+      "A": "Based on the visual information, here is how the placement of the lampposts might affect the framing of your photographs:\n\n*   **Obstruction:** The lampposts are tall and positioned throughout the scene. If you're not careful with your camera placement, they can easily block or intersect with your main subjects, such as the statues or the buildings across the street, creating a visually awkward composition.\n\n*   **Framing Elements:** You can intentionally use the lampposts to frame your shots. By placing a lamppost along one edge of your photo, you can create a natural frame around a subject in the distance, which adds a sense of depth.\n\n*   **Leading Lines:** The series of lampposts along the walkway and street can be used as strong leading lines. This compositional technique helps guide the viewer's eye through the photograph, leading them towards a focal point like the main monument in the park or the buildings at the end of the street.\n\n*   **Visual Clutter:** Because there are multiple lampposts, along with trees and other poles, they can contribute to a cluttered or busy background if not composed thoughtfully. They might distract from the primary subject you want to capture.",
+      "C": "The lampposts help create leading lines and guide the viewer's eye toward the statue, adding architectural interest and balance to the composition.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer of \"4\" does not match the information provided in the ground truth, which states multiple instances of text related to historical details. The prediction is not specific about the exact number and does not align with the enumeration of historical details as mentioned in the ground truth."
+    },
+    {
+      "Q": "How many instances of text are visible in the entire video related to the historical details provided?  ",
+      "A": "4",
+      "C": "There are multiple instances of text visible related to historical details, specifically on both the statue of Samuil and the monument with the date \"09.08-11.08 1877\".",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ]
+]

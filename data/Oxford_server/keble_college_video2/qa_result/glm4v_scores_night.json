@@ -1,0 +1,857 @@
+[
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states 11 street lights, which is outside the ground truth range of 2-3 street lights. Therefore, the prediction is incorrect."
+    },
+    {
+      "Q": "How many street lights can be seen throughout the video?  ",
+      "A": "\nThere are 11 street lights visible throughout the video.",
+      "C": "There are 2-3 street lights visible throughout the video.  ",
+      "M": "Counting ",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there are four doors visible, while the ground-truth answer indicates there are five doors visible. The predicted answer does not match the ground truth, and thus it is fully incorrect."
+    },
+    {
+      "Q": "How many doors are visible in the sequence?  ",
+      "A": "\nThere are four doors visible in the sequence.",
+      "C": "5 doors are visible in the sequence.  ",
+      "M": "Counting ",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there are two sets of steps or staircases, while the ground-truth answer states there are three. The predicted number must match the ground truth exactly to be considered correct in this case."
+    },
+    {
+      "Q": "How many separate sets of steps or staircases are shown?  ",
+      "A": "\nThere are two separate sets of steps or staircases shown in the video.",
+      "C": "Three separate sets of steps or staircases are shown.  ",
+      "M": "Counting ",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there are three distinct sections or rooms, while the ground truth answer specifies there are two. The prediction does not match the ground truth, and there is no range provided for acceptable variance in the answer."
+    },
+    {
+      "Q": "Count the distinct sections or rooms visible in the sequence.  ",
+      "A": "\nThere are three distinct sections or rooms visible in the sequence.",
+      "C": "Two distinct sections or rooms are visible in the sequence.  ",
+      "M": "Counting ",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer states there are 5 light sources, while the ground truth states there are 4. The prediction is only off by one, but it does not match the ground truth exactly, which is required for precise counting tasks."
+    },
+    {
+      "Q": "Count the number of different interior light sources observed.  ",
+      "A": "\nThere are 5 light sources visible in the interior.",
+      "C": "There are 4 different interior light sources observed.  ",
+      "M": "Counting ",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately states that the outdoor lights appeared to get brighter and clearer as you approached the building, which matches the information provided in the ground truth answer. The slight brightness change mentioned in the ground truth is implied in the prediction, leading to a fully correct evaluation."
+    },
+    {
+      "Q": "As you approached the building, did the outdoor lights appear to get brighter or clearer?  ",
+      "A": "\nThe outdoor lights appeared to get brighter and clearer as you approached the building.",
+      "C": "Yes, the outdoor lights appeared to get slightly brighter and clearer as you approached the building.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately reflects the ground-truth answer by stating that the lighting remained consistent with warm tones throughout the video."
+    },
+    {
+      "Q": "Upon entering the building, did the lighting shift from warm to cooler tones, or did it remain consistent?  ",
+      "A": "\nThe lighting remained consistent with a warm, yellowish hue throughout the video.",
+      "C": "It remained consistent with warm tones.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer 'Yes' is too general and doesn't sufficiently capture the nuance of the ground-truth answer, which specifies that while the lighting intensity mostly remained the same with slight changes, more details became visible. The prediction lacks detail about the visibility of additional details and the slight changes in lighting."
+    },
+    {
+      "Q": "While ascending the stairs, did the overhead lighting intensity change, allowing you to see more details?  ",
+      "A": "\nYes",
+      "C": "The lighting intensity remained mostly the same with only slight changes, but some additional details became more visible as you ascended.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer is a clear and accurate restatement of the ground truth answer, indicating that the light sources became more consistent when transitioning from the lobby to the hallway."
+    },
+    {
+      "Q": "As you transitioned from the lobby to the hallway, did the light sources become more consistent or scattered?  ",
+      "A": "\nAs you transitioned from the lobby to the hallway, the light sources became more consistent.",
+      "C": "The light sources became more consistent.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'Yes, the light appears warmer and more inviting as you move from outside to inside.' matches the ground truth answer both in inference and observation. Both describe the light as feeling or appearing warmer when moving from outside to inside, indicating a complete and accurate match."
+    },
+    {
+      "Q": "Could you feel the warmth of the light change as you moved from outside to inside?  ",
+      "A": "\nYes, the light appears warmer and more inviting as you move from outside to inside.",
+      "C": "Yes, the light felt warmer as you moved inside.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately captures the main idea of the ground-truth answer. Both state that the light intensity increased and made architectural details more apparent. Although the predicted answer is slightly more definitive in specifying the increase, it still aligns well with the ground truth."
+    },
+    {
+      "Q": "Did the intensity of the light increase as you entered the hall, making the architectural details more apparent?  ",
+      "A": "\nYes, the light became more intense as you entered the hall, making the architectural details more apparent.",
+      "C": "The intensity of the light increased slightly, making some architectural details more apparent.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly states that there was no flickering of lights, matching the ground truth answer. Both indicate the stability and absence of flickering, making the predicted answer fully correct."
+    },
+    {
+      "Q": "Did you experience any flickering of lights while navigating through the building?  ",
+      "A": "\nNo, the lights appear to be stable and do not flicker.",
+      "C": "No, there was no noticeable flickering of lights.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there was a noticeable shift in brightness, which contradicts the ground truth answer that indicates there wasn't any noticeable shift in brightness. Therefore, the prediction is incorrect."
+    },
+    {
+      "Q": "Was there a noticeable shift in brightness indicating a light turning on or off during the transition from exterior to interior?  ",
+      "A": "\nYes, there was a noticeable shift in brightness indicating a light turning on or off during the transition from exterior to interior.",
+      "C": "No, there wasn't a noticeable shift in brightness indicating a light turning on or off.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer states that the outdoor light fixtures emit a 'yellowish light', which is essentially the same as the ground truth's 'yellow' light. The slight difference in wording does not affect the accuracy of the prediction compared to the ground-truth answer."
+    },
+    {
+      "Q": "What is the color of the light emitted by the outdoor light fixtures in the central area?  ",
+      "A": "\nThe outdoor light fixtures in the central area emit a yellowish light.",
+      "C": "The color of the light emitted by the outdoor light fixtures in the central area is yellow.",
+      "M": "Light Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies the shape of the lights as square, which matches the ground truth answer. The difference in wording does not affect the accuracy of the answer."
+    },
+    {
+      "Q": "What shape are the lights within the archway that cast light downwards?  ",
+      "A": "\nThe lights within the archway that cast light downwards are square.",
+      "C": "The lights within the archway that cast light downwards are square-shaped.",
+      "M": "Light Recognition",
+      "start_idx": 15,
+      "end_idx": 17
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer states that the color of the light emitted by the streetlamp is yellow, which matches the ground truth description of a 'warm yellow color'. While the prediction lacks the adjective 'warm', the basic color 'yellow' is correctly identified. Thus, it is largely correct, but not fully descriptive."
+    },
+    {
+      "Q": "What is the color of the light emitted by the streetlamp at the top of the stairs?  ",
+      "A": "\nThe light emitted by the streetlamp at the top of the stairs is yellow.",
+      "C": "The light emitted by the streetlamp at the top of the stairs is a warm yellow color.",
+      "M": "Light Recognition",
+      "start_idx": 30,
+      "end_idx": 32
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer describes the shadow as a 'long shadow', but it does not specify the nature of the shadow, particularly that it is a 'human shadow that belongs to the person behind the camera', which is the key detail in the ground truth answer."
+    },
+    {
+      "Q": "What kind of shadow is prominent on the stairs?",
+      "A": "\nThe shadow on the stairs is a long shadow.",
+      "C": "A human shadow that belongs to the person behind the camera is prominent on the stairs .",
+      "M": "Light Recognition",
+      "start_idx": 45,
+      "end_idx": 47
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'The lights scattered across the pathway or street are yellow.' matches the ground truth answer 'The lights scattered across the pathway or street appear to be yellow.'. Both answers indicate the color of the lights as yellow, showing complete accuracy."
+    },
+    {
+      "Q": "What color are the lights that are scattered across the pathway or street?  ",
+      "A": "\nThe lights scattered across the pathway or street are yellow.",
+      "C": "The lights scattered across the pathway or street appear to be yellow.",
+      "M": "Light Recognition",
+      "start_idx": 75,
+      "end_idx": 77
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer states there are nine yellowish light sources visible, which falls within the ground truth range of 6-10. Therefore, the prediction is correct."
+    },
+    {
+      "Q": "How many yellowish light sources are visible in the frames?  ",
+      "A": "\nThere are nine yellowish light sources visible in the frames.",
+      "C": "In each of the frames, there are 6-10 yellowish light sources visible.",
+      "M": "Light Recognition",
+      "start_idx": 105,
+      "end_idx": 107
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer does not match the ground truth answer. The ground truth specifies that you should walk straight and turn left at a street lamp, which indicates the entrance of the building with archways. The predicted answer suggests turning left and going up the stairs, which does not align with the directions provided in the ground truth. Therefore, the path guidance differs, resulting in a low correctness score."
+    },
+    {
+      "Q": "How do I reach the building with the archways from my initial position?  ",
+      "A": "\nTurn left and go up the stairs.",
+      "C": "Walk straight and turn left when you approach the street lamp, indicating the entrance of the building with the archways.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer suggests turning left immediately and going up the stairs, which contradicts the ground truth answer that specifies continuing straight ahead and following the left wall to reach the staircase. The prediction does not correctly describe the sequence of actions needed to reach the staircase."
+    },
+    {
+      "Q": "After entering through the archway, where do I go next to reach the staircase?  ",
+      "A": "\nTurn left and go up the stairs.",
+      "C": "After entering continue straight ahead and follow the left wall to reach the staircase.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer is too vague and does not provide the specific actions needed to navigate from the staircase to the starting position. It mentions turning right, which is partially correct, but it misses key details such as retracing steps down the stairs and exiting the building, which are essential for following the correct path as described in the ground truth."
+    },
+    {
+      "Q": "How can I navigate back to the starting position from the staircase?  ",
+      "A": "\nGo forward and turn right.",
+      "C": "Retrace your steps down the stairs, exit the building and turn right to walk to the starting position.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer suggests turning right, which directly contradicts the ground-truth answer that specifies continuing straight ahead. Therefore, the prediction does not match the ground truth."
+    },
+    {
+      "Q": "Upon reaching the top of the stairs, where do I turn to continue through the hallway?  ",
+      "A": "\nTurn right.",
+      "C": "Upon reaching the top of the stairs you can keep walking straight ahead to continue through the hallway.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the core instruction of the ground truth, which is to ascend the stairs to reach the exit. The addition of 'follow the path through the archway' complements the instruction and doesn't contradict the most efficient path to the exit explicitly detailed in the ground truth."
+    },
+    {
+      "Q": "Which landmarks should I follow to ensure I head towards the exit most efficiently?  ",
+      "A": "\nFollow the path through the archway, then ascend the stairs to reach the exit.",
+      "C": "You should follow the stairs to reach the exit most efficiently, as they will lead you directly to it.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer suggests turning right, whereas the ground truth specifies turning left after exiting the building. Both directions are opposite, making the prediction fully incorrect."
+    },
+    {
+      "Q": "After exiting the building which way should I go to continue my journey towards the final stairs?",
+      "A": "\nTurn right",
+      "C": "Turn left and continue straight ahead after leaving the building.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer precisely identifies the same architectural feature as the ground truth. Both mention the \"archway\" as the first architectural feature encountered when entering the building, demonstrating complete alignment."
+    },
+    {
+      "Q": "What was the first architectural feature I encountered as I entered the building?  ",
+      "A": "\nThe first architectural feature encountered as you entered the building was an archway.",
+      "C": "The first architectural feature you encountered is the archway at the entry.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer mentions seeing a lamp on the ceiling, which is different from the ground truth answer that specifies noticing a big arched door on the left side. The predicted answer does not match any aspect of the ground truth, hence it is fully incorrect."
+    },
+    {
+      "Q": "Before climbing the staircase, what notable feature did I see in the corridor?  ",
+      "A": "\nBefore climbing the staircase, you saw a lamp on the ceiling in the corridor.",
+      "C": "Before cl9imbing the staircase, I notice the big ached door on my left side.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer mentions arches and columns, which are not mentioned in the ground truth. It also does not mention the staircase, the different light sources, or the big windows on the second floor, which are key elements in the ground truth. The prediction partially aligns with the mention of arches, but overall, it lacks significant overlap with the ground-truth answer."
+    },
+    {
+      "Q": "Can you list the different architectural elements I observed during my journey inside the building?  ",
+      "A": "\nDuring the journey, you observed various architectural elements such as arches, columns, and intricate railings. The building's interior featured a mix of classical and ornate designs, with the arches and columns adding a sense of grandeur and elegance. The intricate railings provided a touch of sophistication and detail to the overall architecture.",
+      "C": "Some of the different architectural elements are the are: the staircase, the different light sources, the archway and the big windows on the second floor.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer only partially matches the ground-truth sequence. It mentions walking up and down the stairs but misses key details: walking a corridor before the stairs and exploring the second floor with big windows afterward. The predicted sequence lacks continuity and context compared to the ground-truth answer."
+    },
+    {
+      "Q": "What sequence of areas did I pass through after entering the building?  ",
+      "A": "\nYou walked up the stairs, then walked down the stairs.",
+      "C": "After entering the building you walk a short corridor, climb the staircase and then explore the second floor with big windows.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately matches the ground-truth answer in terms of the essential information provided. Both state that a staircase is the structural feature that marks the transition from the corridor to a higher level."
+    },
+    {
+      "Q": "What structural feature marked the transition from the corridor to a higher level?  ",
+      "A": "\nThe transition from the corridor to a higher level was marked by a staircase.",
+      "C": "The staircase is the structural feature that marked the transition from the corridor to a higher level.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer mentions encountering a landing, while the ground truth specifies encountering an open area with a big window. The mention of a landing suggests partial correctness as it implies a space immediately after the stairs, but it lacks specific details about the open area and the window, which are key elements in the ground truth."
+    },
+    {
+      "Q": "What did I encounter immediately after ascending the staircase?  ",
+      "A": "\nI encountered a landing after ascending the staircase.",
+      "C": "You encountered the open area with the big window on the second floor.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'You returned to the archway' does not match the ground truth answer 'You return to the corridor and then the exit of the building.' There is no mention of an archway in the ground truth, indicating the prediction is fully incorrect."
+    },
+    {
+      "Q": "After turning back from the top of the stairs, which feature or area did I return to?  ",
+      "A": "\nYou returned to the archway.",
+      "C": "You return to the corridor and then the exit of the building after turning back from the top of the stairs.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground-truth answer exactly. Both state that 'The building with open windows is closer to the streetlight.'"
+    },
+    {
+      "Q": "What structure is closer to the streetlight, the building with open windows or the distant illuminated windows?  ",
+      "A": "\nThe building with open windows is closer to the streetlight.",
+      "C": "The building with open windows is closer to the streetlight.",
+      "M": "Spatial Reasoning",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer mentions a light positioned above the archway, which partially aligns with the ground-truth answer mentioning lights being present. However, the predicted answer lacks the specifics of there being two small lights embedded into the ceiling structure of the arch. The lack of detail results in an incomplete assessment compared to the ground-truth answer."
+    },
+    {
+      "Q": "What is positioned directly above the archway within the images?  ",
+      "A": "\nThe light is positioned directly above the archway.",
+      "C": "Directly above the archway, there are two small lights embedded into the ceiling structure of the arch.",
+      "M": "Spatial Reasoning",
+      "start_idx": 15,
+      "end_idx": 17
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies the lamp post as being to the right of the stairs. However, it omits the specific detail that it is near the top landing, which is included in the ground truth. While the main spatial relationship is captured, the lack of detail results in a partially correct answer."
+    },
+    {
+      "Q": "What is the position of the lamp post relative to the stairs?  ",
+      "A": "\nThe lamp post is positioned to the right of the stairs.",
+      "C": "The lamp post is positioned to the right of the stairs as you approach them, near the top landing.",
+      "M": "Spatial Reasoning",
+      "start_idx": 30,
+      "end_idx": 32
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there is a railing directly above the steps, whereas the ground truth specifies a wall. These are different objects, making the predicted answer incorrect."
+    },
+    {
+      "Q": "If you are standing on the floor tiles, what object is directly above the steps?  ",
+      "A": "\nA railing is directly above the steps.",
+      "C": "Based on the frames, there is a wall directly above the steps.",
+      "M": "Spatial Reasoning",
+      "start_idx": 45,
+      "end_idx": 47
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer states that the archway is behind the floor lanterns, which contradicts the ground truth that describes the archway as being straight ahead at the end of the hallway. The ground truth also provides specific details about the lanterns being on either side flanking the archway, which is not captured in the predicted answer. Therefore, the prediction is incorrect, and a score of 2 reflects partial accuracy related to the positioning context."
+    },
+    {
+      "Q": "What is the relationship in position between the archway and the floor lanterns?  ",
+      "A": "\nThe archway is behind the floor lanterns.",
+      "C": "The archway is positioned straight ahead at the end of the hallway. The floor lanterns are on either side, flanking the archway, positioned lower and closer to the floor to illuminate the path leading through the arch.",
+      "M": "Spatial Reasoning",
+      "start_idx": 60,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that a cross is positioned between the bush and the building, which contradicts the ground truth that mentions there is no distinct object in that position."
+    },
+    {
+      "Q": "What object is positioned between the bush and the building with illuminated windows?  ",
+      "A": "\nA cross is positioned between the bush and the building with illuminated windows.",
+      "C": "Based on the frames provided, there doesn't appear to be any distinct object positioned between the bush and the building with illuminated windows.",
+      "M": "Spatial Reasoning",
+      "start_idx": 75,
+      "end_idx": 77
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there is a sign with the word 'CAUTION' visible, but the ground-truth answer indicates that no specific text can be identified on the wall in frames 26 and 27. Therefore, the predicted answer contradicts the ground-truth answer, making it incorrect."
+    },
+    {
+      "Q": "What specific text can you identify on the wall next to the door in frames 26 and 27?  ",
+      "A": "\nThe text on the wall next to the door in frames 26 and 27 is a sign with the word 'CAUTION' visible.",
+      "C": "I cannot identify any specific text on the wall next to the door in frames 26 and 27.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The ground truth specifies that it cannot be determined if there is repeated text on the sign, while the predicted answer claims two instances of repeated text. This major discrepancy results in a score of 0."
+    },
+    {
+      "Q": "Is there any repeated text on the sign, and if so, how many times does it appear?  ",
+      "A": "\nFind the sign [[546,611,622,665]]. Check the text on it, got the text 'EXIT'. It appears two times. So the answer is yes, 2.",
+      "C": "I cannot determine if there is repeated text on the sign.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately reflects the ground truth answer by explicitly stating that there is no mention of a specific office or department in the text."
+    },
+    {
+      "Q": "Is there any mention of a specific office or department in the text?  ",
+      "A": "\nNo, there is no mention of a specific office or department in the text.",
+      "C": "There is no mention of a specific office or department in the text that I can see.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer indicates that there is a sign visible with entry conditions, which contradicts the ground truth answer stating that there isn't any text indicating restrictions or requirements. Therefore, the predicted answer is incorrect."
+    },
+    {
+      "Q": "Does any text indicate any restrictions or requirements, such as entry conditions?  ",
+      "A": "\nYes, a sign is visible on the wall indicating entry conditions.",
+      "C": "There isn\u2019t any text that indicates any restrictions or requirements, such as entry conditions that I can identify.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer incorrectly infers the type of building as a chapel from the text on a sign, whereas the ground-truth specifies that such an inference cannot be made."
+    },
+    {
+      "Q": "Can you infer the type of building from a text shown on a sign?  ",
+      "A": "\nYes, the sign indicates that the building is a chapel.",
+      "C": "I cannot infer the type of building from a text shown on a sign.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately states that there is no contact information or phone number visible, which matches the ground-truth answer."
+    },
+    {
+      "Q": "Is there any contact information or a phone number visible?",
+      "A": "\nNo, there is no contact information or a phone number visible.",
+      "C": "There is no visible contact information or phone number.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies some architectural features like arched doorways and windows, which aligns with the archway mentioned in the ground truth. However, it misses other elements present in the ground truth like the staircase, light sources, and tall windows, while adding a tiled floor with a geometric pattern that is not mentioned in the ground truth."
+    },
+    {
+      "Q": "What architectural features did you observe as you entered and moved through the building?  ",
+      "A": "\nAs I entered and moved through the building, I observed arched doorways and windows, as well as a tiled floor with a geometric pattern.",
+      "C": "I observed the archway, the staircase, the light sources, the tall windows and more.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer mentions using a lamp to navigate, which partially aligns with the ground-truth as both involve using light for assistance. However, it does not mention following the walls or sticking to well-lit areas, which are key components of the ground truth answer."
+    },
+    {
+      "Q": "How did you determine your path when navigating through the corridors and staircases?  ",
+      "A": "\nI used the light from the lamp to guide me through the dark corridors and staircases.",
+      "C": "It is easy to navigate when following the walls along side the staircase and stick to the well-lit areas.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'I did not see any signs or markers that helped guide me through the building' closely matches the ground truth 'There were no noticeable guides or markers to help guide my journey'. Both indicate the absence of any guides or markers. Therefore, the prediction is fully correct."
+    },
+    {
+      "Q": "Did you notice any signs or markers that helped guide your journey through the building?  ",
+      "A": "\nI did not see any signs or markers that helped guide me through the building.",
+      "C": "There were no noticeable guides or markers to help guide my journey.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the doors and railings did not stand out, which directly contradicts the ground truth answer that says they stood out due to intricate detailing and ornamentation."
+    },
+    {
+      "Q": "When interacting with objects like doors or railings, did any stand out due to their design or function?  ",
+      "A": "\nNo, the doors and railings in the video did not stand out due to their design or function.",
+      "C": "Yes, the doors and railings in the building stand out with intricate detailing and ornamentation.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer states that the outside environment was brighter, which is the opposite of the ground truth answer that mentions it was significantly darker. Additionally, the predicted answer does not address the aspect of space, whereas the ground truth indicates the outside was far more spacious."
+    },
+    {
+      "Q": "As you exited the building, how did the outside environment compare to the interior?  ",
+      "A": "\nThe outside environment was much brighter than the interior of the building.",
+      "C": "The outside environment is significantly darker and far more spacious than the indoor.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states 'No, there is no one else seen walking in the area', which directly contradicts the ground truth answer of 'Yes, there is someone else seen besides me, walking in the area'. The prediction is the opposite of the ground truth."
+    },
+    {
+      "Q": "Is there anyone else, besides you seen walking in the area?",
+      "A": "\nNo, there is no one else seen walking in the area.",
+      "C": "Yes, there is someone else seen besides me, walking in the area.",
+      "M": "Dynamic",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the person is approaching the building, which directly contradicts the ground-truth answer indicating that the person is leaving the building. Therefore, the prediction is fully incorrect."
+    },
+    {
+      "Q": "Is the person approaching or leaving the building?",
+      "A": "\nThe person appears to be approaching the building as they move closer to it throughout the frames.",
+      "C": "The person is leaving the building.",
+      "M": "Dynamic",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer states there is no moving shadow behind the camera, leading to the conclusion that there is only one person, which aligns with the ground truth answer."
+    },
+    {
+      "Q": "Do you see any other moving shadows, indicating there\u2019s more than 1 person behind the camera?",
+      "A": "\nFind the camera [[000,000,998,998]]. Check the moving shadow behind it. It doesn't exist. The answer is no.",
+      "C": "No, I see only 1 shadow, indicating there\u2019s only 1 person behind the camera.",
+      "M": "Dynamic",
+      "start_idx": 44,
+      "end_idx": 46
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground-truth answer in stating that there are no passing vehicles visible in the distance as you walk down the stairs. Both provide the same information, making the prediction fully correct."
+    },
+    {
+      "Q": "As you walk down the stairs, do you see any passing vehicles somewhere in the distance?",
+      "A": "\nNo, there are no passing vehicles visible in the distance as you walk down the stairs.",
+      "C": "No, there is no vehicles seen in the distance.",
+      "M": "Dynamic",
+      "start_idx": 106,
+      "end_idx": 108
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer exactly matches the ground-truth answer in terms of the number of people who entered the building, which is 0. Therefore, the prediction is considered fully correct."
+    },
+    {
+      "Q": "How many people besides yourself entered the building throughout the video sequence?",
+      "A": "\n0",
+      "C": "0 people besides me entered the building throughout the video sequence.",
+      "M": "Dynamic Counting",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that 0 people exited the building, which contradicts the ground truth answer that states 1 person exited. The prediction does not fall within the range of the ground truth, resulting in an incorrect evaluation."
+    },
+    {
+      "Q": "How many people did you count exiting the building?",
+      "A": "\nI counted 0 people exiting the building.",
+      "C": "I can count 1 person exiting the building.",
+      "M": "Dynamic Counting",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer states that only one shadow, that of the person recording the video, is visible. This aligns with the ground truth answer, which mentions counting only one shadow, the individual's own. As their implications are the same, the prediction is correct."
+    },
+    {
+      "Q": "How many people\u2019s shadows can you count as you walk down the stairs?",
+      "A": "\nAs you walk down the stairs, you can see the shadow of the person recording the video. There are no other people's shadows visible in the video.",
+      "C": "I can count only 1 shadow, my own.",
+      "M": "Dynamic Counting",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately states that there were no passing vehicles observed during the entire video sequence, which matches exactly with the ground-truth answer indicating zero passing vehicles. Therefore, the prediction is fully correct."
+    },
+    {
+      "Q": "How many passing vehicles did you see throughout the entire video sequence?",
+      "A": "\nDuring the entire video sequence, there were no passing vehicles observed.",
+      "C": "I saw zero passing vehicles throughout the entire video sequence.",
+      "M": "Dynamic Counting",
+      "start_idx": 0,
+      "end_idx": 114
+    }
+  ]
+]

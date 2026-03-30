@@ -1,0 +1,707 @@
+[
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer does not match the ground truth answer exactly. The ground truth states there are 8 different tables, while the prediction states there are 7 tables. Since the question is about counting the exact number of tables, a difference in the count affects the accuracy. However, the prediction is close to the ground truth, so it receives a partial score for its proximity."
+    },
+    {
+      "Q": "Can you count the number of different tables seen across all rooms?",
+      "A": "\nThere are 7 tables visible in the video.",
+      "C": "There are 8 different tables across all rooms.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 202
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer correctly identifies that the beds are located in different rooms, matching part of the ground-truth answer. However, it incorrectly states that there are only two beds visible instead of three. Thus, the prediction is partially correct."
+    },
+    {
+      "Q": "How many beds are visible, and are they located in the same room?",
+      "A": "\nThere are two beds visible, and they are located in different rooms.",
+      "C": "There are 3 beds, located across 2 rooms.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 202
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there are four couches or sofas, while the ground truth answer states there are three. The predicted number does not fall within the range of the ground truth answer, making it fully incorrect."
+    },
+    {
+      "Q": "What is the total number of couches or sofas present in the video?",
+      "A": "\nThere are four couches or sofas in the video.",
+      "C": "The number of couches and sofas is 3.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 202
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there are 11 rooms observed, which does not align with the ground-truth answer of 8 rooms. There is no range consideration mentioned in the task's context that would allow for a deviation, hence the prediction is fully incorrect."
+    },
+    {
+      "Q": "How many rooms were observed throughout the video sequence?",
+      "A": "\nThere are a total of 11 rooms observed in the video sequence.",
+      "C": "8 rooms were observed.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 202
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there are 12 lamps, whereas the ground truth indicates there are 21 lamps. This is a discrepancy of 9 lamps, which is a significant difference, leading to an incorrect evaluation."
+    },
+    {
+      "Q": "Across all the scenes, how many lamps can you identify?",
+      "A": "\nThere are a total of 12 lamps visible across all the scenes in the video.",
+      "C": "I can identify 21 lamps across all scenes.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 202
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies that there are 2 rooms containing chairs, matching the ground truth answer both in quantity and detail."
+    },
+    {
+      "Q": "Is there more than one room containing chairs? If so, how many rooms are they in?",
+      "A": "\nYes, there are two rooms containing chairs.",
+      "C": "Yes, there are 2 rooms containing chairs.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 202
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there are two tables with lamps on them, which does not fall within the range of the ground truth answer that says there are six tables with lamps on them. Therefore, the prediction is considered incorrect."
+    },
+    {
+      "Q": "How many tables have lamps positioned on them?",
+      "A": "\nThere are two tables with lamps on them.",
+      "C": "6 tables have lamps positioned on them.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 202
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identified that there are two rooms with more than one table, which matches the ground truth answer. Additionally, it specified the rooms as the kitchen and the dining area, providing further detail."
+    },
+    {
+      "Q": "How many rooms had more than one table within them?",
+      "A": "\nThere are two rooms with more than one table: the kitchen and the dining area.",
+      "C": "2 rooms have more than one table in them.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 202
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer describes a path that includes going through a bathroom and a shelf, which is not mentioned in the ground truth. Additionally, the predicted sequence of navigation seems unnecessarily complex and does not align with the ground truth's straightforward instructions. The main passage described in the ground truth is not reflected in the prediction."
+    },
+    {
+      "Q": "How do I get from the bedroom with the two beds to the large dining area with windows?  ",
+      "A": "\nGo to the door, then go through the door into the bathroom, then go to the shelf, then go through the door into the bedroom, then go to the door, then go through the door into the dining area.",
+      "C": "Walk out the bedroom with 2 beds and head through the vast space then turn right to approach the large dining area with windows.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 202
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer suggests a complicated route through the hallway, living room, and dining area, whereas the ground truth indicates that simply exiting the small bedroom leads directly to the central area. The predicted path does not align with the information given in the ground truth and is therefore fully incorrect."
+    },
+    {
+      "Q": "What is the best route to take from the small bathroom to the central area?  ",
+      "A": "\nThe best route from the small bathroom to the central area involves walking through the hallway, passing through the living room, and then heading towards the dining area.",
+      "C": "By simply exiting the small bedroom you\u2019ll be in the central area.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 202
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer provides a correct sequence of actions to reach the kitchen. Although it does not specifically mention starting in the bedroom with 2 beds, the steps \"head to the door, then go through the door, and turn left\" implicitly align with \"from the bedroom with 2 beds turn left to enter the kitchen.\" The predicted path leads to the same conclusion, hence it is mostly correct."
+    },
+    {
+      "Q": "If I start at the bedroom with 2 beds and want to reach the kitchen, which direction should I head?  ",
+      "A": "\nHead to the door, then go through the door, and turn left.",
+      "C": "From the bedroom with 2 beds turn left to enter the kitchen.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 202
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is 'Turn left and go forward to the seating area,' which contradicts the ground-truth answer 'Turn right to get to the seating area if you\u2019re in the corridor facing a green wall.' The directions provided in the prediction are opposite to the ground truth."
+    },
+    {
+      "Q": "If I\u2019m in the corridor facing a green wall, which way should I go to get to the seating area?  ",
+      "A": "\nTurn left and go forward to the seating area.",
+      "C": "Turn right to get to the seating area if you\u2019re in the corridor facing a green wall.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 202
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer outlines a series of directions that do not match the ground-truth path. The ground-truth specifies going straight past a light sofa to reach the bedroom, while the predicted answer provides unrelated directional turns and landmarks like 'the table', 'the bed', and multiple doors. Therefore, the prediction lacks alignment with the correct navigation path."
+    },
+    {
+      "Q": "From the large open space with the table and chairs, how do I return to the starting bedroom?  ",
+      "A": "\nGo to the table, turn right, go to the door, turn right, go to the bed, turn left, go to the door, turn right.",
+      "C": "From the large open space with the table and chairs walk straight ahead, pass by the light sofa and you\u2019ll be right in front of the initial bedroom.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 202
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer gives a step-by-step direction involving multiple turns and orientations, which deviates from the ground truth answer that indicates a direct route heading straight. Therefore, the complexity and deviation from the simplicity of the ground truth make the prediction largely incorrect."
+    },
+    {
+      "Q": "What direction should I head in if I want to reach the pink sofa from the bedroom with 2 beds?",
+      "A": "\nTurn right and go through the door to the bathroom, then turn left and go through the door to the living room, then turn right and go through the door to the bedroom with the pink sofa.",
+      "C": "Head straight ahead if you want to reach the pink sofa from the bedroom with 2 beds.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 202
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer mentions a patterned wallpaper, which is partially correct in recognizing there is a pattern, but it does not specify the pattern as hexagonal, which is a key detail in the ground truth answer."
+    },
+    {
+      "Q": "What pattern is featured on the lower half of the room's walls?  ",
+      "A": "\nThe lower half of the room's walls features a patterned wallpaper.",
+      "C": "The lower half of the room's walls features a hexagonal pattern.",
+      "M": "Object Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground truth answer exactly, stating that the washbasin is light green. Therefore, the prediction is correct."
+    },
+    {
+      "Q": "What color is the washbasin in the scene?  ",
+      "A": "\nThe washbasin in the scene is light green.",
+      "C": "The washbasin in the scene is light green.",
+      "M": "Object Recognition",
+      "start_idx": 22,
+      "end_idx": 24
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies the colors of the squares as red and green, matching the ground truth. However, it omits the detail about the white background, which is mentioned in the ground truth. Despite this, the core aspect of the pattern, which is the colors of the squares, is accurately captured."
+    },
+    {
+      "Q": "What pattern is displayed on the screen situated on the small table against the left wall?  ",
+      "A": "\nThe screen on the small table displays a pattern of red and green squares.",
+      "C": "The pattern displayed on the screen situated on the small table against the left wall is a mix of green and red squares on a white background.",
+      "M": "Object Recognition",
+      "start_idx": 44,
+      "end_idx": 46
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer states that the floor in the hallway is light green, which is a specific shade of green. Since the ground truth answer indicates the color as green, considering light green is a shade of green, the predicted answer is fully correct."
+    },
+    {
+      "Q": "What is the color of the floor in the hallway?",
+      "A": "\nThe floor in the hallway is light green.",
+      "C": "The color of the floor in the hallway is green.",
+      "M": "Object Recognition",
+      "start_idx": 66,
+      "end_idx": 68
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer mentions that the painting features a geometric design, which is in line with the ground truth answer. However, it does not mention the circular elements that are part of the complete description provided in the ground truth. Therefore, while the prediction is largely correct, it misses a specific detail, resulting in a score of 4."
+    },
+    {
+      "Q": "What type of design is featured in the painting on the wall?",
+      "A": "\nThe painting on the wall features a geometric design.",
+      "C": "The painting on the wall features a geometric design with circular elements.",
+      "M": "Object Recognition",
+      "start_idx": 88,
+      "end_idx": 90
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer exactly matches the ground truth answer in describing the floor tiles as arranged in a herringbone pattern."
+    },
+    {
+      "Q": "What pattern is used for the floor tiles in this room?  ",
+      "A": "\nThe floor tiles in the room are arranged in a herringbone pattern.",
+      "C": "The floor tiles in the room are arranged in a herringbone pattern.",
+      "M": "Object Recognition",
+      "start_idx": 132,
+      "end_idx": 134
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer \"Purple and white\" only partially matches the ground-truth answer. The predicted colors are not fully consistent with the primary colors mentioned in the ground-truth, which are pink, yellow, and white. Only the color white is common between both answers."
+    },
+    {
+      "Q": "What colors are displayed on the screen of the small table in the foreground?  ",
+      "A": "\nPurple and white.",
+      "C": "The screen on the small table in the foreground displays primarily pink, yellow, and white colors.",
+      "M": "Object Recognition",
+      "start_idx": 176,
+      "end_idx": 178
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer does not follow the same sequence as the ground truth answer. The correct answer starts from the bedroom, proceeds to the living area, and visits specific rooms such as a small bathroom and a second bedroom in a particular order before ending. The predicted answer repeats several rooms multiple times and includes a dining area which is not mentioned in the ground truth. This results in a mostly incorrect sequence."
+    },
+    {
+      "Q": "Can you list the sequence of spaces I passed through, starting from the bedroom?  ",
+      "A": "\nbedroom, bathroom, bedroom, dining area, kitchen, living room, bedroom, bathroom, bedroom, dining area, kitchen, living room, bedroom, bathroom, bedroom, dining area, kitchen, living room",
+      "C": "From the first bedroom you go to the open living area, then you turn to the small bathroom, next room you explore is the second bedroom, followed by the kitchen, then after crossing the open living area you go to the big bathroom and the sequence ends after you explore the open space fully.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 202
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer stated that the person entered the bathroom, whereas the ground truth specifies that the person entered the large open space with the couch. These two locations are distinct, making the prediction incorrect."
+    },
+    {
+      "Q": "Which room did I enter directly after leaving the initial bedroom area?  ",
+      "A": "\nYou entered the bathroom after leaving the initial bedroom area.",
+      "C": "You entered the large open space with the couch after leaving the initial bedroom area.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 202
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer 'You entered the bedroom' captures the essence of the ground truth answer 'You visited the bedroom with 2 beds after the narrow bathroom.' The key detail of visiting the bedroom after the narrow bathroom is correctly identified. However, the additional detail of the bedroom having 2 beds is missing, which slightly reduces the completeness of the answer."
+    },
+    {
+      "Q": "After the narrow bathroom, which room did I visit next?  ",
+      "A": "\nYou entered the bedroom.",
+      "C": "You visited the bedroom with 2 beds after the narrow bathroom.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 202
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted sequence only matches one room correctly \u2013 the kitchen \u2013 with the ground truth. The predicted answer includes an incorrect room (bedroom) and omits the ground-truth room (dining area) after the observation point."
+    },
+    {
+      "Q": "What sequence of rooms did I move through after observing the second bathroom\u2019s sink?  ",
+      "A": "\nI moved through the bedroom, the kitchen, and the living room after observing the second bathroom's sink.",
+      "C": "After observing the second bathroom\u2019s sink you returned to big living space and explored the dining area and the kitchen space in it.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 202
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer mentions walking through the door into the bathroom and then into the kitchenette, which is different from the ground truth path of turning left directly into the kitchenette from the bedroom."
+    },
+    {
+      "Q": "How did I get to the kitchenette area from the bedroom?  ",
+      "A": "\nI walked through the door into the bathroom and then through the door into the kitchenette area.",
+      "C": "After the bedroom you turned left and directly entered the kitchenette.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 202
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer says the journey ended in the kitchen, while the ground truth states it ended in the open living space. The starting point is not mentioned in the predicted answer, which compounds the inaccuracies. This results in a partially correct answer regarding the journey's endpoint, thus the score of 2."
+    },
+    {
+      "Q": "Where did I end the journey in comparison to where I began?  ",
+      "A": "\nYou ended up in the kitchen.",
+      "C": "You ended the journey in the open living space and started it in the bedroom with 1 bed.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 202
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that a desk is located between the window and the small table, whereas the ground truth answer states that a shelf is located there. Since the objects mentioned are entirely different, the predicted answer is incorrect and fully wrong."
+    },
+    {
+      "Q": "What is located between the window and the small table in the corner of the room?",
+      "A": "\nA desk is located between the window and the small table in the corner of the room.",
+      "C": "There is a shelf located between the window and the small table in the corner of the room.",
+      "M": "Spatial Reasoning",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the painting is located 1 step away from the sink, which is not within the ground truth range of 5-7 steps. Since the prediction does not fall within the acceptable range specified by the ground truth, it is considered fully incorrect."
+    },
+    {
+      "Q": "How many steps away is the painting located compared to the sink?",
+      "A": "\nThe painting is located 1 step away from the sink.",
+      "C": "The distance between the painting and the sink is approximately 5-7 steps along the wall.",
+      "M": "Spatial Reasoning",
+      "start_idx": 22,
+      "end_idx": 24
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground truth answer exactly, indicating a fully correct interpretation of the information regarding the relative positions of the objects."
+    },
+    {
+      "Q": "What object is located closer to you, the lamp on the table or the toy figurine on the ledge?",
+      "A": "\nThe toy figurine on the ledge is closer to you than the lamp on the table.",
+      "C": "The toy figurine on the ledge is closer to you than the lamp on the table.",
+      "M": "Spatial Reasoning",
+      "start_idx": 44,
+      "end_idx": 46
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer suggests 2 steps, which is outside the range provided by the ground-truth answer (3 to 5 steps). Therefore, it does not fully align with the ground-truth, but it is close to the lower end of the range."
+    },
+    {
+      "Q": "How many steps approximately would it take to reach the chairs from the doorway?",
+      "A": "\nIt would take approximately 2 steps to reach the chairs from the doorway.",
+      "C": "From the doorway to the chairs, it would take approximately 3 to 5 steps.",
+      "M": "Spatial Reasoning",
+      "start_idx": 66,
+      "end_idx": 68
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that a table is in front of the shelf, whereas the ground truth states that it is a black fridge or cabinet. These are distinct objects, indicating a fully incorrect prediction."
+    },
+    {
+      "Q": "What object is directly in front of the white shelf?",
+      "A": "\nA table is in front of the shelf.",
+      "C": "Directly in front of the white shelf is a black fridge or cabinet.",
+      "M": "Spatial Reasoning",
+      "start_idx": 88,
+      "end_idx": 90
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer states 'a monitor' while the ground truth specifies 'a TV'. While both are similar objects, they are distinct items; hence the prediction is not fully correct. However, given the similarity in nature as screen devices, a score of 3 is warranted."
+    },
+    {
+      "Q": "What object is positioned near the lamp on the table?",
+      "A": "\nA monitor is positioned near the lamp on the table.",
+      "C": "In the frames, a TV is positioned near the lamp on the table.",
+      "M": "Spatial Reasoning",
+      "start_idx": 110,
+      "end_idx": 112
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies a cabinet as being positioned directly beneath and slightly to the right, which aligns with the ground truth description. However, the predicted answer lacks the detail of the cabinet having glass doors and being black. Despite the missing details, the core identification of the object as a cabinet is correct, hence a high score of 4 is assigned."
+    },
+    {
+      "Q": "If you are standing next to the window, which item is positioned directly beneath and slightly to your right?",
+      "A": "\nThe cabinet is positioned directly beneath and slightly to your right.",
+      "C": "The item positioned directly beneath and slightly to your right is a black cabinet with glass doors.",
+      "M": "Spatial Reasoning",
+      "start_idx": 132,
+      "end_idx": 134
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies the object as a cabinet, which matches the ground truth answer. However, the predicted answer misses specifying the color 'black' which is present in the ground truth. The key aspect of identifying it as a cabinet is correct, but the lack of detail reduces the score slightly."
+    },
+    {
+      "Q": "What is the object directly to the left of the toilet when viewed from the door?",
+      "A": "\nThe object directly to the left of the toilet when viewed from the door is a cabinet.",
+      "C": "The object directly to the left of the toilet, when viewed from the door, is a black cabinet.",
+      "M": "Spatial Reasoning",
+      "start_idx": 154,
+      "end_idx": 156
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately identifies the lamp as the object directly adjacent to the TV on the table, which is consistent with the ground truth answer."
+    },
+    {
+      "Q": "What object is directly adjacent to the TV on the table?",
+      "A": "\nThe lamp is directly adjacent to the TV on the table.",
+      "C": "The object directly adjacent to the TV on the table is a lamp.",
+      "M": "Spatial Reasoning",
+      "start_idx": 176,
+      "end_idx": 178
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer of 3 steps does not fall within the range of the ground truth answer, which is 4 to 5 steps. Thus, the prediction is slightly incorrect."
+    },
+    {
+      "Q": "How many steps would I approximately take to reach the cabinets from the center of the room?",
+      "A": "\nYou would take about 3 steps to reach the cabinets from the center of the room.",
+      "C": "To reach the cabinet from the center of the room, you would need to take approximately 4 to 5 steps.",
+      "M": "Spatial Reasoning",
+      "start_idx": 198,
+      "end_idx": 200
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'finished' does not match the ground truth 'e1sslxrct'. They are entirely different, with no overlap, making the prediction fully incorrect."
+    },
+    {
+      "Q": "What text is visible on the TV in frames 172-174?",
+      "A": "\nThe text on the TV in frames 172-174 is 'finished'.",
+      "C": "The text on the TV in franes 172-174 says: \"e1sslxrct\".",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 202
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer describes the letters as 'pink', while the ground truth specifies 'pinkish purple'. The predicted color partially matches the ground truth but lacks the 'purple' component, thus making it partially correct."
+    },
+    {
+      "Q": "What is the color of the letters on the TV in frame 172-174?",
+      "A": "\nThe letters on the TV in frames 172-174 are pink.",
+      "C": "The color of the letters is pinkish purple.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 202
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer 'Yes' aligns with the ground-truth answer, which confirms the presence of piles of books in the video. Although the predicted answer lacks the added detail of 'a few instances,' it correctly identifies the presence of book piles. The omission of minor detail reduces the score slightly."
+    },
+    {
+      "Q": "Were there any piles of books anywhere?",
+      "A": "\nYes.",
+      "C": "Yes, there were a few instances where I could see piles of books.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 202
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'No, I did not read any of the titles of the books I saw.' conveys the same meaning as the ground truth answer 'I couldn't read any of the titles of the books.' Both indicate that the titles were not read, making the prediction fully correct."
+    },
+    {
+      "Q": "Did you read any of the titles of the books you saw?",
+      "A": "\nNo, I did not read any of the titles of the books I saw.",
+      "C": "I couldn't read any of the titles of the books.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 202
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'No.' agrees with the ground truth answer that there were no posters with text on them, indicating full correctness."
+    },
+    {
+      "Q": "Did you see any posters with written text on them?",
+      "A": "\nNo.",
+      "C": "No, there were no posters with text on them.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 202
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there are unneeded objects in the bedroom, which contradicts the ground truth answer stating that there are no unneeded objects in the bedroom."
+    },
+    {
+      "Q": "Are there any unneeded objects in the bedroom?",
+      "A": "\nYes",
+      "C": "There are no unneeded objects in the bedroom.",
+      "M": "Non Common",
+      "start_idx": 2,
+      "end_idx": 4
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies a plant as the object blocking the toilet. Although it omits 'big house' before 'plant', the core information\u2014that a plant is blocking the toilet\u2014is conveyed. Since the main concept is accurately captured, it is mostly correct, resulting in a score of 4."
+    },
+    {
+      "Q": "What object that is misplaced is blocking the toilet?",
+      "A": "\nThe plant is blocking the toilet.",
+      "C": "A big house plant is blocking the toilet.",
+      "M": "Non Common",
+      "start_idx": 25,
+      "end_idx": 27
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer describes a different aspect (a cartoon character on it) rather than the fact that the green quilt is floating in the air, which is the ground truth."
+    },
+    {
+      "Q": "What seems odd about the green quilt?",
+      "A": "\nThe green quilt is odd because it has a cartoon character on it, which is unusual for a bedroom setting.",
+      "C": "The green quilt is floating in the air.",
+      "M": "Non Common",
+      "start_idx": 53,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the bedside table is missing a lamp, which does not align with the ground truth. The ground truth specifies that the issue with the bedside table is that it is merging with the bed covers, which is a different problem altogether."
+    },
+    {
+      "Q": "What\u2019s wrong with the bedside table?",
+      "A": "\nThe bedside table is missing a lamp.",
+      "C": "The bedside table is merging with the bed covers.",
+      "M": "Non Common",
+      "start_idx": 56,
+      "end_idx": 58
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there is nothing odd with the white shelf and the stove, which directly contradicts the ground truth answer. The ground truth clearly identifies an issue with the white shelf overlapping with the stove, so the prediction is fully incorrect."
+    },
+    {
+      "Q": "Is there anything odd with the white shelf and the stove?",
+      "A": "\nNo, there is nothing odd with the white shelf and the stove.",
+      "C": "The white shelf is overlapping with the stove.",
+      "M": "Non Common",
+      "start_idx": 84,
+      "end_idx": 86
+    }
+  ]
+]

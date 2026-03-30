@@ -1,0 +1,677 @@
+[
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer, \"conference room, corridor, conference room,\" does not match the ground truth sequence. The predicted answer misses key details from the ground truth such as moving through a dark office with a glass wall, hallway with an emergency exit sign, whiteboard area, and ending at a brighter space. The only similarity is a vague mention of rooms and corridors, but it lacks specificity and correct sequence."
+    },
+    {
+      "Q": "What's the sequence of rooms and corridors I moved through from the start to the end?",
+      "A": "conference room, corridor, conference room",
+      "C": "You moved from a dark office with a glass wall \u2192 down a hallway with an emergency exit sign \u2192 past a whiteboard area \u2192 through several rooms (some with furniture, some empty) \u2192 approached a specific door \u2192 ended at a brighter space.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer \"narrow\" only partially captures the description of the layout. It mentions the narrowness but misses other essential elements such as the doors on both sides and the glowing green emergency exit sign on the right, which are part of the ground-truth answer."
+    },
+    {
+      "Q": "What was the layout like as I moved past the emergency exit sign?",
+      "A": "narrow",
+      "C": "The layout featured a narrow corridor with doors on both sides and a glowing green emergency exit sign on the right.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer 'Conference room' does not match the ground truth answer which describes 'rooms with tables, chairs, and scattered personal items like cups and paper.' The predicted answer provides a specific room type which is not mentioned in the ground truth, showing a significant difference in detail and content."
+    },
+    {
+      "Q": "Which space did I encounter directly after the whiteboard area?",
+      "A": "Conference room",
+      "C": "After the whiteboard area, you entered rooms with tables, chairs, and scattered personal items like cups and paper.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer mentions a neat arrangement and whiteboards, while the ground truth highlights a casual arrangement with items like papers and cups suggesting recent use. The predicted answer misses key details such as the tables being pushed together and the presence of papers and cups, which indicates recent use."
+    },
+    {
+      "Q": "What details did I notice about the tables and chairs in the adjacent rooms I passed through?",
+      "A": "The tables and chairs in the adjacent rooms are arranged neatly, with some rooms having whiteboards on the walls.",
+      "C": "The tables and chairs were arranged casually, some pushed together for collaboration, others isolated; papers and cups suggested recent use.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer \"The conference room\" does not match the ground truth answer, which describes transitioning through a long corridor with a symmetrical layout and more doors on either side. The predicted scene and the ground truth scene are different."
+    },
+    {
+      "Q": "Which scene did I transition into right before approaching the specific door?",
+      "A": "The conference room",
+      "C": "Right before the specific door, you passed through a long corridor with a symmetrical layout and more doors on either side.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer focuses on the size comparison between the two rooms, whereas the ground truth answer describes the differences in arrangement style: cluttered and informal versus clean and structured. The prediction does not address the key aspects of arrangement described in the ground truth answer."
+    },
+    {
+      "Q": "How was the room with scattered papers arranged compared to the office space with the glass wall?",
+      "A": "the room with scattered papers was smaller than the office space with the glass wall",
+      "C": "The room with scattered papers was more cluttered and informal than the clean, structured office space behind the glass wall.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'A table with drinks' does not match the ground truth answer. The ground truth states that the scene after the rooms with furniture was a narrow corridor, not a table with drinks. Therefore, the prediction is fully incorrect."
+    },
+    {
+      "Q": "What scene followed after I moved through the rooms with tables and chairs?",
+      "A": "A table with drinks",
+      "C": "After the rooms with furniture, you entered a narrow corridor that served as a transition to the next focal point.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer only partially matches the ground truth. It mentions 'hallway' twice, which is inconsistent with the detailed passage sequence provided in the ground truth. Significant elements in the sequence, such as the 'glass-walled office', 'whiteboard zone', 'rooms with furniture', 'final corridor', and 'brighter area', are missing from the prediction."
+    },
+    {
+      "Q": "What sequence of spaces did I pass before reaching the brighter area towards the end?",
+      "A": "hallway, conference room, hallway",
+      "C": "You passed the glass-walled office \u2192 hallway with exit sign \u2192 whiteboard zone \u2192 rooms with furniture \u2192 final corridor \u2192 brighter area at the end.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'door 23' correctly identifies the door as number 23, which matches the ground truth 'Room 23'. The term 'door' in place of 'room' is considered semantically equivalent in the context of identifying the correct door number, making the prediction fully correct."
+    },
+    {
+      "Q": "Which door of room you opened?",
+      "A": "door 23",
+      "C": "Room 23.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'blue' does not match the ground truth answer, which is 'a clear glass'. The color specified in the prediction is different from the correct answer, leading to a fully incorrect prediction."
+    },
+    {
+      "Q": "What is the color of the glass you poured water into?",
+      "A": "blue",
+      "C": "It is a clear glass.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer \"green\" accurately reflects the ground truth answer, which states \"It has a green lid.\" The color is correctly identified without any discrepancy."
+    },
+    {
+      "Q": "What is the color of the lid of the bottle you poured water from?",
+      "A": "green",
+      "C": "It has a green lid.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states 4 rooms, while the ground truth mentions 3 rooms. Since the ground truth is specific and the predicted answer does not fall within this number, the prediction is considered incorrect."
+    },
+    {
+      "Q": "How many rooms did I pass through in the entire video?",
+      "A": "4",
+      "C": "From the frames provided, it appears you passed through 3 different rooms.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there are 16 chairs, which is significantly lower than the ground-truth answer of at least 57 chairs. Since the number 16 does not fall within the range suggested by the ground truth (57 or more), the prediction is incorrect."
+    },
+    {
+      "Q": "Can you count the total number of chairs visible throughout the video?",
+      "A": "16",
+      "C": "There are at least 57 chairs visible throughout the video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The ground truth states that there are at least 6 tables encountered, while the predicted answer states only 2 tables. Since 2 does not fall within the range of the ground truth of at least 6, the prediction is incorrect."
+    },
+    {
+      "Q": "How many tables do I encounter as I move through different rooms?",
+      "A": "2",
+      "C": "You encounter at least 6 tables as you move through the rooms.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there are 2 couches or sofas, whereas the ground truth indicates there is only 1. The prediction is therefore incorrect as it does not match the ground truth."
+    },
+    {
+      "Q": "What is the total number of couches or sofas present in the video?",
+      "A": "2",
+      "C": "There is 1 couch or sofa present in the video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer of \"1\" matches the ground truth answer that specifies there is 1 bean bag visible across the video. Therefore, the prediction is fully correct."
+    },
+    {
+      "Q": "Could you count how many bean bags are seen across the video?",
+      "A": "1",
+      "C": "There is 1 bean bag visible across the video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted number of lamps is 1, which matches the ground-truth answer specifying 1 lamp visible in the sequence."
+    },
+    {
+      "Q": "How many different lamps did I see in the sequence?",
+      "A": "1",
+      "C": "There is 1 lamp visible in the sequence.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'four' does not match the ground truth answer, which states there are 7 items (5 glasses and 2 mugs) visible on the tables. There is no overlap with the correct count."
+    },
+    {
+      "Q": "How many mugs and glasses are visible on the tables in total?",
+      "A": "four",
+      "C": "There are 5 glasses and 2 mugs visible on the tables, totaling 7.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer is not the same as the ground truth answer. The predicted answer \"2\" is close but does not meet the ground truth of \"3\"."
+    },
+    {
+      "Q": "What is the total number of distinct rooms that contain visible seating arrangements?",
+      "A": "2",
+      "C": "There are 3 distinct rooms containing visible seating arrangements.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer 'Turn left and walk to the door' is very different from the ground truth answer. The ground truth involves several steps, including walking forward, turning right, and passing through multiple areas before reaching the exit. The predicted answer mentions only turning left and walking to the door, which omits most of the crucial steps required to navigate from the cozy room to the exit."
+    },
+    {
+      "Q": "1. What path should I follow from the cozy room to exit?",
+      "A": "Turn left and walk to the door.",
+      "C": "1. From the cozy room, walk forward into a darker area, turn right into the narrow corridor with glass walls, pass through the room with the large table and chairs, proceed along the long hallway with doors, and finally enter the illuminated exit zone.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer provides a different set of directions than the ground truth answer. The ground truth specifies moving straight from the cozy room, turning right into the corridor, and walking about 10 steps to reach the space with the large table and chairs. The predicted answer suggests turning around, going to the door, then turning right and going to the end of the room, which does not align well with the ground truth directions."
+    },
+    {
+      "Q": "2. How do I get to the room with the large table and chairs?",
+      "A": "Turn around and go to the door, then turn right and go to the end of the room.",
+      "C": "2. Move straight from the cozy room, turn right into the corridor, and after about 10 steps you\u2019ll arrive at the broader space with the large table and chairs.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer \"Turn left\" does not match or align with the ground truth answer, which provides a specific sequence of actions: turning around and walking back the same way through the narrow corridor, along the hallway, and back into the more open rooms. The predicted action is not supported by the ground truth description."
+    },
+    {
+      "Q": "3. What should I do after reaching the dead-end corridor?",
+      "A": "Turn left.",
+      "C": "3. After reaching the dark dead-end, turn around and walk back the same way\u2014through the narrow corridor, along the hallway, and back into the more open rooms.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer suggests a different set of directions that do not align with the ground truth answer. The ground truth specifies walking straight before seeing the hallway, whereas the prediction involves turning right and left, which implies completely different instructions."
+    },
+    {
+      "Q": "4. What\u2019s the correct path from the large table room to the hallway with many doors?",
+      "A": "Turn right, walk to the door and turn left",
+      "C": "4. Walk straight through the room with the table and chairs until the hallway becomes visible\u2014this is the corridor with multiple doors on each side.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'right' is completely incorrect as the ground truth specifies 'turn left' into a narrower corridor that leads directly into the dead-end space. There is no alignment between the predicted and the ground truth directions."
+    },
+    {
+      "Q": "5. What turn leads from the hallway into the dead-end space?",
+      "A": "right",
+      "C": "5. At the hallway, turn left into a narrower corridor that leads directly into the dark dead-end space.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer is partially correct as it suggests turning around, which aligns with the ground truth of turning back from the dead-end. However, it lacks detail about walking through the same hallway and rooms, and proceeding into the well-lit area at the far end to reach the exit, which are crucial parts of the ground truth answer."
+    },
+    {
+      "Q": "6. After backtracking from the dead-end, how do I reach the exit area?",
+      "A": "Turn around and walk to the door.",
+      "C": "6. Turn back from the dead-end, walk through the same hallway and rooms, and proceed into the well-lit area at the far end to reach the exit.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer '23' is completely different and unrelated to the ground truth answer 'INSAIT'. The ground truth specifies a text 'INSAIT' that signifies an organization or event name, while the prediction does not align with the ground truth answer."
+    },
+    {
+      "Q": "What is the partial text visible on the right side in frame 0, and what do you think it signifies?",
+      "A": "23.",
+      "C": "\"INSAIT.\" It likely signifies an organization or event name, possibly related to science or technology.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'INSAT' does not match the ground truth answer 'Fibank'. The predicted text is entirely different and does not indicate the same location attribute as the ground truth text."
+    },
+    {
+      "Q": "From frame 18 onwards, what is the text visible outside the window, and what might it indicate about the location?",
+      "A": "INSAT",
+      "C": "From frame 18 onwards, the text visible outside the window is \u201cFibank.\u201d.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted frames (30.5 - 36.7) do not match the ground truth frames (0, 12, and 21) where 'INS' appears. Additionally, the extrapolation to 'INSIGHTS' does not align with the ground truth 'INSAIT' found at the start of the video."
+    },
+    {
+      "Q": "In which frames does the text \u201cINS\u201d appear, and can you extrapolate what it could be part of?",
+      "A": "The text \u201cINS\u201d appears in frames 30.5 - 36.7, and it could be part of the word \u201cINSIGHTS\u201d.",
+      "C": "The text \u201cINS\u201d appears in frames 0, 12, and 21. It could be part of \u201cINSAIT,\u201d which is visible in full in some frames at the start of the video.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer \"two\" is incorrect because the ground-truth answer indicates multiple instances of text such as \"INSAIT,\" \"Fibank,\" and room numbers, which implies more occurrences than just two. The prediction does not fall within the expected range of the ground-truth answer."
+    },
+    {
+      "Q": "How many occurrences of text can you identify throughout the video?",
+      "A": "two",
+      "C": "There are several occurrences of text throughout the video, including \"INSAIT,\" \"Fibank,\" and room numbers like \"23\" and \"17.\"",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer 'Cityscape' is too vague compared to the ground truth answer, which provides more detail such as seeing a skyline with various buildings in the distance and the presence of window blinds partially obscuring the scene. While 'Cityscape' is a part of the ground truth, it does not encompass the full details needed for a completely correct answer."
+    },
+    {
+      "Q": "What is visible through the glass wall in terms of the cityscape?",
+      "A": "Cityscape",
+      "C": "Through the glass wall, you can see a view of the cityscape. It includes a skyline with various buildings visible in the distance. The view is through window blinds, which partially obscure the scene outside.",
+      "M": "Object Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states the color of the bean bag as black, while the ground truth states it is yellow. The prediction does not match the ground truth color at all."
+    },
+    {
+      "Q": "What color is the bean bag visible near the round white table?",
+      "A": "black",
+      "C": "The bean bag near the round white table is yellow.",
+      "M": "Object Recognition",
+      "start_idx": 10,
+      "end_idx": 12
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer \"Chairs\" does not match the ground truth answer, which describes the furniture as low, rectangular pieces, possibly bench seating or low tables. The type of furniture mentioned in the prediction is not similar to the description given in the ground truth."
+    },
+    {
+      "Q": "What type of furniture is barely visible near the windows?",
+      "A": "Chairs",
+      "C": "The furniture barely visible near the windows appears to be low, rectangular pieces, possibly bench seating or low tables.",
+      "M": "Object Recognition",
+      "start_idx": 20,
+      "end_idx": 22
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The ground truth specifies the color as a warm, yellowish hue, while the predicted answer states the color is white. These are not similar, thus the prediction is incorrect."
+    },
+    {
+      "Q": "What is the color of the light source casting a glow on the ceiling and wall?",
+      "A": "white",
+      "C": "The color of the light source casting a glow on the ceiling and wall is a warm, yellowish hue, likely from sunlight.",
+      "M": "Object Recognition",
+      "start_idx": 30,
+      "end_idx": 32
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer \"orange\" does not match the ground truth answer, which states that the cover of the notebook or paper on the table is \"black\"."
+    },
+    {
+      "Q": "What color are the covers of the papers or notebooks on the table?",
+      "A": "orange",
+      "C": "The cover of the notebook or paper on the table is black.",
+      "M": "Object Recognition",
+      "start_idx": 40,
+      "end_idx": 42
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer 'Rectangular' only identifies one type of shape, while the ground truth lists multiple shapes including rectangles, circles, squares, cylinders, and lines. The prediction is partially correct for identifying rectangles but omits several other shapes mentioned in the ground truth."
+    },
+    {
+      "Q": "What shapes can be faintly identified in the video frames?",
+      "A": "Rectangular",
+      "C": "In the video frames, you can identify several shapes:\n\n1. **Rectangles**: The ceiling tiles and the windows are rectangular.\n2. **Circles**: The chairs and the table have circular elements.\n3. **Squares**: The light fixtures on the ceiling appear to be square.\n4. **Cylinders**: The coat rack base is cylindrical.\n5. **Lines**: The shadows on the floor form linear patterns.\n\nThese shapes contribute to the overall structure and layout of the room.",
+      "M": "Object Recognition",
+      "start_idx": 50,
+      "end_idx": 52
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'white' refers to a color rather than the material. The ground truth specifies the material as wood, hence the prediction does not align with the required answer."
+    },
+    {
+      "Q": "What is the material of the shelf in the hallway?",
+      "A": "white",
+      "C": "The shelf in the hallway appears to be made of wood.",
+      "M": "Object Recognition",
+      "start_idx": 60,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer describes a balcony, while the ground truth specifies a room with a table and a chair. The answers do not match in description or content."
+    },
+    {
+      "Q": "What appears to be located beyond the opening on the right side in the third frame?",
+      "A": "A balcony",
+      "C": "In the third frame, beyond the opening on the right side, there is a room with a table and a chair visible.",
+      "M": "Object Recognition",
+      "start_idx": 70,
+      "end_idx": 72
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'door' does not match the ground truth answer, which is a 'black circular object' appearing to be a small trash bin or container. The two objects are entirely different and thus, the prediction is considered fully incorrect."
+    },
+    {
+      "Q": "What object is positioned to the left when you're seated on the sofa with the pillows?",
+      "A": "door",
+      "C": "When seated on the sofa with the pillows, the object positioned to your left is a black circular object, which appears to be a small trash bin or container.",
+      "M": "Spatial Reasoning",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer of '5' falls within the range provided by the ground-truth answer, which indicates 'around 4 to 6 steps'. Therefore, the prediction is correct."
+    },
+    {
+      "Q": "Based on the spatial relationships provided, how many steps would you approximately take to move from the chair in front of the table to the window?",
+      "A": "5",
+      "C": "Based on the images, the chair in front of the table is located near the left side. The windows are situated directly in front, past the table. To move from the chair to the window, you would likely take around 4 to 6 steps, depending on the stride length.",
+      "M": "Spatial Reasoning",
+      "start_idx": 10,
+      "end_idx": 12
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'table' does not match the ground truth answer 'a white radiator or heater'. They are completely different objects."
+    },
+    {
+      "Q": "What object is located directly adjacent to the window, providing a view of the cityscape?",
+      "A": "table",
+      "C": "A white radiator or heater.",
+      "M": "Spatial Reasoning",
+      "start_idx": 20,
+      "end_idx": 22
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer 'right' partially matches the ground truth answer, which is 'The window would be on your right and front.' The predicted answer did identify one correct orientation, but it missed out on the fact that the window is also in front. Therefore, the prediction is partially correct."
+    },
+    {
+      "Q": "If you were to walk from the center of the room toward the illuminated sign, which side would the window be on?",
+      "A": "right",
+      "C": "The window would be on your right and front.",
+      "M": "Spatial Reasoning",
+      "start_idx": 30,
+      "end_idx": 32
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'chair' is completely unrelated to the ground truth answer, which is 'the row of colored markers, particularly the red one.' The predicted object is different and does not match the ground truth position or description."
+    },
+    {
+      "Q": "What object is positioned closer to the wall on the table?",
+      "A": "chair",
+      "C": "The object positioned closest to the wall on the table is the row of colored markers, the red one is the closest.",
+      "M": "Spatial Reasoning",
+      "start_idx": 40,
+      "end_idx": 42
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states the shape of the object as circular, which does not match the ground-truth description of the object being rectangular."
+    },
+    {
+      "Q": "What is the shape of the object that appears closest to the camera?",
+      "A": "circular",
+      "C": "The object that appears closest to the camera is a flat-screen television mounted on a stand. The screen is rectangular in shape.",
+      "M": "Spatial Reasoning",
+      "start_idx": 50,
+      "end_idx": 52
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer is outside the range of the ground truth answer. The ground truth specifies 2-3 steps, whereas the prediction is 1 step, which indicates an undercount. The prediction is fairly close to the lower bound but does not fall within the range, therefore it is incorrect with a low score."
+    },
+    {
+      "Q": "How many steps would you take to reach the shelving unit from the paper on the floor?",
+      "A": "1",
+      "C": "To reach the shelving unit from the paper on the floor, you would take approximately 2-3 steps.",
+      "M": "Spatial Reasoning",
+      "start_idx": 60,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer mentions a whiteboard on the left side of the corridor toward the end, whereas the ground truth states there is nothing on the left side except the wall. These answers do not match at all, leading to a score of 0."
+    },
+    {
+      "Q": "What is located on the left side of the corridor toward the end?",
+      "A": "A whiteboard",
+      "C": "As you move toward the end of the corridor, there is a door labeled \"18\" located at the end, but nothing on the left side except the wall.",
+      "M": "Spatial Reasoning",
+      "start_idx": 70,
+      "end_idx": 72
+    }
+  ]
+]

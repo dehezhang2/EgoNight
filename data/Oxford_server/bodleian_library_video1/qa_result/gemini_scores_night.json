@@ -1,0 +1,1262 @@
+[
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The ground-truth answer states that you should follow 3 steps to reach the far end of the corridor, while the predicted answer provides a detailed description with 4 steps. Although the predicted steps are logically sound, the discrepancy in the number of steps indicates that the predicted answer does not fully align with the ground-truth requirement."
+    },
+    {
+      "Q": " If I want to go from the entrance of the building to the far end of the indoor corridor, what steps should I follow?",
+      "A": "Based on the visual evidence, here are the steps to go from the entrance of the building to the far end of the indoor corridor:\n\n1.  Walk across the cobbled courtyard and approach the entrance of the building.\n2.  Go up the three stone steps leading into the arched doorway.\n3.  Enter the building and walk straight ahead into the long, stone corridor.\n4.  Continue walking straight down the corridor until you reach the open wooden doors at the other end.",
+      "C": "You should follow 3 steps to reach the far end of the corridor.",
+      "M": "navigation",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer provides a detailed step-by-step process that aligns with the ground truth answer. It describes walking straight from the archway, across the courtyard, and into the long corridor, with additional details about ascending steps and passing through an entrance, which are consistent with reaching the long corridor."
+    },
+    {
+      "Q": " How should I proceed to move from the first lit archway to reach the long corridor?",
+      "A": "To move from the first lit archway and reach the long corridor, you should proceed as follows:\n\n1.  Walk forward across the cobblestone courtyard towards the building entrance.\n2.  Ascend the three stone steps leading up to the doorway.\n3.  Pass through the arched entrance, which leads directly into the long corridor.",
+      "C": "You should walk straight from the archway, across the courtyard and you will reach the long corridor.",
+      "M": "navigation",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer provides a different path description than the ground-truth answer. The ground truth mentions walking past the minibus and into the passageway, which is not reflected in the predicted answer. The predicted answer includes additional, unrelated details and instructions that do not align with the ground truth."
+    },
+    {
+      "Q": " How do I reach the entrance of the building from the outdoor area?",
+      "A": "To reach the entrance of the building from the outdoor area, you should follow these steps:\n\n1.  Start from the dark, cobblestone area and walk towards the large building with illuminated windows.\n2.  Ascend the short flight of stone steps and enter the dark, arched doorway.\n3.  Proceed through the long, vaulted stone passageway.\n4.  Emerge from the passageway into a large, dark courtyard surrounded by buildings.\n5.  Cross the courtyard, heading towards the illuminated arched entrance on the far side.\n6.  Enter through this final archway to arrive at the building's entrance, which is a vaulted hall with a sign for the \"BODLEIAN LIBRARIES\".",
+      "C": " You walk past the minibus and into the passageway.",
+      "M": "navigation",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer provides a detailed description of the route from the courtyard to the exit, which is not inconsistent with the ground truth. However, it does not directly specify the action of turning left as mentioned in the ground truth answer, which causes some ambiguity about the initial direction. Overall, it is partially correct in terms of the sequence of possible navigation but misses the key directional cue present in the ground truth."
+    },
+    {
+      "Q": " Can you guide me from the courtyard to the exit doors seen in the final frames?",
+      "A": "To get from the courtyard to the exit doors, follow these steps:\n\n1.  Start in the courtyard and walk towards the building, heading for the entrance with the small set of steps.\n2.  Go up the steps and enter the dark, arched passageway.\n3.  Walk straight through the long passageway.\n4.  At the end of the passage, you will enter a lit lobby area.\n5.  Continue straight ahead through the large, open wooden doors to exit.",
+      "C": "Yes, you should turn left and walk towards the foyer, at the end of which you may find the exit doors.",
+      "M": "navigation",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer provides a detailed step-by-step path that aligns with the ground-truth answer. Both the predicted answer and ground-truth mention walking straight through a passageway, which is the critical component needed to reach the courtyard."
+    },
+    {
+      "Q": "What is the path I should take to exit the building and reach the courtyard\uff1f",
+      "A": "Based on the visual information, here is the path to exit the building and reach the courtyard:\n\n1.  Start by walking forward towards the stone building with illuminated windows.\n2.  Go up the stone steps and enter the arched stone passageway.\n3.  Continue walking straight through the long, dark, vaulted passageway.\n4.  Exit the passageway to emerge into the large, open courtyard.",
+      "C": "You should walk straight through the passageway.",
+      "M": "navigation",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'BODLEIAN LIBRARIES' exactly matches the ground-truth answer 'The text that appears on the sign is \u201cBODLEIAN LIBRARIES.\u201d', focusing on the key information required by the question."
+    },
+    {
+      "Q": "What text appears on the sign in frames 56\u201361?",
+      "A": "BODLEIAN LIBRARIES",
+      "C": "The text that appears on the sign is \u201cBODLEIAN LIBRARIES.\u201d",
+      "M": "text_recognition",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer places the \"BODLEIAN LIBRARIES\" text inside an entrance hall on a dark information board. The ground truth specifies that it is on a sign visible in the courtyard and passageway area, near the entrance. Thus, the predicted location does not align with the ground truth description, indicating limited accuracy."
+    },
+    {
+      "Q": " Where is the \"BODLEIAN LIBRARIES\" text located in the video?",
+      "A": "The \"BODLEIAN LIBRARIES\" text is located on a large, dark information board positioned on the right-hand side inside a well-lit, stone-arched entrance hall with a vaulted ceiling.",
+      "C": "It is lcated on a sign visible in the courtyard and passageway area, near the entrance to the building.",
+      "M": "text_recognition",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is 6, while the ground truth states that the phrase appears once. The predicted count vastly exceeds the ground truth count, resulting in a fully incorrect evaluation."
+    },
+    {
+      "Q": "How many times does the phrase \"BODLEIAN LIBRARIES\" appear in frames 56\u201361?",
+      "A": "6",
+      "C": "The phrase appears once on the sign during these frames.",
+      "M": "text_recognition",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately identifies the location as being at the Bodleian Library, University of Oxford in England. It adds detail by describing the architecture seen in the video and associating it with Oxford University, which is consistent with the ground-truth answer that indicates the video is filmed near or at the Bodleian Libraries."
+    },
+    {
+      "Q": "What does the presence of the \"BODLEIAN LIBRARIES\" sign suggest about the location?",
+      "A": "Based on the visual evidence, the presence of the \"BODLEIAN LIBRARIES\" sign suggests that the location is the Bodleian Library at the University of Oxford in England. The architecture visible throughout the video, characterized by old stone buildings, courtyards, and arched passageways with fan vaulting, is consistent with the historic style of Oxford University.",
+      "C": " It suggests that the video is filmed near or at the Bodleian Libraries, a group of historic libraries at the University of Oxford.",
+      "M": "text_recognition",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the process of navigating through the narrow path to reach the courtyard. It aligns well with the ground truth answer by stating the direction (straight ahead) and includes additional descriptive details about the passageway (stone-walled, vaulted), which enhances the understanding without contradicting the ground truth."
+    },
+    {
+      "Q": "After entering through the entrance doorway, how do I navigate through the narrow path to reach the courtyard?",
+      "A": "Based on the visual information provided, after entering the arched doorway, you navigate through the narrow path to reach the courtyard by proceeding straight ahead. Continue walking forward along the stone-walled, vaulted passageway until you emerge from the other end directly into the open courtyard.",
+      "C": "Walk through the entrance doorway, straight ahead in the narrow path and you will reach the courtyard. ",
+      "M": "navigation",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer provides a series of steps that involve entering a passageway and cross multiple courtyards, which is not mentioned in the ground truth. The ground truth only mentions walking straight and turning right, indicating a more straightforward path. Therefore, the predicted answer deviates substantially from the ground truth."
+    },
+    {
+      "Q": " Can you explain the steps needed to reach the lit archway after entering the open courtyard?",
+      "A": "Based on the visual evidence provided, here are the steps to reach the lit archway after entering the open courtyard:\n\n1.  **Cross the Courtyard:** Walk straight across the initial cobblestone courtyard towards the building with the lit windows.\n2.  **Enter the First Passageway:** Go up the few stone steps and enter the dark, arched passageway in the building ahead.\n3.  **Walk Through the Passageway:** Proceed through the stone-walled passageway.\n4.  **Enter the Second Courtyard:** Emerge from the passageway into a second, larger courtyard.\n5.  **Cross the Second Courtyard:** Turn and walk across this new courtyard, heading towards another arched entrance visible in the building on the opposite side.\n6.  **Enter the Final Archway:** Enter the final, brightly lit archway.",
+      "C": "You should walk straight and then turn right to reach the lit archway after entering the open courtyard.",
+      "M": "navigation",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the relative position of the second building as being to the right of the main building, which matches the ground truth. The additional detail of the building being in the background does not contradict the ground truth and thus does not affect the correctness."
+    },
+    {
+      "Q": " What is the relative position of the second building compared to the main building?",
+      "A": "The second building is in the background, to the right of the main building.",
+      "C": "The second building is positioned to the right of the main building",
+      "M": "spatial_reasoning",
+      "start_idx": 14,
+      "end_idx": 16
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer states that 'another building' is located to the right of the main building, whereas the ground truth answer mentions 'additional parked cars' as well as a 'building further in the background'. The focus of the prediction on just 'another building' makes it partially correct but misses important elements like the parked cars mentioned in the ground truth."
+    },
+    {
+      "Q": "What is located to the right of the building in relation to the streetlamp",
+      "A": "Another building is located to the right of the main building.",
+      "C": "To the right of the building, in relation to the streetlamp, there are additional parked cars and a building further in the background.",
+      "M": "spatial_reasoning",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer 'steps' partially matches the ground truth answer, which includes 'a circular manhole cover and a set of stairs (steps)'. However, the predicted answer does not mention the circular manhole cover, hence it is only partially correct."
+    },
+    {
+      "Q": "What object is directly in front of the building entrance\uff1f",
+      "A": "steps",
+      "C": "Directly in front of the building entrance, there is a circular manhole cover and a set of stairs.",
+      "M": "spatial_reasoning",
+      "start_idx": 28,
+      "end_idx": 30
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies 'a sign' as being centered between the two walls, consistent with the ground truth answer. Both answers describe the same object and its position."
+    },
+    {
+      "Q": "What is centered between the two walls ahead as you approach the building\uff1f",
+      "A": "A sign on a post is centered between the two walls ahead as you approach the building.",
+      "C": "As you approach the building, a sign or board is centered between the two walls ahead in the corridor.",
+      "M": "spatial_reasoning",
+      "start_idx": 42,
+      "end_idx": 44
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer identifies text 'MAGICAL BOOKS' and 'FROM THE ASHMOLEAN TO HOGWARTS', which does not match the ground truth that indicates the main visible text is 'BODLEIAN LIBRARIES' with other text being minimal or not clearly visible. Therefore, the prediction is not aligning well with the ground truth."
+    },
+    {
+      "Q": "Can you identify any other text surrounding the \"BODLEIAN LIBRARIES\" sign?",
+      "A": "Yes, the following text can be identified on the sign: \"MAGICAL BOOKS\" and \"FROM THE ASHMOLEAN TO HOGWARTS\".",
+      "C": "The main visible text is \u201cBODLEIAN LIBRARIES.\u201d Other surrounding text is either minimal or not clearly visible in these frames.",
+      "M": "text_recognition",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the spatial position of the ground cone relative to the lit archway as being in the foreground and to the left, which aligns with the ground truth answer description of it being in front and to the left from the camera\u2019s perspective."
+    },
+    {
+      "Q": " What is the spatial position of the ground cone relative to the lit archway?",
+      "A": "The ground cone is positioned in the foreground, to the left of the lit archway.",
+      "C": "The ground cone is positioned in front of the lit archway. It is situated on the left side of the frame when facing the archway from the camera's perspective.",
+      "M": "spatial_reasoning",
+      "start_idx": 56,
+      "end_idx": 58
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately reflects the functions of the 'BODLEIAN LIBRARIES' sign in guiding and informing visitors. It covers its role in providing identification, orientation, marking an entrance, and directing visitors to further information, all of which align with the ground truth answer."
+    },
+    {
+      "Q": "How does the \"BODLEIAN LIBRARIES\" sign guide or inform visitors in this setting?",
+      "A": "Based on the visual evidence, the \"BODLEIAN LIBRARIES\" sign informs and guides visitors in the following ways:\n\n*   **Identification and Orientation:** The most crucial function of the sign is to identify the location. As the person walks through a dark, arched passageway, the sign confirms that this area is part of the Bodleian Libraries. This helps visitors orient themselves, confirming they have either arrived at or are exiting the library complex.\n*   **Marking an Entrance/Exit:** The sign is strategically placed within a main entryway or gatehouse, next to large wooden doors. This placement indicates that this is a significant point of access, guiding visitors by marking the boundary of the library's grounds.\n*   **Directing to Further Information:** The sign is positioned next to other display boards on stands. This suggests that this location is an information hub, and the main sign acts as a title, indicating that the adjacent displays contain information relevant to the Bodleian Libraries (e.g., opening hours, exhibits, rules).",
+      "C": " It provides direction and identification, letting visitors know they are at or near the library entrance and guiding them toward the institution.",
+      "M": "text_recognition",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies the archway as an entrance leading into the courtyard and mentions the perspective being from within the courtyard. However, it lacks specific details about the spatial relationship, such as the position of the archway being on the left side and the courtyard surrounding the archway, which are present in the ground truth answer."
+    },
+    {
+      "Q": "What is the spatial relationship between the archway and the courtyard?",
+      "A": "Based on the visual information, the archway is an entrance that opens into the courtyard from the surrounding building. The perspective of the images is from within the courtyard, looking towards the archway.",
+      "C": "The archway is on the left side, and it leads into the courtyard area. The courtyard surrounds the archway, expanding outwards from it. The archway appears as an entry point into or out of the courtyard.",
+      "M": "spatial_reasoning",
+      "start_idx": 84,
+      "end_idx": 86
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer mentions a small red light on what appears to be a camera, which does not match the ground truth answer that specifies a sign or board on the ground. The predicted content does not align with the ground truth, making it an incorrect prediction."
+    },
+    {
+      "Q": "What is directly in front of and below the central arch\uff1f",
+      "A": "Based on the visual evidence, a small red light on what appears to be a camera mounted on a tripod is directly in front of and below the central arch.",
+      "C": "Directly in front of and below the central arch, there is a sign or board on the ground.",
+      "M": "spatial_reasoning",
+      "start_idx": 70,
+      "end_idx": 72
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer accurately identifies the presence of black stanchions or stands positioned directly in front of the signboard, which aligns with the ground truth that mentions a freestanding post or stanchion with a base. The slight variation in wording does not affect the overall correctness of identifying the primary object in front of the signboard."
+    },
+    {
+      "Q": "What is located directly in front of the signboard?",
+      "A": "Based on the visual evidence in the images, there are several black stanchions or stands positioned directly in front of the signboard, holding it up.",
+      "C": "Directly in front of the signboard, there is a freestanding post or stanchion with a base.",
+      "M": "spatial_reasoning",
+      "start_idx": 98,
+      "end_idx": 100
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies the vaulted stone ceilings as a prominent architectural feature inside the building, which aligns with the ground-truth answer. Although the predicted answer adds specific details about the style (Gothic architecture) and mentions stone ribs, these details do not contradict the ground-truth answer and enhance the description, maintaining overall accuracy."
+    },
+    {
+      "Q": " After entering the building, what architectural feature was prominent inside?",
+      "A": "Upon entering the building, the prominent architectural feature is the ornate, vaulted ceiling with stone ribs, characteristic of Gothic architecture.",
+      "C": " Inside the building, the vaulted stone ceilings and wall-mounted lamps were the most prominent architectural features.",
+      "M": "scene_sequence",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer partially matches the ground-truth answer. Both descriptions account for starting outdoors and going through stone passages and entering a courtyard or quadrangle. However, the predicted answer misses details about the lit entrance, stone-walled corridors with vaulted ceilings, and the final lit corridor leading to an arched doorway. The sequence and specific environments in the ground-truth answer are more detailed and differ in the order and description of locations."
+    },
+    {
+      "Q": "What sequence of environments did I pass through in this video\uff1f",
+      "A": "Based on the visual evidence in the video, you passed through the following sequence of environments:\n\n1.  You started on an outdoor cobblestone street or in a courtyard at night, approaching a large, historic-looking building.\n2.  You walked through a dark, arched stone passageway.\n3.  You emerged into a large, open quadrangle or courtyard, surrounded by buildings.\n4.  You crossed the quadrangle and entered another vaulted entryway, which appears to be a gatehouse or main entrance area for the Bodleian Libraries.",
+      "C": "You moved from a dark outdoor setting with illuminated windows and sparse streetlights, toward a cobblestone pathway, up steps into a lit entrance, through stone-walled corridors with vaulted ceilings, into a courtyard or passage with more illuminated windows, and finally exited through a well-lit corridor, leading to an arched doorway.",
+      "M": "scene_sequence",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer describes a 'fan-vaulted ceiling' marking the approach, whereas the ground truth identifies 'a slightly open door beneath detailed arches' as the feature marking the final approach. The predictions do not align with the ground-truth answer, which specifically highlights different architectural features."
+    },
+    {
+      "Q": "Which feature marked my final approach to the building entrance?",
+      "A": "Based on the visual evidence, a fan-vaulted ceiling marked the final approach to the building entrance.",
+      "C": "The final approach was marked by a slightly open door beneath detailed arches, glowing with soft light from inside.",
+      "M": "scene_sequence",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer starts correctly with the description of a dark, narrow stone passageway with a vaulted ceiling, which matches the ground truth. However, it diverges significantly by continuing to describe additional locations such as a courtyard and another passageway, which are not mentioned in the ground truth. The extra details suggest a longer path than what the ground truth describes, leading to a partially correct answer."
+    },
+    {
+      "Q": "What path did I follow after entering through the door with arches?",
+      "A": "After entering through the door with arches, you followed this path:\n\n1.  You walked straight through a dark, narrow stone passageway with a vaulted ceiling.\n2.  You exited the passageway into a large, dark courtyard surrounded by buildings with lit windows.\n3.  You proceeded across the courtyard towards another, larger arched gateway on the opposite side.\n4.  You entered this second gateway, which led into a wider, more ornate, and brightly lit passageway with a fan-vaulted ceiling.\n5.  You walked through this final passageway, passing a wooden booth and a sign for the \"BODLEIAN LIBRARIES,\" before exiting through a large open door.",
+      "C": "After entering, you followed a narrow stone corridor with a vaulted ceiling, lit by periodic wall-mounted lamps.",
+      "M": "scene_sequence",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer states that the area passed through before reaching the courtyard was an outdoor, cobbled street or an outer yard, which contradicts the ground-truth answer of passing through a dimly lit corridor. Therefore, the prediction is incorrect."
+    },
+    {
+      "Q": "Before reaching the courtyard or passage, which area did I pass through?",
+      "A": "Based on the visual evidence, before reaching the inner courtyard and passing through the arched passage, you were in an outdoor, cobbled street or an outer yard in front of the building.",
+      "C": "You passed through a dimly lit corridor.",
+      "M": "scene_sequence",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer mentions a manhole cover, which is not in the ground truth answer, though it correctly identifies a short flight of steps and an arched entrance. However, it lacks the specific detail of encountering a set of steps with arched architectural details."
+    },
+    {
+      "Q": "What did I encounter right before entering the building?",
+      "A": "Right before entering the building, I encountered a manhole cover and a short flight of stone steps leading up to an arched doorway.",
+      "C": "Right before entering the building, you encountered a set of steps leading up to the entrance with arched architectural details.",
+      "M": "scene_sequence",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer describes a different culmination of the journey compared to the ground truth. While both mention passing through arches and ending in a street or courtyard, the predicted answer includes specific details about a 'Bodleian Libraries' sign and a wooden door that are not present in the ground truth. The ground truth emphasizes the courtyard and passage with illuminated windows, and the sky being visible, which are not covered in the predicted answer. The predicted journey elements are partially similar but diverge significantly enough to be deemed incorrect overall."
+    },
+    {
+      "Q": " How did the journey through the building conclude, based on the scene sequence?",
+      "A": "Based on the image sequence, the journey concluded by passing through a stone-arched passageway with a vaulted ceiling. This passage led to an entrance hall, identified by a sign for the \"Bodleian Libraries,\" before finally exiting through a large, open wooden door onto another street or courtyard.",
+      "C": "The journey concluded by emerging into a courtyard or passage with more illuminated windows, visible sky, and an archway leading to another indoor area with an arched doorway, leading to the street.",
+      "M": "scene_sequence",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer provides an extensive and detailed layout, including features such as the ceiling, left and right sides, and the floor, which agrees with the ground truth about the vaulted ceilings. However, it introduces additional details not found in the ground truth, and it does not explicitly mention the passageway being narrow or the lighting from sparse wall-mounted lamps. Thus, while partially aligning with the ground truth, it does not fully match it."
+    },
+    {
+      "Q": "What was the layout of the first indoor space after entering?",
+      "A": "Based on the visual evidence, upon entering, the layout of the first indoor space is a passageway with the following features:\n\n*   **Ceiling:** An arched, stone-vaulted ceiling with intricate ribbing (fan vaulting).\n*   **Left Side:** A large wooden structure resembling a booth or porter's lodge.\n*   **Right Side:** A large informational sign on a stand, which identifies the location as \"BODLEIAN LIBRARIES\".\n*   **Straight Ahead:** An open doorway with large wooden doors leading back outside to another street or alley.\n*   **Floor:** The floor is paved with large, flat stones.",
+      "C": "The first indoor space was a narrow stone passageway with vaulted ceilings, illuminated by sparse wall-mounted lamps.",
+      "M": "scene_sequence",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer describes the corridor's ceiling texture as coarse and uneven, which directly contradicts the ground-truth answer that specifies the ceiling texture as smooth."
+    },
+    {
+      "Q": "What is the  texture of the corridor's ceiling?",
+      "A": "Based on the visual cues in the images, the corridor's ceiling has a coarse and uneven texture, characteristic of materials like stone or rough plaster. It is not smooth.",
+      "C": " The texture of the corridor's ceiling seems smooth from what\u2019s visible in the image.",
+      "M": "object_recognition",
+      "start_idx": 42,
+      "end_idx": 44
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer aligns well with the ground truth answer, both stating that the corridor's ceiling is made of stone. Although the predicted answer includes the possibility of brick, the structural description and material identification match the provided ground truth."
+    },
+    {
+      "Q": "What is the material of the corridor's ceiling?",
+      "A": "Based on the visual information in the images, the corridor's ceiling appears to be made of **stone or brick**, forming an arched or vaulted structure.",
+      "C": " The ceiling of the corridor appears to be made of a series of arch-shaped beams, likely stone or plaster, given its structure. ",
+      "M": "object_recognition",
+      "start_idx": 42,
+      "end_idx": 44
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies the architectural feature at the entrance of the building as an arch, which aligns precisely with the ground-truth answer specifying an 'arched doorway'. Both descriptions identify the same architectural element."
+    },
+    {
+      "Q": "What architectural feature is present at the entrance of the building?",
+      "A": "Based on the visual information from the images, the architectural feature at the entrance of the building is an arch.",
+      "C": "The architectural feature present at the entrance of the building is an arched doorway.",
+      "M": "object_recognition",
+      "start_idx": 56,
+      "end_idx": 58
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately identifies the material as 'cobblestone', which matches the ground truth answer. There is no discrepancy between the predicted and the ground truth answer."
+    },
+    {
+      "Q": "What type of material is the ground mainly composed of in the scene?",
+      "A": "Based on the visual evidence, the ground is mainly composed of cobblestone.",
+      "C": "The ground in the scene is mainly composed of cobblestones.",
+      "M": "object_recognition",
+      "start_idx": 28,
+      "end_idx": 30
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 4,
+      "reason": "The prediction is close but not exact. The ground truth states there are 14 windows lit, while the predicted answer states 13. While it is not fully correct, it is quite close, hence a score of 4."
+    },
+    {
+      "Q": "How many windows on the building are lit?",
+      "A": "There are 13 lit windows on the building.",
+      "C": "There are 14 windows lit on the building.",
+      "M": "object_recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer 'yellowish-orange' is very close to the ground truth answer of 'orange'. The slight variation in description is minor and generally describes the same color appearance, so the prediction can be considered correct with a high score."
+    },
+    {
+      "Q": "What color is the light emitted by the streetlamp?",
+      "A": "Yellowish-orange",
+      "C": "The streetlamp emits an orange light.",
+      "M": "light_recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately identifies the prominent architectural feature in the building's entryway as an 'arch', which matches the ground-truth answer that specifies 'an arched entrance'. The prediction is correct and fully aligns with the expected answer."
+    },
+    {
+      "Q": "What architectural feature is prominently used in the building's entryway?",
+      "A": "Based on the visual cues in the images, the architectural feature prominently used in the building's entryway is an **arch**.",
+      "C": "The building's entryway prominently features an arched entrance.",
+      "M": "object_recognition",
+      "start_idx": 84,
+      "end_idx": 86
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer \"An arch\" is a concise version of the ground-truth answer \"Below the illuminated rectangular windows on the building, there is an arched doorway.\" Both identify an \"arch\" as the architectural element below the windows, thus making the predicted answer fully correct."
+    },
+    {
+      "Q": "What architectural element is featured below the illuminated rectangular windows on the building?",
+      "A": "An arch.",
+      "C": "Below the illuminated rectangular windows on the building, there is an arched doorway.",
+      "M": "object_recognition",
+      "start_idx": 70,
+      "end_idx": 72
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The ground truth answer specifies a ribbed vault design as the type of ceiling in the Gothic-style archway, while the predicted answer identifies it as a fan vault ceiling. These are two distinct architectural styles. The prediction does describe the characteristics of a fan vault, but it does not match the ground truth designation of a ribbed vault."
+    },
+    {
+      "Q": " What type of ceiling is featured in the Gothic-style archway?",
+      "A": "Based on the visual cues in the images, the Gothic-style archway features a **fan vault** ceiling. This type of vaulted ceiling is characterized by ribs of the same curve and distance apart, fanning out from the supporting columns or walls.",
+      "C": "The ceiling in the Gothic-style archway features a ribbed vault design.",
+      "M": "object_recognition",
+      "start_idx": 98,
+      "end_idx": 100
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer describes the light as warm and yellowish, while the ground truth specifies it as neutral-cool yellowish. The predicted answer captures the yellowish aspect but inaccurately describes the tone as warm instead of neutral-cool."
+    },
+    {
+      "Q": "What is the color tone of the light coming from the windows?",
+      "A": "The color tone of the light coming from the windows is warm and yellowish.",
+      "C": "The windows emit a neutral-cool yellowish light.",
+      "M": "light_recognition",
+      "start_idx": 56,
+      "end_idx": 58
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer identifies two light color temperatures, but it does not precisely match the ground-truth answer. The ground-truth specifies 'warm orange from the streetlights and cool white from the building windows', while the prediction mentions a 'warm white/yellowish-white light' from the building windows and 'amber/warm yellow light'. The predicted light from the building windows does not mention 'cool white', and the source of the 'amber/warm yellow light' is different from 'streetlights'. Thus, while the prediction captures the idea of two distinct temperatures, it lacks accuracy in the details."
+    },
+    {
+      "Q": "What are the two distinct light color temperatures visible in the nighttime urban scene?",
+      "A": "Based on the visual information in the images, the two distinct light color temperatures visible are:\n\n1.  **Warm white/yellowish-white light:** This is seen coming from the windows of the building.\n2.  **Amber/warm yellow light:** This is emitted by the exterior lights mounted on the ground floor of the building.",
+      "C": "The two distinct light color temperatures are warm orange from the streetlights and cool white from the building windows.",
+      "M": "light_recognition",
+      "start_idx": 14,
+      "end_idx": 16
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the hue cast by the streetlamp as a warm, yellowish-orange, which aligns with the ground truth of warm orange. The addition of \"yellowish\" does not detract from the correctness, as it falls within the warm orange spectrum."
+    },
+    {
+      "Q": "What hue does the streetlamp cast on the cobblestone pavement?",
+      "A": "The streetlamp casts a warm, yellowish-orange hue on the cobblestone pavement.",
+      "C": "The streetlamp casts a warm orange hue on the cobblestone pavement.",
+      "M": "light_recognition",
+      "start_idx": 28,
+      "end_idx": 30
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies that the light changed during the transition from the courtyard to the passageway. It adequately describes the lighting conditions in both locations. While it provides additional details not mentioned in the ground truth, such as the timing and the brightness due to overhead lighting, it still fundamentally agrees with the ground truth's characterization of the shift from broader to more focused lighting. The core of the prediction aligns with the ground truth answer, hence it is considered correct."
+    },
+    {
+      "Q": "Did the light change as I transitioned from the courtyard to the passageway?",
+      "A": "Yes, the light changed significantly as you transitioned from the courtyard to the passageway. Initially, in the dark courtyard, the main sources of light were the illuminated windows of the building and a few scattered exterior lamps. As you entered the passageway around frame 00:33, the scene became much brighter due to direct, overhead lighting within the archway, which strongly illuminated the vaulted ceiling and stone walls.",
+      "C": "Yes, the light shifted from broader, softer illumination in the courtyard to more focused, sparse lighting in the passageway.",
+      "M": "Light_change",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly states that the wall-mounted lamps become more prominent as they are the primary source of illumination in the passageway, aligning with the ground truth answer. Both answers focus on the prominence and significance of the lighting from the wall-mounted lamps as the primary source."
+    },
+    {
+      "Q": "When entering the passageway, does the lighting from the wall-mounted lamps become more prominent?",
+      "A": "Yes, when entering the passageway, the lighting from the wall-mounted lamps becomes significantly more prominent as they are the primary source of illumination in the enclosed, dark space, casting distinct light and shadows on the walls and vaulted ceiling.",
+      "C": "Yes, the wall-mounted lamps become the primary visible light source in the passageway.",
+      "M": "Light_change",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer identifies the predominant color of the ambient artificial lighting as 'warm yellow or yellowish-white'. The ground truth specifies 'warm yellow'. The prediction aligns closely with the ground truth by accurately capturing the 'warm' aspect of the lighting, although it includes a slightly broader description. Therefore, it is mostly correct."
+    },
+    {
+      "Q": "What is the predominant color of the ambient artificial lighting in the corridor?",
+      "A": "Based on the visual cues, the predominant color of the ambient artificial lighting in the corridor is a warm yellow or yellowish-white.",
+      "C": "The predominant color of the ambient lighting in the corridor is warm yellow.\n",
+      "M": "light_recognition",
+      "start_idx": 98,
+      "end_idx": 100
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer of 12 lit windows does not fall within the ground truth answer of 9 lit windows. There is a discrepancy of 3 windows between the predicted and the ground-truth answer."
+    },
+    {
+      "Q": "How many windows are lit in the building at the end of the passageway?",
+      "A": "12",
+      "C": "There are 9 lit windows in the building at the end of the passageway.",
+      "M": "light_recognition",
+      "start_idx": 42,
+      "end_idx": 44
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer suggests that no additional lights were turned on, attributing the brightness to moving from outside. The ground truth specifies that multiple artificial lights brightened the space. The prediction acknowledges the brightness but not due to additional lights, which contradicts the ground truth, leading to partial correctness."
+    },
+    {
+      "Q": "Inside the foyer, did any additional light sources create a brightening effect as I entered?",
+      "A": "Based on the visual evidence from the image sequence, no additional light sources turned on to create a brightening effect as you entered the foyer. The increase in brightness is a result of moving from the dark exterior into the already illuminated interior space.",
+      "C": "Yes, the foyer had multiple artificial lights that brightened the space as you entered.",
+      "M": "Light_change",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly states that there are moments when the lighting outside the building dims significantly as you move toward it, which matches the ground truth answer. The additional detail about specific timestamps is consistent with the description in the ground truth, reinforcing the correctness of the prediction."
+    },
+    {
+      "Q": "Are there moments when the lighting outside the building dims significantly as I move toward it?",
+      "A": "Yes, there are moments when the lighting outside the building dims significantly. This is most noticeable between timestamps 00:30 and 00:44, as you move from the relatively open, lamp-lit cobblestone area into the much darker arched passageway of the building.",
+      "C": "Yes, there are moments when the outdoor lighting appears dimmer as you move closer.",
+      "M": "Light_change",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer perfectly matches the ground truth answer in meaning, confirming that the street lamps on the building's exterior did not stop providing light throughout the video."
+    },
+    {
+      "Q": "Was there a point when the street lamps on the building's exterior stopped providing light?",
+      "A": "No, the street lamps on the building's exterior remain on throughout the video.",
+      "C": "No, the street lamps on the building's exterior continued to provide light throughout.",
+      "M": "Light_change",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the change in light intensity as the transition from the dimly lit areas to the brightly lit foyer, which aligns with the ground truth. Both the predicted and ground truth answers state that there is a significant increase in light intensity in the foyer."
+    },
+    {
+      "Q": "Are there noticeable changes in light intensity as I move to the foyer?",
+      "A": "Yes, there are noticeable changes in light intensity. The scene starts in a dark outdoor area, moves through a dimly lit passageway, emerges into another dark courtyard, and finally enters a brightly lit foyer where the light intensity increases significantly.",
+      "C": "Yes, the foyer is significantly brighter, creating a clear change in light intensity.",
+      "M": "Light_change",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer \"The person was headed to the Bodleian Libraries\" does not match the ground truth, which indicates the person was walking from the courtyard into the lit arched passageway leading to the building\u2019s exit. There is no mention of the Bodleian Libraries in the ground truth, hence the prediction does not align with the ground truth context or location."
+    },
+    {
+      "Q": "Where was the person headed to?",
+      "A": "The person was headed to the Bodleian Libraries.",
+      "C": "The person was walking from the courtyard into the lit arched passageway that is leading to the building\u2019s exit.\n",
+      "M": "dynamic",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the shift in lighting tones from warm to a more neutral tone, aligning with the ground truth answer. It even provides additional details about the specific locations and colors involved, further supporting its correctness."
+    },
+    {
+      "Q": "As I moved indoors, did the lighting shift from warm to a more neutral tone?",
+      "A": "Yes, as you moved indoors into the final arched passageway, the lighting shifted from the warm, yellow-orange glow of the exterior lamps to a brighter, more neutral-white illumination on the vaulted ceiling.",
+      "C": "Yes, the lighting shifted from warm tones outside to a more neutral indoor lighting tone.",
+      "M": "Light_change",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies that there are moving objects in the video and provides additional details that align with the ground truth, such as the presence of a person heading towards the lit passageway at the end of the video."
+    },
+    {
+      "Q": "Did you notice any moving objects during the whole video?",
+      "A": "Yes, there are moving objects in the video.\n\nTowards the end of the clip, as the camera moves towards and into a lit archway, a person can be seen walking through the passage and out the door to the street.",
+      "C": "Yes, there was a person, headed towards the lit passageway towards the end of the video.",
+      "M": "dynamic",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there are moving cars visible in the video, which directly contradicts the ground truth that states no moving cars are present. Therefore, the prediction is fully incorrect."
+    },
+    {
+      "Q": " Are there any moving cars passing by me during the whole video?",
+      "A": "Yes, there are moving cars passing by in the distance, visible through an archway towards the end of the video.",
+      "C": "No, there are no moving cars.",
+      "M": "dynamic_counting",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there are 2 dynamic objects, which does not fall within the range of the ground truth answer indicating only 1 dynamic object. Therefore, the prediction is incorrect."
+    },
+    {
+      "Q": "Count how many dynamic objects can you see in the entire video.",
+      "A": "2",
+      "C": "You can see 1 dynamic object during the entire video, that is a walking person.",
+      "M": "dynamic_counting",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted frames (71-80 and 82-86) do not overlap with the ground truth frames (91 to 100) at all, meaning the prediction is completely incorrect regarding when the walking person can be seen."
+    },
+    {
+      "Q": "Through which frames can you see the walking person?",
+      "A": "The walking person can be seen in frames 71-80 and 82-86.",
+      "C": "You can see the person from frame 91 to frame 100.",
+      "M": "dynamic_counting",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there were dynamic objects (people) visible in front of the main building, while the ground truth answer claims there were no visible dynamic objects. This is a direct contradiction, making the prediction fully incorrect."
+    },
+    {
+      "Q": "Were there any dynamic objects in front of the main building?",
+      "A": "Yes, there were people visible in the distance. In the latter half of the clip, after passing through an archway into a courtyard, a person can be seen walking under another archway across the yard. Earlier in the clip, some indistinct figures also appear to be walking on the far right side of the scene.",
+      "C": "No, there were no visible dynamic objects in front of the main building",
+      "M": "dynamic",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there is 1 large door visible, whereas the ground truth states there are 3 large doors visible. The predicted answer does not fall within the range of the ground truth answer, thus it is considered incorrect."
+    },
+    {
+      "Q": "How many large doors are visible throughout the video?",
+      "A": "There is 1 large door visible in the video.",
+      "C": "There are 3 large doors visible.",
+      "M": "counting",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground-truth answer exactly, with both stating that there are 3 steps leading up to the entrance."
+    },
+    {
+      "Q": "Count the number of steps leading up to the entrance shown in the video.",
+      "A": "3",
+      "C": "There are 3 steps leading up to the entrance.",
+      "M": "counting",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer is close to the ground truth but not exact. The ground truth states that there are 4 street lamps, while the prediction states 3. While close, the prediction does not match the required count, hence it is incorrect but reasonably close."
+    },
+    {
+      "Q": "Across the entire video, how many street lamps can you count?",
+      "A": "3",
+      "C": "There are 4 street lamps visible.",
+      "M": "counting",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground truth answer in specifying the total number of buildings as 3."
+    },
+    {
+      "Q": "What is the total number of buildings visible in the video?",
+      "A": "3",
+      "C": "A total of 3 buildings are visible.",
+      "M": "counting",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer identifies 4 distinct pathways or pavements, whereas the ground truth states there is only 1 distinct pathway or pavement. The variance between the predicted and ground truth numbers is significant, and thus the prediction cannot be considered correct."
+    },
+    {
+      "Q": "How many distinct pathways or pavements can you identify in the video?",
+      "A": "Based on the visual information in the video, I can identify 4 distinct pathways or pavements:\n\n1.  **Cobblestone Pavement:** Visible in the initial courtyard, this surface is made of rounded cobblestones.\n2.  **Rectangular Paver Path:** A narrow, smoother path made of rectangular stones is set within the cobblestone courtyard, leading towards a set of stairs.\n3.  **Flagstone Flooring:** Inside the arched passageways or tunnels, the floor is made of large, flat stone slabs or flagstones.\n4.  **Street Pavement:** At the very end of the video, through an open gate, a different type of pavement belonging to a street is briefly visible.",
+      "C": "There are 1 distinct pathway or pavements.",
+      "M": "counting",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer provides a detailed description of the path taken, which includes some elements found in the ground truth answer, such as the cobblestone path and the arched entrance. However, it contains additional steps and lacks specific mention of the 'central to the courtyard's layout' aspect. Thus, while the general direction aligns somewhat, it lacks precision and relevance to the ground-truth answer."
+    },
+    {
+      "Q": "Which pathways in the courtyard did you choose to explore?",
+      "A": "Based on the visual evidence from the image sequence, the pathways explored are as follows:\n\n1.  I began in a dark, outdoor area with cobblestone ground and walked towards a large, lit building.\n2.  I went up a short flight of steps and entered a dark, covered archway or passageway.\n3.  I walked through this passageway, which had a vaulted ceiling.\n4.  I emerged from the passageway into a large, enclosed courtyard surrounded by buildings.\n5.  I crossed the courtyard.\n6.  Finally, I entered another vaulted archway at the far side of the courtyard, which served as an exit.",
+      "C": "I followed the cobblestone path leading to the arched entrance and central to the courtyard's layout.",
+      "M": "action",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there are a minimum of 44 different rooms with lit windows, which is not within range of the ground-truth answer of 9. This significant discrepancy makes the prediction incorrect."
+    },
+    {
+      "Q": "Throughout the video, how many different rooms with lit windows can you see?",
+      "A": "Based on a careful review of the video, a minimum of 44 different rooms with lit windows are visible across the different buildings shown.",
+      "C": "You can see 9 different rooms with lit windows.",
+      "M": "counting",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer gives a count of 17 lit windows, which is significantly lower than the ground truth answer of 43 lit windows. As the predictions do not fall within the range of the ground truth answer and shows less than half of the actual amount, it cannot be considered correct. Therefore, the answer is mostly incorrect with some partial correctness."
+    },
+    {
+      "Q": "How many windows appear lit in the main building throughout the video?",
+      "A": "Based on the clearest views of the main building, particularly in the early part of the video, there are 17 windows that appear lit. This consists of 7 windows on the top floor, 7 on the middle floor, and 3 on the ground floor.",
+      "C": "There are 43 lit windows in the main building.",
+      "M": "counting",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer describes the physical appearance of the doors, matching some attributes like decoration and traditional design. However, it misses detailing 'intricate carvings' and does not acknowledge any 'historical significance,' which are mentioned in the ground truth."
+    },
+    {
+      "Q": "When you reached the large wooden doors, did you notice any inscriptions or details of interest?",
+      "A": "Yes, the large wooden doors are made of dark vertical planks and are heavily decorated with a pattern of large, dark metal studs. However, no specific inscriptions are visible on the doors themselves in the provided images.",
+      "C": "The doors were quite impressive, with intricate carvings and a heavy, traditional design that suggested historical significance.",
+      "M": "action",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer captures a detailed and evocative description of walking through the passageway, describing specific elements such as the lighting, stone walls, and an intricate vaulted ceiling. However, it introduces additional aspects like an ancient, mysterious, and slightly eerie atmosphere which do not specifically align with the ground truth answer. The ground truth focuses on a welcoming passage with grandeur and continuity of design. Some elements like the vaulted ceiling and the transition from the entrance to the courtyard are common in both, but the prediction adds layers not present in the ground truth."
+    },
+    {
+      "Q": "Can you describe the atmosphere as you walked through the passageway leading to the courtyard?",
+      "A": "Based on the visual sequence, walking through the passageway creates a mysterious and historic atmosphere. The journey begins in a dark, open courtyard, with the camera moving towards a dimly lit, narrow stone archway. As you enter the passage, the space becomes confined and hushed, illuminated only by a few warm, sparse lights that cast long shadows on the ancient stone walls and the intricately vaulted ceiling. There's a palpable sense of stepping back in time. Looking through the tunnel-like passage towards the courtyard on the other side, with its lit windows framed by the arch, feels like peering into a secluded, scholarly world. The atmosphere is quiet, reverent, and slightly eerie, as if you are discovering a hidden part of an old, grand institution after dark.",
+      "C": "The passageway felt enclosed yet welcoming, with a vaulted ceiling adding a sense of grandeur and continuity from the entrance to the courtyard.",
+      "M": "action",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer mentions elements such as lighting, arched doorways, courtyard layout, and signage, which are not specifically mentioned in the ground truth answer. The ground truth emphasizes the symmetry of the building and clearly marked paths, which are not addressed in the predicted answer. There is some partial correctness because the predicted answer does include navigational elements, but it does not align closely with the ground truth specifics."
+    },
+    {
+      "Q": "What elements of the building's design helped you decide which way to navigate?",
+      "A": "Based on the visual evidence, the following elements of the building's design helped guide navigation:\n\n*   **Lighting:** The most significant navigational aid is the strategic use of light. In the prevailing darkness, illuminated doorways, windows, and archways stand out as points of interest and suggest pathways. The warm glow from these sources contrasts sharply with the unlit areas, creating a clear route to follow.\n*   **Arched Doorways and Passageways:** The architecture consistently uses arched openings to signify entrances and thoroughfares. The person filming moves from one illuminated arch to the next, first entering a courtyard and then proceeding through another passage on the far side.\n*   **Courtyard Layout:** The open space of the courtyard, enclosed by buildings, naturally channels movement from the entrance point across to the exit passage on the opposite side.\n*   **Signage:** Towards the end of the sequence, a sign for the \"BODLEIAN LIBRARIES\" becomes visible in a well-lit entryway, confirming the destination and the correct path.",
+      "C": "The symmetry of the building and the clearly marked paths helped guide my exploration, directing me towards the central passage and beyond.",
+      "M": "action",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer acknowledges the presence of a sign which aligns with the ground-truth answer about signs providing guidance. However, the predicted answer does not explicitly state that the signs were providing guidance throughout the building as outlined in the ground truth. Hence, while partially correct, it misses out on the full context."
+    },
+    {
+      "Q": "As you entered the building, did you observe any signs or indicators that guided your exploration?",
+      "A": "Yes, as I entered the building through an arched gateway, a large sign on a stand was visible to the right. The sign had the words \"BODLEIAN LIBRARIES\" printed on it.",
+      "C": "Inside, there were clear signs indicating various parts of the building, providing guidance on where to proceed next.",
+      "M": "action",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately identifies that the ground is composed mainly of cobblestones, which matches the ground truth answer."
+    },
+    {
+      "Q": "What type of material is the ground mainly composed of in the scene?",
+      "A": "Based on the visual evidence, the ground in the scene is mainly composed of cobblestones.",
+      "C": "The ground in the scene is mainly composed of cobblestones.",
+      "M": "object_recognition",
+      "start_idx": 28,
+      "end_idx": 30
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is '8', which is outside the range of the ground truth answer, '5'. Therefore, the prediction is considered incorrect."
+    },
+    {
+      "Q": "How many arches are visible throughout the entire video?",
+      "A": "8",
+      "C": "There are 5 arches visible.",
+      "M": "counting",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer states that there are 11 lit windows, while the ground truth specifies 14 lit windows. The prediction is close, but not within the acceptable range indicated by the ground truth."
+    },
+    {
+      "Q": "How many windows on the building are lit?",
+      "A": "There are 11 lit windows on the building.",
+      "C": "There are 14 windows lit on the building.",
+      "M": "object_recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer describes the ceiling texture as rough and uneven with visible lines or ridges, which contradicts the ground truth stating it is smooth. The inconsistency in texture description leads to an incorrect prediction."
+    },
+    {
+      "Q": "What is the  texture of the corridor's ceiling?",
+      "A": "Based on the visual information, the corridor's ceiling is arched and has a rough, uneven texture, with some visible lines or ridges running along its curve.",
+      "C": "The texture of the corridor's ceiling seems smooth from what\u2019s visible in the image.",
+      "M": "object_recognition",
+      "start_idx": 42,
+      "end_idx": 44
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer accurately captures the essence of the question by identifying features of the environment that influenced the direction and pace of exploration. Both the ground-truth and predicted answers highlight architectural elements that prompted a pause. However, the specifics differ: the ground-truth focuses on the arches and entrance details, while the prediction mentions the scale and architecture in a broader context, and the presence of a lit archway. Despite these differences, the prediction aligns well with the ground-truth in terms of environmental influence, making it mostly correct with a little deviation in specifics."
+    },
+    {
+      "Q": "Were there any features of the environment that made you pause or change direction during your exploration?",
+      "A": "Yes, upon emerging from the first dark, vaulted passageway into the main quadrangle, the impressive scale and architecture of the surrounding buildings, illuminated against the night sky, caused me to slow down and pan across the scene to take it all in. My path was then directed by the sight of another lit archway, which I moved towards to continue my exploration and eventually exit the courtyard.",
+      "C": "The arches and the entrance with their architectural details were captivating enough to make me pause and take a closer look before continuing.",
+      "M": "action",
+      "start_idx": 0,
+      "end_idx": 104
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'archway' closely matches the ground truth answer 'arched doorway'. Both terms refer to a similar architectural feature involving an arch at the entrance. Therefore, the prediction is correct and fully accurate."
+    },
+    {
+      "Q": "What architectural feature is present at the entrance of the building?",
+      "A": "Based on the visual information from the images, the architectural feature present at the entrance of the building is an archway.",
+      "C": "The architectural feature present at the entrance of the building is an arched doorway.",
+      "M": "object_recognition",
+      "start_idx": 56,
+      "end_idx": 58
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'An arch is the prominent architectural feature used in the building's entryway.' effectively aligns with the ground truth answer, which states 'The building's entryway prominently features an arched entrance.' Both answers clearly identify the focal architectural feature as an arch, confirming the prediction as fully correct."
+    },
+    {
+      "Q": " What architectural feature is prominently used in the building's entryway?",
+      "A": "An arch is the prominent architectural feature used in the building's entryway.",
+      "C": "The building's entryway prominently features an arched entrance.",
+      "M": "object_recognition",
+      "start_idx": 84,
+      "end_idx": 86
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer, \"An arched entryway is featured below the illuminated rectangular windows on the building,\" is essentially synonymous with the ground truth answer, \"Below the illuminated rectangular windows on the building, there is an arched doorway.\" Both descriptions accurately identify the architectural element as \"arched\" and located below the windows."
+    },
+    {
+      "Q": "What architectural element is featured below the illuminated rectangular windows on the building?",
+      "A": "An arched entryway is featured below the illuminated rectangular windows on the building.",
+      "C": "Below the illuminated rectangular windows on the building, there is an arched doorway",
+      "M": "object_recognition",
+      "start_idx": 70,
+      "end_idx": 72
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer describes a fan vault ceiling, which is a specific type of ribbed vault. While both answers mention a vaulted ceiling, they differ in specificity. The ground truth specifies a ribbed vault, whereas the prediction specifies a fan vault. A fan vault is a more specific subset of ribbed vaults, thus partially aligning with the ground truth but not matching exactly."
+    },
+    {
+      "Q": "What type of ceiling is featured in the Gothic-style archway?",
+      "A": "Based on the visual evidence, the Gothic-style archway features a **fan vault** ceiling. This is characterized by the ribs that radiate outwards from the supporting columns in a fan-like pattern.",
+      "C": "The ceiling in the Gothic-style archway features a ribbed vault design.",
+      "M": "object_recognition",
+      "start_idx": 98,
+      "end_idx": 100
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies the arched shape and rough texture, suggesting the ceiling is made of stone or brick. This aligns well with the ground-truth, which states it is likely stone or plaster. Both responses acknowledge a similar type of material, though they differ slightly in specifics (brick vs. plaster). Overall, the prediction is mostly consistent with the ground truth."
+    },
+    {
+      "Q": "What is the material of the corridor's ceiling?",
+      "A": "Based on the arched shape and rough texture visible on the corridor's ceiling, it appears to be made of stone or brick.",
+      "C": "The ceiling of the corridor appears to be made of a series of arch-shaped beams, likely stone or plaster, given its structure. ",
+      "M": "object_recognition",
+      "start_idx": 42,
+      "end_idx": 44
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer describes the hue as 'a warm, yellow-orange', which closely matches the ground truth description of 'a warm orange hue'. The inclusion of 'yellow' does not significantly alter the meaning and the warm aspect of the hue is maintained. Thus, the prediction accurately reflects the ground truth."
+    },
+    {
+      "Q": "What hue does the streetlamp cast on the cobblestone pavement?",
+      "A": "The streetlamp casts a warm, yellow-orange hue on the cobblestone pavement.",
+      "C": "The streetlamp casts a warm orange hue on the cobblestone pavement.",
+      "M": "light_recognition",
+      "start_idx": 28,
+      "end_idx": 30
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'yellowish-orange' is consistent with the ground truth 'orange'. Both describe a similar range of color emitted by the streetlamp, and 'yellowish-orange' falls within the spectrum of 'orange' light. Hence, the prediction is considered correct."
+    },
+    {
+      "Q": "What color is the light emitted by the streetlamp?",
+      "A": "The light emitted by the streetlamp is yellowish-orange.",
+      "C": "The streetlamp emits an orange light.",
+      "M": "light_recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer describes the light as 'warm, yellowish-gold,' which differs from the ground truth's 'neutral-cool yellowish light.' The predicted color tone is warmer than the ground truth description, which could mean a softer, more golden light as opposed to a more neutral or cooler yellow. Thus, the prediction captures some of the light's characteristics but does not accurately match the specified tone."
+    },
+    {
+      "Q": "What is the color tone of the light coming from the windows?",
+      "A": "The color tone of the light coming from the windows is a warm, yellowish-gold.",
+      "C": "The windows emit a neutral-cool yellowish light.",
+      "M": "light_recognition",
+      "start_idx": 56,
+      "end_idx": 58
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer identifies two distinct light color temperatures, similar to the ground truth. However, it describes them as 'warm yellowish-white' and 'cool bluish-white', which do not fully match the ground truth's description of 'warm orange' from streetlights and 'cool white' from building windows. Although there's some overlap in the descriptions (warm and cool), the specific terminology and sources (streetlights versus windows) are different."
+    },
+    {
+      "Q": "What are the two distinct light color temperatures visible in the nighttime urban scene?",
+      "A": "The two distinct light color temperatures visible are:\n\n1.  **Warm yellowish-white light:** This is seen coming from the windows and some of the exterior lights of the main building in the foreground.\n2.  **Cool bluish-white light:** This is visible illuminating the building in the distant background on the right.",
+      "C": "The two distinct light color temperatures are warm orange from the streetlights and cool white from the building windows.",
+      "M": "light_recognition",
+      "start_idx": 14,
+      "end_idx": 16
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer describes the predominant color as a \"warm, yellowish-white,\" which is very similar to the ground truth description of \"warm yellow.\" Although there is a slight difference in wording, both convey a warm yellowish hue, which aligns closely with the ground truth."
+    },
+    {
+      "Q": "What is the predominant color of the ambient artificial lighting in the corridor?",
+      "A": "Based on the visual evidence, the predominant color of the ambient artificial lighting in the corridor is a warm, yellowish-white.",
+      "C": "The predominant color of the ambient lighting in the corridor is warm yellow.",
+      "M": "light_recognition",
+      "start_idx": 98,
+      "end_idx": 100
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer of 11 lit windows does not match the ground truth answer of 9 lit windows. As the prediction does not fall within the range of the ground truth answer, it is considered incorrect."
+    },
+    {
+      "Q": "How many windows are lit in the building at the end of the passageway?",
+      "A": "There are 11 lit windows in the building.",
+      "C": "There are 9 lit windows in the building at the end of the passageway.",
+      "M": "light_recognition",
+      "start_idx": 42,
+      "end_idx": 44
+    }
+  ]
+]

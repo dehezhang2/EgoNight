@@ -1,0 +1,707 @@
+[
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer states there are 5 trash bins visible, while the ground truth states there are 9. This discrepancy in number indicates the prediction does not match the ground truth. Furthermore, the detailed description does not account for the remaining four bins."
+    },
+    {
+      "Q": "Are there any trash bins visible, and if so, how many?  ",
+      "A": "Yes, there are 5 trash bins visible. Two are large dumpsters seen next to a building, and three are smaller bins attached to the tables outside the grill restaurant.",
+      "C": "There are 9 trash bins visible.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 64
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is 10, which does not match the ground truth of 8 storefronts. In questions involving counting objects, if the predicted count does not fall within the specified range of the ground truth answer, it should be considered incorrect. Here, the given predicted count of 10 does not fall in the range of the ground truth answer of exactly 8."
+    },
+    {
+      "Q": "How many storefronts are visible throughout the video?  ",
+      "A": "10",
+      "C": "There are 8 storefronts visible throughout the video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 64
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer of 8 streetlights does not fall within the range of the ground truth answer of 10-15 streetlights. Therefore, the prediction is incorrect."
+    },
+    {
+      "Q": "How many streetlights are visible in the entire video?  ",
+      "A": "8",
+      "C": "A total of 10-15 streetlights are visible in the video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 64
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer states that 1 intersection was passed, while the ground-truth states 2 intersections. The numbers do not match, hence it's incorrect. However, the prediction is close and shows partial understanding, thus the score is given as 3 out of 5."
+    },
+    {
+      "Q": "Did you notice the number of intersections you passed?  ",
+      "A": "I passed 1 intersection.",
+      "C": "I passed 2 intersections in the video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 64
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there are at least 17 trees, which does not fall within the ground truth range of 35-40 trees. Hence, the prediction is incorrect."
+    },
+    {
+      "Q": "How many trees can be seen along the street?  ",
+      "A": "There are at least 17 trees visible along the street.",
+      "C": "There are 35-40 trees along the street",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 64
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there are 2 bikes visible in the video, while the ground truth specifies there are 0 bikes. Since the numbers do not match, the prediction is incorrect."
+    },
+    {
+      "Q": "How many bikes can be counted attached or left on the sidewalks?  ",
+      "A": "2 bikes are visible in the video.",
+      "C": "There are 0 bikes attached or left on the sidewalks.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 64
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer states that the windows of the buildings are rectangular, which is equivalent to the ground truth answer that describes the windows as having a rectangular shape. Both accurately describe the shape of the windows as rectangular."
+    },
+    {
+      "Q": "What shapes do the windows of the buildings have?  ",
+      "A": "The windows of the buildings are rectangular.",
+      "C": "The windows of the buildings have a rectangular shape.  ",
+      "M": "Object Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer mentions both a blue van and a black car, while the ground truth specifies only a black car. The prediction partially matches the ground truth as it correctly identifies the black car but includes additional information about a blue van that is not present in the ground truth."
+    },
+    {
+      "Q": "What type of vehicle is parked along the right side of the street?  ",
+      "A": "Based on the visual information in the images, a blue van and a black car are parked along the right side of the street.",
+      "C": "The vehicle parked along the right side of the street is a black car.  ",
+      "M": "Object Recognition",
+      "start_idx": 12,
+      "end_idx": 14
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer identifies two of the three colors mentioned in the ground truth answer (red and white) but misses one color (yellow). Therefore, while partially correct, the prediction is incomplete."
+    },
+    {
+      "Q": "What colors are present on the illuminated sign above the building?  ",
+      "A": "Based on the visual information, the colors present on the illuminated sign above the building are red and white.",
+      "C": "The colors on the illuminated sign are red, yellow and white.",
+      "M": "Object Recognition",
+      "start_idx": 6,
+      "end_idx": 8
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer \"Yellow\" matches the ground truth answer which confirms the primary color of the advertisement is yellow."
+    },
+    {
+      "Q": "What is the primary color of the advertisement that prominently features the word \"Camel\"?  ",
+      "A": "Yellow",
+      "C": "The primary color of the advertisement featuring the word \"Camel\" is yellow.  ",
+      "M": "Object Recognition",
+      "start_idx": 30,
+      "end_idx": 32
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted number of colors observed (7) falls within the ground truth range (3-8). Therefore, the prediction is aligned with the ground truth."
+    },
+    {
+      "Q": "How many different colors of cars did you observe?  ",
+      "A": "I observed 7 different colors of cars:\n1. Black\n2. Blue\n3. Silver/Gray\n4. Red\n5. White\n6. Yellow\n7. Green",
+      "C": "Colors of Cars: I observed 3-8 different colors of cars.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 64
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer describes different elements (a window with Cyrillic text and a restaurant) located on either side of the 'Sesame' establishment, while the ground truth specifies decorative plants. There is no mention of plants in the predicted answer, indicating a complete mismatch with the ground truth."
+    },
+    {
+      "Q": "What is located on either side of the entrance to the \"Sesame\" establishment?  ",
+      "A": "Based on the visual evidence, to the left of the entrance to the \"Sesame\" establishment, there is a large window with Cyrillic text \"\u0411\u0423\u041a\u041c\u0415\u0419\u041a\u042a\u0420\u0421\u041a\u0418 \u041f\u0423\u041d\u041a\u0422\". To the right of the entrance, there is a restaurant with a sign that says \"GRILL\".",
+      "C": "On either side of the entrance to the \"Sesame\" establishment, there are decorative plants.",
+      "M": "Object Recognition",
+      "start_idx": 42,
+      "end_idx": 44
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies 'tobacco' as being prominently advertised alongside coffee on the facade of the 'ANTRE' convenience store, matching the ground truth answer."
+    },
+    {
+      "Q": "What type of product is prominently advertised alongside coffee on the facade of the \"ANTRE\" convenience store?  ",
+      "A": "Based on the visual information from the images, the sign on the facade of the \"ANTRE\" convenience store reads \"DRINKS. WINE. TOBACCO.\" Therefore, a product prominently advertised is **tobacco**.",
+      "C": "The product prominently advertised alongside coffee on the facade of the \"ANTRE\" convenience store is tobacco.  ",
+      "M": "Object Recognition",
+      "start_idx": 36,
+      "end_idx": 38
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly describes the presence of horizontal stripes on the exterior walls of the \"24 Grill Center\". However, it inaccurately describes the pattern as having a thick, dark brown stripe and a thinner, light brown stripe, instead of alternating brown and white colors. Therefore, the prediction is partially correct but not fully accurate."
+    },
+    {
+      "Q": "What kind of pattern is featured on the exterior walls of the \"24 Grill Center\"?  ",
+      "A": "Based on the visual information, the exterior walls of the \"24 Grill Center\" feature a pattern of horizontal stripes. Specifically, there is a thick, dark brown stripe and a thinner, light brown stripe running along the upper portion of the white wall.",
+      "C": "The exterior walls of the \"24 Grill Center\" feature a pattern of horizontal stripes in alternating brown and white colors.  ",
+      "M": "Object Recognition",
+      "start_idx": 54,
+      "end_idx": 56
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer includes additional information about a second sign \"SESAME\" with a roulette wheel design, which is not mentioned in the ground truth. Although it correctly identifies \"24 GRILL\" as being on a sign, the inclusion of extra details not found in the ground truth impacts the prediction\u2019s correctness."
+    },
+    {
+      "Q": "What is displayed on the prominent sign above the establishment?  ",
+      "A": "The prominent signs above the establishments display \"24 GRILL\" with a flame logo, and \"SESAME\" with a roulette wheel design.",
+      "C": "The prominent sign above the establishment displays \"24 GRILL\".",
+      "M": "Object Recognition",
+      "start_idx": 48,
+      "end_idx": 50
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer, 28, does not fall in the range of the ground truth answer, which is 30-35. However, it is relatively close to the range, indicating a partial correctness."
+    },
+    {
+      "Q": "Can you count the total number of parked cars in total?  ",
+      "A": "28",
+      "C": "There are 30-35 parked cars in total.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 64
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer \"ANTRE\" matches the ground truth answer \"ANTRE\" exactly, indicating that the prediction is fully correct."
+    },
+    {
+      "Q": "Which shop appears after the \"MARKET\" sign in the sequence?  ",
+      "A": "ANTRE",
+      "C": "The shop that appears after the \"MARKET\" sign is the \"ANTRE\" store.  ",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 64
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies the sequence of shops: \"ANTRE,\" \"SESAME,\" and \"24 GRILL,\" which matches the ground truth answer. The predicted answer describes a market/supermarket instead of \"T-MARKET,\" but given the description matches the context, it is mostly correct."
+    },
+    {
+      "Q": "What is the sequence of shops I passed starting from the first storefront?  ",
+      "A": "Based on the video frames, here is the sequence of shops you passed:\n\n1.  A market/supermarket (with an ad for \"\u041f\u0420\u042f\u0421\u041d\u041e \u041c\u0415\u0421\u041e\" - Fresh Meat).\n2.  ANTRE (a 24/7 shop for drinks, wine, and tobacco).\n3.  SESAME (a casino/bookmaker).\n4.  24 GRILL (a grill restaurant).",
+      "C": "The sequence of shops I passed, starting from the first storefront, includes a path down the street with parked cars and a visible shop named \u201cT-MARKET\u201d, followed by \"ANTRE,\" and ending with \"SESAME\" and \u201c24 GRILL.\u201d  ",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 64
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer mentions places such as a supermarket, a 24/7 convenience store, a casino, and a restaurant after the dimly lit street. While these could be considered a series of shops, the specific details provided in the prediction do not closely match the ground-truth answer. There is a partial alignment as the types of places mentioned could fall under \"shops\", but the details differ significantly."
+    },
+    {
+      "Q": "What follows the dimly lit street with parked cars and trees?  ",
+      "A": "Following the dimly lit street, there is a turn onto a sidewalk that passes a supermarket, a 24/7 convenience store, a casino named \"SESAME,\" and a \"24 GRILL CENTER\" restaurant.",
+      "C": "After the dimly lit street with parked cars and trees, I encountered a series of shops.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 64
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer \"ANTRE\" matches the ground-truth answer exactly. Therefore, the prediction is fully correct."
+    },
+    {
+      "Q": "Which store has a 24/7 sign after the \"MARKET\" store?  ",
+      "A": "ANTRE",
+      "C": "The store with a \"24/7\" sign after the \"MARKET\" store is \"ANTRE.\"  ",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 64
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer mentions 'a black car', while the ground truth specifies 'a blue car'. The discrepancy in color indicates that the predicted answer does not match the ground truth, hence it is scored as incorrect."
+    },
+    {
+      "Q": "What object is to the left of the tree?  ",
+      "A": "A black car.",
+      "C": "The object to the left of the tree is a blue car.",
+      "M": "Spatial Reasoning",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly includes passing the \"ANTRE\" shop and mentions \"CAMEL\" signage, matching the ground truth to some extent. However, it differs significantly by describing a different starting sequence and additional elements like a supermarket and a fruit stall, which are not mentioned in the ground truth answer. Thus, while partially correct, it does not fully align with the ground truth sequence."
+    },
+    {
+      "Q": "What is the sequence of elements leading up to the sign that reads \"SESAME\"?  ",
+      "A": "The sequence of elements leading up to the \"SESAME\" sign is as follows:\n1.  The camera operator starts on a street corner and turns left to walk down a sidewalk.\n2.  They pass a supermarket with a large advertisement for \"\u041f\u0420\u042f\u0421\u041d\u041e \u041c\u0415\u0421\u041e\" (Fresh Meat).\n3.  Continuing on the sidewalk, they pass a small fruit stall set up next to a blue van.\n4.  They then walk by a 24/7 shop named \"ANTRE\" which features large ads for \"CAMEL\" and \"IQOS\".\n5.  Immediately following the \"ANTRE\" shop, the \"SESAME\" sign comes into view on the adjacent building.",
+      "C": "The sequence of elements leading up to the sign that reads \"SESAME\" includes the \u201cT-MARKET\u201d, the \"ANTRE\" store, followed by transitioning past \"CAMEL\" signage.  ",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 64
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer identifies a \"24 GRILL CENTER\" restaurant following the \"SESAME\" shop, whereas the ground truth states that the path continues towards \"ANTRE\". There is no overlap between the predicted answer and the ground truth answer, making the prediction incorrect."
+    },
+    {
+      "Q": "What follows the first shop with illuminated signage in the sequence?  ",
+      "A": "A \"24 GRILL CENTER\" restaurant follows the \"SESAME\" shop.",
+      "C": "What follows the first shop with illuminated signage is the continuation of the path towards \"ANTRE.\"  ",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 64
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer mentions a silver station wagon parked on the side of the road, which partially aligns with the ground truth answer that mentions a path with parked cars. However, the predicted answer omits the presence of trees. The prediction is partially correct but misses key details from the ground truth."
+    },
+    {
+      "Q": "What notable feature is depicted right before the vibrant sign that reads \"MARKET\"?  ",
+      "A": "A silver station wagon is parked on the side of the road.",
+      "C": "The notable feature depicted right before the vibrant sign that reads \"MARKET\" is a path with parked cars and trees.   ",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 64
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer describes a red kiosk with the word \"TASTE\" and a person sitting on a bench, which is different from the ground truth answer that specifies an awning directly above the entrance. There is no mention of an awning in the predicted answer, leading to a low score for its relevance to the ground truth."
+    },
+    {
+      "Q": "What is directly above the entrance of the building with stairs?  ",
+      "A": "A red kiosk with the word \"TASTE\" on it is located directly above the entrance of the building with the stairs. A person is also sitting on a bench in front of it.",
+      "C": "Directly above the entrance of the building with stairs, there is an awning.",
+      "M": "Spatial Reasoning",
+      "start_idx": 18,
+      "end_idx": 20
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer mentions both trees and a market stall with a striped umbrella positioned between the sidewalk and the parked cars. However, the ground truth only refers to several trees. The predicted answer partially matches the ground truth by mentioning the trees but adds extra details that are not in the ground truth."
+    },
+    {
+      "Q": "What is positioned between the sidewalk and the parked cars on the right side?",
+      "A": "Based on the visual information from the images, there are trees planted in patches of dirt and a market stall with a striped umbrella positioned between the sidewalk and the parked cars on the right side.",
+      "C": "Between the sidewalk and the parked cars on the right side, there are several trees.",
+      "M": "Spatial Reasoning",
+      "start_idx": 12,
+      "end_idx": 14
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer 'A tree' is mostly correct as it identifies the trees above and to the right of the sidewalk. However, the predicted answer is less specific than the ground truth answer, which mentions 'large trees,' hence a score of 4 is appropriate."
+    },
+    {
+      "Q": "What object is directly above and to the right of the sidewalk?  ",
+      "A": "A tree.",
+      "C": "Directly above and to the right of the sidewalk, there are large trees.",
+      "M": "Spatial Reasoning",
+      "start_idx": 6,
+      "end_idx": 8
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies the 'SESAME' shop as being to the right of the 'ANTRE' shop entrance, aligning with the ground truth answer. However, it incorrectly states that the 'SESAME' shop is across the walkway, whereas the ground truth specifies it is further down the street. The distance aspect of the relative positioning is not accurately captured, leading to a less than fully correct answer."
+    },
+    {
+      "Q": "What is the relative position of the \"SESAME\" shop compared to the \"ANTRE\" shop entrance from your perspective?  ",
+      "A": "The \"SESAME\" shop is located across the walkway and to the right of the \"ANTRE\" shop entrance.",
+      "C": "The \"SESAME\" shop is located further down the street and to the right when compared to the entrance of the \"ANTRE\" shop from your perspective.",
+      "M": "Spatial Reasoning",
+      "start_idx": 36,
+      "end_idx": 38
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer includes additional objects not mentioned in the ground truth. The ground truth specifies only one object, a sign with \"Schweppes\" and \"24/7\" written on it. The predicted answer does mention a red sign for Schweppes and a \"24/7\" sign, which partially aligns with the ground truth. However, the additional objects and details result in some incorrect information, lowering the score."
+    },
+    {
+      "Q": "What object is affixed to the side of the kiosk?  ",
+      "A": "Based on the visual evidence, the following objects are affixed to the side of the kiosk:\n- A large yellow advertisement for Camel cigarettes.\n- A large green advertisement for IQOS ILUMA.\n- A red sign for Schweppes.\n- A \"24/7\" sign.\n- A sign with the word \"ANTRE\".",
+      "C": "The object affixed to the side of the kiosk is a sign with \"Schweppes\" and \"24/7\" written on it.",
+      "M": "Spatial Reasoning",
+      "start_idx": 30,
+      "end_idx": 32
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer specifies different objects ('a person sitting in a chair and a dog') in front of the entrance, whereas the ground-truth answer indicates a 'traffic cone.' They do not align, resulting in an incorrect prediction."
+    },
+    {
+      "Q": "What is positioned directly in front of the entrance to the building on the left?  ",
+      "A": "A person sitting in a chair and a dog are positioned directly in front of the entrance to the building on the left.",
+      "C": "Directly in front of the entrance to the building on the left, labeled \"SESAME,\" there is a traffic cone.",
+      "M": "Spatial Reasoning",
+      "start_idx": 42,
+      "end_idx": 44
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground truth answer by stating that after passing the commercial building with a red sign, the direction to head is straight ahead, which aligns perfectly with the ground truth answer."
+    },
+    {
+      "Q": "After passing the commercial building with a red sign, which direction should I head to remain on the main path?",
+      "A": "After passing the commercial building with a red sign (\"24 GRILL\"), you should continue straight ahead along the sidewalk.",
+      "C": "Continue straight ahead after passing the commercial building with a red sign to remain on the main path.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 64
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer of approximately 2 steps is significantly outside the ground truth answer range of 4 to 5 steps. The prediction does not fall within the acceptable range, making it incorrect."
+    },
+    {
+      "Q": "If I start at the planter boxes beside the food stand, how many steps approximately would it take to reach the tree?  ",
+      "A": "Based on the movement between the frames, it would take approximately 2 steps to reach the tree.",
+      "C": "To reach the tree from the planter boxes beside the food stand, it would take you approximately 4 to 5 steps.",
+      "M": "Spatial Reasoning",
+      "start_idx": 48,
+      "end_idx": 50
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes turning left and walking straight ahead from the initial street scene to reach the supermarket. The additional detail about the advertisement for \"\u041f\u0420\u042f\u0421\u041d\u041e \u041c\u0415\u0421\u041e\" (fresh meat) does not contradict the ground truth and enhances the description of the supermarket location."
+    },
+    {
+      "Q": "How do I continue towards the supermarket from the initial street scene?",
+      "A": "From the initial street scene, turn left at the corner and walk straight ahead on the sidewalk. The supermarket will be the large building on your left with an advertisement for \"\u041f\u0420\u042f\u0421\u041d\u041e \u041c\u0415\u0421\u041e\" (fresh meat).",
+      "C": "Turn left and walk straight ahead to continue towards the supermarket from the initial street scene.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 64
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer mentions passing a supermarket with a large advertisement, whereas the ground-truth answer states the last notable feature was a section of road with parked cars under trees. The features described do not match, leading to a fully incorrect prediction."
+    },
+    {
+      "Q": "Before reaching the store labeled \"ANTRE,\" what was the last notable feature I passed?  ",
+      "A": "You passed a supermarket with a large wall advertisement for \"\u041f\u0420\u042f\u0421\u041d\u041e \u041c\u0415\u0421\u041e\" (Fresh Meat).",
+      "C": "Before reaching the store labeled \"ANTRE,\" the last notable feature I passed was a section of road with parked cars under the trees.  ",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 64
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer of 9 steps falls within the ground truth range of 8 to 10 steps, making it a correct prediction. Both the predicted answer and the ground truth are consistent with each other."
+    },
+    {
+      "Q": "What is the approximate distance in steps from the Grill Center sign to the tree on the right?  ",
+      "A": "Based on the visual evidence, the approximate distance from the Grill Center sign to the tree on the right is 9 steps.",
+      "C": "Based on the frames provided, the approximate distance from the Grill Center sign to the tree on the right seems to be around 8 to 10 steps.",
+      "M": "Spatial Reasoning",
+      "start_idx": 54,
+      "end_idx": 56
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer suggests walking straight and then identifies landmarks and final destination details not mentioned in the ground truth. The path description in the prediction is more detailed and deviates from the ground truth after the initial walking straight phase. The ground-truth emphasizes a slight turn to the left, which is not specified in the prediction. Therefore, while part of the prediction aligns with the ground-truth, it ultimately provides additional, potentially misleading information."
+    },
+    {
+      "Q": "What is my navigation path to approach the convenience store entrance?",
+      "A": "Walk straight ahead on the sidewalk. Continue past the large supermarket on your left. The convenience store, labeled \"ANTRE\" and \"24/7\", will be on your left, with its entrance up a small set of steps.",
+      "C": "Walk straight, then turn slightly to the left to approach the convenience store entrance.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 64
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer provides a different path than the ground-truth answer. It mentions turning around and passing different landmarks. The ground truth specifically mentions passing the big market and following the \u201cCamel\u201d sign, which is not included in the predicted answer."
+    },
+    {
+      "Q": "How do I get back to the initial starting point from the 24/7 supermarket entrance?",
+      "A": "To get back to the initial starting point from the 24 Grill Center entrance, you need to:\n\n1.  Turn around 180 degrees.\n2.  Walk straight ahead on the sidewalk, passing the \"ANTRE\" 24/7 shop on your right.\n3.  Continue walking past the large supermarket on your right.\n4.  Proceed until you reach the street corner where the video began.",
+      "C": "Walk straight, pass the big market, then when you see the yellow \u201cCamel\u201d sign continue straight and turn left to reach the 24/7 supermarket entrance.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 64
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer provides a detailed route description, but it instructs to turn right initially instead of directly turning left at the distant intersection as per the ground truth. This makes the prediction largely incorrect regarding the specific action at the intersection."
+    },
+    {
+      "Q": "How should I navigate if I want to explore the side street to the left at the distant intersection?",
+      "A": "From your starting position, turn right and proceed straight ahead along the sidewalk. You will walk past a supermarket, a 24/7 kiosk, a Sesame casino, and a 24 Grill restaurant on your left. Continue walking until you reach the major intersection ahead, where you will find the side street to your left.",
+      "C": "You should turn left if you I want to explore the side street to the left at the distant intersection.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 64
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately identifies 'SESAME' as a likely casino, betting shop, or gambling establishment, which aligns with the ground truth description of a gaming or entertainment venue, possibly a casino or betting shop. The mention of a roulette wheel graphic reinforces the likelihood of it being a gambling establishment, matching the context provided by the ground truth."
+    },
+    {
+      "Q": "What potential type of business is \"SESAME\" based on its signage?  ",
+      "A": "Based on its signage, which features a graphic of a roulette wheel, \"SESAME\" is likely a casino, betting shop, or gambling establishment.",
+      "C": "Based on its signage, \"SESAME\" is likely a gaming or entertainment venue, possibly a casino or betting shop.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 64
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 4,
+      "reason": "The predicted answer is one less than the ground truth answer. Since the task is to count the number of times \"T MARKET\" appears, precision is key. Thus, there is a minor discrepancy, justifying a high score but not a fully correct rating."
+    },
+    {
+      "Q": "How many times does the text \"T MARKET\" appear throughout the video?  ",
+      "A": "3",
+      "C": "The text \"T MARKET\" appears 4 times throughout the video.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 64
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer provides specific details about the route to take, which are not present in the ground truth. Although the general direction of proceeding straight aligns, the additional specific instructions given in the predicted answer cannot be verified from the ground truth. Therefore, while part of the direction matches, the lack of specifics in the ground truth prompts a partial correctness evaluation."
+    },
+    {
+      "Q": "What route do I follow to reach the building with bright neon lights from the video\u2019s final sequence?",
+      "A": "Based on the video provided, here is the route to reach the building with the bright neon lights:\n\n1.  From the starting intersection, proceed straight ahead along the sidewalk.\n2.  Walk past the large supermarket on your left, identifiable by the large advertisement for \"\u041f\u0420\u042f\u0421\u041d\u041e \u041c\u0415\u0421\u041e\" (Fresh Meat).\n3.  Continue past a street vendor's stall selling produce.\n4.  Proceed past a 24/7 shop named \"ANTRE\" with a large yellow \"CAMEL\" advertisement.\n5.  Immediately after the \"ANTRE\" shop, the building with the bright neon \"SESAME\" sign will be on your left, next to the \"24 GRILL\" restaurant.",
+      "C": "Maintain the same direction and keep walking on the sidewalk to reach the building with bright neon lights from the video\u2019s final sequence.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 64
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies ANTRE as an establishment open 24/7. However, it also incorrectly includes 24 GRILL, which was not mentioned in the ground truth. Therefore, the prediction is partially correct, but not fully accurate as per the ground-truth answer."
+    },
+    {
+      "Q": "Which establishment is open 24/7 according to the text visible in the video?  ",
+      "A": "Based on the text visible in the video, the establishments that are open 24/7 are:\n- **ANTRE** (The sign says \"DRINKS, WINE, TOBACCO\" and \"24/7\")\n- **24 GRILL** (The name of the establishment is \"24 GRILL\")",
+      "C": "The establishment labeled \"Antr\u00e9\" is open 24/7 according to the text visible in the video.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 64
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately reflects the implication of the \"24 GRILL CENTER\" sign, stating that the establishment operates 24 hours a day, which is consistent with the ground truth answer."
+    },
+    {
+      "Q": "What does the \"24 GRILL CENTER\" sign imply about its operating hours?  ",
+      "A": "The \"24 GRILL CENTER\" sign implies that the establishment is open 24 hours a day.",
+      "C": "The \"24 GRILL CENTER\" sign implies that it operates 24 hours a day.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 64
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer '\u041f\u0420\u042f\u0421\u041d\u041e \u041c\u0415\u0421\u041e' does not match the ground truth answer 'T MARKET.' Therefore, the prediction is fully incorrect."
+    },
+    {
+      "Q": "What is the first business I encounter based on the signage in the video?  ",
+      "A": "\u041f\u0420\u042f\u0421\u041d\u041e \u041c\u0415\u0421\u041e",
+      "C": "The first business you encounter based on the signage is \"T MARKET.\"",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 64
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted frames 0026-0037 overlaps with the ground truth frames 30-32, but also includes additional frames. This indicates some degree of correctness but not fully correct as the range is broader than the ground truth."
+    },
+    {
+      "Q": "In which frames does the \"CAMEL LEGEND\" advertisement first appear?  ",
+      "A": "0026-0037",
+      "C": "The \"CAMEL LEGEND\" advertisement first appears around frame 30-32.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 64
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer provides a timeframe (00:00:13.000-00:00:18.500) instead of specific frame numbers and significantly differs from the ground truth answer of frames 35 to 37, making it fully wrong."
+    },
+    {
+      "Q": "Can you identify which frames show the \"ANTR\u00c9 24/7\" sign?  ",
+      "A": "The \"ANTR\u00c9 24/7\" sign is visible in the following frames:\n00:00:13.000-00:00:18.500",
+      "C": "The \"ANTR\u00c9 24/7\" sign is visible in frames 35 to 37.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 64
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer aligns very closely with the ground-truth answer by emphasizing the businesses' constant availability and convenience due to their \"24/7\" branding. Additionally, it provides specific examples of how this is beneficial, thus offering an expanded explanation that supports the ground truth."
+    },
+    {
+      "Q": "How does the use of \"24/7\" in the video impact the appeal of the businesses shown?  ",
+      "A": "The use of \"24/7\" in the video significantly enhances the appeal of the businesses by highlighting their constant availability and convenience. \n\nTwo businesses prominently feature this branding:\n1.  **ANTRE (Drinks, Wine, Tobacco):** The \"24/7\" sign on this shop indicates that customers can purchase items like drinks and tobacco at any hour, day or night. This makes it a highly convenient and reliable option for people with unconventional schedules or late-night needs.\n2.  **24 Grill Center:** The name itself incorporates the \"24,\" immediately communicating that it is an around-the-clock food establishment. This is particularly appealing for those seeking a meal outside of standard dining hours, such as late-shift workers or people out late, perhaps visiting the adjacent \"Sesame\" casino.\n\nOverall, the \"24/7\" branding positions these businesses as dependable, accessible hubs in a busy urban environment, catering to the needs of customers at all times.",
+      "C": "The use of \"24/7\" in the video suggests that these businesses are always open, which can increase their appeal by offering convenience and accessibility at any time of day or night.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 64
+    }
+  ]
+]

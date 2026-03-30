@@ -1,0 +1,1127 @@
+[
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer identifies plastic packaging as being predominant, while the ground truth specifies plastic bags and jars. While plastic bags can be considered a subset of plastic packaging, jars are not specified, leading to incomplete coverage of the ground truth."
+    },
+    {
+      "Q": "What type of packaging is predominantly found on the left side shelves?  ",
+      "A": "The type of packaging predominantly found on the left side shelves is plastic packaging.",
+      "C": "On the left side shelves, the packaging predominantly consists of plastic bags and jars.  ",
+      "M": "Object Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies 'red' as one of the dominant colors but incorrectly identifies 'green' instead of 'yellow' and 'blue' which are mentioned in the ground-truth answer. Thus, not all dominant colors mentioned in the ground-truth are captured in the prediction."
+    },
+    {
+      "Q": "What dominant colors are visible on the packaging in the illuminated aisles of the supermarket?  ",
+      "A": "The dominant colors visible on the packaging in the illuminated aisles of the supermarket are red and green.",
+      "C": "In the illuminated aisles of the supermarket, the dominant colors visible on the packaging are red, yellow, and blue.  ",
+      "M": "Object Recognition",
+      "start_idx": 6,
+      "end_idx": 8
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies the shelves on the left side as containing items packaged in green, which matches the general location given in the ground truth. However, it lacks the specific detail about the items being near the bottom, which slightly impacts the completeness of the answer."
+    },
+    {
+      "Q": "Which shelves contain items packaged in green?  ",
+      "A": "The shelves on the left side of the video contain items packaged in green.",
+      "C": "In the images provided, green packaged items can be found on the shelf to your left, near the bottom.",
+      "M": "Object Recognition",
+      "start_idx": 12,
+      "end_idx": 14
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer only mentions 'plastic bottles and cardboard boxes', while the ground truth includes additional types of packaging: jars and bottles, plastic bags, cans and tins. The prediction partially captures the ground truth but omits several significant elements."
+    },
+    {
+      "Q": "What types of packaging are visible on the shelves?  ",
+      "A": "plastic bottles and cardboard boxes",
+      "C": "The shelves display various types of packaging including: boxes, jars and bottles, plastic bags, cans and tins, cardboard cartons. Each type of packaging is neatly organized on the shelves.  ",
+      "M": "Object Recognition",
+      "start_idx": 18,
+      "end_idx": 20
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer indicates there are 4 refrigerated sections, whereas the ground truth mentions 6. Since the range was not considered and the discrepancy is significant, the prediction is incorrect."
+    },
+    {
+      "Q": "How many refrigerated sections are there throughout the store?  ",
+      "A": "There are 4 refrigerated sections throughout the store.",
+      "C": "There are a total of six refrigerated sections.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer of 3 aisles is outside the range of the ground-truth answer of 8 aisles, indicating an incorrect prediction. The prediction is fully wrong as it significantly underestimates the number of aisles visible."
+    },
+    {
+      "Q": "How many aisles are visible in the entire video?  ",
+      "A": "3",
+      "C": "8 aisles are visible.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer of 4 shelving units is significantly different from the ground truth of 18 shelving units. Therefore, the prediction is incorrect."
+    },
+    {
+      "Q": "Count the total number of shelving units visible in the video.  ",
+      "A": "4",
+      "C": "There are 18 shelving units visible.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies the number of distinct product categories as at least 4, consistent with the ground truth. However, there is a mismatch in the specific categories identified. The predicted categories include 'candies' and 'other packaged goods,' which do not match any of the ground-truth categories 'cleaning products' and 'canned goods.' This discrepancy impacts the accuracy of the prediction, leading to a partial correctness."
+    },
+    {
+      "Q": "How many distinct product categories can you identify on the shelves?  ",
+      "A": "I can identify at least 4 distinct product categories on the shelves: drinks, snacks, candies, and other packaged goods.",
+      "C": "Four distinct product categories: snacks, beverages, cleaning products, and canned goods.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer \"1\" matches exactly with the ground truth answer indicating one checkout counter is visible."
+    },
+    {
+      "Q": "How many checkout counters appear in the video?  ",
+      "A": "1",
+      "C": "One checkout counter is visible.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states 6 rows of products, while the ground truth answer states 5 rows. Since the predicted answer does not fall within the range of the ground truth answer, it is considered incorrect."
+    },
+    {
+      "Q": "How many rows of products are visible inside a single refrigerated unit?  ",
+      "A": "6",
+      "C": "5 rows of products are visible inside a single refrigerated unit.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies various drinks and bottled beverages inside the refrigerator unit, aligning with the ground truth that mentions drink bottles. However, it does not specify the colors or mention the prevalence of green, which slightly reduces the accuracy."
+    },
+    {
+      "Q": "What items can be seen inside the refrigerator unit at the end of the aisle?  ",
+      "A": "The refrigerator unit at the end of the aisle contains various drinks, including bottled beverages and possibly some bottled water.",
+      "C": "Inside the refrigerator unit at the end of the aisle, you can see various drink bottles and packages in different colors, mostly green.",
+      "M": "Object Recognition",
+      "start_idx": 24,
+      "end_idx": 26
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer \"candy\" does not match the ground-truth answer, which describes a product that is a type of snack, such as corn puffs or similar snack food. The description of bright yellow and red packaging was used to identify the product type, but the predicted answer does not fit this category."
+    },
+    {
+      "Q": "What type of product is primarily found on the top shelf, easily identifiable by its bright yellow and red packaging?  ",
+      "A": "candy",
+      "C": "The product primarily found on the top shelf, easily identifiable by its bright yellow and red packaging, appears to be a type of snack or chips. The packaging design suggests it might be something like corn puffs or a similar snack food.  ",
+      "M": "Object Recognition",
+      "start_idx": 30,
+      "end_idx": 32
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer includes two out of the three most prominent colors mentioned in the ground truth answer. It correctly identifies pink and blue, but omits yellow, which results in a partially correct prediction."
+    },
+    {
+      "Q": "What colors are most prominent on the cartoon-themed bottles?  ",
+      "A": "The most prominent colors on the cartoon-themed bottles are pink and blue.",
+      "C": "The most prominent colors on the cartoon-themed bottles are blue, pink, and yellow.  ",
+      "M": "Object Recognition",
+      "start_idx": 36,
+      "end_idx": 38
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies red, white, and orange as the predominant colors, which match the ground truth. However, it misses one color, green, that is also mentioned in the ground truth answer."
+    },
+    {
+      "Q": "What colors are predominantly visible on the packaged snacks on the middle shelves?  ",
+      "A": "The packaged snacks on the middle shelves predominantly feature colors such as red, white, and orange.",
+      "C": "The predominant colors visible on the packaged snacks on the middle shelves are red, green, white, and orange.   ",
+      "M": "Object Recognition",
+      "start_idx": 42,
+      "end_idx": 44
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground truth answer exactly, both stating that the shelves inside the refrigerators are white."
+    },
+    {
+      "Q": "What color are the shelves inside the refrigerators?  ",
+      "A": "The shelves inside the refrigerators are white.",
+      "C": "The shelves inside the refrigerators are white.  ",
+      "M": "Object Recognition",
+      "start_idx": 48,
+      "end_idx": 50
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'The cap of the bottle being held in the foreground is blue' matches exactly with the ground truth answer in terms of content and accuracy. Both specify that the bottle cap is blue."
+    },
+    {
+      "Q": "What color is the cap of the bottle being held in the foreground?  ",
+      "A": "The cap of the bottle being held in the foreground is blue.",
+      "C": "The cap of the bottle you are holding in the foreground is blue.  ",
+      "M": "Object Recognition",
+      "start_idx": 54,
+      "end_idx": 56
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer provides general details about the store's layout and organization but lacks the specific elements mentioned in the ground truth, such as the placement of refrigeration units and freezer sections. Additionally, some details like the cleanliness and lighting mentioned in the prediction are not relevant to the question. There is some overlap with the general organization of items and aisles, hence a partial score."
+    },
+    {
+      "Q": "What is the general layout of the store as you walked through it?  ",
+      "A": "The store has a well-organized layout with shelves neatly arranged and stocked with various products. The aisles are wide, and the shelves are filled with a wide range of items, including beverages, snacks, and other groceries. The lighting is adequate, making it easy to see the products. The store appears to be clean and well-maintained.",
+      "C": "The store has refrigeration units on one side and shelves with various products on the other. The aisles are organized with freezer sections in the middle.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer 'The aisle layout is straight' does not convey the specific detail about the layout being 'parallel, with products displayed on both sides, including snacks and instant foods' as mentioned in the ground truth. The term 'straight' could align with 'parallel', but it misses the detailed description of products on both sides, which is a significant part of the ground truth answer."
+    },
+    {
+      "Q": "After walking past the refrigeration units, what type of aisle layout did you observe?  ",
+      "A": "The aisle layout is straight.",
+      "C": "After passing the refrigeration units, the aisle layout is parallel, with products displayed on both sides, including snacks and instant foods.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer lacks specificity regarding the transition point to focusing on individual products. While it mentions a general progression, it does not specify the transition after the refrigeration section to the aisles with snacks and drinks as indicated in the ground truth."
+    },
+    {
+      "Q": "At what point in the sequence did you start focusing on individual products?  ",
+      "A": "The sequence began with a general view of the store and gradually focused on individual products as the video progressed.",
+      "C": "I started focusing on individual products after leaving the initial refrigeration section and entering the aisles with snacks and drinks.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer describes the sections in a different order than the ground truth. The order should have started with the refrigeration units, then moved to snack aisles, followed by grocery shelves, and ended in fridges with drinks. Instead, the prediction begins with refrigerated drinks, then snack aisle, and cold drink section. There is partial overlap with the sections mentioned but not in the right order nor fully matching all sections."
+    },
+    {
+      "Q": "What was the sequence of sections or aisles you moved through from start to end?",
+      "A": "You moved through the following sections or aisles: first, the refrigerated section with drinks, then the snack aisle, and finally the cold drink section.",
+      "C": "Sequence of Sections: I moved through the store starting with the refrigeration units, then proceeded to the snack aisles, followed by other grocery shelves, then the sequence ended when I went to the fridges with drinks.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies the transition from the snack aisle to the refrigerated drink section by stating the movement towards the refrigerated drinks after exiting the snack aisle. It captures the essence of the ground truth answer, which is walking further down the aisle toward the drink section, though it lacks the specific detail of walking toward the end of the aisle. Thus, it is mostly accurate, but not completely detailed."
+    },
+    {
+      "Q": "How did you proceed from the snack aisle to the refrigerated drink section?  ",
+      "A": "I proceeded from the snack aisle to the refrigerated drink section by walking towards the refrigerated drink section after exiting the snack aisle.",
+      "C": "I walked further down the aisle with snacks and instant foods, heading towards the refrigerated drinks section at the end.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately reflects the shift in focus from the aisle overview to specific product selection. It acknowledges the shift from a general view to a detailed examination of specific items, consistent with the ground truth answer which mentions examining snacks and beverages closely."
+    },
+    {
+      "Q": "How did your focus shift from the aisle overview to product selection?  ",
+      "A": "I shifted my focus from the overall aisle overview to product selection by carefully examining the shelves and picking out specific items that I was interested in. I moved from the general view to the detailed selection process, focusing on the items I wanted to purchase.",
+      "C": "My focus shifted from a general overview of the aisles to specific product selection as I examined snacks and beverages closely.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer indicated the vending machine section, whereas the ground truth answer specified the refrigerated drinks section as the last observed section before turning towards the exit. These are different sections, thus making the prediction incorrect."
+    },
+    {
+      "Q": "What was the last section you observed before turning towards the exit?  ",
+      "A": "The last section I observed before turning towards the exit was the vending machine section.",
+      "C": "The last section I observed before turning towards the exit was the refrigerated drinks section.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer mentions examining 'shelves' and 'items and their prices,' whereas the ground truth specifies handling and examining 'different packaged snacks and beverages in the refrigerated section.' The predicted answer is partially related to examining items but lacks specificity regarding the type of items (packaged snacks and beverages) and the location (refrigerated section)."
+    },
+    {
+      "Q": "What items did you handle or examine closely during the video?  ",
+      "A": "I examined the shelves closely, checking the items and their prices.",
+      "C": "I handled and examined closely different packaged snacks and beverages in the refrigerated section before exiting.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer states that the shelving units are 'adjacent to each other,' which implies they are side by side. The ground truth specifies that the shelving units are 'parallel with an aisle between them,' suggesting a different alignment. The prediction captures part of the spatial concept but misses the detail about the aisle and parallel alignment, hence only partially correct."
+    },
+    {
+      "Q": "What is the spatial relationship between the left shelving unit and the right shelving unit in the store?  ",
+      "A": "The left shelving unit and the right shelving unit are adjacent to each other in the store.",
+      "C": "The left shelving unit is positioned parallel to the right shelving unit, with an aisle between them. Both shelving units run down the length of the aisle in the store.",
+      "M": "Spatial Reasoning",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer of '3 steps' falls within the range of the ground truth answer '2-3 steps'. Therefore, it is considered a correct prediction, earning a full score."
+    },
+    {
+      "Q": "If you start at the entrance door, how many steps would it take to reach the freezer in the center aisle?  ",
+      "A": "3 steps",
+      "C": "Based on the images, it appears you might need to take around 2-3 steps to reach the center of the aisle. This would vary based on your stride length.",
+      "M": "Spatial Reasoning",
+      "start_idx": 6,
+      "end_idx": 8
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer indicates the correct location of the shelf being on the far left, which aligns with the ground truth. However, the description of the items is different; the predicted answer mentions the shelf having the most items displayed, whereas the ground truth specifies the presence of various pink and blue packaged items. Although the location is correctly identified, the distinguishing features described differ."
+    },
+    {
+      "Q": "Which shelf is closest to the left wall in the store layout?  ",
+      "A": "The shelf closest to the left wall in the store layout is the one on the far left, which has the most items displayed.",
+      "C": "The shelf closest to the left wall is the one on the far left with various pink and blue packaged items visible on it.",
+      "M": "Spatial Reasoning",
+      "start_idx": 12,
+      "end_idx": 14
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer mentions that there are 'boxes' on top of the shelves, which matches a part of the ground truth. However, the prediction is incomplete as it does not mention 'containers', or provide the details about the different boxes and packages. Therefore, the prediction is not fully accurate."
+    },
+    {
+      "Q": "What objects are positioned on top of the shelves?  ",
+      "A": "The objects positioned on top of the shelves are boxes.",
+      "C": "On top of the shelves, you can see various boxes and containers. There are large boxes in the middle and right sections of the shelves, and some red and white packages are stacked towards the back.",
+      "M": "Spatial Reasoning",
+      "start_idx": 18,
+      "end_idx": 20
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'Fridge' is a correct synonym for the ground truth answer 'refrigerator'. Both refer to the same object."
+    },
+    {
+      "Q": "What object is directly adjacent to the left shelf at the end of the aisle?  ",
+      "A": "Fridge",
+      "C": "The object directly adjacent to the left shelf at the end of the aisle is a refrigerator.",
+      "M": "Spatial Reasoning",
+      "start_idx": 24,
+      "end_idx": 26
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer mentions '2 shelves' which doesn't align with the walking distance indicated in the ground truth answer, '1-2 steps'. The concept of 'shelves' doesn't directly equate to 'steps', thus causing a mismatch in spatial measurement. The predicted answer doesn't lie within the range implied by the ground truth."
+    },
+    {
+      "Q": "How far do you need to walk to reach the green product box relative to the stacked boxes on the right side?  ",
+      "A": "You need to walk 2 shelves to reach the green product box relative to the stacked boxes on the right side.",
+      "C": "To reach the green product box, walk just 1-2 steps past the stacked boxes on the right side.",
+      "M": "Spatial Reasoning",
+      "start_idx": 30,
+      "end_idx": 32
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer states that the pink containers are on the bottom shelf relative to the snacks, which implies they are on a shelf below the snacks. This aligns with the ground truth, which states that the pink containers are located on the shelf below the snacks. Hence, the prediction is semantically correct."
+    },
+    {
+      "Q": "Which shelf are the pink containers located on relative to the snacks?  ",
+      "A": "The pink containers are located on the bottom shelf relative to the snacks.",
+      "C": "The pink containers are located on the shelf below the snacks.",
+      "M": "Spatial Reasoning",
+      "start_idx": 36,
+      "end_idx": 38
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the orange package is 'below' the red package, whereas the ground truth states it is 'to the right'. The direction is different, making the prediction incorrect."
+    },
+    {
+      "Q": "What is the position of the orange package relative to the red package on the left shelf?  ",
+      "A": "The orange package is below the red package on the left shelf.",
+      "C": "The orange package is to the right of the red package on the left shelf.",
+      "M": "Spatial Reasoning",
+      "start_idx": 42,
+      "end_idx": 44
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer 'Go straight across the aisle' is incomplete. It misses the specific instruction to 'turn left to reach the refrigerator across the door' included in the ground truth answer. The prediction lacks directions for the final part of the journey."
+    },
+    {
+      "Q": "How do I reach the refrigerator across the door from the narrow aisle?",
+      "A": "Go straight across the aisle.",
+      "C": "Wall straight down the aisle and turn left to reach the refrigerator across the door.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer suggests to continue straight after entering the narrow aisle, which contradicts the ground-truth answer that specifies turning left to reach the open area. Since the directional change is crucial and the prediction misses this key detail, the prediction is mostly incorrect."
+    },
+    {
+      "Q": "What directional changes should I make after entering the narrow aisle to reach the open area?",
+      "A": "After entering the narrow aisle, you should continue straight to reach the open area.",
+      "C": "To reach the open are turn left after the narrow aisle.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer suggests a completely different path via the vending machine area and then to the right, which does not match the ground truth answer that specifies to retrace steps back via the original narrow aisle. Thus, the predicted answer is incorrect with no overlap with the correct path."
+    },
+    {
+      "Q": "If I want to return to the entry point from the refrigerated section, which paths should I take?",
+      "A": "Take the path through the vending machine area and then the path to the right.",
+      "C": "From the refrigerated section retrace your steps back to the original narrow aisle to return to your entry point.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer 'You should turn left.' is partially correct since it includes the correct direction to turn, but it is missing the initial step of 'walk straight' as specified in the ground truth answer."
+    },
+    {
+      "Q": "After picking up the drink with the cartoon design, which way should I turn if I want to reach the snacks with the orange packaging that I picked next?",
+      "A": "You should turn left.",
+      "C": "Walk straight and then turn left to reach the snacks with the orange packaging.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer was 'Right', but the ground truth answer is 'Turn left'. The predicted direction is opposite to the ground truth, leading to a fully incorrect prediction."
+    },
+    {
+      "Q": "After the final refrigerator with the drinks, if I want to reach the checkout point seen in the distance, which way should I turn?",
+      "A": "Right",
+      "C": "Turn left after the final refrigerator with the drinks if you want to reach the checkout point seen in the distance.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer identifies the product as a bottle, similar to the ground truth. However, it incorrectly specifies the product as a bottle of milk and does not mention the cartoon character or fruit images found on the packaging. Additionally, the predicted answer fails to acknowledge that the text is in a non-Latin script, a key detail from the ground truth. Therefore, these discrepancies lead to partial correctness."
+    },
+    {
+      "Q": "What type of product is being picked up from the shelf, and what can you read on its packaging?",
+      "A": "The product being picked up from the shelf is a bottle of milk. The packaging has a blue cap and a white label with some text on it, but the specific text is not clearly visible in the image.",
+      "C": "A bottle with a cartoon character on it is being picked up. The packaging includes some text in a non-Latin script and pictures of fruits.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'Yes' matches the ground truth answer, confirming that there are recurring texts or labels on the products across different frames. The prediction addresses the question accurately and provides the correct conclusion."
+    },
+    {
+      "Q": "Are there any recurring text or labels on the products displayed across different frames?",
+      "A": "Yes",
+      "C": "Yes, the text on some packages repeats, indicating similar or identical products.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer mentions snacks and beverages, whereas the ground truth specifies groceries and beverages with an international and Asian products focus. While both emphasize beverages, the predicted answer omits the international and Asian aspect and replaces groceries with snacks. Therefore, it is partially correct."
+    },
+    {
+      "Q": "Based on the text you can see, what type of items does this store seem to specialize in?",
+      "A": "The store appears to specialize in snacks and beverages.",
+      "C": "The store appears to specialize in groceries and beverages with international branding, likely focused on Asian products.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer 'beverages section of the store' differs from the ground truth 'section shown on the shelves with a small orange label'. The prediction does not mention or accurately specify the promotional indicator (small orange label), which is a key feature of the ground truth answer. However, there is mention of a 'section' but lacks the specific identification of what indicates the discount."
+    },
+    {
+      "Q": "In which section of the store do you find text indicating a promotional offer or discount?",
+      "A": "You can find text indicating a promotional offer or discount in the beverages section of the store.",
+      "C": "There is a section shown on the shelves with a small orange label which likely indicates a promotional offer or discount.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer correctly identifies that the beverage aisle offers a variety of products and mentions different types of beverages. However, it does not specify that the variety includes juices and flavored milk, nor does it mention the language diversity on the labels, which are key elements in the ground-truth answer."
+    },
+    {
+      "Q": "What can you deduce from the text about the variety of products offered in the beverage aisle?",
+      "A": "The text suggests that the beverage aisle offers a variety of products, including both bottled and canned drinks, as well as different flavors and types of beverages.",
+      "C": "The beverage aisle offers a variety of drinks, including juices and flavored milk, with labels in different languages.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies that products are organized by category and brand, which aligns with the ground-truth answer stating products are organized by type and category. However, the predicted answer does not explicitly mention the organization of beverages in refrigerators and snacks on shelves, hence slightly less than fully correct."
+    },
+    {
+      "Q": "How are the products organized on the shelves based on the visible text, if any, throughout the video sequence?",
+      "A": "The products on the shelves are organized by category and brand name, as indicated by the visible text on the packaging.",
+      "C": "Products are organized by type and category, with beverages together in refrigerators and snacks on shelves, grouped under similar brands or flavors.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer partially aligns with the ground truth answer. Both answers mention snacks and refrigerated items. However, the predicted answer includes sections that are not mentioned in the ground truth, such as general merchandise, which causes a deviation from the specific products or sections listed in the ground truth."
+    },
+    {
+      "Q": "What specific products or sections have you inspected during your navigation through the store aisles?  ",
+      "A": "I have inspected the shelves of beverages, including various bottled drinks and canned goods, as well as the sections with snacks and packaged goods. I have also checked the refrigerated areas for fresh products and the aisles for general merchandise.",
+      "C": ": I've inspected the frozen goods, packaged snacks, and refrigerated beverages.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately reflects the ground truth answer. Both answers state that there are no inconsistencies in product placement and highlight the organization and effectiveness of current stocking decisions. The alignment between predicted and ground truth answers justifies a full score."
+    },
+    {
+      "Q": "Did you notice any inconsistencies in the placement of products, and how might that affect future stocking decisions?  ",
+      "A": "No, I did not notice any inconsistencies in the placement of products. The shelves appear well-organized and the products are neatly arranged, suggesting that the current stocking decisions are effective.",
+      "C": "There are no glaring inconsistencies in product placement. Everything seems well-organized, which should streamline future stocking decisions.  ",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The ground truth specifies 'the cup or drink with cartoon design', whereas the predicted answer is 'Tea'. The prediction 'Tea' does not capture any aspect of the distinguishing feature mentioned in the ground truth, specifically the cartoon design on the cup or drink. Therefore, the prediction is largely inaccurate."
+    },
+    {
+      "Q": "What product did you first pick up?",
+      "A": "Tea",
+      "C": "I first picked up the cup or drink with cartoon design.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer mentions a cute design and specific placement of the cup, but does not address the key reasons highlighted in the ground truth such as interesting shape or bright colors and cartoonish design. Although the predicted answer slightly aligns with the idea of a design, it lacks the depth of explanation found in the ground truth. The placement on the shelf and being described as a small water bottle are irrelevant to the reasons provided in the ground truth."
+    },
+    {
+      "Q": "What was the possible reason your first interest was caught by that specific cup?",
+      "A": "The cup was a small water bottle with a cute design, and it was placed on the shelf next to the milk.",
+      "C": "The possible reason could be the interesting shape, the bright colors and cartoonish design.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer, \"a carton of milk\", is entirely different from the ground truth answer, \"the orange package in the instant noodles section\". The object mentioned does not match the description or category given in the ground truth."
+    },
+    {
+      "Q": "What was the second object you picked up?",
+      "A": "The second object you picked up was a carton of milk.",
+      "C": "The second object I picked up was the orange package in the instant noodles section.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer stated that the orange product has the spiciest flavor, while the ground truth suggests the red one has the spiciest flavor. The prediction does not match the ground-truth answer."
+    },
+    {
+      "Q": "Whet you take a closer look, there are 3 different types of the same product \u2013 the orange one you picked, the red one on the left and the green on the right. Which one out of the three would you assume has flavor with the spiciest level?",
+      "A": "The orange product would have the spiciest flavor.",
+      "C": "Based on the color choice of the packaging, I would assume the red one has the spiciest flavor.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is 'juice', but the ground truth indicates the choice was 'a flavored milk'. Therefore, the predicted answer does not match the ground truth."
+    },
+    {
+      "Q": "What kind of drink did you choose from the refrigerator \u2013 a juice or a milk?",
+      "A": "juice",
+      "C": "I chose a flavored milk.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer states the drink is labeled as flavored milk on the packaging, but the ground-truth answer identifies the design on the bottle featuring a cartoon cow holding a strawberry as the indicator. The prediction does not match the reasoning in the ground-truth answer, which specifies a different identifying factor."
+    },
+    {
+      "Q": "How do you know the drink is a flavored milk?",
+      "A": "The drink is a flavored milk because it is labeled as such on the packaging.",
+      "C": "I can tell it\u2019s a flavored milk based on the design on the bottle \u2013 a cartoon cow holding as strawberry.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer captures part of the ground truth answer, indicating that no products of interest were bought. However, it lacks the complete information present in the ground truth answer about the products being returned to their places."
+    },
+    {
+      "Q": "In the end, did you buy any of the products of interest or did you return all of them?",
+      "A": "I did not buy any of the products of interest.",
+      "C": "I did not buy any of the products of interest, I returned them all to their places.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer \"Yes\" captures the essence of the ground-truth answer, which confirms that the ambient light did increase. However, it lacks the detail about the gradual increase, hence not fully matching the ground-truth answer."
+    },
+    {
+      "Q": "Did the ambient light gradually increase as I walked through the aisle?  ",
+      "A": "Yes",
+      "C": "Yes, the ambient light gradually increased as you walked through the aisle.  ",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer 'Yes' aligns with the ground truth answer 'Yes, there was a noticeable shift in lighting towards the refrigerated sections.' The predicted answer is correct but lacks details provided in the ground truth."
+    },
+    {
+      "Q": "Is there a noticeable shift in lighting towards the refrigerated sections?  ",
+      "A": "Yes",
+      "C": "Yes, there was a noticeable shift in lighting towards the refrigerated sections.  ",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately matches the ground-truth answer. Both clearly state that the overhead lights did not turn on at any point during the video."
+    },
+    {
+      "Q": "Did the overhead lights turn on at any point during the video?  ",
+      "A": "No, the overhead lights did not turn on during the video.",
+      "C": "No, the overhead lights did not turn on at any point during the video.  ",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer only addresses one aspect of the ground-truth answer. It correctly identifies that the lighting became more consistent but omits that it also became brighter. This partial correctness merits a score of 3."
+    },
+    {
+      "Q": "As I moved, did the lighting become brighter or more consistent?  ",
+      "A": "The lighting became more consistent.",
+      "C": "Yes, as you moved, the lighting became brighter and more consistent.  ",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'artificial lighting' is consistent with the ground truth answer which states that the increase in light was due to artificial lighting. Both refer to the same source of light, matching the ground truth fully."
+    },
+    {
+      "Q": "Was the increase in light due to natural light from windows or artificial lighting?  ",
+      "A": "artificial lighting",
+      "C": "The increase in light was due to artificial lighting, particularly from the refrigerators.  ",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is 'No', which directly contradicts the ground-truth answer 'Yes'. The prediction is entirely incorrect as the ground-truth states that the illumination levels did stabilize after a certain point."
+    },
+    {
+      "Q": "Did the illumination levels stabilize after a certain point in the aisle?  ",
+      "A": "No",
+      "C": "Yes, the illumination levels stabilized after moving towards the end of the aisle.  ",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer confirms that there is an area significantly brighter, which aligns with the ground truth. However, it lacks the specific detail about the area near the refrigerators provided in the ground truth answer. Therefore, while partially correct, it is not fully accurate."
+    },
+    {
+      "Q": "Is there an area where the light is significantly brighter than the rest?  ",
+      "A": "Yes",
+      "C": "Yes, the area near the refrigerators was significantly brighter than the rest.  ",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the primary source of light is the camera light, while the ground truth specifies it is coming from an illuminated area at the back of the store, likely from an open door or window. These are distinct sources of light, and the predicted answer does not align with the ground truth."
+    },
+    {
+      "Q": "What is the primary source of light in the scene?  ",
+      "A": "The primary source of light in the scene is the camera light.",
+      "C": "The primary source of light in the scene is coming from the illuminated area at the back of the store, likely from an open door or window.",
+      "M": "Light Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies the primary direction of the light entering the aisle as being from the left side. However, it lacks additional details on the source of the light, specifically that it is coming through the open shelves toward the end of the aisle, as mentioned in the ground-truth answer. Despite the omission of these details, the fundamental answer is correct, leading to a high score, but not a perfect one."
+    },
+    {
+      "Q": "What is the primary direction from which the light is entering the aisle?  ",
+      "A": "The light is entering the aisle from the left side.",
+      "C": "The primary direction from which the light is entering the aisle is from the left side, through the open shelves visible toward the end of the aisle.",
+      "M": "Light Recognition",
+      "start_idx": 6,
+      "end_idx": 8
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies the left side as the direction of the illumination relative to the frame. However, it does not specify the upper left side as the ground truth does, leading to a slight deduction in the score."
+    },
+    {
+      "Q": "What is the apparent direction of the strongest light source illuminating the shelves?  ",
+      "A": "The strongest light source illuminating the shelves is coming from the left side of the frame.",
+      "C": "The strongest light source appears to be coming from the upper left side, relative to the camera's perspective. This is indicated by the way the light is illuminating the floor and the shelves, which are brighter on the side closer to this light source.",
+      "M": "Light Recognition",
+      "start_idx": 12,
+      "end_idx": 14
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies the source of bright light as the refrigerator, which closely matches the ground truth answer that specifies a 'lit refrigerator case'. The only difference is the omission of the word 'lit', but the core idea of a refrigerator being the light source is captured accurately."
+    },
+    {
+      "Q": "What is the primary source of bright light at the end of the aisle?  ",
+      "A": "The primary source of bright light at the end of the aisle is the refrigerator.",
+      "C": "The primary source of bright light at the end of the aisle appears to be a lit refrigerator case.",
+      "M": "Light Recognition",
+      "start_idx": 24,
+      "end_idx": 26
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer suggests that the lighting is bright and uniform, typical of fluorescent lights, which contrasts with the ground truth that describes the lighting as dimly lit with soft, diffused light. While both answers mention fluorescent lights, the description of lighting characteristics is contradictory, leading to inaccuracies in evaluating the predicted answer as correct."
+    },
+    {
+      "Q": "What type of lighting fixtures are most likely used in this store based on the color and distribution of the light?  ",
+      "A": "The store appears to be using fluorescent lighting fixtures, as indicated by the color and distribution of the light. The lighting is bright and uniform, typical of fluorescent lights, which are commonly used in retail stores for their efficient and consistent illumination.",
+      "C": "Based on the frames, the store is dimly lit with a soft, diffused light. This suggests that the lighting fixtures might be recessed ceiling lights or possibly compact fluorescent lights (CFLs) or LED panels.",
+      "M": "Light Recognition",
+      "start_idx": 30,
+      "end_idx": 32
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer suggests a soft, diffused light source like a softbox, which contrasts the ground truth's description of a focused beam of light like a flashlight or narrow spotlight. The prediction mentions spread out light, whereas the ground truth specifies a focused beam."
+    },
+    {
+      "Q": "What type of light source is likely being used in terms of its focus and spread?  ",
+      "A": "The image appears to be dimly lit, suggesting that the light source is likely a soft, diffused light rather than a harsh, direct light source. The focus is not very sharp, indicating that the light may not be particularly strong or focused, but rather more spread out. This could be due to the light being coming from a single source, such as a softbox or a soft light, which would provide a more even distribution of light without creating harsh shadows.",
+      "C": "Based on the frames provided, it looks like you are using a focused beam of light, likely a flashlight or a narrow spotlight.",
+      "M": "Light Recognition",
+      "start_idx": 36,
+      "end_idx": 38
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the type of light source is fluorescent lighting, which does not match the ground truth answer of a flashlight. The characteristics described in the ground truth, such as the focused beam and dark surroundings, are consistent with a flashlight, not fluorescent lighting."
+    },
+    {
+      "Q": "What type of light source is being used to illuminate the products on the shelf?  ",
+      "A": "The type of light source being used to illuminate the products on the shelf is fluorescent lighting.",
+      "C": "The products on the shelf are being illuminated by a flashlight. The area outside the focused beam is dark, suggesting that the overhead lights are not providing significant illumination.",
+      "M": "Light Recognition",
+      "start_idx": 42,
+      "end_idx": 44
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer specifies 'the internal lighting of the vending machine,' which is not the same as the ground truth answer of 'internal lighting within each case.' The terms 'vending machine' and 'display cases' may refer to different things, leading to a potential difference in understanding the question context precisely. However, both answers mention internal lighting as the primary source, suggesting partial correctness."
+    },
+    {
+      "Q": "What is the primary source of light in the refrigerated display cases?  ",
+      "A": "The primary source of light in the refrigerated display cases is the internal lighting of the vending machine.",
+      "C": "The primary source of light in the refrigerated display cases appears to be the internal lighting within each case.",
+      "M": "Light Recognition",
+      "start_idx": 48,
+      "end_idx": 50
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'fluorescent' does not match the ground truth description, which indicates the lighting is likely LED. The discrepancy in type of lighting indicates a fully incorrect prediction."
+    },
+    {
+      "Q": "What type of lighting is used inside the refrigeration unit?  ",
+      "A": "fluorescent",
+      "C": "The lighting inside the refrigeration unit appears to be dim, possibly due to energy-efficient LED lights, which are commonly used in such units to illuminate the shelves without generating much heat.",
+      "M": "Light Recognition",
+      "start_idx": 54,
+      "end_idx": 56
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'no' accurately matches the ground truth answer indicating that there are no other people roaming around the aisles. Both answers convey the same information."
+    },
+    {
+      "Q": "Are there any other people roaming around the aisles?",
+      "A": "no",
+      "C": "There seem to be no other people roaming around the aisles.",
+      "M": "Dynamic",
+      "start_idx": 11,
+      "end_idx": 13
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'no' accurately represents the ground truth answer 'No, I did not see any objects moving or falling.' Both answers convey the same meaning that no movement or falling of objects was observed."
+    },
+    {
+      "Q": "Do you see any objects moving or falling?",
+      "A": "no",
+      "C": "No, I did not see any objects moving or falling.",
+      "M": "Dynamic",
+      "start_idx": 35,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'Right' is not consistent with the ground-truth answer 'I used my left hand to pick up the orange packaging'. The prediction is fully wrong as it mistakenly identifies the hand used."
+    },
+    {
+      "Q": "Which hand did I use to pick up the orange packaging?",
+      "A": "Right",
+      "C": "I used my left hand to pick up the orange packaging.",
+      "M": "Dynamic",
+      "start_idx": 43,
+      "end_idx": 45
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer identifies the bottle as the third from the left, whereas the ground truth specifies that it is the fourth bottle. There is a discrepancy between the positions identified in the predicted and ground-truth answers, and since counting produces specific results, this makes the prediction incorrect."
+    },
+    {
+      "Q": "Which bottle, counting from the left side of the shelf, did I pick?",
+      "A": "The bottle you picked is the third one from the left side of the shelf.",
+      "C": "You picked the fourth bottle counting from the left.",
+      "M": "Dynamic",
+      "start_idx": 51,
+      "end_idx": 53
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The prediction of 1 person matches the ground truth answer stating that there was 1 person seen towards the final frames of the video. Therefore, the predicted answer is fully correct."
+    },
+    {
+      "Q": "How many people did you spot walking around?",
+      "A": "1",
+      "C": "I could see 1 person towards the final frames of the video.",
+      "M": "Dynamic Counting",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is 1, whereas the ground truth answer specifies 3 objects were picked up. The predicted answer does not fall within the range of the ground truth answer, leading to a score of 0."
+    },
+    {
+      "Q": "How many objects were picked up throughout the video?",
+      "A": "1",
+      "C": "3 objects were picked up.",
+      "M": "Dynamic Counting",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states 2 fridge doors were opened, whereas the ground truth states that only 1 fridge door was opened. The prediction does not fall in the range of the ground truth answer, hence it is fully incorrect."
+    },
+    {
+      "Q": "How many fridge doors did I open?",
+      "A": "2",
+      "C": "You opened 1 fridge door.",
+      "M": "Dynamic Counting",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ]
+]

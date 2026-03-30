@@ -1,0 +1,812 @@
+[
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there is only one traffic light, whereas the ground truth states there are 8 traffic lights. The predicted answer does not fall within the range of the ground truth, making it fully incorrect."
+    },
+    {
+      "Q": "How many traffic lights can be seen throughout the entire video?",
+      "A": "one",
+      "C": "I can see a total of 8 traffic lights throughout the video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer of 2 does not fall within the same range as the ground truth count of 7 benches. Since these are countable objects and no partial correctness can be inferred, the prediction is considered fully incorrect."
+    },
+    {
+      "Q": "Can you count the number of benches visible across all park and pathway scenes?",
+      "A": "2",
+      "C": "I counted 7 benches visible in the park and pathway scenes.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states \"two\" poles with traffic cameras, while the ground truth answer clearly specifies that there are no poles with traffic cameras visible in the video. The prediction does not match the ground truth, hence it is fully wrong."
+    },
+    {
+      "Q": "How many poles with traffic cameras are visible in the video?",
+      "A": "two",
+      "C": "There are no poles with traffic cameras visible in the video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer \"three\" indicates the correct number of vehicle types, which matches the count provided in the ground truth answer. However, it does not specify the types of vehicles, so it receives a score of 4 instead of 5."
+    },
+    {
+      "Q": "Over the course of the video, how many different types of vehicles are constantly visible?",
+      "A": "three",
+      "C": "There are 3 different types of vehicles constantly visible: cars, taxis, and trucks.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is 'four', which does not match the ground truth answer of '5 trees'. The task was specific in counting the number of trees, and the prediction does not fall within the range of the ground truth count."
+    },
+    {
+      "Q": "Can you count the number of trees lining the street before I turned towards the park area?",
+      "A": "four",
+      "C": "I can count 5 trees lining the street as shown in the video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer of \"two\" does not fall within the ground truth range of \"4-7\" storefronts, indicating a significant discrepancy in the count."
+    },
+    {
+      "Q": "How many storefronts are visible in the video?",
+      "A": "two",
+      "C": "There are 4-7 storefronts visible in the video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer of 1 pedestrian crossing is incorrect as it does not match the ground truth answer of 2 pedestrian crossings. In counting tasks, the predicted answer needs to be in the range of the ground-truth answer, which in this case it is not."
+    },
+    {
+      "Q": "Count the number of visible pedestrian crossings in the urban setting.",
+      "A": "1",
+      "C": "I can see 2 pedestrian crossings in the urban setting.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer 'Rectangular' indicates the shape of the windows correctly but lacks details. The ground truth specifies 'large vertical rectangular windows', indicating both the size and orientation. The omission of these aspects results in a partially correct answer."
+    },
+    {
+      "Q": "What type of windows are featured on the corner building?  ",
+      "A": "Rectangular",
+      "C": "The corner building features large vertical rectangular windows.",
+      "M": "Object Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is \"bricks\" while the ground truth specifies \"concrete paving stones.\" These are different materials used for sidewalks, so the prediction is not correct."
+    },
+    {
+      "Q": "What material is the sidewalk made of in the scene?  ",
+      "A": "bricks",
+      "C": "The sidewalk in the scene is made of concrete paving stones.",
+      "M": "Object Recognition",
+      "start_idx": 16,
+      "end_idx": 18
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is 'bricks', but the ground-truth answer is 'concrete pavers'. These are two different materials, making the prediction fully incorrect."
+    },
+    {
+      "Q": "What material is the pavement on the sidewalk made of?  ",
+      "A": "bricks",
+      "C": "The pavement on the sidewalk is made of concrete pavers.",
+      "M": "Object Recognition",
+      "start_idx": 24,
+      "end_idx": 26
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the shape of the tiles is 'square', whereas the ground-truth answer specifies that the tiles are 'rectangular'. This indicates a complete mismatch in the predicted shape compared to the actual shape described in the ground truth."
+    },
+    {
+      "Q": "What is the shape of the tiles on the paved pathway alongside the building?  ",
+      "A": "square",
+      "C": "The tiles on the paved pathway alongside the building are rectangular.",
+      "M": "Object Recognition",
+      "start_idx": 32,
+      "end_idx": 34
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer \"balcony\" does not match the ground truth answer, which states the architectural feature is a \"mansard roof\". Therefore, the prediction is incorrect."
+    },
+    {
+      "Q": "What type of architectural feature is present on the structure to the left in Frame 1?  ",
+      "A": "balcony",
+      "C": "The structure to the left in Frame 1 features a mansard roof visible on the building in the far left.",
+      "M": "Object Recognition",
+      "start_idx": 40,
+      "end_idx": 42
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer indicates that the pathway is made of brick, which does not match the ground-truth answer stating it is made of concrete tiles. Since the material is explicitly different, the prediction is fully incorrect."
+    },
+    {
+      "Q": "What is the material of the pathway I am walking on?  ",
+      "A": "Brick",
+      "C": "The pathway you are walking on is made of concrete tiles.",
+      "M": "Object Recognition",
+      "start_idx": 48,
+      "end_idx": 50
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer 'dome' is partially correct as it identifies a dome, but it lacks specificity. The ground truth specifies an 'onion dome with a cross on top,' providing more detailed information about the architectural feature. Therefore, the prediction is lacking important details."
+    },
+    {
+      "Q": "What architectural feature is visible at the top of the building?  ",
+      "A": "dome",
+      "C": "The architectural feature visible at the top of the building is an onion dome with a cross on top.",
+      "M": "Object Recognition",
+      "start_idx": 56,
+      "end_idx": 58
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer 'Arched' does not match the ground-truth answer 'The windows of the multi-story building are distinguished by their classical architectural design with decorative moldings above each window'. The prediction might partially relate to an architectural feature, but it does not correctly capture the distinctive features described in the ground truth, such as classical design and decorative moldings."
+    },
+    {
+      "Q": "What architectural feature distinguishes the windows of the multi-story building?  ",
+      "A": "Arched",
+      "C": "The windows of the multi-story building are distinguished by their classical architectural design with decorative moldings above each window.",
+      "M": "Object Recognition",
+      "start_idx": 64,
+      "end_idx": 66
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'balconies' does not match or include any of the classical architectural elements mentioned in the ground truth, such as pilasters, arched windows, or decorative lintels. Therefore, the prediction is fully incorrect."
+    },
+    {
+      "Q": "What classical architectural elements are prominently featured on the building's facade?  ",
+      "A": "balconies",
+      "C": "The building's facade prominently features classical architectural elements such as pilasters, which are flat columns projecting slightly from the wall. The facade also showcases arched windows on the lower floor and rectangular windows with decorative lintels on the upper floors.",
+      "M": "Object Recognition",
+      "start_idx": 72,
+      "end_idx": 74
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer partially matches the ground truth, as both mention a park, but it misses crucial details about the sequence of scenes such as turning right, passing what looks like a church, and returning to the street corner. Thus, while there's a partial overlap, important elements are missing."
+    },
+    {
+      "Q": "What is the sequence of scenes I pass after the bustling street corner?  ",
+      "A": "a sidewalk, a park, a street",
+      "C": "After the bustling street corner, you turn right to walk past what looks like a church and explore a park area and then return to the street corner.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer \"a busy street\" does not match the ground truth answer which specifies \"a pathway lined with trees and benches on the right.\" There is no overlap or similarity between the predicted environment and the ground truth description."
+    },
+    {
+      "Q": "Before reaching the historical building, what kind of environment did I navigate through?  ",
+      "A": "a busy street",
+      "C": "Before reaching the historical building, you navigated through a pathway lined with trees and benches on the right.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'A white truck' does not match the ground-truth answer which describes a continuation down the street until a turn is made. The predicted answer is completely unrelated to the sequence described in the ground truth."
+    },
+    {
+      "Q": "What came right after the yellow fa\u00e7ade building?  ",
+      "A": "A white truck.",
+      "C": "Right after the yellow fa\u00e7ade building, you continued down the bustling street until you turned right.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'Church' does not match the ground-truth answer that describes a 'green-roofed building with gold dome structures along with benches and trees'. Therefore, the prediction is incorrect."
+    },
+    {
+      "Q": "Which landmarks are visible when I reach the park area?  ",
+      "A": "Church",
+      "C": "When you reach the park area, a green-roofed building with gold dome structures becomes visible along with benches and trees.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer lacks detail compared to the ground truth. It does not mention the busy street corner with cars and a yellow building or the quieter pathway lined with trees. It only mentions the movement from the street corner to the pathway without these details."
+    },
+    {
+      "Q": "Describe the transition of scenes from the street corner to the dimly lit pathway.",
+      "A": "the camera moves from the street corner to the pathway",
+      "C": "You start at a busy street corner with cars and a yellow building, then move to a quieter pathway lined with trees on the right.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer, 'pedestrian path', is generally correct in identifying the type of path but lacks the specific details provided in the ground truth answer, such as 'paved pathway with trees on the right'. These details are important to convey the full context of the connection between the bustling street area and the tranquil park, resulting in a partial correctness."
+    },
+    {
+      "Q": "What type of path connects the bustling street area to the tranquil park?  ",
+      "A": "pedestrian path",
+      "C": "A paved pathway with trees on the right connects the bustling street area to the tranquil park.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer mentions the yellow building but incorrectly states the next encountered fa\u00e7ade as blue, omitting the series of buildings and the church fa\u00e7ade mentioned in the ground truth."
+    },
+    {
+      "Q": "In what order do I encounter the various building fa\u00e7ades?  ",
+      "A": "first yellow, then blue",
+      "C": "You first encounter a yellow building fa\u00e7ade and then pass by a series of buildings on the left as you walk along the street and then the fa\u00e7ade of the church in the park area becomes most prominent.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer, 'a city', is too vague and does not match the ground-truth answer, which specifies being at a 'bustling street corner with a yellow building'. The prediction lacks specifics about the location and context that are present in the ground-truth."
+    },
+    {
+      "Q": "Which area did I visit before reaching the ambient pathway with benches?  ",
+      "A": "a city",
+      "C": "Before reaching the ambient pathway with benches, you were at a bustling street corner with a yellow building.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'a group of people' does not match the ground truth answer, which mentions passing by a series of buildings on the left while walking on a pathway lined with trees. There is no mention of people in the ground truth, making the prediction fully incorrect."
+    },
+    {
+      "Q": "What do I pass immediately before the lushly vegetated area?  ",
+      "A": "a group of people",
+      "C": "Immediately before the lushly vegetated area, you pass by a series of buildings on the left while walking on a pathway lined with trees.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer captures the general idea of movement through a scene but misses specific details in the ground-truth answer. The predicted answer mentions the camera panning and turning, but it lacks the mention of a busy street corner with a yellow building, pathway with trees and benches, and the well-landscaped area. These are significant details that provide a visual cue leading up to the stately building, which are missing in the prediction."
+    },
+    {
+      "Q": "What sequence of scenes leads up to the stately well-lit building?  ",
+      "A": "The camera pans right from the street to the sidewalk, then moves forward down the sidewalk, and finally turns left towards the stately well-lit building.",
+      "C": "You walk from a busy street corner with a yellow building, proceed along a pathway with trees and benches, and then approach the well-landscaped area near the stately building.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer \"efbet\" captures the name of the signage, which is a key element of the ground truth answer. However, it lacks the description of the building, such as \"yellow curved corner facade\". Therefore, the answer is partially correct but not fully descriptive as per the ground truth."
+    },
+    {
+      "Q": "What building is located directly across the street from your position?  ",
+      "A": "efbet",
+      "C": "The building directly across the street has a yellow curved corner facade and is labeled with \"efbet\" signage at the street level.  ",
+      "M": "Spatial Reasoning",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer 'shops' partially matches the ground-truth answer, which mentions multi-story buildings with shops on the ground floor. However, it misses important details about the multi-story nature of the buildings and the signage for various businesses, including a possible restaurant. Therefore, the prediction captures part of the ground truth but lacks completeness."
+    },
+    {
+      "Q": "What structures are located on the opposite side of the street from the path you are walking on?  ",
+      "A": "shops",
+      "C": "Across the street, there are several multi-story buildings with shops on the ground floor. The signage suggests various businesses, possibly including a restaurant.",
+      "M": "Spatial Reasoning",
+      "start_idx": 16,
+      "end_idx": 18
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there is a tree in front of the church entrance, while the ground-truth answer specifies a lamppost and an informational sign. There is no overlap between the predicted and ground-truth answers."
+    },
+    {
+      "Q": "What object is directly in front of the church entrance?  ",
+      "A": "a tree",
+      "C": "Directly in front of the church entrance, there is a lamppost and an informational sign.  ",
+      "M": "Spatial Reasoning",
+      "start_idx": 32,
+      "end_idx": 34
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'a car' does not match the ground truth answer 'an informational sign'. The objects described are entirely different and thus, the prediction is fully incorrect."
+    },
+    {
+      "Q": "What is directly in front of you in the third image?  ",
+      "A": "a car",
+      "C": "In the third image, directly in front of you is an informational sign.  ",
+      "M": "Spatial Reasoning",
+      "start_idx": 40,
+      "end_idx": 42
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'tree' does not match the ground-truth answer which includes 'a bench and a grassy area'. The prediction fails to identify any of the objects mentioned in the ground truth."
+    },
+    {
+      "Q": "As I walk along this path, what object can I find directly to my right?  ",
+      "A": "tree",
+      "C": "As you walk along the path, to your right, you will find a bench and a grassy area beyond that.  ",
+      "M": "Spatial Reasoning",
+      "start_idx": 48,
+      "end_idx": 50
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is 12, which does not fall within the ground-truth range of 7-10 steps. Therefore, the prediction is incorrect."
+    },
+    {
+      "Q": "How many steps are there from your current position leading up to the entrance of the building?  ",
+      "A": "12",
+      "C": "From your current position, there are 7-10 steps leading up to the entrance of the building.  ",
+      "M": "Spatial Reasoning",
+      "start_idx": 56,
+      "end_idx": 58
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer mentioned only 'bushes', which is only partially correct as the ground-truth answer includes 'bushes, park benches, and a paved walkway'."
+    },
+    {
+      "Q": "What objects are located directly in front of the building in the background?  ",
+      "A": "bushes",
+      "C": "Directly in front of the building in the background, there are bushes, park benches, and a paved walkway.  ",
+      "M": "Spatial Reasoning",
+      "start_idx": 64,
+      "end_idx": 66
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is \"A blue car\", which is not consistent with the ground truth answer of \"trees and shrubs\". The objects mentioned in the predicted answer and the ground truth are completely different, resulting in a fully wrong prediction."
+    },
+    {
+      "Q": "What object is positioned to the left of the illuminated building in the background?  ",
+      "A": "A blue car",
+      "C": "In the frames, to the left of the building in the background, there are trees and shrubs.  ",
+      "M": "Spatial Reasoning",
+      "start_idx": 72,
+      "end_idx": 74
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer 'right' matches the direction given in the ground truth answer. However, the predicted answer lacks context, such as 'at the intersection' and 'to stay along the park\u2019s edge', which is given in the ground truth answer. Therefore, while the key direction is correct, important contextual information is not included, leading to a slightly reduced score."
+    },
+    {
+      "Q": "Once I reach the intersection, which way should I veer to stay along the park\u2019s edge?  ",
+      "A": "right",
+      "C": "At the intersection, veer right to stay along the park\u2019s edge.  ",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly conveys that seeing the lit-up historical building means you are going in the correct/right direction, aligning with the ground-truth answer."
+    },
+    {
+      "Q": "When I see the lit-up historical building, what does it signify about my direction?  ",
+      "A": "you are going in the right direction",
+      "C": "Seeing the lit-up historical building indicates you are going in the correct direction along the park.  ",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'the sign' does not match the ground truth answer 'a church with distinctive architecture'. The two landmarks are completely different, as the sign is not a church or related to distinctive architecture. Therefore, the prediction is fully incorrect."
+    },
+    {
+      "Q": "What landmark should I look for to know I've reached the park entrance?  ",
+      "A": "the sign",
+      "C": "Look for a church with distinctive architecture for the park entrance landmark.  ",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer suggests turning right and walking straight to the end of the park, which does not align with the ground-truth answer that suggests staying on the path and looking for the information table. Thus, the prediction fails to capture the correct navigation details."
+    },
+    {
+      "Q": "How do I navigate to the distinctive gate or monument inside the park?  ",
+      "A": "turn right and walk straight to the end of the park.",
+      "C": "To find the distinctive gate or monument inside the park, stay on the path and look for the information table.  ",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer 'Turn left towards the sidewalk' does not align with the ground truth answer 'To return to the starting point, walk back the way you came, keeping to the left along the park's edge.' The predicted answer lacks details about retracing steps and staying along the park's edge, making the direction unclear and insufficient for accurately returning to the starting point."
+    },
+    {
+      "Q": "If I need to return to the starting point at the street corner, which path should I take?  ",
+      "A": "Turn left towards the sidewalk",
+      "C": "To return to the starting point, walk back the way you came, keeping to the left along the park's edge.  ",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'left' is essentially correct as it matches the direction specified in the ground truth answer, 'turn left'. Both answers direct to the same action needed to reach the bright sign building."
+    },
+    {
+      "Q": "Which direction should I turn after reaching the intersection to head back to the bright sign building?  ",
+      "A": "left",
+      "C": "After reaching the intersection, turn left to head back towards the bright sign building.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer 'The path on the right' specifies a particular path, which is not aligned with the ground truth answer. The ground truth provides a general direction to take any available paths leading deeper into the park without specifying any particular side or path. The prediction did not match this open-ended instruction, thereby making it highly incorrect."
+    },
+    {
+      "Q": "If I want to explore further into the park, which path should I follow from the gate or monument?  ",
+      "A": "The path on the right",
+      "C": "From the gate or monument, explore further into the park by following any available paths that lead deeper into the park area.  ",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer states that the text \"efbet\" appears 2 times, while the ground truth answer is 3 times. The prediction is incorrect because the predicted number does not fall within the range of the ground-truth count."
+    },
+    {
+      "Q": "How many times does the text \"efbet\" appear throughout the video?  ",
+      "A": "two",
+      "C": "The text \"efbet\" appears 3 times throughout the video",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The ground truth states that the \"efbet\" text appears in the very first frame, meaning it should be noticed immediately at the start. The predicted answer indicates a range of 0.0 - 3.8 seconds, which suggests that it may not be appearing immediately or might have a delay in noticing it. Since the ground truth specifies immediate appearance and the prediction suggests a range, the prediction is not fully correct. However, given the start of the range is 0.0 seconds, there is partial correctness."
+    },
+    {
+      "Q": "In which frames can I first notice the \"efbet\" text?  ",
+      "A": "0.0 - 3.8 seconds.",
+      "C": "The text \u201cefbet\u201d appears in the very first frame.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer 'casinos' falls under the category of a betting or gaming establishment, which aligns with the ground truth answer. While the ground truth answer is broader, casinos are indeed a type of gambling or gaming establishment mentioned in the context."
+    },
+    {
+      "Q": "What type of establishment does \"efbet\" likely refer to in the context of this video?  ",
+      "A": "casinos",
+      "C": "\"Efbet\" likely refers to a betting or gaming establishment in the context of the video.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'PROMO' does not match the ground-truth answer '\u0420\u0443\u0441\u043a\u0438 \u0440\u0435\u0441\u0442\u043e\u0440\u0430\u043d\u0442'. The prediction is fully incorrect as it does not provide the correct text visible on the second floor of the building."
+    },
+    {
+      "Q": "What\u2019s the text visible on the second floor of the building in the left side in frames 8-10?",
+      "A": "PROMO.",
+      "C": "The text visible on the second floor of the building says \u201c\u0420\u0443\u0441\u043a\u0438 \u0440\u0435\u0441\u0442\u043e\u0440\u0430\u043d\u0442\u201d suggesting there\u2019s a restaurant there.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the language of the text is Russian, while the ground truth specifies it is Bulgarian. These are different languages, thus the prediction is incorrect."
+    },
+    {
+      "Q": "What\u2019s the language of the text on the information sing in front of the church?",
+      "A": "Russian",
+      "C": "The language of the text on the information sing in front of the church is Bulgarian.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'Yes' does not provide the specific name of the church as written in Bulgarian, which is required to match the ground-truth answer."
+    },
+    {
+      "Q": "Can you spot the name of the church written in Bulgarian on the information sing in front of the entrance?",
+      "A": "Yes",
+      "C": "The name of the church is \u201c\u0421\u0432\u0435\u0442\u0438 \u041d\u0438\u043a\u043e\u043b\u0430\u0439 \u0427\u0443\u0434\u043e\u0442\u0432\u043e\u0440\u0435\u0446\u201d, as written in Bulgarian on the information sing in front of the entrance",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer simply mentions the presence of buildings but lacks details about their architectural features. The ground truth specifies classical architecture with ornate facades, columns, detailed moldings, and a distinctive dome, which are not mentioned in the prediction."
+    },
+    {
+      "Q": "Can you identify any architectural details of the buildings in your path?  ",
+      "A": "Yes, there are many buildings in the background.",
+      "C": "The buildings feature classical architecture with ornate facades, columns, and detailed moldings. One building has a distinctive dome with windows.  ",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'no' contradicts the ground-truth answer, which states that there is graffiti visible. Therefore, the prediction is fully incorrect."
+    },
+    {
+      "Q": "Do you notice any street art or murals on your walk?  ",
+      "A": "no",
+      "C": "There is graffiti visible on some of the lower concrete walls behind the benches.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer 'yes' indicates that there are places to sit, which is aligned with the ground truth that states there are multiple benches. However, the predicted answer lacks the specificity provided by the ground truth answer, leading to a loss of some detail."
+    },
+    {
+      "Q": ": Are there any benches or places to sit along the route you\u2019re documenting?  ",
+      "A": "yes",
+      "C": ": There are multiple benches along the pathways.  ",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer includes 'buses' and 'trucks', which are not mentioned in the ground truth. The ground truth mentions 'cars' and 'taxis', of which only 'cars' are included in the predicted answer. This partial overlap warrants a middle score."
+    },
+    {
+      "Q": "What types of vehicles are parked or moving on the streets in your images?  ",
+      "A": "Cars, buses, trucks",
+      "C": "Various cars and a few taxis are observed parked and moving on the streets.  ",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies the presence of a plaque in front of the church, which is part of the ground truth answer. However, while it captures a key detail, it does not mention the church's architectural features and historical significance, leading to a slightly lower score."
+    },
+    {
+      "Q": "Are there any historical landmarks or plaques that you come across?  ",
+      "A": "Yes, there is a plaque in front of the church.",
+      "C": "There is a church with a green-roof and decorative spires, suggesting historical significance, along with a plaque or information board nearby.  ",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer does not match the ground-truth answer. The ground-truth mentions a sign for \"efbet\" which suggests a betting shop, whereas the predicted answer refers to a sign for the \"Ukrainian Carpathian Museum.\""
+    },
+    {
+      "Q": "Can you spot any distinctive signs or storefronts that catch your eye?",
+      "A": "Yes, there is a sign for \"Ukrainian Carpathian Museum\" in the video.",
+      "C": "Storefronts have visible signage, one being \"efbet\" which suggests a betting shop.  ",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer 'No' contradicts the ground truth which mentions specific urban design elements such as 'landscaped parks with pathways and flower arrangements'. The predicted answer fails to recognize any such elements, resulting in a largely incorrect prediction."
+    },
+    {
+      "Q": "Do you observe any specific urban design elements such as fountains or sculptures?  ",
+      "A": "No",
+      "C": "There are landscaped parks with pathways and flower arrangements, contributing to the aesthetic urban design.  ",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 80
+    }
+  ]
+]

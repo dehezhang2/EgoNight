@@ -1,0 +1,632 @@
+[
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground truth exactly, which indicates the prediction is fully correct."
+    },
+    {
+      "Q": "How many flags are seen in the entire video?  ",
+      "A": "3",
+      "C": "There are 3 flags.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer of 4 falls within the ground-truth range of 3-5, thus it is considered correct."
+    },
+    {
+      "Q": "What is the total number of street signs visible in the video?  ",
+      "A": "4",
+      "C": "The total number of street signs is 3-5.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer of 16 does not fall within the ground truth range of 25-30. Therefore, the prediction is incorrect."
+    },
+    {
+      "Q": "How many potted plants are visible along the sidewalk?  ",
+      "A": "16",
+      "C": "The number of potted plants visible along the sidewalk is 25-30.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies that the small plants are housed in rectangular planters, which aligns with the shape described in the ground truth answer. However, it does not mention the specific material (stone or concrete) described in the ground truth, hence a score of 4 instead of a perfect 5."
+    },
+    {
+      "Q": "What type of containers house the small plants on the sidewalk?  ",
+      "A": "Based on the visual cues in the images, the small plants on the sidewalk are housed in rectangular planter boxes.",
+      "C": "The small plants on the sidewalk are housed in rectangular stone or concrete planters.",
+      "M": "Object Recognition",
+      "start_idx": 18,
+      "end_idx": 20
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer of 10 falls within the ground-truth range of 8-11, making it a correct prediction. The prediction matches the requirement for the question regarding counting objects within a specified range."
+    },
+    {
+      "Q": "What is the total number of streetlights visible throughout the video?  ",
+      "A": "10",
+      "C": "The total number of streetlights is around 8-11.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer specifies that the shrubs are cone-shaped, while the ground truth indicates two shapes: cones and spirals. The prediction is partially correct by identifying one of the shapes but misses the spiral shape."
+    },
+    {
+      "Q": "What is the shape of the shrubs in front of the modern building?  ",
+      "A": "The shrubs in front of the modern building are cone-shaped.",
+      "C": "The shrubs in front of the modern building are shaped like cones and spirals.",
+      "M": "Object Recognition",
+      "start_idx": 36,
+      "end_idx": 38
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies the prominent feature on the roof as an overhang, similar to the ground truth. Both mention that it is a prominent feature on the roof, and the description matches well with the ground truth answer."
+    },
+    {
+      "Q": "What feature is prominent on the roof of the modern building on the left?  ",
+      "A": "A large, dark overhang is a prominent feature on the roof of the modern building on the left.",
+      "C": "The modern building on the left has a prominent overhanging roof feature.",
+      "M": "Object Recognition",
+      "start_idx": 27,
+      "end_idx": 29
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 4,
+      "reason": "The predicted answer was 7, while the ground truth was 8. The prediction is close to the correct answer, but it does not fall within the specified range of the ground truth answer. Thus, it is considered incorrect, although very close to being correct."
+    },
+    {
+      "Q": "Count the overall number of traffic cones observed.  ",
+      "A": "7",
+      "C": "Overall number of traffic cones is 8.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer 'At least 10 buildings' does not fall within the range of the ground truth '15-20 buildings'. Although the prediction indicates multiple buildings, it does not accurately reflect the ground truth range specified in the question."
+    },
+    {
+      "Q": "How many buildings can be seen in the entire video sequence?  ",
+      "A": "At least 10 buildings can be seen in the video.",
+      "C": "There are 15-20 buildings in the entire video sequence.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer includes some correct items from the ground truth such as buildings, streetlights, cars, bicycles, flags, and traffic cones. However, it also includes additional items not mentioned in the ground truth like roads/streets, sidewalks, overpass/bridge, motorcycles, and vegetation. Additionally, some items are redundantly described separate from others like flagpoles and planters. Hence, while the prediction overlaps significantly with the ground truth, it contains both extraneous and missing elements, leading to a score of 3."
+    },
+    {
+      "Q": "How many unique types of structures or objects are observed throughout the video?",
+      "A": "Based on the visual evidence from the video, here are the unique types of structures and objects observed:\n\n1.  **Buildings:** Includes modern glass-paneled high-rises and older apartment blocks.\n2.  **Roads/Streets:** Paved surfaces for vehicles.\n3.  **Sidewalks:** Paved walkways for pedestrians.\n4.  **Overpass/Bridge:** A structure carrying a road over another area.\n5.  **Vehicles:** This category includes cars (including a taxi), a bus, and a motorcycle.\n6.  **Bicycles:** Both adult and children's bicycles are visible.\n7.  **Streetlights/Lamp Posts:** Poles with lights for illuminating the street.\n8.  **Flags:** The flags of Bulgaria and the European Union are shown.\n9.  **Flagpoles:** Poles used to display flags.\n10. **Planters:** Containers for plants, made of concrete/stone.\n11. **Vegetation:** Includes trees, shrubs, and hedges.\n12. **Traffic Cones:** Small cones used to direct traffic or block areas.\n13. **Signs:** Includes road signs and building signs (e.g., for parking entrance).\n14. **Gabion Wall:** A retaining wall made of a wire mesh cage filled with rocks.\n15. **Glass Railings:** Transparent safety barriers.\n16. **Bike Rack:** A structure for parking bicycles.\n17. **Trash Can:** A public waste receptacle.\n18. **Parking Barrier:** An automated gate for a parking area.\n19. **Overhead Wires:** Wires suspended above the road, likely for public transport like trolleybuses.\n20. **People:** Individuals walking on the sidewalk.",
+      "C": "Unique types of structures or objects: Buildings, streetlights, cars, potted plants, flags, street signs, traffic cones, bicycles, bollards, benches, and a bus stop pole.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer suggests horizontal architectural louvers or slats, which differs significantly from the ground-truth answer that identifies prominent geometric elements with rectangular protrusions. There is no mention of such features in the predicted answer."
+    },
+    {
+      "Q": "What type of design feature is prominently visible on the left-side building?  ",
+      "A": "Based on the visual cues, the prominent design feature on the left-side building is the use of **horizontal architectural louvers or slats** under the overhangs of the upper floors.",
+      "C": "The building on the left side in the video frame features prominent geometric elements with rectangular protrusions.",
+      "M": "Object Recognition",
+      "start_idx": 72,
+      "end_idx": 74
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies the possibility of the columns being made of metal, which aligns with the ground truth suggesting metal or coated concrete. The prediction offers additional details such as potential metal types and finishes, but the core material assessment is consistent with the ground truth."
+    },
+    {
+      "Q": "What material are the columns that line the walkway most likely made of?  ",
+      "A": "Based on the visual evidence, the columns that line the walkway are most likely made of **metal**, such as steel or aluminum, with a dark powder-coated or painted finish. Their smooth surface, uniform color, and modern design are characteristic of metal used in contemporary architecture.",
+      "C": "The columns lining the walkway are most likely made of a dark, polished material, possibly metal or coated concrete.",
+      "M": "Object Recognition",
+      "start_idx": 45,
+      "end_idx": 47
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer mentions a gabion wall, which is not mentioned in the ground truth answer. The ground truth specifies \"The big modern building on your left\" as the distinctive feature, indicating a discrepancy between the prediction and the ground truth."
+    },
+    {
+      "Q": "Before I reached the quieter side street, what distinctive feature was present on the main street?  ",
+      "A": "A gabion wall (a wire cage filled with rocks) ran along the edge of the property next to the sidewalk.",
+      "C": "The big modern building on your left is the most what distinctive feature was present on the main street, before the quieter area.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer identifies a \"gabion retaining wall\" which aligns with the ground truth description of a \"low stone wall filled with rocks.\" Additionally, it mentions a \"hedge on top,\" which correlates with \"some shrubs\" in the ground truth description. Both answers describe similar objects positioned between the building and the sidewalk."
+    },
+    {
+      "Q": "What object is positioned between the building and the sidewalk?  ",
+      "A": "A gabion retaining wall with a hedge on top.",
+      "C": "Between the building and the sidewalk, there is a low stone wall filled with rocks as well as some shrubs.",
+      "M": "Spatial Reasoning",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies that the street lamps are on the opposite side of the street from the building, which is part of the ground truth answer. However, it lacks details about the street lamps being on the sidewalk and the median that divides the lanes of traffic, as well as being parallel to the building."
+    },
+    {
+      "Q": "What's the position of the street lamps relative to the building?  ",
+      "A": "The street lamps are located on the opposite side of the street from the building.",
+      "C": "They are situated opposite building on the sidewalk and median that divides the two lanes of traffic, parallel to the building.",
+      "M": "Spatial Reasoning",
+      "start_idx": 9,
+      "end_idx": 11
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer includes a lot of details about the landscape elements, such as a gabion wall, green hedge, small trees, potted plants, and flagpoles, but it does not directly mention \"lots of greenery\" as specified in the ground truth. While the elements mentioned could be a part of greenery, the prediction does not use this specific term, which is the key element of the ground-truth answer. Therefore, it partially matches, but not completely."
+    },
+    {
+      "Q": "What landscape elements were present beside the glass facade of the building?  ",
+      "A": "Based on the visual information from the image set, the following landscape elements were present beside the glass facade of the building:\n\n*   A gabion wall (a retaining wall made of rocks in a wire cage).\n*   A green hedge running along the top of the gabion wall.\n*   Small trees and patches of grass behind the hedge.\n*   Several potted plants and small trees in both rectangular and round planters placed along the sidewalk.\n*   Flagpoles flying the Bulgarian and European Union flags.",
+      "C": "Beside the glass fa\u00e7ade of the building there is lots of greenery.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the transition in architectural styles. It clearly identifies the change from modern, commercial buildings to older, residential apartment blocks, which aligns with the ground truth answer. The detailed descriptions further support the correctness of the prediction."
+    },
+    {
+      "Q": "How did the architectural style of the buildings change as I moved from the main street to the side street?  ",
+      "A": "Based on the visual evidence, the architectural style transitioned from modern and commercial to older and residential.\n\nInitially, on the main street, the buildings are large-scale, contemporary structures characterized by extensive glass facades, steel elements, and clean, geometric designs, typical of modern office or high-end mixed-use buildings.\n\nAs you moved onto the side street, the architecture changed to older, multi-story residential apartment blocks. These buildings feature more traditional facades, likely made of brick or stucco, with smaller windows and balconies, representing a more functional and less contemporary style.",
+      "C": "The architectural style changed from business modern buildings to living apartment blocks.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies planter boxes with greenery (small evergreen trees) on the sidewalk, aligning with the ground truth answer. While the description differs slightly in wording, it captures the essential elements: the presence of planter boxes and greenery. Therefore, it's mostly correct."
+    },
+    {
+      "Q": "What object is right next to you on the sidewalk as you move along the building?  ",
+      "A": "Based on the visual evidence, a white planter box with small evergreen trees is right next to you on the sidewalk as you move along the building.",
+      "C": "As you move along the building, the object right next to you on the sidewalk is a series of rectangular planters with greenery planted in them.",
+      "M": "Spatial Reasoning",
+      "start_idx": 18,
+      "end_idx": 20
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer includes several observations that are not mentioned in the ground-truth answer, such as a person walking inside, potted plants, a reddish-orange wall or art piece, and reflections of a logo and the sky. The ground truth specifically mentions seeing furniture and light sources, which are only partially covered by the predicted answer's mention of interior ceiling lights. Thus, the prediction lacks accuracy and completeness with respect to the ground truth."
+    },
+    {
+      "Q": "What details were visible through the building's glass windows?  ",
+      "A": "Based on the visual information from the video frames, the following details were visible through the building's glass windows:\n\n*   Interior ceiling lights are on in several areas.\n*   A person can be seen walking inside through a revolving glass door.\n*   Large, white potted plants are visible inside the lobby near the entrance.\n*   In one section, a bright reddish-orange wall or a large piece of art can be seen.\n*   Towards the end of the clip, a reflection of a circular yellow logo with the letters \"la\" is visible on one of the windows.\n*   Strong reflections of the sky, clouds, and buildings across the street are also prominent on the glass surfaces.",
+      "C": "Through the glass windows you can see mainly furniture and light sources.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there are 6 planters, which falls outside the range of 8-10 planters provided in the ground truth answer. As the prediction does not fall within the specified range, it is marked as incorrect."
+    },
+    {
+      "Q": "How many planters are positioned along the edge of the sidewalk on your right side in the video?  ",
+      "A": "There are 6 planters positioned along the edge of the sidewalk on the right side.",
+      "C": "There are 8-10 planters positioned along the edge of the sidewalk on your right side.",
+      "M": "Spatial Reasoning",
+      "start_idx": 54,
+      "end_idx": 56
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'A street light' is synonymous with the ground-truth answer 'a streetlamp'. Both refer to the same object, thereby making the prediction fully correct."
+    },
+    {
+      "Q": "What object is directly in front of the right building and partially obscured by trees?  ",
+      "A": "A street light.",
+      "C": "The object directly in front of the right building, partially obscured by trees, is a streetlamp.",
+      "M": "Spatial Reasoning",
+      "start_idx": 72,
+      "end_idx": 74
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies an overhang, which is synonymous with a canopy, positioned above the sidewalk and providing shelter. Although it specifies 'from the building on the left,' which is slightly more specific than the ground truth, the functional description matches well with 'building canopy.' Therefore, the prediction is mostly correct."
+    },
+    {
+      "Q": "What is positioned directly above the sidewalk, providing shelter as you walk?  ",
+      "A": "An overhang from the building on the left is positioned above the sidewalk, providing shelter.",
+      "C": "There is a building canopy positioned directly above the sidewalk, providing shelter as you walk.",
+      "M": "Spatial Reasoning",
+      "start_idx": 63,
+      "end_idx": 65
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer aligns with the ground truth by stating that the person should walk straight following alongside the building to reach the nearest intersection. While the prediction contains more detailed steps, it ultimately leads to the same outcome described in the ground truth."
+    },
+    {
+      "Q": "How can I identify the route to the nearest intersection?  ",
+      "A": "To identify the route to the nearest intersection, follow these steps:\n\n1.  Start by walking straight ahead on the sidewalk, keeping the modern glass building on your left and the busy main road on your right.\n2.  Continue walking until you reach the corner of the building, then turn left to walk along the covered walkway at the front of the same building.\n3.  Proceed straight along this covered path until you reach the end of the building complex.\n4.  At the end of the building, you will arrive at the intersection where the street you are on meets another street.",
+      "C": "Walk straight, alongside the building, to reach the nearest intersection.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the closest traffic cone is approximately 14 steps ahead, but the ground truth indicates it is about 5 steps ahead. The prediction does not fall within the acceptable range of the ground truth answer, making it incorrect."
+    },
+    {
+      "Q": "How many steps ahead is the closest traffic cone from your current position on the sidewalk?  ",
+      "A": "Based on the visual information from the first image, the closest traffic cone is approximately 14 steps ahead.",
+      "C": "The closest traffic cone is about 5 steps ahead on the sidewalk.",
+      "M": "Spatial Reasoning",
+      "start_idx": 27,
+      "end_idx": 29
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The ground-truth answer states that there is no visible pedestrian crossing in the video, while the predicted answer provides detailed steps to reach a pedestrian crossing. This indicates a clear disparity between the ground truth and prediction, hence the prediction is incorrect."
+    },
+    {
+      "Q": "What steps should I take to reach a pedestrian crossing?  ",
+      "A": "Based on the visual information from the image sequence, here are the steps to reach a pedestrian crossing:\n\n1.  Begin by walking straight ahead on the wide, paved sidewalk, keeping the modern glass building on your left and the main road on your right.\n2.  Continue walking straight, passing the main entrance and the underground garage entrance of the building.\n3.  When you reach the end of the large building, the path will lead you onto a smaller side street. Follow the sidewalk as it curves to the left.\n4.  Proceed down this quieter side street, with the modern building still on your left and an older apartment building on your right.\n5.  Continue walking straight towards the end of the street, where it intersects with another road. You will find the pedestrian crossing at this intersection.",
+      "C": "There is no visible pedestrian crossing in the video.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer provides a different route description that doesn't match the main instruction in the ground-truth answer, which is to 'cross the road at the intersection.' The predicted answer instructs to walk along the building and end at a residential area with trees, which is different from 'the park-like open space across the modern building.'"
+    },
+    {
+      "Q": "How do I get to the closest park or open space?  ",
+      "A": "Based on the visual information from the video, here is how you can get to the closest park or open space:\n\n1.  Continue walking straight ahead on the sidewalk, keeping the large modern building on your left.\n2.  Follow the path as it turns left around the corner of the building, moving away from the main road and onto a smaller side street.\n3.  Proceed straight down this street, walking under the covered walkway in front of the building.\n4.  Continue walking straight after the covered walkway ends. The video concludes as you approach a residential area ahead with apartment buildings and numerous trees, which represents the closest available open green space. Continue into this area to find it.",
+      "C": "Cross the road at the intersection and you will find yourself at the park-like open space across the modern building.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there are multiple direct paths shown in the video connecting the pedestrian walkway to adjacent roadways, while the ground truth indicates there is no direct path for pedestrians. This is a complete contradiction of the ground truth answer, hence the prediction is fully wrong."
+    },
+    {
+      "Q": "Is there a direct path to connect with the adjacent roadway?  ",
+      "A": "Yes, there are multiple direct paths shown in the video that connect the pedestrian walkway to the adjacent roadways, including driveways for vehicle access and intersections with other streets.",
+      "C": "There seems to be no direct path for pedestrians to reach the adjacent roadway.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer provides a similar set of directions to the ground truth, with additional details. Both indicate walking straight, turning left, and continuing to reach the revolving door. However, the predicted answer also includes the context of keeping the road on the right, which is consistent with the direction given in the ground truth."
+    },
+    {
+      "Q": "From the starting point how do I reach the revolving door, indicating the entrance of the modern building?",
+      "A": "Walk straight ahead on the sidewalk, keeping the modern building on your left and the road on your right. Continue forward until you reach the corner of the building. Turn left to go under the covered walkway. Proceed straight ahead, and the revolving door will be on your left.",
+      "C": "Continue straight until you reach the end of the building then turn left and walk straight until you reach the revolving door.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer includes the text '\u0412\u0425\u041e\u0414 / ENTRANCE', which is correct, but also includes additional text '\u041e\u0424\u0418\u0421\u0418 / OFFICES' which is not part of the ground truth answer. This additional text is irrelevant to the question, which specifically asks about the purpose of the entrance, thus partially correct."
+    },
+    {
+      "Q": "What text indicates the purpose of the entrance in frame 13",
+      "A": "\u0412\u0425\u041e\u0414 / ENTRANCE\n\u041e\u0424\u0418\u0421\u0418 / OFFICES",
+      "C": "The text \"\u0412\u0425\u041e\u0414 | ENTRANCE\" indicates the purpose of the entrance.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer estimated the number of steps to be approximately 8, which does not fall within the ground truth range of 3 to 5 steps. The predicted calculations used a distance conversion method, which suggests a significantly higher number of steps than the ground-truth range based on stride estimation. Therefore, the prediction is incorrect."
+    },
+    {
+      "Q": "How many steps are there approximately from the bushes to the lamp post?  ",
+      "A": "Based on the visual information from the images, the distance from the beginning of the bushes (roughly where the grey car is parked) to the lamp post is estimated. Using the length of the grey car (approximately 4-5 meters) as a reference, the total distance appears to be around 6 to 7 meters. Assuming a standard walking step length of about 0.75 meters, we can calculate the approximate number of steps.\n\n6.5 meters / 0.75 meters per step \u2248 8.6 steps.\n\nTherefore, the approximate number of steps is 8.",
+      "C": "Considering a typical human stride, it looks to be approximately 3 to 5 steps from the bushes to the lamp post.",
+      "M": "Spatial Reasoning",
+      "start_idx": 81,
+      "end_idx": 83
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer mentions the languages present in frame 13: Bulgarian and English. The ground truth is about frame 6 and mentions the same two languages. However, the predicted answer also includes additional text ('\u041e\u0424\u0418\u0421\u0418 / OFFICES') not present in the ground truth, which suggests differences between frames. Therefore, while the languages match, the frames referenced and text content differ, leading to partial correctness."
+    },
+    {
+      "Q": "Can you list all the languages present on the sign in frame 13?",
+      "A": "Based on the sign visible in frame 13, which reads \"\u0412\u0425\u041e\u0414 / ENTRANCE\" and \"\u041e\u0424\u0418\u0421\u0418 / OFFICES\", the languages present are:\n\n*   Bulgarian\n*   English",
+      "C": "The sign in frame 6 has text in two languages: Bulgarian (\"\u0412\u0425\u041e\u0414\") and English (\"ENTRANCE\").",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies that the text \"\u0412\u0425\u041e\u0414 | ENTRANCE\" is related to the entrance for vehicles, specifically indicating a vehicular entrance, which aligns with the ground truth answer that specifies it is for cars. The additional detail about the sign being located above a downward-sloping ramp leading to a parking garage is specific and supportive of the interpretation, but does not contradict the ground truth. Overall, the prediction aligns fully with the ground truth."
+    },
+    {
+      "Q": "How does the text \"\u0412\u0425\u041e\u0414 | ENTRANCE\" relate to the layout of the building?",
+      "A": "The text \"\u0412\u0425\u041e\u0414 | ENTRANCE\" is on a sign located above a downward-sloping ramp, indicating the vehicular entrance to the building's parking garage.",
+      "C": "The text \"\u0412\u0425\u041e\u0414 | ENTRANCE\" indicates the entryway for cars.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies that the entrance leads to office spaces, aligning with the ground-truth answer. However, it adds extra, speculative information about the entrance possibly being a vehicle entrance to a parking area, which is not mentioned in the ground-truth. Therefore, the prediction partially matches the ground-truth but includes unnecessary assumptions."
+    },
+    {
+      "Q": "What can the text \"OFFICES\" suggest about what is inside the entrance?",
+      "A": "Based on the visual evidence, the text \"OFFICES\" on the sign above the entrance, along with \"ENTRANCE\", suggests that this entrance leads to the offices located within the building. It likely serves as an access point, possibly a vehicle entrance to a parking area designated for the offices.",
+      "C": "The text \"OFFICES\" suggests that there are office spaces located within the building accessible through this entrance.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground truth in stating that the text is both directional and informational. The example provided in the prediction aligns with the ground truth details about labeling entrances and office presence, with the additional detail about \"BULSTRAD TOWER\" being consistent with the informational aspect."
+    },
+    {
+      "Q": "Is the text purely directional, or does it also provide information about what to expect inside?",
+      "A": "The text provides both directional information and information about what to expect inside. For example, a sign indicates \"ENTRANCE\" (directional) and also \"OFFICES\" (information about the interior). Additionally, a flag identifies the building as \"BULSTRAD TOWER,\" indicating the presence of that company.",
+      "C": "The text is both directional and informational. It directs to the entrance and informs that there are offices inside.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer is consistent with the ground truth answer. Both indicate that the combination \"\u0412\u0425\u041e\u0414 | ENTRANCE | OFFICES\" appears once in the video."
+    },
+    {
+      "Q": "How many times does the combination \"\u0412\u0425\u041e\u0414 | ENTRANCE | OFFICES\" appear in the entire video?",
+      "A": "1",
+      "C": "Based on the visible information, this combination appears once in the video.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer accurately mentions that the pathway has patterns and designs, which aligns with the ground-truth about a uniform pattern. However, it adds extra details about different patterns, paving transitions, and drainage grates not mentioned in the ground-truth. This indicates partial correctness in recognizing patterns, but the divergence in specifics lowers the correctness score."
+    },
+    {
+      "Q": "Are there any notable patterns or designs on the pathway I am walking on?  ",
+      "A": "Yes, there are a few patterns and designs on the pathway.\n\nInitially, the pathway is made of large, grey rectangular paving stones laid in a standard pattern. As you walk further and go under the building's overhang, the paving changes to lighter grey, more polished square tiles. These tiles are arranged in a simple grid, but some of them have a slightly different texture or shade, creating a subtle, mottled pattern on the ground. Additionally, there are linear metal drainage grates set into the pathway at various points.",
+      "C": "The pathway has a clean, tiled surface with a uniform pattern. It looks well-maintained and smooth.  ",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer closely aligns with the ground truth answer, providing comprehensive details about the architectural features such as modern glass facades, large windows, vertical columns, and overhanging structures. Additionally, it includes elaborate descriptions of other features that further support the observed architecture. Therefore, the prediction is fully correct and detailed."
+    },
+    {
+      "Q": "What architectural details can you observe on the building as I move past it?  ",
+      "A": "Based on the video frames, here are the architectural details observed on the building as you move past it:\n\n*   **Facade and Structure:** The building is a modern, multi-story structure with a prominent glass curtain wall. The facade is broken up by strong vertical elements\u2014tall, light-colored columns or fins with dark vertical accent lines.\n*   **Ground Floor and Colonnade:** The ground floor is set back, creating a deep overhang that forms a covered walkway or colonnade. This overhang is supported by large, round, dark-colored pillars.\n*   **Soffit (Underside of Overhang):** The ceiling of the covered walkway has a distinct linear, ribbed, or slatted texture, painted in a dark color.\n*   **Entrances:** The building has a main entrance with large glass doors (including a revolving door) and at least two separate entrances for an underground parking garage, marked with \"\u0412\u0425\u041e\u0414 / ENTRANCE\" signs and height restriction notices.\n*   **Materials:** The primary materials visible are glass, metal panels for the facade and soffit, and stone or concrete for the paving, planters, and a gabion wall (a wire cage filled with rocks) used for landscaping near the initial corner.\n*   **Landscaping:** The front of the building is landscaped with hedges, small trees in planters, and the aforementioned gabion wall.\n*   **Transition in Design:** As you move along, the initial tall tower section transitions into a lower, long wing. This section features balconies with glass railings on the upper floors, suggesting a shift from purely commercial to possibly mixed-use or residential space.",
+      "C": "The building features modern glass facades with large windows and vertical columns. Its design includes overhanging structures and a sleek facade.  ",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer describes a detailed observation of various streetlights, including their style and placement, which is different from the ground truth answer. The ground truth focuses on the even spacing and parallel alignment along the road, whereas the predicted answer describes a more complex and varied sequence. This does not align with the simplicity and uniformity described in the ground truth."
+    },
+    {
+      "Q": "Can you describe the sequence and placement of the streetlights as I approach them?  ",
+      "A": "As you walk along the sidewalk next to the modern glass building, you first see a series of tall, modern streetlights with multiple lamp arms across the main road on your right. These are spaced out along the far side of the road.\n\nAs you pass the main building and approach a smaller side street, you encounter a different set of streetlights. The first one on this new street is a modern, single-lamp pole with a gentle curve, located on the opposite (left) side of the street. Another identical streetlight is visible further down the street, also on the left.\n\nFinally, as you reach the end of this block where the road curves, there is an older, rust-colored streetlight on the right side of the road.",
+      "C": "The streetlights are evenly spaced along the road. Positioned to provide consistent illumination, they form a straight line parallel to the street.  ",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer partially matches the ground truth answer in terms of a change in building types from office to residential. However, it fails to mention the increase in greenery and planters along the pathway, which is a key element of the ground truth. Additional details about the transition from a major road to a side street and the visibility of a mountain do not align with the main changes noted in the ground truth. Hence, while there is some overlap, the predicted answer is not fully correct."
+    },
+    {
+      "Q": "What changes do you notice in the surroundings as the journey progresses (besides lighting)?  ",
+      "A": "As the journey progresses, the surroundings change in the following ways:\n\n*   **Transition from a Major Road to a Side Street:** The journey begins on a sidewalk next to a wide, busy, multi-lane road with significant traffic, including cars, a taxi, and a bus. The camera then turns left, following the building, onto a much narrower and quieter side street with parked cars and less traffic.\n*   **Architectural Contrast:** Initially, the view across the street is of other modern glass office buildings. After turning onto the side street, the view across the road changes to older, more traditional residential apartment buildings, creating a stark contrast with the new building the camera is walking alongside.\n*   **Appearance of Natural Landscape:** As the camera moves onto the side street, a mountain becomes visible in the distance, which was not in view at the start of the journey.\n*   **Change in Building Features:** The initial view of the building includes flags and a main entrance. Further along, the camera passes an entrance to an underground parking garage, and the sidewalk becomes a covered walkway supported by pillars.",
+      "C": "The buildings become more residential as the journey progresses, and there's an increase in greenery and planters along the pathway.  ",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer identifies several landmarks that align with the ground truth description. Both mention office buildings and point out the transition to a suburban environment through various sights seen while walking. However, the predicted answer provides more detail than the ground truth. Despite this, the core elements of the prediction match those in the ground truth, such as the notable office buildings. Therefore, it is mostly correct, but not entirely since some details go beyond what's provided in the ground-truth."
+    },
+    {
+      "Q": "Are there any points of interest or landmarks visible as I continue walking?  ",
+      "A": "Based on the visual information from the video, here are the points of interest and landmarks visible as you walk:\n\n*   **A large, modern glass office building:** You walk alongside this prominent building for the first half of the video.\n*   **Bulgarian and European Union flags:** These are flying on flagpoles at the entrance of the modern building.\n*   **Underground parking entrance:** A sign indicates an entrance for \"OFFICES\".\n*   **Other modern office buildings:** Across the main road, several other contemporary office buildings are visible, including one with a distinctive pinkish-purple facade.\n*   **Mountain view:** As you turn the corner and walk down the side street, a mountain becomes visible in the distance.",
+      "C": "Notable landmarks include adjacent office and residential buildings, and the transition to a more suburban environment is notable.  ",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer provides a detailed analysis of how various angles of shots affect the perception of the building's height. It elaborates on how low-angle shots enhance the building's height and mentions other angles that offer different perceptions. This aligns well with the ground truth that emphasizes the effect of low-angle shots in making the building appear taller and more prominent."
+    },
+    {
+      "Q": "How does the angle of the shots affect the perception of the building's height?  ",
+      "A": "Based on the visual evidence, the angle of the shots significantly affects the perception of the building's height in the following ways:\n\n*   **Initial Low-Angle Shots:** At the beginning of the sequence, the camera is positioned low and angled upwards towards the modern glass building. This low-angle perspective exaggerates the vertical lines and scale, making the building appear immense and dominant in the frame.\n\n*   **Shots from Under the Overhang:** As the person recording moves closer and then walks under the building's large overhang, the camera angle shifts from looking up at the facade to a more horizontal or slightly upward view of the overhang's ceiling and the space beneath it. This change in perspective removes the top of the building from the frame, immediately diminishing the immediate perception of its total height and shifting the focus to its ground-level architecture and length.\n\n*   **Horizontal Panning Shots:** Towards the end, as the camera moves past the main tower and along the side street, the view becomes more horizontal. This eye-level perspective presents the building in relation to its surroundings, providing a more neutral and less imposing sense of its height compared to the initial dramatic, low-angle shots.",
+      "C": "The angle of the shots, taken from a lower perspective, enhances the building's height, making it appear more towering and prominent.  ",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer identifies several elements such as flags, building signs, traffic control measures, vehicle markings, and pathway furniture. While it mentions flags and building/entrance signs which align partially with the ground truth, it does not specifically mention planters, which are included in the ground truth. Additionally, the predicted answer includes extra details like traffic cones and vehicle markings, which are not relevant to the question about signs or symbols on or near the pathway. This extra information and the omission of planters slightly reduce its accuracy compared to the ground truth."
+    },
+    {
+      "Q": "Can you identify any signs or symbols that appear on or near the pathway?  ",
+      "A": "Based on the visual cues from the image set, here are the signs and symbols identified on or near the pathway:\n\n*   **Flags:** A Bulgarian national flag and a European Union flag are visible on flagpoles.\n*   **Building/Entrance Signs:** A sign above a garage entrance indicates \"\u0412\u0425\u041e\u0414 / ENTRANCE\" and \"\u041e\u0424\u0418\u0421\u0418 / OFFICES\". There is also a height restriction sign showing \"2.3m\" within a red circle.\n*   **Traffic Control:** Red and white striped traffic cones are placed along the edge of the road. A blue circular traffic sign is visible in the distance.\n*   **Vehicle Markings:** A yellow taxi has \"TAXI\" written on it, along with a logo and text that reads \"\u2605\u2605\u2605\u2605\u2605 \u041a\u041e\u041c\u0424\u041e\u0420\u0422\u041d\u041e \u0421 TAXIM\".\n*   **Pathway Furniture:** A bicycle rack is present on the walkway.",
+      "C": "There are flags and signs indicating building entrances and exits. There are also small planters placed along the walkway.  ",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ]
+]

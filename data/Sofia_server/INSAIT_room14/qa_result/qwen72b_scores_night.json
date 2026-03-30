@@ -1,0 +1,842 @@
+[
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground-truth answer precisely, as both state that the camera turned to the right in the hallway after exiting the meeting room."
+    },
+    {
+      "Q": "After exiting the meeting room, which direction did the camera turn in the hallway?",
+      "A": "The camera turned to the right in the hallway after exiting the meeting room.",
+      "C": "Turned right.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer \"whiteboard\" does not match the ground truth answer \"kitchen setup with a mini stove\". The prediction is entirely different from the expected answer."
+    },
+    {
+      "Q": "What was the last object examined in the meeting room before leaving?",
+      "A": "The last object examined in the meeting room before leaving was the whiteboard.",
+      "C": "Kitchen setup with a mini stove.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer \"13\" does not match the ground truth answer \"Meeting Room 14\". The predicted number is incorrect and does not contain any part of the correct label."
+    },
+    {
+      "Q": "What was the room labeled just before the kitchen setup was visible?",
+      "A": "13",
+      "C": "Meeting Room 14.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer \"9\" falls within the range of the ground truth answer \"8-11 frames\". Hence, the prediction is considered correct."
+    },
+    {
+      "Q": "When did I opened the door of the room?",
+      "A": "9",
+      "C": "You opened the time around 8-11 frames.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer \"computer monitor\" does not match the ground truth answer \"Kitchen setup with a mini stove\"."
+    },
+    {
+      "Q": "What was the last object examined in the meeting room before leaving?",
+      "A": "The last object examined in the meeting room before leaving was the computer monitor.",
+      "C": "Kitchen setup with a mini stove.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that only one object was touched, while the ground truth indicates that three objects were touched. The prediction does not fall within the range of the ground truth answer, hence it is incorrect."
+    },
+    {
+      "Q": "How many objects did I touch in the room?",
+      "A": "Based on the visual information provided in the images, you touched one object in the room. Specifically, you touched the whiteboard with a marker. The other actions depicted, such as walking down the hallway and interacting with a computer, do not involve touching objects within the room itself.",
+      "C": "You touched 3 stuffs in touch.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer did not match any of the items from the ground truth answer. The predicted items include a door handle and a red cup, while the ground truth specifies a pink plate, a Vision Pro, and a cup. None of the objects are the same, and there is no overlap in the order or specific items mentioned."
+    },
+    {
+      "Q": "What did I touch in the room chronologically?",
+      "A": "Based on the sequence of images and the chronological order of events, you touched the following items in the room:\n\n1. The door handle of the meeting room.\n2. The red cup on the table.\n3. The door handle of the second room.",
+      "C": "A pink plate, a Vision Pro, and a cup.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies that the cup is not the second object touched, matching the ground truth answer in this aspect. However, it lacks the additional detail that the cup is actually the third object touched, which is specified in the ground truth."
+    },
+    {
+      "Q": "Is the cup the second object I touch?",
+      "A": "No",
+      "C": "No, it is the third one.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer \"No\" captures the overall sentiment of the ground-truth answer, but it lacks the specific detail that it is the second object touched, which is present in the ground truth."
+    },
+    {
+      "Q": "Is the Vision Pro the first object I touch?",
+      "A": "No",
+      "C": "No, it is the second one.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer \"white\" does not match the ground truth answer \"It is pink.\" Therefore, the prediction is fully incorrect."
+    },
+    {
+      "Q": "What's the color of the plate that was touched by me?",
+      "A": "white",
+      "C": "It is pink.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted color of the plate is \"white,\" while the ground truth states it is \"pink.\" Therefore, the predicted answer does not match the ground-truth answer at all."
+    },
+    {
+      "Q": "What's the color of the plate that was touched by me?",
+      "A": "white",
+      "C": "It is pink.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer \"124\" does not fall within the ground truth frame range of 49-52. Therefore, the prediction is incorrect."
+    },
+    {
+      "Q": "When did I opened the door again to leave the room?",
+      "A": "124",
+      "C": "You opened the time around 49-52 frames.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there are two robot arms visible, while the ground-truth answer states that there is only one robot arm visible. The predicted number does not fall within the range of the ground truth, thus the prediction is fully incorrect."
+    },
+    {
+      "Q": "How many robot arms are visible during my exploration?",
+      "A": "During your exploration, there are two robot arms visible. One robot arm is seen in the room where you initially entered and explored, and another robot arm is visible in the room you visited later in the exploration.",
+      "C": "There is 1 robot arm visible.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there are 3 cups, while the ground truth states there are 2 cups. Since the predicted number of cups does not fall within the range suggested by the ground truth, the prediction is incorrect."
+    },
+    {
+      "Q": "What is the number of cups located on the desk with the robot arm?",
+      "A": "There are 3 cups located on the desk with the robot arm.",
+      "C": "There are 2 cups located on the desk with the robot arm.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer indicates 3 rooms were entered, whereas the ground truth states only 1 room was entered. The prediction does not match the ground truth."
+    },
+    {
+      "Q": "Can you count how many rooms I entered throughout the video?",
+      "A": "Based on the visual cues provided in the sequence of images, you entered a total of 3 rooms throughout the video. The first room is where you opened the door and turned off the light, the second room is where you walked down the hallway and encountered a person, and the third room is where you entered after the person walked away.",
+      "C": "I entered 1 room throughout the video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer of 6 is not within the range of the ground truth answer of 3. Therefore, the prediction is incorrect."
+    },
+    {
+      "Q": "What is the total number of exit signs visible from the beginning to the end of the video?",
+      "A": "6",
+      "C": "From the beginning to the end of the video, there are 3 exit signs visible.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer \"2\" matches exactly with the ground truth answer \"There are 2 tables.\" Thus, the prediction is fully correct."
+    },
+    {
+      "Q": "How many tables in total in the room with robot arm?",
+      "A": "2",
+      "C": "There are 2 tables.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer '2' matches exactly with the ground truth answer of 'There are 2 chairs'."
+    },
+    {
+      "Q": "How many chairs in total in the room with robot arm?",
+      "A": "2",
+      "C": "There are 2 chairs.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is 'No', which contradicts the ground truth answer 'Yes, the flashlight increased the lighting level inside the dark meeting room'. The ground truth explicitly states that the lighting level increased, therefore the prediction is fully incorrect."
+    },
+    {
+      "Q": "Upon entering the meeting room, did the overall lighting level change?",
+      "A": "No",
+      "C": "Yes, the flashlight increased the lighting level inside the dark meeting room.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer directly contradicts the ground truth. The ground truth specifies that reflective surfaces did appear brighter under the flashlight, whereas the predicted answer states otherwise. This discrepancy makes the prediction fully incorrect."
+    },
+    {
+      "Q": "When inspecting the various objects, did the light illuminate any reflective surfaces more brightly?",
+      "A": "No",
+      "C": "Yes, reflective surfaces like metal door handles and glossy monitors appeared brighter under the flashlight.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer acknowledges a change in ambient light when exiting the room with a flashlight, which aligns with the ground truth. However, it incorrectly describes the hallway as initially dark and focuses more on the beam of the flashlight and its effects rather than acknowledging the ambient light from the corridor lights becoming visible as mentioned in the ground truth. Hence, it partially captures the essence but misses specific elements."
+    },
+    {
+      "Q": "Exiting the room, did you notice a change in ambient light when using the flashlight?",
+      "A": "Yes, when exiting the room and using the flashlight, there was a noticeable change in ambient light. The hallway was initially dark, but the flashlight illuminated the path ahead, revealing more details of the surroundings. The light from the flashlight created a contrast with the darker areas, making it easier to see the corridor and the objects within it. The ambient light in the hallway appeared to be dim, and the flashlight provided a focused beam of light that helped navigate through the space.",
+      "C": "As you exited the room, the flashlight still illuminated your immediate path, but ambient light from the corridor lights became visible.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies that the flashlight is not visible throughout the entire video. However, it does not specify the parts of the video where the flashlight is not visible as mentioned in the ground truth, causing a slight deduction in score."
+    },
+    {
+      "Q": "If the flashlight's impact visible in the whole video",
+      "A": "No",
+      "C": "No, at the begining and the end of video, the flashlight is not visible.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly describes the steps needed to reach meeting room #14. Both the predicted answer and the ground truth indicate that the meeting room is on the left side of the hallway, and the instructions are clear and accurate."
+    },
+    {
+      "Q": "How do I reach the meeting room #14 from the hallway?",
+      "A": "To reach the meeting room #14 from the hallway, follow these steps:\n\n1. **Turn Left**: As you enter the hallway, turn left to head towards the meeting rooms.\n2. **Walk Straight**: Continue walking straight down the hallway. You will see the meeting rooms on your left side.\n3. **Look for Room #14**: Keep an eye out for the meeting room labeled #14. It should be one of the rooms on your left.\n4. **Enter the Room**: Once you find the meeting room #14, open the door and enter.\n\nThe meeting room #14 is located on the left side of the hallway, so make sure to turn left and walk straight until you find it.",
+      "C": "Go straight for several steps and then it is on your left hand.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer suggests only turning right, whereas the ground truth specifies that both left and right are possible directions. While the predicted answer provides accurate details about the hallway extending to the right, it misses the possibility of turning left, which is mentioned in the ground truth."
+    },
+    {
+      "Q": "Once I exit the meeting room, which direction should I take to continue along the hallway?",
+      "A": "To continue along the hallway after exiting the meeting room, you should turn right. The hallway extends straight ahead from the meeting room exit, and you can follow it as it curves slightly to the right. Keep walking straight and you'll stay on the main hallway path.",
+      "C": "You can turn both left or right.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer suggests taking a left turn before walking straight, which adds an unnecessary step compared to the ground-truth answer suggesting to walk straight directly. This deviation introduces potential confusion or error in navigation."
+    },
+    {
+      "Q": "Once I exit the meeting room, which direction should I take to reach the cloest exit?",
+      "A": "You should take a left turn and walk straight ahead to reach the closest exit.",
+      "C": "You can walk straight.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer suggests turning right, which contradicts the ground-truth answer that specifies turning left. This directional difference makes the prediction fully wrong."
+    },
+    {
+      "Q": "Once I exit the meeting room, which direction should I take to reach the farther exit?",
+      "A": "You should take a right turn once you exit the meeting room to reach the farther exit.",
+      "C": "You can turn left and then walk straight.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer \"Meeting room\" correctly identifies the text indicating the purpose of room number 14. Although the exact phrasing of the ground-truth is not matched, the key information needed to answer the question is accurately provided."
+    },
+    {
+      "Q": "What text indicates the purpose of room number 14?",
+      "A": "Meeting room",
+      "C": "The text \"Meeting room\" indicates the purpose of room number 14.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there are no other texts visible on the door besides \"meeting room 14\", while the ground truth clearly mentions additional text on a poster indicating not to touch the robots and cameras and to turn everything off after working with a robot. The predicted answer directly contradicts the ground truth, making it fully incorrect."
+    },
+    {
+      "Q": "Can you see any other texts besides the \"meeting room 14\" in the door?",
+      "A": "No, there are no other texts visible on the door besides \"meeting room 14\".",
+      "C": "There is also a poster with text indicates don't touch the robots and cameras and also turn everything off aftering working with a robot.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer, '1', matches the ground truth answer stating that the number '14' appears once in the text. Therefore, the prediction is fully correct."
+    },
+    {
+      "Q": "How many times does the number \"14\" appear in the text?",
+      "A": "1",
+      "C": "The number \"14\" appears once in the text.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately identifies the implication of 'turning everything off' related to potential hazards. Both answers mention risks associated with leaving equipment on, such as electrical hazards and emphasize it as a safety precaution. The predicted answer covers similar types of hazards and intentions behind the instruction as the ground truth."
+    },
+    {
+      "Q": "What does the instruction to \"turn everything off\" imply about potential hazards?",
+      "A": "The instruction to \"turn everything off\" implies that there are potential hazards associated with leaving equipment or machinery on. This could include risks such as electrical hazards, fire hazards, or mechanical hazards that could occur if the equipment is left unattended. The instruction is likely a safety precaution to ensure that all potential sources of danger are eliminated when the room is not in use.",
+      "C": "The instruction implies that leaving equipment on could pose safety risks, such as electrical hazards, overheating, or accidental activation of machines, especially when dealing with robots.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer \"Green\" matches the ground truth answer which states that the primary color illuminating the emergency exit signs is green. Hence, the prediction is fully correct."
+    },
+    {
+      "Q": "What is the primary color illuminating the emergency exit signs in the hallway?",
+      "A": "Green",
+      "C": "The primary color illuminating the emergency exit signs in the hallway is green.",
+      "M": "Object Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is 4, which does not match the ground truth answer of 14. The room number is specific, and there is no partial correctness in this case. Therefore, the prediction is incorrect."
+    },
+    {
+      "Q": "What is the room number displayed next to the \"Meeting room\" sign?",
+      "A": "4",
+      "C": "The room number displayed next to the \"Meeting room\" sign is 14.",
+      "M": "Object Recognition",
+      "start_idx": 7,
+      "end_idx": 9
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the equipment on the desk is a microscope, whereas the ground truth specifies it is a robotic arm setup. These are two distinctly different types of equipment, therefore the prediction does not match the ground truth."
+    },
+    {
+      "Q": "What type of equipment is situated on the desk in the first frame?",
+      "A": "The equipment situated on the desk in the first frame appears to be a microscope.",
+      "C": "In the first frame, the desk has a robotic arm setup.",
+      "M": "Object Recognition",
+      "start_idx": 14,
+      "end_idx": 16
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted color of the toy kitchen accessory (white) does not match the ground truth color (light blue)."
+    },
+    {
+      "Q": "What is the color of the toy kitchen accessory shaped like a sink on the desk?",
+      "A": "The toy kitchen accessory shaped like a sink on the desk is white.",
+      "C": "The toy kitchen accessory shaped like a sink on the desk is light blue.",
+      "M": "Object Recognition",
+      "start_idx": 21,
+      "end_idx": 23
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately states that there is a monitor in the room and correctly identifies its location on the right desk, which matches the ground-truth answer."
+    },
+    {
+      "Q": "Is there a monitor in the room, if yes, on which desk, left or right?",
+      "A": "Yes, there is a monitor in the room. It is on the right desk.",
+      "C": "There is one, and it is on the right desk. ",
+      "M": "Object Recognition",
+      "start_idx": 28,
+      "end_idx": 30
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there is a bottle on the workbench against the back wall, which is not mentioned in the ground truth. The ground truth specifies that there is a monitor, keyboard, a vision pro, and some papers, which are different from a bottle. Therefore, the prediction is incorrect."
+    },
+    {
+      "Q": "What object is placed on the workbench against the back wall?",
+      "A": "A bottle is placed on the workbench against the back wall.",
+      "C": "On the workbench against the back wall, there is a monitor, keyboard, a vision pro, and some papers.",
+      "M": "Object Recognition",
+      "start_idx": 35,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies the objects inside the translucent container as 'eggs', which matches the ground truth answer. There is no discrepancy in the described substance of the objects, thus the prediction fully aligns with the ground truth answer."
+    },
+    {
+      "Q": "What round objects are inside the translucent container on the countertop?",
+      "A": "The round objects inside the translucent container on the countertop are eggs.",
+      "C": "The round objects inside the translucent container on the countertop appear to be eggs.",
+      "M": "Object Recognition",
+      "start_idx": 42,
+      "end_idx": 44
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer states there are two small white panels visible, but does not specify their types to match the ground truth answer, which identifies specific items (an air conditioning control panel, a switch, and an outlet). Although the predicted answer is somewhat related, it lacks the precision and details provided in the ground truth."
+    },
+    {
+      "Q": "How many small white panels can you see on the wall?",
+      "A": "In the image, there are two small white panels visible on the wall.",
+      "C": "I can see an air conditioning control panel, a switch, and an outlet.",
+      "M": "Object Recognition",
+      "start_idx": 49,
+      "end_idx": 51
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies the small white panel as an electrical outlet, which matches the ground truth answer. Although it provides additional context about the environment and the presence of a flashlight, the core identification of the object as an electrical outlet is accurate."
+    },
+    {
+      "Q": "What is that small white panel on the bottom of the wall?",
+      "A": "The small white panel on the bottom of the wall appears to be an electrical outlet or a control panel. Given the context of the dark environment and the presence of a person holding a flashlight, it is likely an electrical outlet. The person might be using the flashlight to inspect or interact with the outlet.",
+      "C": "It is an outlet.",
+      "M": "Object Recognition",
+      "start_idx": 49,
+      "end_idx": 51
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer of approximately 10 steps falls within the range of the ground truth answer (6-9 steps), and thus is considered correct for a question involving counting the number of steps."
+    },
+    {
+      "Q": "How many steps will needed from 1st frame to reach the door of meeting room 14?",
+      "A": "Based on the visual cues and the assumption that the video was sampled at 1 fps from an original 30 fps video, it appears that the person recording the video has moved forward in the hallway. The door of meeting room 14 is not visible in the current frame, but the hallway seems to be relatively straight with a few doors on either side.\n\nGiven the perspective and the distance covered in the three frames, it is estimated that it would take approximately 10 steps to reach the door of meeting room 14 from the position in the first frame. This is a rough estimate based on the visual information and the assumption of a normal walking pace.",
+      "C": "It needs around 6-9 steps.",
+      "M": "Spatial Reasoning",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer is partially correct as it captures that the computer is on top of the table. However, it lacks the detail about the computer being slightly to the right side, which is present in the ground truth answer."
+    },
+    {
+      "Q": "What is the position of the computer relative to the table in the third image?",
+      "A": "on top of",
+      "C": "In the third image, the computer is positioned on top of the table, slightly to the right side.",
+      "M": "Spatial Reasoning",
+      "start_idx": 7,
+      "end_idx": 9
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies the object between the computer monitor and the tripod as a chair, which matches the ground truth."
+    },
+    {
+      "Q": "What object is positioned between the computer monitor and the tripod?",
+      "A": "A chair is positioned between the computer monitor and the tripod.",
+      "C": "The object positioned between the computer monitor and the tripod is a chair.",
+      "M": "Spatial Reasoning",
+      "start_idx": 14,
+      "end_idx": 16
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately identifies the color of the object closest to the viewer (or camera) as blue, matching the ground truth."
+    },
+    {
+      "Q": "Among the stuffs on the table, what is the color of the stuff that is cloest to me?",
+      "A": "The object closest to the camera appears to be a blue-handled tool, likely a screwdriver, on the table.",
+      "C": "The thing that is closest to you is with blue color.",
+      "M": "Spatial Reasoning",
+      "start_idx": 21,
+      "end_idx": 23
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer describes a white object, possibly a tissue box, located next to the monitor. However, the ground truth specifies that a VR headset and a piece of paper are present in that position. The predicted answer does not match or overlap with the ground-truth objects significantly."
+    },
+    {
+      "Q": "What object is positioned next to the monitor on the desk?",
+      "A": "There appears to be a white object next to the monitor on the desk. It could be a tissue box or some other similar item, but it is difficult to determine exactly what it is due to the low lighting conditions.",
+      "C": "Next to the monitor on the desk, there is a VR headset and a piece of paper.",
+      "M": "Spatial Reasoning",
+      "start_idx": 28,
+      "end_idx": 30
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the VR headset is approximately 1 meter away from the monitor, while the ground truth indicates that it is placed directly next to the monitor and almost touching it. These are significantly different positions, hence the prediction is incorrect."
+    },
+    {
+      "Q": "How far is the VR headset from the monitor on the desk?",
+      "A": "The VR headset is approximately 1 meter away from the monitor on the desk.",
+      "C": "The VR headset is placed directly next to the monitor on the desk, almost touching it.",
+      "M": "Spatial Reasoning",
+      "start_idx": 35,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer, 'A kettle', does not match the ground truth, which is 'the robotic arm'. The objects mentioned are entirely different, showing no partial correctness."
+    },
+    {
+      "Q": "What is directly above the two cups on the table?",
+      "A": "A kettle.",
+      "C": "Directly above the two cups on the table is the robotic arm.",
+      "M": "Spatial Reasoning",
+      "start_idx": 42,
+      "end_idx": 44
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer of 10 steps falls within the range of the ground truth answer of 10 to 15 steps. Therefore, the prediction is considered correct and fully aligns with the ground truth."
+    },
+    {
+      "Q": "What is the approximate number of steps from the door to the exit sign on the ceiling?",
+      "A": "10 steps",
+      "C": "Based on the frames, there are approximately 10 to 15 steps from the door to the exit sign on the ceiling.",
+      "M": "Spatial Reasoning",
+      "start_idx": 49,
+      "end_idx": 51
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there are four green emergency exit lights, while the ground truth specifies there are three. The predictions are not within the range since it is an exact count, resulting in a fully wrong prediction."
+    },
+    {
+      "Q": "How many green emergency exit lights are visible in the images?",
+      "A": "There are four green emergency exit lights visible in the images.",
+      "C": "There are three green emergency exit lights.",
+      "M": "Light Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'flashlight' matches exactly with the primary lighting source specified in the ground truth answer. Therefore, it is fully correct."
+    },
+    {
+      "Q": "What is the source of the current main lighting?",
+      "A": "flashlight",
+      "C": "The primary lighting source is flashlight.",
+      "M": "Light Recognition",
+      "start_idx": 7,
+      "end_idx": 9
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the primary source of light is a computer monitor, while the ground truth specifies that it is a flashlight. These are two different sources of light, thus the prediction does not match the ground truth."
+    },
+    {
+      "Q": "What is the primary source of light visible in the room across the frames?",
+      "A": "The primary source of light visible in the room across the frames appears to be a computer monitor.",
+      "C": "The primary lighting source is flashlight.",
+      "M": "Light Recognition",
+      "start_idx": 28,
+      "end_idx": 30
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the shape of the light spot on the wall as circular, which is consistent with the ground truth answer."
+    },
+    {
+      "Q": "What shape is the light spot on the wall?",
+      "A": "The light spot on the wall is circular.",
+      "C": "The light spot on the wall appears to be circular.",
+      "M": "Light Recognition",
+      "start_idx": 35,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies that the light spot is caused by a reflection from a light source. Although it does not specify a flashlight as in the ground truth, it does mention a lamp or a computer screen as possibilities, which generally aligns with the ground truth. The explanation about it being off a shiny surface or reflective material complements the idea of it being a reflection. Therefore, the core concept is captured, albeit with minor inaccuracies."
+    },
+    {
+      "Q": "What caused the light spot on the wall?",
+      "A": "The light spot on the wall is likely caused by a reflection from a light source, such as a lamp or a computer screen, off a shiny surface like a metallic object or a reflective material. The specific object causing the reflection is not clearly visible in the image.",
+      "C": "It is reflection of lighting, most likely a flashlight.",
+      "M": "Light Recognition",
+      "start_idx": 35,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies that there is only one lighting source, which aligns with the ground truth answer. Additionally, the prediction provides relevant details about the lighting and shadows that support the conclusion, confirming its accuracy."
+    },
+    {
+      "Q": "Is there more than one lighting sources?",
+      "A": "No, there is not more than one lighting source. The scene appears to be illuminated by a single light source, which is likely the lamp visible on the right side of the image. The shadows and the way the light falls on the objects suggest a single point of illumination.",
+      "C": "No, from the images, there is only one lighting source.",
+      "M": "Light Recognition",
+      "start_idx": 42,
+      "end_idx": 44
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies that the lighting source is not from the ceiling, which matches the ground truth answer. However, the prediction adds additional information about the possible source of lighting, which is not present in the ground truth. Therefore, the prediction is mostly correct with slight deviation in details."
+    },
+    {
+      "Q": "Is the lighting sources from the ceiling?",
+      "A": "No, the lighting source is not from the ceiling. The light appears to be coming from a lamp on the right side of the image, which is illuminating the area around the stove and countertop.",
+      "C": "No, from the showdows of the objects, we can tell the lighting source is not from the ceiling.",
+      "M": "Light Recognition",
+      "start_idx": 42,
+      "end_idx": 44
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer specifies 'the emergency exit sign' as the light source, which is effectively the same as 'an exit sign' described in the ground truth answer, both referring to a common emergency exit sign typically found in buildings. Therefore, the prediction is accurate and correct."
+    },
+    {
+      "Q": "What ambient light source provides a subtle green glow in the scene?",
+      "A": "The ambient light source providing a subtle green glow in the scene is the emergency exit sign.",
+      "C": "The ambient light source providing a subtle green glow in the scene is an exit sign.",
+      "M": "Light Recognition",
+      "start_idx": 49,
+      "end_idx": 51
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer states there is only one lighting source, whereas the ground truth specifies there are two: one from a flashlight and one from an exit sign. Therefore, the prediction is incorrect about the number of lighting sources present in the scene."
+    },
+    {
+      "Q": "How many lighting source can be seen in the scene?",
+      "A": "There is one lighting source visible in the scene.",
+      "C": "There are two, one from flashlight, one from exit sign.",
+      "M": "Light Recognition",
+      "start_idx": 49,
+      "end_idx": 51
+    }
+  ]
+]

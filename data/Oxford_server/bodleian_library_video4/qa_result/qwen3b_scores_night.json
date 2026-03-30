@@ -1,0 +1,962 @@
+[
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the car parked on the street is white, while the ground truth answer specifies that the car is red. The prediction does not match the ground truth with respect to the color of the car."
+    },
+    {
+      "Q": "What color is the car parked on the street?",
+      "A": "The car parked on the street is white.",
+      "C": "The car parked on the street is red.",
+      "M": "Object Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer states that the lights are white, whereas the ground truth specifies that the lights are yellow and white. The prediction captures only part of the ground truth, missing the yellow color. Thus, it is partially correct."
+    },
+    {
+      "Q": "What color are the faint lights coming from the windows in the background buildings?",
+      "A": "The faint lights coming from the windows in the background buildings are white.",
+      "C": "The faint lights coming from the windows in the background buildings appear to be yellow and white.",
+      "M": "Object Recognition",
+      "start_idx": 16,
+      "end_idx": 18
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer 'Buildings' only partially captures the ground truth. The ground truth specifies 'large building on the right', 'other buildings in the distance', and 'street elements such as street lights'. The predicted answer fails to include the street elements and the specific locations of the buildings mentioned in the ground truth."
+    },
+    {
+      "Q": "What kind of structures can be identified from the illuminated windows?",
+      "A": "Buildings",
+      "C": "Based on the frames provided, you can identify the following structures from the illuminated windows: large building on the right, on the left other buildings in the distance, street elements such as street lights.",
+      "M": "Object Recognition",
+      "start_idx": 8,
+      "end_idx": 10
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'The windows visible on the buildings in the background are rectangular.' accurately matches the ground-truth answer 'The windows visible on the buildings in the background appear to be rectangular in shape.' Both answers describe the windows as rectangular, with no discrepancy in information."
+    },
+    {
+      "Q": "What shape are the windows visible on the buildings in the background?",
+      "A": "The windows visible on the buildings in the background are rectangular.",
+      "C": "The windows visible on the buildings in the background appear to be rectangular in shape.",
+      "M": "Object Recognition",
+      "start_idx": 32,
+      "end_idx": 34
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer is identical to the ground-truth answer, indicating that the prediction is fully correct."
+    },
+    {
+      "Q": "What color are the markings on the road?",
+      "A": "The markings on the road are yellow.",
+      "C": "The markings on the road are yellow.",
+      "M": "Object Recognition",
+      "start_idx": 48,
+      "end_idx": 50
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer states, 'The illuminated light near the buildings is green,' which accurately matches the ground truth answer, 'The light near the buildings is green.' Both answers assert that the color of the light is green, with no differences or ambiguities. Therefore, the prediction is fully correct."
+    },
+    {
+      "Q": "What color is the illuminated light near the buildings?",
+      "A": "The illuminated light near the buildings is green.",
+      "C": "The light near the buildings is green.",
+      "M": "Object Recognition",
+      "start_idx": 56,
+      "end_idx": 58
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The ground truth states that the streetlamp is positioned in front of the building from the viewer's perspective, while the predicted answer incorrectly describes it as being on the left side of the building relative to the camera's view direction. The two descriptions are not aligned with the reference point provided in the ground truth."
+    },
+    {
+      "Q": "What is the position of the streetlamp relative to the building?",
+      "A": "The streetlamp is positioned on the left side of the building relative to the direction of the camera's view.",
+      "C": "From your perspective, the streetlamp is positioned in front of the building in the video.",
+      "M": "Spatial Reasoning",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer specifies the same direction (to the left) as the ground truth for the streetlights, with an additional detail of them being positioned above, which does not contradict the ground truth. Hence, it is mostly correct."
+    },
+    {
+      "Q": "What is the position of the streetlights in relation to the people walking down the street?",
+      "A": "The streetlights are positioned above and to the left of the people walking down the street.",
+      "C": "The streetlights are positioned on the left side of the street in relation to the people walking down the street.",
+      "M": "Spatial Reasoning",
+      "start_idx": 8,
+      "end_idx": 10
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer \"Three\" falls within the range \"2 or 3 buildings\" provided by the ground-truth answer, making the prediction correct."
+    },
+    {
+      "Q": "How many buildings are visible along the street from your perspective?",
+      "A": "Three",
+      "C": "I can spot around 2 or 3 buildings alongside the street.",
+      "M": "Spatial Reasoning",
+      "start_idx": 16,
+      "end_idx": 18
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer states that the streetlight is directly in front of the nearest building, whereas the ground truth indicates that the streetlight is to the left of the building, which is also slightly forward. The spatial relationship in the predicted answer is not fully aligned with the ground truth description."
+    },
+    {
+      "Q": "What is the spatial relationship between the streetlight and the nearest building?",
+      "A": "The streetlight is positioned directly in front of the nearest building.",
+      "C": "The streetlight is positioned to the left of the nearest building. The building is slightly forward.",
+      "M": "Spatial Reasoning",
+      "start_idx": 24,
+      "end_idx": 26
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer states that the image is too dark to determine what is beneath the streetlamp, which contrasts with the ground truth, which specifies that there is a pavement or ground area beneath the streetlamp. Therefore, the prediction does not accurately match the ground truth."
+    },
+    {
+      "Q": "What is directly beneath the streetlamp?",
+      "A": "The image set is too dark to provide a clear view of what is directly beneath the streetlamp.",
+      "C": "Directly beneath the streetlamp, there appears to be a pavement or ground area.",
+      "M": "Spatial Reasoning",
+      "start_idx": 32,
+      "end_idx": 34
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer states that the streetlamp is in front of the building, which aligns with the positioning in the ground truth answer. However, it lacks the detail of 'directly,' resulting in a slight lack of precision. Hence, a score of 4 is appropriate."
+    },
+    {
+      "Q": "What position does the streetlamp occupy in relation to the building?",
+      "A": "The streetlamp is positioned in front of the building.",
+      "C": "The streetlamp is positioned directly in front of the building.",
+      "M": "Spatial Reasoning",
+      "start_idx": 40,
+      "end_idx": 42
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'The moon' accurately identifies the object positioned directly above the building with the green light as described in the ground truth answer. Both mention the moon as the object, so the prediction is fully correct."
+    },
+    {
+      "Q": "What is positioned directly above the building with the green light?",
+      "A": "The moon",
+      "C": "Directly above the building with the green light, there is a bright object in the sky, which appears to be the moon.",
+      "M": "Spatial Reasoning",
+      "start_idx": 48,
+      "end_idx": 50
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that a person is positioned along the sidewalk, while the ground-truth answer specifies a parked van. The prediction does not match the provided ground truth."
+    },
+    {
+      "Q": "What is positioned along the sidewalk and approximately 15-25 steps from you?",
+      "A": "A person is positioned along the sidewalk and approximately 15-25 steps from you.",
+      "C": "Along the sidewalk, approximately 15-25 steps from you, there is a parked van.",
+      "M": "Spatial Reasoning",
+      "start_idx": 56,
+      "end_idx": 58
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the color of the illuminated windows is red, while the ground truth specifies the color as an amber or warm yellow. The prediction does not match the ground truth color."
+    },
+    {
+      "Q": "What is the color of the illuminated windows on the building?",
+      "A": "The color of the illuminated windows on the building is red.",
+      "C": "The color of the illuminated windows on the building is an amber or warm yellow.",
+      "M": "Light Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The ground truth states that there are three streetlights visible, while the predicted answer states two. As the prediction does not fall within the range of the ground truth answer and is not completely off, it is considered incorrect with a partial score."
+    },
+    {
+      "Q": "How many streetlights are visible in the scene?",
+      "A": "There are two streetlights visible in the scene.",
+      "C": "There are a total of three streetlights visible in the scene.",
+      "M": "Light Recognition",
+      "start_idx": 8,
+      "end_idx": 10
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the color of the light as 'white', which matches the ground truth answer that states the light source is emitting white light. Both answers convey the same information correctly and precisely."
+    },
+    {
+      "Q": "What is the color of the light coming from the bright light source on the left side?",
+      "A": "The color of the light coming from the bright light source on the left side is white.",
+      "C": "The bright light source on the left side of the frame is emitting white light.",
+      "M": "Light Recognition",
+      "start_idx": 16,
+      "end_idx": 18
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 4,
+      "reason": "The predicted answer 'white' is general and correct in terms of identifying the color category of the light. However, it lacks the specificity provided in the ground-truth answer which specifies the light as 'cool white'. While the predicted answer is mostly correct, it doesn't capture the specific description required by the ground truth, resulting in a minor deduction."
+    },
+    {
+      "Q": "What is the color of the light emitted by the streetlights on the left side of the frame?",
+      "A": "The color of the light emitted by the streetlights on the left side of the frame is white.",
+      "C": "The light emitted by the streetlights on the left side of the frame appears to be a cool white.",
+      "M": "Light Recognition",
+      "start_idx": 24,
+      "end_idx": 26
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the glow emitted by the streetlamp is white, which does not match the ground truth answer of cool yellow. There is no partial correctness as the color description completely differs."
+    },
+    {
+      "Q": "What color is the glow emitted by the streetlamp?",
+      "A": "The glow emitted by the streetlamp is white.",
+      "C": "The glow emitted by the streetlamp is a cool yellow.",
+      "M": "Light Recognition",
+      "start_idx": 32,
+      "end_idx": 34
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states the color of the light as white, whereas the ground truth states it as yellow. Since the colors do not match, the prediction is incorrect."
+    },
+    {
+      "Q": "What is the color of the light coming from the windows on the right side of the scene?",
+      "A": "The color of the light coming from the windows on the right side of the scene is white.",
+      "C": "The color of the light coming from the windows on the right side of the scene is yellow.",
+      "M": "Light Recognition",
+      "start_idx": 48,
+      "end_idx": 50
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the light is green, which does not match the ground truth answer that describes the light as orange. Thus, the prediction is fully wrong."
+    },
+    {
+      "Q": "What color is the light coming from the streetlights?",
+      "A": "The light coming from the streetlights is green.",
+      "C": "The light coming from the streetlights appears to be orange.",
+      "M": "Light Recognition",
+      "start_idx": 56,
+      "end_idx": 58
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly recognizes that there were people walking beside or past the user in the video, which aligns with the ground truth answer indicating several instances of people walking in the area."
+    },
+    {
+      "Q": "Were there any people walking beside or past you in the video?",
+      "A": "Yes, there were people walking beside or past me in the video.",
+      "C": "Yes, there were several instances of people walking in the area.",
+      "M": "Dynamic",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer 'Yes' aligns with the ground truth intention that there was a moving vehicle. However, the predicted answer is less detailed than the ground truth answer, which is why it doesn't receive a perfect score."
+    },
+    {
+      "Q": "Were there any moving vehicles?",
+      "A": "Yes",
+      "C": "Yes, there was a moment when a car drove past me.",
+      "M": "Dynamic",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately matches the ground-truth answer in terms of meaning. Both answers indicate that there were no cars moving in the background."
+    },
+    {
+      "Q": "Did you notice any cars moving in the background?",
+      "A": "No, I did not notice any cars moving in the background.",
+      "C": "No, I did not notice any moving cars in the background.",
+      "M": "Dynamic",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer lists a specific sequence of buildings characterized by the presence of lights, while the ground truth answer describes a mix of historical and modern architectural styles. The predicted answer does not address the architectural nature of the buildings and thus lacks alignment with the ground truth answer, resulting in a low score."
+    },
+    {
+      "Q": "What sequence of buildings did I encounter from the beginning to the end?",
+      "A": "You encountered a series of buildings from the beginning to the end. The sequence was as follows:\n\n1. A building with a few lights on.\n2. A building with a large light on the roof.\n3. A building with a light on the roof.\n4. A building with a few lights on.\n5. A building with a light on the roof.\n6. A building with a light on the roof.\n7. A building with a few lights on.\n8. A building with a large light on the roof.\n9. A building with a light on the roof.\n10. A building with a light on the roof.\n11. A building with a few lights on.\n12. A building with a light on the roof.\n13. A building with a light on the roof.\n14. A building with a light on the roof.\n15. A building with a few lights on.\n16. A building with a light on the roof.\n17. A building with a light on the roof.\n18. A building with a few lights on.\n19. A building with a light on the roof.\n20. A building with a light on the roof.\n21. A building with a few lights on.\n22. A building with a light on the roof.\n23. A building with a light on the roof.\n24. A building with a light on the roof.\n25. A building with a few lights on.\n26. A building with a light on the roof.\n27. A building with a light on the roof.\n28. A building with a few lights on.\n29. A building with a light on the roof.\n30. A building with a light on the roof.\n31. A building with a few lights on.\n32. A building with a light on the roof.\n33. A building with a light on the roof.\n34. A building with a few lights on.\n35. A building with a light on the roof.\n36. A building with a light on the roof.\n37. A building with a few lights on.\n38. A building with a light on the roof.\n39. A building with a light on the roof.\n40. A building with a few lights on.\n41. A building with a light on the roof.\n42. A building with a light on the roof.\n43. A building with a few lights on.\n44. A building with a light on the roof.\n45. A building with a light on the roof.\n46. A building with a few lights on.\n47. A building with a light on the roof.\n48. A building with a light on the roof.\n49. A building with a few lights on.\n50. A building with a light on the roof.\n51. A building with a light on the roof.\n52. A building with a few lights on.\n53. A building with a light on the roof.\n54. A building with a light on the roof.\n55. A building with a few lights on.\n56. A building with a light on the roof.\n57. A building with a light on the roof.\n58. A building with a few lights on.\n59. A building with a light on the roof.\n60. A building with a light on the roof.\n61. A building with a few lights on.\n62. A building with a light on the roof.\n63. A building with a light on the roof.\n64. A building with a few lights on.\n65. A building with a light on the roof.\n66. A building with a light on the roof.\n67. A building with a few lights on.\n68. A building with a light on the roof.\n69. A building with a light on the roof.\n70. A building with a few lights on.\n71. A building with a light on the roof.\n72. A building with a light on the roof.\n73. A building with a few lights on.\n74. A building with a light on the roof.\n75. A building with a light on the roof.\n76. A building with a few lights on.\n77. A building with a light on the roof.\n78. A building with a light on the roof.\n79. A building with a few lights on.\n80. A building with a light on the roof.\n81. A building with a light on the roof.\n82. A building with a few lights on.\n83. A building with a light on the roof.\n84. A building with a light on the roof.\n85. A building with a few lights on.\n86. A building with a light on the roof.\n87. A building with a light",
+      "C": "From the beginning to the end the surrounding buildings presented as a mix of historical and more modern architecture.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer focuses on modern architecture with contemporary design characteristics, omitting the presence of historic architecture mentioned in the ground-truth answer. It partially covers the ground-truth answer but is incomplete."
+    },
+    {
+      "Q": "What types of architecture were prominent in the structures I walked past?",
+      "A": "The video shows buildings with modern architecture, characterized by clean lines and large windows. The structures appear to be residential or commercial buildings with a contemporary design.",
+      "C": "The structures were a mixture of historic and modern architecture.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer accurately captures the main point of the ground truth answer that the arrangement of parked vehicles did not change significantly as you moved down the street. However, the predicted answer includes additional details about the lighting conditions and the presence of other elements, which are not necessary for responding to the question. Despite this, the core aspect of both answers aligns well, justifying a high score."
+    },
+    {
+      "Q": "How did the arrangement of parked vehicles change as I moved down the street?",
+      "A": "The arrangement of parked vehicles remained relatively consistent as you moved down the street. There were a few cars parked along the side of the road, and their positions did not change significantly. The primary movement in the video was the vehicle you were in, which was driving down the street. The streetlights and buildings provided some consistent lighting, but the overall scene remained dark and the details of the parked vehicles were somewhat obscured due to the low light conditions.",
+      "C": "The arrangement of parked vehicles did not change the way you move, due to the fact that they were not blocking your way.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies the positioning of the traditional-style buildings as being to the right of the starting point, which matches the ground-truth answer. Both answers highlight the relative position from the starting point perspective correctly."
+    },
+    {
+      "Q": "What was the positioning of the traditional-style buildings relative to my starting point?",
+      "A": "The traditional-style buildings were positioned to the right of your starting point.",
+      "C": "The traditional-style buildings were situated mainly on you right side from the perspective of the camera.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer suggests a significant transformation in the scene regarding lighting and visibility, which contradicts the ground truth. The ground truth states that there was no significant change, only a mixture of architectural styles throughout. While there may be some detail in the prediction, it largely describes changes that the ground truth specifically notes did not happen."
+    },
+    {
+      "Q": "How did the scene transform as I progressed from the first set of buildings to the last?",
+      "A": "The scene gradually transformed as you progressed from the first set of buildings to the last. Initially, the area was dimly lit with a few streetlights and some buildings illuminated by lights. As you moved forward, the visibility improved slightly, revealing more details of the surroundings. The streetlights became more prominent, casting a brighter light on the road and the buildings. The buildings themselves became more discernible, with their windows and architectural features becoming more visible. The overall atmosphere became slightly brighter, allowing for a clearer view of the environment.",
+      "C": "The scene did not change significantly as there was a mixture of architectural styles from the beginning to the end.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer describes the road layout evolution in terms of the path becoming more curved and complex, while the ground truth focuses on a specific directional change (turning right off the main street into a darker area). The predicted answer does not address this specific change in the road layout, instead providing a more general description of the road becoming winding, which may not accurately match the ground truth."
+    },
+    {
+      "Q": "How did the road layout evolve from the start to the end of the scene?",
+      "A": "The road layout evolved from a straight path at the start to a more curved and winding path towards the end of the scene. The road initially appears straight, with no visible curves or turns. As the video progresses, the road becomes more intricate, with several turns and bends, making it appear more complex and less straight as it approaches the end of the scene.",
+      "C": "The road layout changed as you turned right, leaving the main street and entering a smaller, darker area.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer includes streetlights, which aligns with the ground-truth answer. However, it also mentions traffic lights and street signs, which are not part of the ground-truth description. While it mostly captures the main element\u2014streetlights\u2014the inclusion of additional elements reduces the accuracy of the prediction."
+    },
+    {
+      "Q": "What progression of street elements (e.g., streetlights, signs) was visible throughout the video?",
+      "A": "The progression of street elements visible throughout the video includes streetlights, traffic lights, and street signs. The streetlights provide illumination along the road, while the traffic lights regulate the flow of vehicles. Street signs are also present, indicating directions or regulations.",
+      "C": "There was a consistent presence of streetlights, that were the main source of light throughout the video.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer describes the architectural style as modern with clean lines and glass facades, whereas the ground truth describes it as a mix of classical elements with large windows and rectangular shapes. The descriptions indicate significantly different architectural styles."
+    },
+    {
+      "Q": "How would you describe the architectural style of the buildings captured in the video?",
+      "A": "The video captures a scene at night with buildings illuminated by streetlights and windows. The architectural style of the buildings appears to be modern, with clean lines and possibly glass facades. The structures have multiple stories and are likely part of a residential or mixed-use area. The lighting suggests a well-lit environment, indicating that the buildings are actively used or inhabited during the night.",
+      "C": "The buildings seem to feature a mix of classical architectural elements, characterized by large windows and rectangular shapes, hinting at a traditional style.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer does not address the specific features of the buildings, such as the 'arched windows and linear facades', mentioned in the ground-truth answer. Instead, it describes the general atmosphere and visibility conditions without highlighting specific architectural features. Therefore, it demonstrates very little alignment with the ground-truth answer."
+    },
+    {
+      "Q": "Were there any specific features of the buildings that stood out to you during your walk?",
+      "A": "The buildings in the video were quite dark and difficult to see clearly. However, some buildings had windows that were lit up, indicating that they might be occupied or have some activity inside. The overall atmosphere was quite dark and mysterious, with the streetlights providing the only source of illumination.",
+      "C": "The arched windows and linear facades stood out, contributing to the building's classical aesthetic.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer directly contradicts the ground truth answer. The ground truth states that a street sign is visible in the video, while the prediction states that no signage or landmarks were noticed."
+    },
+    {
+      "Q": "Did you notice any signage or landmarks that indicated the location of the street you were filming?",
+      "A": "No, I did not notice any signage or landmarks that indicated the location of the street.",
+      "C": "A street sign is visible in the video, though specific landmarks are not highlighted.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies that the people were walking, which is the main activity mentioned in the ground truth. The addition of \"navigating the area at night\" does not contradict the ground truth and provides extra context but does not alter the fundamental activity described. Therefore, it is mostly correct with a slight embellishment."
+    },
+    {
+      "Q": "What kind of interactions or activities were the people around you engaged in?",
+      "A": "The people around you were engaged in walking and navigating the area at night.",
+      "C": "The people around seem to be walking along the street.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies observing the surroundings and mentions the stationary red car, aligning with the ground-truth focus. However, it adds details not present in the ground truth, such as streetlights, building's windows, and pace adjustment, which are not specified in the ground-truth answer. It fails to specifically mention using the sidewalk to navigate around the obstacles, such as the stationary red car, which is an important element of the ground-truth answer."
+    },
+    {
+      "Q": "How did you navigate through the area with the presence of the stationary red car and other possible obstacles?",
+      "A": "I navigated through the area by carefully observing the surroundings, especially the stationary red car and other potential obstacles. I paid attention to the streetlights and the building's windows to ensure I was following the correct path. I made sure to avoid any sudden movements and maintained a steady pace to avoid any accidents.",
+      "C": "I navigated by walking on the sidewalk, moving around the stationary red car and other obstacles.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there are two street lights visible, which is not within the range of the ground truth that specifies about 6 street lights. Therefore, the prediction is incorrect."
+    },
+    {
+      "Q": "How many street lights are visible throughout the video?",
+      "A": "There are two street lights visible throughout the video.",
+      "C": "I can see about 6 street lights throughout the video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is 3, whereas the ground truth answer is approximately 13. Since 3 does not fall within the acceptable range close to 13, the prediction is incorrect and scores 0."
+    },
+    {
+      "Q": "How many different buildings can be seen in the entire video sequence?",
+      "A": "3",
+      "C": "There are approximately 13 different buildings visible.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The ground truth states that there are 3 cars visible, while the predicted answer states 2 cars. The prediction is close but not exact, which results in a partially correct answer."
+    },
+    {
+      "Q": "In total, how many cars are visible at different points in the video?",
+      "A": "There are 2 cars visible at different points in the video.",
+      "C": "I can count 3 cars in different frames.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer of 1 matches the ground-truth answer, which is also 1 street sign. Since both are equal, the prediction is fully correct."
+    },
+    {
+      "Q": "How many distinct street or building signs can you count in the entire video?",
+      "A": "1",
+      "C": "I notice 1 street sign in the video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer states that there are 10 illuminated windows, whereas the ground truth indicates there are about 30. The prediction is significantly off from the ground truth count."
+    },
+    {
+      "Q": "How many different windows are illuminated in the buildings across the video?",
+      "A": "In the video, I observe that the buildings across the street have a total of 10 different windows illuminated. This count includes windows on both the ground floor and the upper floors of the buildings.",
+      "C": "There are about 30 illuminated windows visible across the buildings.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer counted five doors, whereas the ground truth states there are around three. The prediction does not fall within the interpretation of \"around 3.\""
+    },
+    {
+      "Q": "Can you count the total number of doors visible in the buildings throughout the video?",
+      "A": "The video shows two buildings with a total of five visible doors.",
+      "C": "I can see around 3 doors in the video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that two street intersections are visible, whereas the ground-truth answer specifies only one intersection is visible. The predicted number is outside the range specified by the ground truth, making it incorrect."
+    },
+    {
+      "Q": "How many street intersections are visible as the camera moves through the video?",
+      "A": "Two street intersections are visible as the camera moves through the video.",
+      "C": "There is 1 visible street intersection.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer of \"2\" matches the ground truth answer which states there are 2 separate streets captured. Therefore, the prediction is fully correct."
+    },
+    {
+      "Q": "How many separate streets are captured as the video progresses?",
+      "A": "2",
+      "C": "It appears there are 2 separate streets captured as the video progresses.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'To the right' is incorrect because the ground truth answer states to 'Continue straight past the building'. The directions provided in the predicted answer do not match the required action according to the ground truth."
+    },
+    {
+      "Q": "After passing the building with illuminated windows, where should I turn to continue my route?",
+      "A": "To the right",
+      "C": "Continue straight past the building.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly provides the instructions to continue straight ahead after passing the row of parked vehicles, which matches the ground truth answer."
+    },
+    {
+      "Q": "Once I pass the row of parked vehicles, how do I reach the next street?",
+      "A": "Once you pass the row of parked vehicles, continue straight ahead on the street. You will eventually reach the next street.",
+      "C": "Continue walking straight ahead.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer provides similar landmarks but differs in their orientation relative to the pathway. The ground truth specifies the building on the right, whereas the predicted answer mentions the building on the left with an added streetlight on the right. The answer is partially correct as it guides using similar landmarks, but the directions are not fully aligned with the ground truth."
+    },
+    {
+      "Q": "If I want to find the fastest way back to the starting point, what landmarks should I look for?",
+      "A": "In the dark night, look for the lighted building on the left and the streetlight on the right. These landmarks will guide you back to the starting point more easily.",
+      "C": "Look for the path with the illuminated building on your right.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately matches the ground truth answer in terms of direction and action. Both specify to continue or head straight ahead, which is the key component for reaching the destination after the right turn past the bright street lamps. The predicted answer is complete and precise in its alignment with the ground truth."
+    },
+    {
+      "Q": "After making a right turn past the bright street lamps, where should I head next to reach my destination?",
+      "A": "After making a right turn past the bright street lamps, you should head straight ahead to reach your destination.",
+      "C": "Continue straight along the path.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer includes an additional instruction to turn left into the alley after continuing straight, which is not mentioned in the ground truth. The main part of following the path straight is correct, but the additional step of turning left is inaccurate according to the ground truth."
+    },
+    {
+      "Q": "To get to a nearby alley, what sequence should I follow after passing the red car parked on the street?",
+      "A": "After passing the red car parked on the street, you should continue walking straight ahead and then turn left into the alley.",
+      "C": "Continue straight following the path after passing the red car.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground-truth answer, correctly identifying that there is no visible text on the buildings."
+    },
+    {
+      "Q": "Can you identify any visible text on the buildings to determine their purpose or affiliation?",
+      "A": "No, I cannot identify any visible text on the buildings to determine their purpose or affiliation.",
+      "C": "There is no visible text on the buildings.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that no text is visible, while the ground truth answer specifies that a sign with the text 'OCatte StreetO' is visible. The predictions contradict each other, indicating an incorrect prediction."
+    },
+    {
+      "Q": "What text appears on any visible signs, and what might it indicate about the location?",
+      "A": "No text is visible on any signs in the provided frames.",
+      "C": "There is a sing that says OCatte StreetO, indicating the exact location.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer states that there is no text on any vehicles, which contradicts the ground-truth answer that confirms there are registration plates on the vehicles. Therefore, the prediction is mostly incorrect except for the aspect unrelated to registration plates."
+    },
+    {
+      "Q": "Is there text on any vehicles that suggests their use or ownership?",
+      "A": "No, there is no text on any vehicles that suggests their use or ownership.",
+      "C": "There are registration plates on the vehicles. That is the only indication of text you can spot on them.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer mentions that text appears sporadically throughout the video with no consistent pattern and is often located near the bottom edge, which significantly differs from the ground truth answer that states the text appears clearly only once on a street sign. This indicates a misunderstanding or incorrect observation of the main feature of the text appearance. Since the location and frequency of the text appearance are fundamental aspects of the question, the prediction is largely incorrect."
+    },
+    {
+      "Q": "How often does the text appear throughout the video, and where is it located?",
+      "A": "The text appears sporadically throughout the video, with no consistent pattern. It is located in the lower part of the screen, often near the bottom edge, and its appearance is intermittent.",
+      "C": "There is one time where text appears clearly in the video. It is located on the street sign that identifies the street.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'No' is incorrect because the ground-truth answer indicates that there is a visible sign with text that specifies the street name. Therefore, the predicted denial of a sign's existence is fully wrong."
+    },
+    {
+      "Q": "Can you see any signs that indicate what street I'm on?",
+      "A": "No",
+      "C": "Yes, there is a sign that indicates the street you are on. The text on it says OCatte StreetO, suggesting your exact location.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'No' correctly indicates that there is no text suggesting a specific office or company presence, aligning with the ground truth answer 'There is no such text visible.'"
+    },
+    {
+      "Q": "Is there any text that suggests a specific office or company presence?",
+      "A": "No",
+      "C": "There is no such text visible.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that streetlights turned off, while the ground truth explicitly states that no streetlights turned off. Since the prediction contradicts the ground truth, it is incorrect."
+    },
+    {
+      "Q": "Did any streetlights turn off as I walked along the road?",
+      "A": "Yes, some streetlights turned off as you walked along the road.",
+      "C": "No streetlights turned off as you walked.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer suggests a frequency (approximately once every 3 seconds), which does not correlate directly to a singular, total count. The ground truth specifies a singular event (1 time), while the prediction implies multiple events over a period, indicating a mismatch in the evaluation of the event's occurrence."
+    },
+    {
+      "Q": "How often did vehicle headlights illuminate the area in my direction?",
+      "A": "The vehicle headlights illuminated the area in your direction approximately once every 3 seconds.",
+      "C": "Vehicle headlights illuminated the area in your direction 1 time.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there were changes in building brightness indicating lights turned on, while the ground truth contradicts this by stating there were no noticeable changes in brightness."
+    },
+    {
+      "Q": "Did the brightness from any buildings change, suggesting interior lights turning on or off?",
+      "A": "Yes, the brightness from the buildings suggests that interior lights have been turned on.",
+      "C": "There were no noticeable changes in the brightness from building interiors.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer indicates that it appeared to get darker as the moon became obscured, which contradicts the ground truth answer stating that the overall brightness remained consistent and the moon did not appear to become obscured. Therefore, the prediction is incorrect."
+    },
+    {
+      "Q": "Was there a point where it appeared to get darker, perhaps as the moon became obscured?",
+      "A": "Yes, it appeared to get darker as the moon became obscured.",
+      "C": "The overall brightness remained consistent; the moon did not appear to become obscured.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The ground truth indicates that the brightness was steadily influenced by the streetlights without significant variation, while the predicted answer suggests multiple changes in brightness due to the streetlights' positions. The predicted answer contradicts the ground truth rather than aligns with it."
+    },
+    {
+      "Q": "How frequently did the changing positions of streetlights affect the brightness of the path I was on?",
+      "A": "The changing positions of the streetlights affected the brightness of the path you were on multiple times throughout the video.",
+      "C": "The brightness of the path was steadily influenced by the streetlights, with no significant variation due to their positions.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly states that the moonlight did not provide more illumination than the streetlights, which aligns with the ground truth that the streetlights consistently provided more illumination."
+    },
+    {
+      "Q": "At any point, did the moonlight seem to provide more illumination than the streetlights?",
+      "A": "No, the moonlight did not seem to provide more illumination than the streetlights at any point.",
+      "C": "The streetlights consistently provided more illumination than the moonlight.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies that there are instances when the taillights added temporary brightness, aligning with the ground truth. However, it fails to specify the exact number of instances, which is 1 according to the ground truth. While the general event is acknowledged, the lack of specificity regarding the quantity results in a deduction."
+    },
+    {
+      "Q": "Were there instances when the taillights of a car moving away added temporary brightness?",
+      "A": "Yes, there were instances when the taillights of a car moving away added temporary brightness.",
+      "C": "Yes, there was 1 instance when the taillights of cars moving away added temporary brightness.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that three cars drove past, while the ground-truth answer specifies that only one car drove past. The prediction does not match the ground truth and thus is considered incorrect."
+    },
+    {
+      "Q": "How many cars drove past you as you were walking?",
+      "A": "Three cars drove past you as you were walking.",
+      "C": "Only 1 car drove past me as I was walking.",
+      "M": "Dynamic Counting",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that only one person was spotted, which does not fall within the ground truth range of 20-22 people. Therefore, the prediction is completely incorrect."
+    },
+    {
+      "Q": "How many people did you spot throughout the video?",
+      "A": "I spotted one person throughout the video.",
+      "C": "I counted between 20-22 people throughout the entire video.",
+      "M": "Dynamic Counting",
+      "start_idx": 0,
+      "end_idx": 62
+    }
+  ]
+]

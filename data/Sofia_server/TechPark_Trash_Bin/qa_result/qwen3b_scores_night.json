@@ -1,0 +1,902 @@
+[
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'No' does not match the ground truth answer 'There are five distinct road markings'. The prediction fails to provide a numerical count of road markings as required by the question."
+    },
+    {
+      "Q": "Can you count the number of road markings that appear on the road?",
+      "A": "No",
+      "C": "There are five distinct road markings.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer of 'Three' falls within the range specified by the ground truth answer 'More than two less than seven street lamps are visible'. Therefore, the prediction is correct."
+    },
+    {
+      "Q": "How many street lamps are visible throughout the entire video?",
+      "A": "Three",
+      "C": "More than two less than seven street lamps are visible.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer of 2 trash cans is omitted by 1 from the ground truth of 3 trash cans. The prediction is close but not fully correct, receiving a score of 3 for partial correctness."
+    },
+    {
+      "Q": "Count the total number of trash cans encountered in the video.",
+      "A": "2",
+      "C": "3 trash cans are encountered.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'Two' matches the ground truth answer which states 'Two portable toilets can be seen along the route.' Both answers indicate the same quantity, fulfilling the requirement for counting correctness."
+    },
+    {
+      "Q": "How many portable toilets can be seen along the route?",
+      "A": "Two",
+      "C": "Two portable toilets can be seen along the route.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is 2, which is vastly different from the ground truth answer stating that more than thirty lanes are visible. Therefore, the prediction does not fall within the correct range and is considered incorrect."
+    },
+    {
+      "Q": "Count the total pieces of road lanes (how many segments) visible on the street.",
+      "A": "2",
+      "C": "More than thirty lanes are visible on the street.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is 1, while the ground truth answer is 2. Since the prediction does not match the ground truth and does not fall within a range that encompasses all possibilities of the ground truth answer, it is evaluated as incorrect."
+    },
+    {
+      "Q": "How many buildings do you pass by during the video?",
+      "A": "1",
+      "C": "You pass by two buildings during the video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is 1, whereas the ground-truth answer is 7; this does not match and falls outside any reasonable counting range for correctness. The prediction is therefore incorrect."
+    },
+    {
+      "Q": "How many manhole covers are shown in the video?",
+      "A": "1",
+      "C": "7",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there are 2 intersections, while the ground truth indicates there is only 1 intersection. The predicted answer does not fall within the range provided by the ground truth, therefore it is fully incorrect."
+    },
+    {
+      "Q": "How many intersections are crossed during the video?",
+      "A": "2",
+      "C": "You cross one intersection during the video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer states that the streetlights remained on throughout the video, which is consistent with the ground truth answer that states the streetlights did not turn off during the video. Both answers convey the same meaning, indicating the prediction is fully correct."
+    },
+    {
+      "Q": "Did the streetlights turn off at any point during the video?",
+      "A": "No, the streetlights remained on throughout the video.",
+      "C": "The streetlights did not turn off during the video.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the intensity of the streetlights changed, while the ground truth answer states that the intensity remained consistent. These are contradictory statements, so the prediction is incorrect."
+    },
+    {
+      "Q": "Did the intensity of the streetlights change as I approached them?",
+      "A": "Yes, the intensity of the streetlights changed as you approached them.",
+      "C": "The intensity of the streetlights appeared consistent as you approached them.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the illuminated area expanded, while the ground-truth answer indicates that the illuminated area became smaller towards the end of the video, implying a contraction rather than an expansion."
+    },
+    {
+      "Q": "When I moved forward, did the illuminated area on the ground expand or contract?",
+      "A": "expand",
+      "C": "The illuminated area was large in the beginning and became smaller at the end of the video.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that dynamic sources of light like car headlights appeared in the video, which is directly contrary to the ground truth answer stating there were no such sources of light. Therefore, the prediction is fully incorrect."
+    },
+    {
+      "Q": "Did any dynamic sources of light (like a car's headlights) appear in the video?",
+      "A": "Yes, dynamic sources of light like a car's headlights appeared in the video.",
+      "C": "No other sources of light, like car headlights, appeared in the video.",
+      "M": "Light Recognition",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer \"street light\" is synonymous with the ground truth answer \"streetlights\", accurately identifying the primary light source illuminating the street. Therefore, the prediction is fully correct."
+    },
+    {
+      "Q": "What is the primary light source type illuminating the street?",
+      "A": "street light",
+      "C": "The primary light source illuminating the street is streetlights.",
+      "M": "Light Recognition",
+      "start_idx": 6,
+      "end_idx": 8
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately identifies the colors of light visible on the left side as red and blue, which matches the ground truth answer. The mention of them being company logos is supplementary detail that does not impact the correctness of the prediction regarding the colors."
+    },
+    {
+      "Q": "What colors of light are visible on the left side, standing out against the dark background?",
+      "A": "red and blue",
+      "C": "On the left side, against the dark background, the colors of light visible are red and blue and seem to be company logos.",
+      "M": "Light Recognition",
+      "start_idx": 12,
+      "end_idx": 14
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer correctly identifies the shadow as being in the shape of a person. However, the reasoning behind the distinct outline is incorrect. The ground truth explains that the shadow's distinct elongated outline is due to artificial lighting, whereas the predicted answer incorrectly attributes it to the person recording the video standing in front of the camera. Hence, the prediction is partially correct."
+    },
+    {
+      "Q": "What is the shape of the shadow visible on the ground, and what likely causes its distinct outline?",
+      "A": "The shadow visible on the ground is in the shape of a person. The distinct outline of the shadow is likely caused by the person recording the video standing in front of the camera, casting their shadow on the ground.",
+      "C": "The shape of the shadow visible on the ground is humanoid and elongated. This distinct outline is likely caused by artificial lighting, such as a streetlamp, which casts a long shadow due to the angle and position of the light source.",
+      "M": "Light Recognition",
+      "start_idx": 18,
+      "end_idx": 20
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer states the direction of the shadows as 'towards the right side of the frame,' while the ground-truth specifies that the shadows extend 'away from the street lamp, primarily in a direction toward the subject and slightly downward in the images.' The predicted answer does not accurately capture the more detailed and specific directional description provided in the ground truth. However, both mention directionality away from the light source, so partial credit is given."
+    },
+    {
+      "Q": "What is the primary direction of the shadows cast by the bins relative to the street lamp?",
+      "A": "The primary direction of the shadows cast by the bins relative to the street lamp is towards the right side of the frame.",
+      "C": "The shadows cast by the bins are extending away from the street lamp, primarily in a direction toward the subject and slightly downward in the images.",
+      "M": "Light Recognition",
+      "start_idx": 30,
+      "end_idx": 32
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'The color of the light emitted by the streetlights visible in the images is white.' matches exactly with the ground truth answer. Therefore, it is considered fully correct."
+    },
+    {
+      "Q": "What is the color of the light emitted by the streetlights visible in the images?",
+      "A": "The color of the light emitted by the streetlights visible in the images is white.",
+      "C": "The light emitted by the streetlights visible in the images is white.",
+      "M": "Light Recognition",
+      "start_idx": 36,
+      "end_idx": 38
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'You can turn right' is completely opposite to the ground truth answer 'You can either continue forward or make a left turn.' There is no overlap between the predicted and the ground-truth directions."
+    },
+    {
+      "Q": "As I start on the path, what option do I have when I see road markings indicating the direction?",
+      "A": "You can turn right.",
+      "C": "You can either continue forward or make a left turn.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that a trash bin is encountered on the right side, while the ground truth specifies two temporary blue toilets. These are entirely different landmarks, leading to a score of 0 as the prediction does not align with the ground truth."
+    },
+    {
+      "Q": "What landmark do I encounter on my right side shortly after starting on the straight path?",
+      "A": "You encounter a trash bin on your right side shortly after starting on the straight path.",
+      "C": "You encounter two temporary toilets which are blue on your right side.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer \"The surface of the path becomes cobblestone\" aligns with the ground truth answer \"The surface transitions from asphalt to cobblestones.\" Both indicate a transition to cobblestones, accurately describing the change in the surface material at the intersection."
+    },
+    {
+      "Q": "When I reach an intersection, what happens to the surface of the path?",
+      "A": "The surface of the path becomes cobblestone.",
+      "C": "The surface transitions from asphalt to cobblestones.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'Look for the cafe sign' does not align with the ground truth answer which provides a specific path: 'Go straight until you meet the turn with 3 trash cans, then turn left'. The predicted answer lacks the detailed navigation cues specified in the ground truth answer."
+    },
+    {
+      "Q": "From the beginning position in the video, how can you find the Cafe as soon as possible?",
+      "A": "Look for the cafe sign.",
+      "C": "Go straight until you meet the turn with 3 trash cans, then turn left.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is \"Right turn\", whereas the ground truth answer specifies you should make a U-turn and go in the opposite direction. These are completely different directional choices."
+    },
+    {
+      "Q": "When I reach the cobblestone intersection, what is my immediate directional choice?",
+      "A": "Right turn.",
+      "C": "You make a U-turn and go in the opposite direction.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer 'Go straight' captures the essential action of the ground truth answer, which is to move in the original direction. However, it lacks the completeness of 'continue in the original direction,' which provides additional clarity, thus slightly reducing the score."
+    },
+    {
+      "Q": "From the beginning position in the video, how can you find the incubator as soon as possible?",
+      "A": "Go straight.",
+      "C": "Go straight and continue in the original direction.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there are no visible landmarks or notable buildings, whereas the ground-truth answer describes old and possibly abandoned buildings indicating historical architecture. The predictions are contradictory, making the predicted answer incorrect."
+    },
+    {
+      "Q": "Are there any visible landmarks or notable buildings that give insight into the local environment?",
+      "A": "No, there are no visible landmarks or notable buildings in the image.",
+      "C": "The buildings appear old and possibly abandoned, indicating an area with historical architecture that might be in decline or undergoing renovation.",
+      "M": "Object Recognition",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer acknowledges the road as paved, which partially matches the ground truth. However, it does not mention the transition to cobblestones and instead introduces irrelevant details about visibility and obstacles due to lighting conditions, which are not part of the ground truth answer."
+    },
+    {
+      "Q": "What kind of surface are you walking on, and how might it affect your journey?",
+      "A": "The surface you are walking on is a paved road. The smooth and even surface of the road will make your journey more comfortable and steady. However, the darkness of the night might make it harder to see obstacles and other vehicles, increasing the risk of accidents. The lighting conditions could also affect your visibility and make it more challenging to navigate.",
+      "C": "The road is paved and switches to cobblestones. The cobblestones might make the journey slightly uneven but add a rustic charm to the walk.",
+      "M": "Object Recognition",
+      "start_idx": 3,
+      "end_idx": 5
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer \"trash cans\" is only partially correct as it only identifies one of the items among the \"blue stuffs\" listed in the ground truth answer. The ground truth also includes a temporary toilet and a road sign, which are not mentioned in the prediction. Therefore, it partially matches the ground truth, but is not entirely correct."
+    },
+    {
+      "Q": "What are the blue stuffs in the video?",
+      "A": "trash cans",
+      "C": "The blue stuffs include the temporary toilet, trash bin, and a road sign showing turn left or go straight for cars and a passageway for pedestrians.",
+      "M": "Object Recognition",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer mentions the sidewalk has a textured surface, which is a general observation and partially aligns with the ground truth of rectangular paving stones, as these stones inherently create a textured surface. However, the prediction lacks the specific detail about the paving stones that the ground truth provides."
+    },
+    {
+      "Q": "What is the texture of the sidewalk on the right side of the road?",
+      "A": "The sidewalk on the right side of the road has a textured surface.",
+      "C": "The texture of the sidewalk on the right side of the road consists of rectangular paving stones.",
+      "M": "Object Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'trees' does not match any of the objects mentioned in the ground truth answer, which includes portable toilets, a bush, a road sign, and some trash bins. Therefore, the prediction is completely incorrect."
+    },
+    {
+      "Q": "What object is located on the right side of the road?",
+      "A": "trees",
+      "C": "On the right side of the road, there are portable toilets (porta-potty), a bush, a road sign, and some trash bins.",
+      "M": "Object Recognition",
+      "start_idx": 6,
+      "end_idx": 8
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer \"Arrow\" is partially correct because it does identify the main feature painted in the lane. However, it lacks detail compared to the ground truth, which specifies the directions indicated by the arrow (left turn and straight forward). Therefore, it only partially matches the ground truth."
+    },
+    {
+      "Q": "What's painted in the right lane of the road?",
+      "A": "Arrow",
+      "C": "In the right lane of the road, there is a painted arrow indicating both a left turn and straight forward direction.",
+      "M": "Object Recognition",
+      "start_idx": 12,
+      "end_idx": 14
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer only includes the color blue, while the ground truth specifies additional details: the toilets have a white top and yellow text. Therefore, the prediction is only partially correct."
+    },
+    {
+      "Q": "What are the colors of the portable toilets?",
+      "A": "The colors of the portable toilets are blue.",
+      "C": "The portable toilets are blue with a white top and yellow text on it.",
+      "M": "Object Recognition",
+      "start_idx": 18,
+      "end_idx": 20
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'The ground in the scene is paved with cobblestones.' accurately describes the type of paving as 'cobblestone', which is consistent with the ground truth answer. The terminology used in the prediction matches that of the ground-truth, reflecting full correctness."
+    },
+    {
+      "Q": "What type of paving is used on the ground in the scene?",
+      "A": "The ground in the scene is paved with cobblestones.",
+      "C": "The paving used on the ground in the scene is cobblestone.",
+      "M": "Object Recognition",
+      "start_idx": 24,
+      "end_idx": 26
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer \"brick\" does not match the ground truth answer \"stone or concrete blocks\". Since the materials mentioned are distinct and there is no overlap, the prediction is fully incorrect."
+    },
+    {
+      "Q": "What type of material is the building made of?",
+      "A": "brick",
+      "C": "The building is made of stone or concrete blocks.",
+      "M": "Object Recognition",
+      "start_idx": 30,
+      "end_idx": 32
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the colors on the road sign are not discernible due to low lighting conditions, whereas the ground truth clearly states the colors as brown for Cafe and light yellow for incubator. This discrepancy indicates that the predicted answer is incorrect."
+    },
+    {
+      "Q": "What colors are shown on the road sign?",
+      "A": "The road sign in the video is not clearly visible due to the low lighting conditions. The specific colors on the sign are not discernible.",
+      "C": "It shows brown for Cafe and light yellow for incubator.",
+      "M": "Object Recognition",
+      "start_idx": 42,
+      "end_idx": 44
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer only mentions part of the ground-truth answer. While it correctly identifies the blue portable toilet, it fails to mention the large, old brick building, which is also part of the ground-truth description."
+    },
+    {
+      "Q": "What was the first significant structure on the right side of the road?",
+      "A": "The first significant structure on the right side of the road was a blue portable toilet.",
+      "C": "The first significant structure on the right side of the road was a large, old brick building and a blue toilet.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'A yellow trash bin' does not match the ground truth answer, which states 'there was a road sign next to it'. The objects mentioned are different, leading to a score of 0."
+    },
+    {
+      "Q": "After passing the blue portable toilet, what did I see next to it?",
+      "A": "A yellow trash bin.",
+      "C": "After passing the blue portable toilet, there was a road sign next to it.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer precisely matches the ground truth answer in terms of the objects mentioned (blue and yellow trash bins) and their position near the building when the surface changed."
+    },
+    {
+      "Q": "What objects were positioned near the building when the surface changed?",
+      "A": "The objects positioned near the building when the surface changed were the blue and yellow trash bins.",
+      "C": "Near the building when the surface changed, blue and yellow trash bins were positioned.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states \"No sign\", which directly contradicts the ground truth answer indicating a \"pedestrian crossing sign\" was passed. Therefore, the prediction is fully incorrect."
+    },
+    {
+      "Q": "Which type of public signage did I pass by after the cobblestone area?",
+      "A": "No sign.",
+      "C": "After the cobblestone area, I passed by a pedestrian crossing sign.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer mentions 'trash cans' near the pedestrian zones, which does not match the ground-truth answer of 'landscaped grassy areas and trees'. The predicted elements are completely different from the ones described in the ground truth."
+    },
+    {
+      "Q": "Before the road curved to the left, what was present near the pedestrian zones?",
+      "A": "There were trash cans near the pedestrian zones before the road curved to the left.",
+      "C": "Before the road curved to the left, landscaped grassy areas and trees were present near the pedestrian zones.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there was a white pedestrian crossing sign on the road, while the ground truth answer specifies a curve to the left with cobblestones continuing. These are two different observations about the road design at the end of the sequence, with no overlapping elements, leading to the prediction being incorrect."
+    },
+    {
+      "Q": "What was the notable change in the road design at the very end of the sequence?",
+      "A": "The notable change in the road design at the very end of the sequence was the appearance of a white pedestrian crossing sign on the road.",
+      "C": "The notable change in the road design at the very end of the sequence was a curve to the left with cobblestones continuing.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer, 'The road continues ahead,' correctly identifies that the road is continuing, which matches the ground truth's indication that the road continued straight. However, the predicted answer lacks the detail of being 'flanked by trees,' which is present in the ground truth. Although this omission impacts the completeness of the prediction, it still partially captures the essence of the continuation of the road."
+    },
+    {
+      "Q": "As the scene concluded, what was indicated about the continuation of the road?",
+      "A": "The road continues ahead.",
+      "C": "As the scene concluded, it was indicated that the road continued straight, flanked by trees.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer states that the blue object is to the right of the road arrow, which is correct in terms of lateral position. However, the predicted answer lacks the information about the blue object being positioned straight ahead along the road and slightly beyond the road arrow, as described in the ground truth. Therefore, while the lateral position is mentioned, the full spatial description is incomplete."
+    },
+    {
+      "Q": "How would you describe the position of the blue object relative to the road arrow?",
+      "A": "The blue object is located to the right of the road arrow.",
+      "C": "The blue object is positioned straight ahead along the road, slightly to the right side from my perspective, just beyond the road arrow.",
+      "M": "Spatial Reasoning",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'the streetlight on the left side of the road' does not match the ground truth answer, which describes a 'green area with trees and a sidewalk.' The prediction provides a completely different feature opposite the blue structure."
+    },
+    {
+      "Q": "What feature is directly opposite the blue structure across the road?",
+      "A": "The feature directly opposite the blue structure across the road is the streetlight on the left side of the road.",
+      "C": "Directly opposite the blue structure across the road, there is a green area with trees and a sidewalk.",
+      "M": "Spatial Reasoning",
+      "start_idx": 6,
+      "end_idx": 8
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately states that you will reach the blue portable toilets first when walking straight down the road, matching the ground truth answer."
+    },
+    {
+      "Q": "If you continue walking straight down the road, which will you reach first: the road sign or the blue portable toilets?",
+      "A": "You will reach the blue portable toilets first if you continue walking straight down the road.",
+      "C": "If you continue walking straight down the road, you will reach the blue portable toilets first.",
+      "M": "Spatial Reasoning",
+      "start_idx": 12,
+      "end_idx": 14
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer specifies a \"trash can\" to the left of the building, whereas the ground truth states there is a \"large tree\". The objects mentioned do not match, making the prediction incorrect."
+    },
+    {
+      "Q": "What object do you find to the left of the building?",
+      "A": "trash can",
+      "C": "To the left of the building, there is a large tree.",
+      "M": "Spatial Reasoning",
+      "start_idx": 24,
+      "end_idx": 26
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'blue bin' matches exactly with the key part of the ground truth answer 'A blue bin is located directly to the right of the yellow bin'."
+    },
+    {
+      "Q": "What object is located directly to the right of the yellow bin?",
+      "A": "blue bin",
+      "C": "A blue bin is located directly to the right of the yellow bin.",
+      "M": "Spatial Reasoning",
+      "start_idx": 30,
+      "end_idx": 32
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that a street sign is located directly on the right side of the paved path, whereas the ground-truth answer mentions a row of trees and a grassy area. There is no overlap or partial correctness, making the prediction fully incorrect."
+    },
+    {
+      "Q": "What is located directly on the right side of the paved path?",
+      "A": "A street sign is located directly on the right side of the paved path.",
+      "C": "Directly on the right side of the paved path, there is a row of trees and a grassy area.",
+      "M": "Spatial Reasoning",
+      "start_idx": 36,
+      "end_idx": 38
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer of \"two steps away\" does not match the ground truth answer of \"about one step away.\" Since the predicted number does not fall within the range of the ground truth, the prediction is considered mostly incorrect."
+    },
+    {
+      "Q": "How many steps away are the sidewalk tiles in front of you?",
+      "A": "Two steps away.",
+      "C": "From your perspective, the sidewalk tiles directly in front of you appear to be about one step away.",
+      "M": "Spatial Reasoning",
+      "start_idx": 42,
+      "end_idx": 44
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer mentions that the blue object is to the right of the road arrow, which aligns with one part of the ground truth answer. However, it misses important details such as the object being straight ahead along the road and just beyond the road arrow. The predicted answer is partially correct but lacks full accuracy."
+    },
+    {
+      "Q": "How would you describe the position of the blue object relative to the road arrow?",
+      "A": "The blue object is to the right of the road arrow.",
+      "C": "The blue object is positioned straight ahead along the road, slightly to the right side from my perspective, just beyond the road arrow.",
+      "M": "Spatial Reasoning",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer identifies a streetlight as the feature directly opposite the blue structure, while the ground truth specifies a green area with trees and a sidewalk. There is no overlap or similarity between the two answers."
+    },
+    {
+      "Q": "What feature is directly opposite the blue structure across the road?",
+      "A": "The feature directly opposite the blue structure across the road is the streetlight on the left side of the road.",
+      "C": "Directly opposite the blue structure across the road, there is a green area with trees and a sidewalk.",
+      "M": "Spatial Reasoning",
+      "start_idx": 6,
+      "end_idx": 8
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly states that the blue portable toilets will be reached first, matching the ground-truth answer."
+    },
+    {
+      "Q": "If you continue walking straight down the road, which will you reach first: the road sign or the blue portable toilets?",
+      "A": "The blue portable toilets will be reached first if you continue walking straight down the road.",
+      "C": "If you continue walking straight down the road, you will reach the blue portable toilets first.",
+      "M": "Spatial Reasoning",
+      "start_idx": 12,
+      "end_idx": 14
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'trash bin' does not match the ground truth answer 'a large tree'. Therefore, the prediction is completely incorrect."
+    },
+    {
+      "Q": "What object do you find to the left of the building?",
+      "A": "trash bin",
+      "C": "To the left of the building, there is a large tree.",
+      "M": "Spatial Reasoning",
+      "start_idx": 24,
+      "end_idx": 26
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'blue bin' matches the ground truth answer 'A blue bin is located directly to the right of the yellow bin'. The key information of the object being a 'blue bin' is correctly identified."
+    },
+    {
+      "Q": "What object is located directly to the right of the yellow bin?",
+      "A": "blue bin",
+      "C": "A blue bin is located directly to the right of the yellow bin.",
+      "M": "Spatial Reasoning",
+      "start_idx": 30,
+      "end_idx": 32
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer \"signboard\" does not match the ground-truth answer \"a row of trees and a grassy area\", which accurately describes what is located directly on the right side of the paved path. Therefore, the prediction is incorrect and scores a 0."
+    },
+    {
+      "Q": "What is located directly on the right side of the paved path?",
+      "A": "signboard",
+      "C": "Directly on the right side of the paved path, there is a row of trees and a grassy area.",
+      "M": "Spatial Reasoning",
+      "start_idx": 36,
+      "end_idx": 38
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer '10' does not fall within the range of the ground truth answer, which indicates that the sidewalk tiles are about 'one step away'. The prediction is significantly different from the ground truth, hence it is considered fully incorrect."
+    },
+    {
+      "Q": "How many steps away are the sidewalk tiles in front of you?",
+      "A": "10",
+      "C": "From your perspective, the sidewalk tiles directly in front of you appear to be about one step away.",
+      "M": "Spatial Reasoning",
+      "start_idx": 42,
+      "end_idx": 44
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer talks about a blue sign indicating a restroom facility, while the ground truth mentions signs for pedestrian crossing and directions to a caf\u00e9 or incubator, suggesting pedestrian-friendly and commercial zones. The predictions are not aligned with the ground truth in terms of content or implications regarding the surroundings."
+    },
+    {
+      "Q": "Do you notice any signage that provides guidance or information, and what does this suggest about the surroundings?",
+      "A": "Yes, there is a blue sign on the sidewalk that appears to indicate a restroom facility. This suggests that the surroundings include public restrooms available for the public to use.",
+      "C": "There are signs indicating a pedestrian crossing and directions to a caf\u00e9 or incubator. This suggests a mixture of pedestrian-friendly areas and commercial zones.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer describes symbols that indicate left and right turns, while the ground truth specifies arrows indicating directions of going straight or turning left. The predicted answer partially overlaps with the ground truth in terms of direction indications but doesn't mention the option to go straight, leading to a partial mismatch."
+    },
+    {
+      "Q": "As you're walking, what kind of symbols can you observe on the road surface, and what might they indicate?",
+      "A": "The symbols observed on the road surface are arrows pointing to the left and right. These arrows indicate the direction of traffic flow and the need for drivers to take a left or right turn accordingly.",
+      "C": "The road has arrow symbols indicating directions. They suggest that vehicles can go straight or turn left.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately reflects the ground-truth by indicating that the \"EKOPAK\" sign on the blue container suggests recycling or separating different types of waste in the area. Both answers mention the involvement of recyclable materials and waste management practices."
+    },
+    {
+      "Q": "What indication does the \"EKOPAK\" sign on the blue container provide about waste management practices in the area?",
+      "A": "The \"EKOPAK\" sign on the blue container indicates that the waste management practices in the area include recycling or separating different types of waste, as the container is likely designed for collecting recyclable materials.",
+      "C": "The \"EKOPAK\" sign on the blue container suggests that the area supports waste recycling and management, likely indicating a system for collecting recyclable materials such as paper and cardboard.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately identifies that the \"cafe\" sign serves as a navigational aid by indicating the presence of a cafe nearby and suggests its use as a landmark. Both the ground truth and the predicted answer highlight the cafe as a place for refreshments or a break. The additional context about urban or suburban surroundings in the predicted answer does not detract from the correctness of fulfilling the core question requirement."
+    },
+    {
+      "Q": "How does the appearance of the word \"cafe\" on the sign guide you in navigating the environment?",
+      "A": "The word \"cafe\" on the sign indicates the presence of a caf\u00e9 nearby, which can be a helpful landmark for navigation. It suggests a place where people might gather for refreshments, which can be a focal point in the area. The presence of the sign also implies that the surroundings might be urban or suburban, as cafes are typically found in these areas.",
+      "C": "The \"cafe\" sign serves as a navigational aid, suggesting that there is a cafe nearby in the direction indicated by the sign. It can help you locate a place for refreshments or a break.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer accurately describes the implication of the label 'EKOPAK' presence, which is related to environmental sustainability and waste management. However, it incorrectly counts the occurrence of the label as two times instead of three. This discrepancy affects the overall correctness, leading to a partial score."
+    },
+    {
+      "Q": "How many times can you see the label \"EKOPAK\" in the frames and what does its presence imply about the area?",
+      "A": "In the frames, the label \"EKOPAK\" is visible twice. Its presence implies that the area might have specific recycling guidelines or regulations, likely related to waste management or environmental sustainability efforts.",
+      "C": "The label \"EKOPAK\" appears 3 times on recycling bins. Its presence implies a commitment to environmental sustainability and waste recycling efforts in the area.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer does not match the ground truth answer. The ground truth specifically states that the text means 'incubator' and suggests you are in a business park, which might have start-ups. The prediction was vague and did not provide this specific information."
+    },
+    {
+      "Q": "What is the meaning of the light yellow text on the road sign at the end of the video, what information does it provide?",
+      "A": "The light yellow text on the road sign at the end of the video likely provides important information or instructions for the road\u4f7f\u7528\u8005, such as speed limits, directions, or traffic regulations. Without the specific text, I cannot provide a precise translation or meaning, but it is intended to inform and guide the road\u4f7f\u7528\u8005 safely.",
+      "C": "It means incubator, suggesting that you are in a business park which might have some start-ups.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 48
+    }
+  ]
+]

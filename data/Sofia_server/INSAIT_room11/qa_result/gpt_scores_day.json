@@ -1,0 +1,587 @@
+[
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer only partially matches the ground-truth answer. While it correctly mentions the 'emergency exit sign on the ceiling', it omits other key elements like the 'white door labeled 07' and 'some signs next to it' which were also noticed first according to the ground truth."
+    },
+    {
+      "Q": "What was the first element you noticed in the hallway before entering the office space?",
+      "A": "The first element I noticed in the hallway before entering the office space was the emergency exit sign on the ceiling.",
+      "C": "I first noticed the white door labeled \"07\" with some signs next to it and an emergency exit sign on the ceiling.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 33
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer states that there are a total of 6 chairs visible throughout the entire video, which matches exactly with the ground truth answer."
+    },
+    {
+      "Q": "How many chairs are visible throughout the entire video?",
+      "A": "There are a total of 6 chairs visible throughout the entire video.",
+      "C": "There are 6 chairs visible throughout the entire video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 33
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there are four desks visible, while the ground truth states there are six desks. The range between predicted and ground truth counts is not within a margin of error that could be considered incidental or typical for object count predictions."
+    },
+    {
+      "Q": "Can you count the number of desks seen from the beginning to the end?",
+      "A": "Based on the images, there are **four desks** visible from the beginning to the end.",
+      "C": "I can count 6 desks seen from the beginning to the end.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 33
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly states that the subject did not enter room 07 before entering room 11, which aligns with the ground truth answer. The justification in the predicted answer also aligns with the expected reasoning based on visual cues, matching the described sequence of events."
+    },
+    {
+      "Q": "Did I entered room 07 before I entered room 11",
+      "A": "Based on the visual cues in the images, you did not enter room 07 before entering room 11. The sequence of images shows you approaching and then entering room 11 directly, as indicated by the whiteboard labeled \"11\" and the subsequent views inside that room. There is no indication of entering room 07 prior to room 11 in this image set.",
+      "C": "No, you didn't.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 33
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the sequence of events after entering room 11, confirming that no other scenes were visited, which matches the ground-truth answer."
+    },
+    {
+      "Q": "Did I went to some other scenes after I entered room 11",
+      "A": "Based on the images, after you entered room 11, you did not go to any other scenes. The sequence shows you moving from the hallway into room 11, then walking around and filming inside the room, but you did not exit to another location or scene after entering room 11.",
+      "C": "No, you didn't.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 33
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground truth exactly, indicating both correctness and accuracy in the number of rooms counted as visible."
+    },
+    {
+      "Q": "Count the total number of rooms visible throughout the video.",
+      "A": "The total number of rooms visible throughout the video is **2**.",
+      "C": "The total number of rooms visible throughout the video is 2.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 33
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'There are two whiteboards present across the video footage.' accurately matches the ground truth answer 'There are 2 whiteboards present across the video footage.' Both answers indicate the presence of 2 whiteboards, making the prediction fully correct."
+    },
+    {
+      "Q": "How many whiteboards are present across the video footage?",
+      "A": "There are two whiteboards present across the video footage.",
+      "C": "There are 2 whiteboards present across the video footage.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 33
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground-truth answer exactly, stating that there is 1 coat rack that appears in the entire video."
+    },
+    {
+      "Q": "How many coat racks appear in the entire video?",
+      "A": "There is 1 coat rack that appears in the entire video.",
+      "C": "There is 1 coat rack that appears in the entire video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 33
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that three doors can be seen, while the ground truth indicates only two doors are visible. The predicted number does not fall within the range suggested by the ground truth."
+    },
+    {
+      "Q": "How many doors can be seen during the entire video sequence?",
+      "A": "During the entire video sequence, a total of **three doors** can be seen.",
+      "C": "There are 2 doors seen during the entire video sequence.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 33
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly states that there is 1 exit sign visible from start to finish, which matches the ground truth answer. Therefore, the prediction is fully correct."
+    },
+    {
+      "Q": "Can you determine the number of exit signs visible from start to finish?",
+      "A": "There is 1 exit sign visible from start to finish.",
+      "C": "I can determine that there is 1 exit sign visible from start to finish.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 33
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there are two personal laptops in the room, whereas the ground truth says there are three. The prediction does not fall within the ground truth answer range, making it incorrect."
+    },
+    {
+      "Q": "How many personal laptop are there in the room?",
+      "A": "There are two personal laptops in the room.",
+      "C": "There are 3 personal laptop.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 33
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer identifies 6 computer monitors, which is one less than the 7 computer monitors identified in the ground truth. For counting questions, the prediction must fall within the range specified by the ground truth to be considered correct, but here it does not. Thus, the prediction is incorrect. However, it is close to the correct number, so a score of 3 is assigned."
+    },
+    {
+      "Q": "How many computer monitors can be identified in the complete sequence?",
+      "A": "A total of **6 computer monitors** can be identified in the complete sequence.",
+      "C": "There are 7 computer monitors identified in the complete sequence.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 33
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there are 8 potted plants, while the ground truth specifies there are 6 potted plants. The predicted answer does not fall within the acceptable range of the ground truth answer."
+    },
+    {
+      "Q": "How many potted plants are there in the room?",
+      "A": "There are 8 potted plants in the room.",
+      "C": "There are 6 potted plants.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 33
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer appropriately guides the individual to walk straight down the hallway to the glass door, which aligns perfectly with the ground truth answer. Although the prediction mentions reaching the glass door on the right, which is slightly more detailed, it does not contradict the ground truth. Therefore, the prediction is fully correct."
+    },
+    {
+      "Q": "How do I reach the office space once I enter the hallway?",
+      "A": "1. Walk straight down the hallway.\n2. Continue forward until you reach the glass door on your right.\n3. Enter through the glass door into the office space.",
+      "C": "Walk straight down the hallway toward the glass door at the end.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 33
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately identifies the larger whiteboard as being on the left, which matches the ground-truth answer."
+    },
+    {
+      "Q": "Which whiteboard is larger, on my left or right?",
+      "A": "The whiteboard on your left is larger.",
+      "C": "The larger whiteboard is on the left wall",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 33
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer identifies the final destination as a window, consistent with the ground-truth answer. The addition of specific details about potted plants does not contradict or alter the destination, which remains the window. Thus, it aligns well with the expected answer."
+    },
+    {
+      "Q": "What is the final destination at the far side of the room?",
+      "A": "The final destination at the far side of the room is the window area with several potted plants placed on the floor in front of the window.",
+      "C": "The final destination is the large window.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 33
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the action described in the ground truth. It details continuing to walk straight past the desks to the end of the room, which aligns with the ground truth's instructions to reach the window. The additional specificity about positioning along the left side of the room and passing chairs does not contradict the ground truth and enhances clarity. Therefore, the prediction is correct."
+    },
+    {
+      "Q": "What should I continue doing after noticing the whiteboard to reach the window?",
+      "A": "After noticing the whiteboard, you should continue walking straight ahead along the left side of the room, passing by the desks and chairs, until you reach the window at the end of the room.",
+      "C": "Continue walking straight past the desks until you reach the end of the room.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 33
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer includes additional details and steps that are not mentioned in the ground truth. While both answers describe moving straight to reach the left whiteboard, the prediction adds unnecessary complexity by mentioning a hallway, glass door, and specific office furniture. This divergence from the ground truth makes the prediction partially correct but less accurate."
+    },
+    {
+      "Q": "After entering the office space, what path do I follow to reach the left whiteboard?",
+      "A": "1. Enter the office space and walk straight down the hallway.\n2. Continue forward as the hallway narrows and leads to a glass door.\n3. Open the glass door and enter the office room.\n4. Move straight ahead, passing the desks and chairs on your right.\n5. As you proceed, the left whiteboard will appear on the left wall.\n6. Approach the whiteboard directly by continuing straight and then veering slightly left to stand in front of it.",
+      "C": "Once inside, walk straight ahead. The whiteboard will be on your left.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 33
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer includes additional steps that are not part of the ground truth path, such as walking straight down a hallway and passing by desks and chairs. The path described in the predicted answer largely differs from the ground truth answer, which is a straightforward right turn followed by a left turn. Although both answers mention reaching the right whiteboard, the specific directions to reach it are not aligned."
+    },
+    {
+      "Q": "After entering the office space, what path do I follow to reach the right whiteboard?",
+      "A": "1. Enter the office space and walk straight down the hallway.\n2. Continue forward as the hallway narrows and leads to a glass door.\n3. Open the glass door and enter the office room.\n4. Once inside, move slightly to the right to approach the right side of the room.\n5. Walk along the right side of the room, passing by desks and chairs.\n6. Continue straight until you reach the right whiteboard, which is mounted on the right wall of the office.",
+      "C": "Once inside, turn right, walk several steps, then turn left and walk straight ahead.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 33
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer indicates the number on the door as '11', which is incorrect compared to the ground truth answer that states the number is '07'. Therefore, the prediction does not match the ground truth."
+    },
+    {
+      "Q": "What number is indicated on the door in the first frame, and what might it signify?",
+      "A": "The number indicated on the door in the first frame is \"11\". It likely signifies the room or office number within the building.",
+      "C": "The number \"07\" is indicated on the door in the first frame, possibly signifying an office or room number in a building.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 33
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly infers the purpose and type of work that occurs in the space described. Both the predicted and ground truth answers agree that the space is an office or meeting room used for planning, technical discussions, and brainstorming. The predicted answer provides additional details about the specific types of technical work, such as software development and data science, but this does not conflict with the ground truth. Thus, the prediction is accurate and correct."
+    },
+    {
+      "Q": "What can be inferred about the space based on the text and diagrams on the whiteboard?",
+      "A": "Based on the text and diagrams on the whiteboard, it can be inferred that the space is used for technical or research work, likely related to software development, data science, or engineering. The whiteboard contains structured tables, flowcharts, labeled diagrams, and mathematical notations, which are typical in environments where planning, algorithm design, or system architecture discussions take place. This suggests the space is an office or meeting room used for collaborative technical work, brainstorming, and problem-solving sessions.",
+      "C": "The space seems to be an office or meeting room used for planning or discussions. The text and diagrams suggest technical or project-related content, indicating a work environment focused on brainstorming or strategy meetings.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 33
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies the location of the exit sign as being on the ceiling in the hallway. However, it suggests moving straight ahead from the starting point, rather than forward and then right, which deviates from the ground-truth direction."
+    },
+    {
+      "Q": "Where is the exit sign located, and what direction does it suggest to follow?",
+      "A": "The exit sign is located on the ceiling near the beginning of the video, above the hallway. It suggests to follow the direction straight ahead from the starting point of the recording.",
+      "C": "The exit sign is located on the ceiling in the hallway, suggesting to move forward and then right for the exit.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 33
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states the number on the door as 11, while the ground truth answer specifies the number as 07. The predicted number does not match the ground truth number at all."
+    },
+    {
+      "Q": "What is the number on the door to the left?",
+      "A": "The number on the door to the left is 11.",
+      "C": "The number on the door to the left says \"07.\"",
+      "M": "Object Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer describes the object near the glass office door as a 'black cylindrical object', which matches the description of a typical trash can. Although it does not explicitly state 'trash can', the description closely aligns with the ground-truth answer, allowing for a high score."
+    },
+    {
+      "Q": "What item is placed near the glass office door in the corridor?",
+      "A": "A black cylindrical object is placed near the glass office door in the corridor.",
+      "C": "There is a trash can placed near the glass office door in the corridor.",
+      "M": "Object Recognition",
+      "start_idx": 4,
+      "end_idx": 6
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer provides a detailed description that doesn't fully match or appropriately summarize the ground truth. While both answers mention diagrams, the predicted answer adds multiple elements such as tables, matrices, and technical terms (e.g., 'LLM,' 'SOTA') that are not in the ground truth. The ground truth focuses on flowcharts and lists pertaining to project planning, without mentioning the detailed technical aspects cited in the prediction."
+    },
+    {
+      "Q": "Can you describe the contents of the whiteboard seen in frames 24-28?",
+      "A": "Based on frames 24-28, the whiteboard contains a mix of diagrams, tables, and text written in multiple colors (blue, red, green, black). The contents include:\n\n- A table or matrix with several rows and columns, filled with text and numbers, some of which are underlined or highlighted.\n- Several flowchart-like diagrams, including boxes connected by arrows, and a large labeled block diagram with arrows indicating data or process flow.\n- Mathematical or network diagrams, including nodes and connecting lines, possibly representing graphs or relationships.\n- Various annotations, labels, and notes written around the diagrams and tables, some of which are circled or boxed for emphasis.\n- The text appears to be technical, possibly related to software, data processing, or system architecture, with terms like \"LLM,\" \"SOTA,\" and other abbreviations visible.\n- There are also some hand-drawn shapes and figures, such as a 3D object or network graph.\n\nThe whiteboard is densely filled with information, indicating an active brainstorming or planning session.",
+      "C": "The whiteboard contains text and diagrams, including flowcharts and lists. It seems to relate to project planning or some technical process.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 33
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies the floor in the office as being carpeted, matching the ground truth answer. There is no discrepancy between the predicted and ground truth answers."
+    },
+    {
+      "Q": "What type of surface is the floor in the office?",
+      "A": "The floor in the office is carpeted.",
+      "C": "The floor in the office appears to be carpeted.",
+      "M": "Object Recognition",
+      "start_idx": 12,
+      "end_idx": 14
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately identifies the object against the right wall of the room as a coat rack, which exactly matches the ground-truth answer. The wording and object identification are both correct."
+    },
+    {
+      "Q": "What object is positioned against the right wall of the room?",
+      "A": "The object positioned against the right wall of the room is a coat rack.",
+      "C": "A coat rack is positioned against the right wall of the room.",
+      "M": "Object Recognition",
+      "start_idx": 8,
+      "end_idx": 10
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer states that there is 1 door with a room number visible, whereas the ground truth answer states there are 2 doors visible with room numbers '07' and '11'. The prediction does not fall within the range provided by the ground truth answer, resulting in an incorrect evaluation."
+    },
+    {
+      "Q": "How many doors with room numbers are visible",
+      "A": "There is 1 door with a room number visible.",
+      "C": "Two doors with room numbers are visible, one with \"07\" and another with \"11\".",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 33
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies the presence of 'papers' near the glass door marked with '11'. However, it incorrectly includes 'a bottle' instead of 'whiteboard markers' as mentioned in the ground truth answer. Therefore, it is partially correct but not completely accurate."
+    },
+    {
+      "Q": "What is located on the floor near the glass door marked with \"11\"?",
+      "A": "On the floor near the glass door marked with \"11\", there are some papers and a bottle.",
+      "C": "On the floor near the glass door marked with \"11,\" there are some whiteboard markers and papers.",
+      "M": "Object Recognition",
+      "start_idx": 20,
+      "end_idx": 22
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately identifies the notable feature as a large whiteboard with writing, which closely aligns with the ground truth describing a whiteboard with writings and drawings. The mention of 'large' does not mislead or change the accuracy of the answer; thus, the prediction is fully correct."
+    },
+    {
+      "Q": "What notable feature is visible on the left wall of the office?",
+      "A": "The notable feature visible on the left wall of the office is a large whiteboard with writing on it.",
+      "C": "The notable feature visible on the left wall of the office is a whiteboard with writings and drawings on it.",
+      "M": "Object Recognition",
+      "start_idx": 16,
+      "end_idx": 18
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer lists four colors: blue, red, green, and black, while the ground truth lists three colors: blue, dark, and red. Although two colors (blue and red) match between the predicted and the ground truth answers, the predicted answer includes two colors (green and black) not mentioned in the ground truth and lacks 'dark', making it partially correct."
+    },
+    {
+      "Q": "What color are the diagrams and notes primarily written in on the whiteboard?",
+      "A": "The diagrams and notes on the whiteboard are primarily written in blue, red, green, and black.",
+      "C": "The diagrams and notes on the whiteboard are primarily written in blue, dark, and red.",
+      "M": "Object Recognition",
+      "start_idx": 24,
+      "end_idx": 26
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer explicitly states that the ceiling light is positioned slightly above and to the left of the exit sign, which matches the ground-truth answer indicating that the ceiling light is the one positioned slightly above and to the left."
+    },
+    {
+      "Q": "Which is positioned slightly above and to the left: the exit sign or the ceiling light?",
+      "A": "The ceiling light is positioned slightly above and to the left of the exit sign.",
+      "C": "The ceiling light.",
+      "M": "Spatial Reasoning",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer of 2 steps does not fall within the ground truth range of 5-7 steps. Thus, it is considered incorrect."
+    },
+    {
+      "Q": "How many steps do you need to take to reach the paper on the floor next to the left wall?",
+      "A": "Based on the progression shown in the images, it would take approximately 2 steps to reach the paper on the floor next to the left wall.",
+      "C": "To reach the paper on the floor next to the left wall, you would need to take approximately 5-7 steps, assuming an average stride length.",
+      "M": "Spatial Reasoning",
+      "start_idx": 4,
+      "end_idx": 6
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer and the ground truth answer both describe the same object (a black bag/backpack) being positioned near the right end of the desk on the floor. The usage of \"bag\" and \"backpack\" is essentially synonymous in this context, thus the prediction accurately matches the ground truth."
+    },
+    {
+      "Q": "What object is positioned near the right end of the desk?",
+      "A": "Near the right end of the desk, there is a black backpack positioned on the floor.",
+      "C": "Near the right end of the desk, there is a black bag positioned on the floor.",
+      "M": "Spatial Reasoning",
+      "start_idx": 8,
+      "end_idx": 10
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground-truth answer exactly, indicating that the prediction is fully correct."
+    },
+    {
+      "Q": "What stationary object is positioned directly in front of the glass wall?",
+      "A": "The stationary object positioned directly in front of the glass wall is a coat rack.",
+      "C": "The stationary object positioned directly in front of the glass wall is a coat rack.",
+      "M": "Spatial Reasoning",
+      "start_idx": 12,
+      "end_idx": 14
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer, which states that the computers are located approximately 5 steps away from the whiteboard, falls within the correct ground-truth range of 3 to 5 steps. Therefore, the prediction is considered correct and receives a full score."
+    },
+    {
+      "Q": "How many steps away from the whiteboard are the computers located?",
+      "A": "The computers are located approximately 5 steps away from the whiteboard.",
+      "C": "The computers are located approximately 3 to 5 steps away from the whiteboard.",
+      "M": "Spatial Reasoning",
+      "start_idx": 28,
+      "end_idx": 30
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches exactly with the ground truth answer, indicating full correctness."
+    },
+    {
+      "Q": "If I were to reach the whiteboard from the table, would I need to pass the chair?",
+      "A": "Yes, you would need to pass the chair to reach the whiteboard from the table.",
+      "C": "Yes, you would need to pass the chair to reach the whiteboard from the table.",
+      "M": "Spatial Reasoning",
+      "start_idx": 20,
+      "end_idx": 22
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that one should turn right to find the exit, whereas the ground truth specifies a left turn is needed. The two directions are opposite, leading to a fully wrong prediction."
+    },
+    {
+      "Q": "According to the exit sign, which way should I go if I were about to leave room 11?",
+      "A": "According to the exit sign visible at the beginning of the image set, you should turn right after leaving room 11 to go towards the exit.",
+      "C": "you have to turn left to find the exit.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 33
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer suggests going straight ahead to reach the exit, while the ground-truth answer indicates a turn to the right is necessary. The prediction does not align with the provided ground-truth direction."
+    },
+    {
+      "Q": "According to the exit sign, which way should I go if I were standing on the position of 1st frame?",
+      "A": "According to the exit sign visible in the 1st frame, you should go straight ahead (in the direction the camera is facing) to reach the exit.",
+      "C": "you have to turn right to find the exit.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 33
+    }
+  ]
+]

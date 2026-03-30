@@ -1,0 +1,947 @@
+[
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer, 'I saw a total of five streetlights throughout the entire video,' accurately matches the ground truth answer, 'I saw 5 streetlights.' The number of streetlights reported is the same in both answers, ensuring total correctness."
+    },
+    {
+      "Q": "How many streetlights did you see throughout the entire video?  ",
+      "A": "I saw a total of five streetlights throughout the entire video.",
+      "C": "I saw 5 streetlights.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer states that there were two bicycles, which does not fall within the range of 3-5 bicycles mentioned in the ground truth answer."
+    },
+    {
+      "Q": "How many bicycles did you notice along the path?  ",
+      "A": "I noticed two bicycles along the path.",
+      "C": "I noticed at least 3-5 bicycles.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted number of benches (2) does not match the ground-truth number of benches (4). The answer falls outside the correct range, therefore it is considered incorrect."
+    },
+    {
+      "Q": "Count the number of benches visible in the video.  ",
+      "A": "There are 2 benches visible in the video.",
+      "C": "I observed 4 benches along the path.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the video does not show a total number of building entrances, which contradicts the ground-truth that specifies there are 2-5 building entrances visible. The prediction fails to acknowledge the presence of the building entrances within the range provided by the ground truth. Therefore, the prediction is incorrect."
+    },
+    {
+      "Q": "Can you count the total number of building entrances shown?  ",
+      "A": "No, the video does not show a total number of building entrances.",
+      "C": "There are 2-5 building entrances visible.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer states that the person remembers seeing two signs, which matches the ground truth answer indicating that 2 signs were seen. The predicted and ground truth answers are identical in terms of the number of signs, fulfilling the requirement for a correct prediction."
+    },
+    {
+      "Q": "How many signs do you remember seeing by the end of the video?  ",
+      "A": "I remember seeing two signs by the end of the video.",
+      "C": "I saw 2 signs.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there is one trash bin, which does not fall within the range of 2-3 trash bins specified in the ground truth. Therefore, the predicted answer is incorrect."
+    },
+    {
+      "Q": "What is the count of trash bins that appear in the entire sequence?  ",
+      "A": "In the entire sequence of the video, there is one trash bin that appears.",
+      "C": "There are 2-3 trash bins throughout the video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer of three buildings is not within the range of the ground-truth answer of 6-8 buildings. Thus, it is fully incorrect."
+    },
+    {
+      "Q": "What is the total number of buildings you walked past in the video?  ",
+      "A": "I walked past three buildings in the video.",
+      "C": "I walked past 6-8 buildings.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that a streetlight turned on, which directly contradicts the ground truth that no streetlights turned on or off during the walk. This discrepancy makes the prediction fully incorrect."
+    },
+    {
+      "Q": "Did any streetlight turn on or off during my walk?",
+      "A": "The streetlight turned on during your walk.",
+      "C": "No streetlights turned on or off during your walk.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the shadows are shifting further away, while the ground truth states that the shadows are shifting closer. This is a direct contradiction."
+    },
+    {
+      "Q": "Are the shadows shifting closer or further away as I move forward?",
+      "A": "The shadows are shifting further away as you move forward.",
+      "C": "The shadows seemed to shift closer to you as you moved forward.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The ground truth answer indicates that the scene became slightly darker, which contradicts the predicted answer of 'No'. Therefore, the prediction does not align with the ground truth and is mostly incorrect."
+    },
+    {
+      "Q": "Is the overall scene getting darker as I progress through the frames?",
+      "A": "No",
+      "C": "The overall scene became slightly darker as you progressed through the frames.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly states that no building lights drastically changed in intensity while walking, which is consistent with the ground truth answer."
+    },
+    {
+      "Q": "Did any building light drastically change in intensity while I was walking?",
+      "A": "No, the buildings did not drastically change in intensity while you were walking.",
+      "C": "No building light drastically changed in intensity while you were walking.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer identifies the light from a building as becoming more prominent, whereas the ground truth specifies the light from streetlamps. Although both answers describe light becoming more prominent, they refer to different sources, which affects the correctness. Hence, the prediction is partially correct."
+    },
+    {
+      "Q": "Is the light from a specific source becoming more prominent as I approach it?",
+      "A": "Yes, the light from the building on the right side of the path is becoming more prominent as you approach it.",
+      "C": "The light from the streetlamps became more prominent as you approached them.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground truth exactly, indicating that no new light sources appeared or vanished during the scene. Therefore, the prediction is fully correct."
+    },
+    {
+      "Q": "Did any new light source appear or vanish during the scene?",
+      "A": "No new light source appeared or vanished during the scene.",
+      "C": "No new light sources appeared or vanished during the scene.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly matches the ground-truth answer, as both indicate that there was no moment when the path seemed to get significantly brighter or dimmer."
+    },
+    {
+      "Q": "Was there a moment when the path seemed to get significantly brighter or dimmer?",
+      "A": "No, there was no moment when the path seemed to get significantly brighter or dimmer.",
+      "C": "There was no moment when the path seemed to get significantly brighter or dimmer overall.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies that reflective signage caught and reflected more light, which aligns with the ground truth. Both answers convey the same core information."
+    },
+    {
+      "Q": "Did any reflective signage suddenly catch and reflect more light?",
+      "A": "Yes, the reflective signage caught and reflected more light.",
+      "C": "A reflective sign began to catch and reflect more light as you approached it.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer 'yellow' is very close in meaning to the ground truth answer 'a warm yellow'. The core information about the color being yellow is captured accurately, though the prediction lacks the nuance of the specific shade 'warm', which results in a slightly lower score than fully correct."
+    },
+    {
+      "Q": "What is the predominant color of the streetlights illuminating the area?  ",
+      "A": "The predominant color of the streetlights illuminating the area is yellow.",
+      "C": "The predominant color of the streetlights illuminating the area is a warm yellow.  ",
+      "M": "Light Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground truth. Both answers state that there are three streetlights visible in the alleyway, which is accurate and complete based on the given information."
+    },
+    {
+      "Q": "How many streetlights are visible in the alleyway?  ",
+      "A": "There are three streetlights visible in the alleyway.",
+      "C": "In the alleyway, there are 3 streetlights visible.  ",
+      "M": "Light Recognition",
+      "start_idx": 8,
+      "end_idx": 10
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately identifies that the majority of the illumination along the pathway comes from streetlights, which aligns with the ground truth answer. The use of 'street lamp' in the prediction is synonymous with 'streetlights' in this context."
+    },
+    {
+      "Q": "What type of light provides the majority of illumination along the pathway in the scene?  ",
+      "A": "The street lamp provides the majority of illumination along the pathway in the scene.",
+      "C": "The majority of the illumination along the pathway comes from streetlights.  ",
+      "M": "Light Recognition",
+      "start_idx": 16,
+      "end_idx": 18
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'window' does not match the ground truth answer 'A street sight'. The object described in the prediction is entirely different from the ground truth, reflecting a misunderstanding or misinterpretation of the content prompting the question."
+    },
+    {
+      "Q": "What object is seen reflecting light on the left side of the images?",
+      "A": "window",
+      "C": "A street sight is seen reflecting light on the left side of the images.",
+      "M": "Light Recognition",
+      "start_idx": 20,
+      "end_idx": 22
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately identifies 'streetlights' as the primary light source illuminating the area, which matches the ground truth answer."
+    },
+    {
+      "Q": "What type of light source is primarily illuminating the area?  ",
+      "A": "The primary light source illuminating the area is streetlights.",
+      "C": "The area is primarily illuminated by streetlights.",
+      "M": "Light Recognition",
+      "start_idx": 28,
+      "end_idx": 30
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the action to take to reach the end of the alley, which is to continue walking straight down the alleyway. It aligns with the ground-truth answer and provides additional details that do not contradict the main instruction."
+    },
+    {
+      "Q": "How do I reach the end of the alley from where I am currently standing?",
+      "A": "To reach the end of the alley from where you are currently standing, you should continue walking straight down the alley. The alley is well-lit with streetlights, so you can see your way ahead. As you proceed, you will pass by buildings on either side and eventually reach the end of the alley.",
+      "C": "Continue straight down the alleyway until you reach the end.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer suggests that there's a sign indicating the need to change direction, while the ground-truth answer states there is no need to turn. The two answers contradict each other completely, making the prediction incorrect."
+    },
+    {
+      "Q": "Is there any indication that I need to change direction to exit the alley?",
+      "A": "Yes, there is a sign that reads \"ROAD AHEAD CLOSED,\" indicating that you need to change direction to exit the alley.",
+      "C": "No, continue straight as the path does not require turns.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly suggests retracing steps by turning around and walking back in the opposite direction, which aligns with the ground-truth answer of retracing your steps back the way you came."
+    },
+    {
+      "Q": "If I reach a dead end, what\u2019s my next best option to find an exit?",
+      "A": "Your next best option to find an exit if you reach a dead end is to turn around and walk back in the opposite direction. This will allow you to retrace your steps and possibly find an exit or another path to continue your journey.",
+      "C": "Retrace your steps back the way you came.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly states that there are no potential exits signaled along the sides of the alley, which fully aligns with the ground truth answer."
+    },
+    {
+      "Q": "Are there any potential exits signaled along the sides of the alley?",
+      "A": "No, there are no potential exits signaled along the sides of the alley.",
+      "C": "No exits are signaled along the sides; proceed straight until an opening is visible at the end.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer suggests confirming progress by observing the narrowing of buildings and the path extending into the distance, but it does not mention the key indicator from the ground truth answer, which is seeing the distant light indicating a potential exit."
+    },
+    {
+      "Q": "How can I confirm I am making progress towards the end of the alley?",
+      "A": "You can confirm you are making progress towards the end of the alley by checking if the buildings on either side of the alley get closer to each other and if the path appears to extend further into the distance.",
+      "C": "Continue until you see the distant light indicating a potential exit.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer suggests a different method for returning to the starting point than the ground truth answer. The ground truth answer suggests simply turning around and walking back the same path, whereas the predicted answer involves continuing straight, turning right, and following a path, which deviates from the ground truth method."
+    },
+    {
+      "Q": "Once I reach the end of the alley, how should I proceed if I want to return to my starting point?",
+      "A": "Continue straight down the alley until you reach the end, then turn right and follow the path back to your starting point.",
+      "C": "Turn around and walk back along the same straight path.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'The ground in the alley or courtyard is made of brick' and the ground truth 'The ground in the alley or courtyard is made of brick pavers' are essentially the same in meaning, as 'brick pavers' are understood to be a type of brick. Thus, the prediction captures the essential information of the ground being made of brick, which is the key aspect of the answer."
+    },
+    {
+      "Q": "What kind of surface is the ground made of in the alley or courtyard?  ",
+      "A": "The ground in the alley or courtyard is made of brick.",
+      "C": "The ground in the alley or courtyard is made of brick pavers.  ",
+      "M": "Object Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer describes the texture as smooth and concrete, which is different from the ground truth answer that states the building has a brick texture."
+    },
+    {
+      "Q": "What texture is present on the surface of the building on the left side of the alleyway?  ",
+      "A": "The texture present on the surface of the building on the left side of the alleyway is smooth and concrete.",
+      "C": "The surface of the building on the left side of the alleyway has a brick texture.  ",
+      "M": "Object Recognition",
+      "start_idx": 4,
+      "end_idx": 6
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies the sign as red, matching the ground truth. However, the predicted reasoning for the color ('it is a fire escape sign or a warning sign') does not align with the ground truth reasoning ('to catch passersby\u2019s attention'). Therefore, the prediction is mostly correct but not fully accurate."
+    },
+    {
+      "Q": "What color is the sign seen in the far left and what could be the reason?",
+      "A": "The sign seen in the far left of the image is red. The reason for this could be that it is a fire escape sign or a warning sign indicating a hazardous area.",
+      "C": "The sign in the far left is a red color, possibly to catch passersby\u2019s attention.",
+      "M": "Object Recognition",
+      "start_idx": 12,
+      "end_idx": 14
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies the walls as being a dark color, aligning with the ground truth of dark brown or dark red. The prediction mentions dark brown, which closely matches the ground truth, and while it mentions black, which is not in the ground truth, the overall prediction still aligns closely enough with the ground truth to be considered mostly correct."
+    },
+    {
+      "Q": "What color are the walls in the alleyway?  ",
+      "A": "The walls in the alleyway are dark, likely black or very dark brown.",
+      "C": "The walls in the alleyway appear to be a dark color, likely dark brown or dark red.",
+      "M": "Object Recognition",
+      "start_idx": 20,
+      "end_idx": 22
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer identifies some structural elements such as flat roof and rectangular windows, which are relevant for identifying the architectural style and align with the ground truth. However, it misses other key elements like material and building geometry mentioned in the ground truth. Furthermore, the predicted architectural style as 'modern or contemporary' partially overlaps with the ground truth 'modern or Brutalist', but it lacks the mention of Brutalist style, resulting in a partially correct but incomplete assessment."
+    },
+    {
+      "Q": "What elements of the building's structure are visible in the frames to help identify its architectural style?  ",
+      "A": "In the frames provided, the architectural style of the building can be identified by the presence of a flat roof, rectangular windows with white frames, and vertical lines along the exterior wall. These features suggest a modern or contemporary architectural style.",
+      "C": "Based on the frames provided, several structural elements can help identify the architectural style \u2013 the windows and facades, the material and the building geometry. These elements collectively suggest a modern or Brutalist architectural style.",
+      "M": "Object Recognition",
+      "start_idx": 28,
+      "end_idx": 30
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer provides a sequence of buildings, but it does not match the description given in the ground truth. The ground truth mentions passing by buildings possibly part of a complex on either side of the street, but the predicted answer lists specific positions (left, middle, right) that are not described in the ground truth. Therefore, it partially captures the idea of passing by buildings but lacks key details about the complex."
+    },
+    {
+      "Q": "What sequence of buildings did I pass from the start of the alley to the end?  ",
+      "A": "You passed from the start of the alley to the end through the following sequence of buildings: \n\n1. A building on the left side.\n2. A building in the middle.\n3. A building on the right side.",
+      "C": "From the start to finish you pass by several buildings, possibly part of some sort of complex, located on either side of the street.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer mentions the transition from brick buildings to a more modern building with glass and concrete, which aligns with the ground truth answer description of materials varying from bricks and concrete to more reflective materials. However, additional unnecessary details were provided, such as the lighting conditions, that do not pertain specifically to the transition of building materials. Despite this, the core of the predicted answer correctly captures the transition in materials."
+    },
+    {
+      "Q": "Can you describe the transitions between the different building materials seen along the alley?  ",
+      "A": "The video shows a dimly lit alleyway at night, transitioning between different building materials. Initially, the scene is dominated by brick buildings on either side of the alley, with some windows illuminated, suggesting a residential or mixed-use building. The transition occurs as the camera moves forward, revealing a more modern building with a mix of materials, including glass and concrete. The lighting remains consistent throughout, with the primary light source being street lamps. The overall atmosphere is quiet and somewhat eerie due to the darkness and lack of visible activity.",
+      "C": "The different building materials vary from bricks and concrete to some more reflective materials.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer includes a street light and a building with a window, while the ground truth only mentions a building on the left side. The mention of the building aligns with the ground truth, but the addition of a street light and window makes the answer partially incorrect."
+    },
+    {
+      "Q": "What notable features did I pass before reaching the \"No Pedestrian Access\" sign?  ",
+      "A": "Before reaching the \"No Pedestrian Access\" sign, you passed a street light and a building with a window.",
+      "C": "You passed by a building on your left side.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer lists signs that do not match the ground truth answer. The ground truth specifies signs saying \"No pedestrian access\" and \"Road prohibited,\" whereas the predicted answer lists \"ROAD AHEAD CLOSED\" and \"ROAD AHEAD.\" There is no overlap between the predicted and ground truth signs, resulting in complete inaccuracy in the predicted answers."
+    },
+    {
+      "Q": "What sequence of signs did I encounter along the alleyway?  ",
+      "A": "You encountered the following signs along the alleyway: \"ROAD AHEAD CLOSED\" and \"ROAD AHEAD.\"",
+      "C": "You passed by 2 signs saying \u201cNo pedestrian access\u201d and \u201cRoad prohibited.\u201d",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer includes most of the key details from the ground truth answer, specifically mentioning a lit window. However, it also adds extra elements like a building, trees, and a lamppost, which were not mentioned in the ground truth. Despite this additional information, the core detail of passing by a lit window is present."
+    },
+    {
+      "Q": "What features did I pass just before the \"Road Ahead Closed\" sign?  ",
+      "A": "Just before the \"Road Ahead Closed\" sign, you passed by a building with a lit window, some trees, and a lamppost.",
+      "C": "You passed by a well-lit window right before the \"Road Ahead Closed\" sign.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the position of the garbage bins as being on the left side of the building's corner, which matches the ground truth answer. Both answers are consistent and clearly indicate the same spatial relation."
+    },
+    {
+      "Q": "What is the position of the garbage bins relative to the building's corner?  ",
+      "A": "The garbage bins are positioned on the left side of the building's corner.",
+      "C": "The garbage bins are located to the left of the building's corner in the video frames.  ",
+      "M": "Spatial Reasoning",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer \"Bicycles\" is partially correct as it mentions one of the objects correctly. However, it misses mentioning the \"small plant\", which is also mentioned in the ground truth. Therefore, the prediction is incomplete."
+    },
+    {
+      "Q": "What objects are found directly next to the building on the right?  ",
+      "A": "Bicycles",
+      "C": "Directly next to the building on the right, there are several bicycles parked and a small plant.  ",
+      "M": "Spatial Reasoning",
+      "start_idx": 4,
+      "end_idx": 6
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer is approximately 10 meters, which falls outside the ground truth answer range of 3 to 5 meters. The prediction is therefore considered incorrect with a low score."
+    },
+    {
+      "Q": "What is the approximate distance from your position to the first street lamp along the walkway?  ",
+      "A": "Approximately 10 meters.",
+      "C": "Based on the frames from the video, the approximate distance from my position to the first street lamp along the walkway is about 3 to 5 meters.  ",
+      "M": "Spatial Reasoning",
+      "start_idx": 8,
+      "end_idx": 10
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there are no objects directly in front of the door, while the ground truth specifies that there are two signs. The prediction is completely different from the ground truth, leading to a score of 0."
+    },
+    {
+      "Q": "What objects are located directly in front of the door on the left side of the pathway?  ",
+      "A": "There are no objects directly in front of the door on the left side of the pathway in the image.",
+      "C": "Directly in front of the door on the left side of the pathway, there are two signs. One sign says \"No Pedestrian Access\" and the other says \"Road Ahead Closed.\"  ",
+      "M": "Spatial Reasoning",
+      "start_idx": 16,
+      "end_idx": 18
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there are 2 buildings on the left, but the ground truth correct answer specifies there is only 1 building. The predicted answer does not fall within the range of the ground truth answer."
+    },
+    {
+      "Q": "How many buildings are on your left as you walk down the pathway?  ",
+      "A": "2",
+      "C": "There is one building on your left as you walk down the pathway.  ",
+      "M": "Spatial Reasoning",
+      "start_idx": 20,
+      "end_idx": 22
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'A tree' does not match the ground truth answer which states that there is an 'open alleyway'. The two answers describe entirely different objects; hence the prediction is fully wrong."
+    },
+    {
+      "Q": "What is located between the building on the left and the light post?  ",
+      "A": "A tree.",
+      "C": "Between the building on the left and the light post, there is an open alleyway that stretches from front to back in the video frames.  ",
+      "M": "Spatial Reasoning",
+      "start_idx": 24,
+      "end_idx": 26
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches exactly with the ground-truth answer, indicating that the prediction is fully correct."
+    },
+    {
+      "Q": "What does the red sign say about the status of the road ahead?  ",
+      "A": "The red sign says \"ROAD AHEAD CLOSED.\"",
+      "C": "The red sign says \"ROAD AHEAD CLOSED.\"",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer, 'the partially visible sign indicates that pedestrian access is not allowed', accurately conveys the same meaning as the ground-truth answer, which is 'NO PEDESTRIAN ACCESS.' Both indicate that pedestrians are restricted from accessing the area."
+    },
+    {
+      "Q": "What is the indication given by the partially visible sign regarding pedestrian access?  ",
+      "A": "The partially visible sign indicates that pedestrian access is not allowed.",
+      "C": "The sign indicates \"NO PEDESTRIAN ACCESS.\"",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer accurately identifies that the road is closed, which aligns with the ground truth. However, the predicted answer lacks the additional context about the possible reasons for the closure, such as construction, repairs, or maintenance work, which are mentioned in the ground truth."
+    },
+    {
+      "Q": "Based on the signs, what can you infer about the possible situation on the road?  ",
+      "A": "Based on the signs, it can be inferred that the road ahead is closed.",
+      "C": "The road is closed, possibly due to construction, repairs, or other maintenance work.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies the number of signs visible and accurately describes their purpose as used to communicate restrictions or warnings, consistent with the ground truth answer."
+    },
+    {
+      "Q": "How many signs are visible that are used to communicate restrictions or warnings?  ",
+      "A": "There are two signs visible in the video that are used to communicate restrictions or warnings.",
+      "C": "Two signs are visible: \"ROAD AHEAD CLOSED\" and \"NO PEDESTRIAN ACCESS.\"",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately matches the ground truth answer by citing construction, maintenance, and emergency as possible reasons for the road closure. Both answers align in their content and logical justification for the closure."
+    },
+    {
+      "Q": "What might be the reason for the road being closed, as indicated by the \"ROAD AHEAD CLOSED\" sign?  ",
+      "A": "The reason for the road being closed, as indicated by the \"ROAD AHEAD CLOSED\" sign, could be due to construction, maintenance work, or an emergency situation that requires the road to be temporarily closed for safety reasons.",
+      "C": "The road may be closed for construction, maintenance, or an emergency situation.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer is partially correct as it identifies that pedestrians are not allowed to enter the area marked by the sign, but it incorrectly states that the sign does not suggest any specific actions. The ground truth specifies that the sign suggests pedestrians should not proceed further, indicating that an action (not proceeding) is implied by the sign."
+    },
+    {
+      "Q": "Does the \"no pedestrian access\" sign suggest any specific actions for pedestrians?  ",
+      "A": "No, the \"no pedestrian access\" sign does not suggest any specific actions for pedestrians. It indicates that pedestrians are not allowed to enter the area marked by the sign.",
+      "C": "Yes, it suggests that pedestrians should not proceed further along the road.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer suggests slowing down and proceeding with caution, which does not align with the ground-truth action of finding an alternative route. The action to proceed contradicts the closure of the road as stated in the sign."
+    },
+    {
+      "Q": "If you see a sign that says \"ROAD AHEAD CLOSED,\" what actions should a driver take?  ",
+      "A": "A driver should slow down, be cautious, and proceed with caution when they see a sign that says \"ROAD AHEAD CLOSED.\"",
+      "C": "The driver should find an alternative route as the road is not accessible.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer mentions 'streetlights' as a landmark for navigation, which is not present in the ground truth. However, both the predicted answer and the ground truth mention 'buildings'. Since the predicted answer partially matches the landmarks mentioned in the ground truth, it warrants a middle score."
+    },
+    {
+      "Q": "What landmarks or structures did I use to navigate through the alley?  ",
+      "A": "You used the streetlights and the buildings on either side of the alley to navigate through the area.",
+      "C": "You likely used the arrangement of buildings and visible signs to navigate through the alley.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer correctly mentions approaching the sign and interpreting it as indicating no pedestrian access, aligning with the ground truth. However, it fails to include the aspect of choosing another path and continuing through the space, which is explicitly mentioned in the ground truth."
+    },
+    {
+      "Q": "How did I approach and interpret the sign indicating no pedestrian access?  ",
+      "A": "You approached the sign by walking down the pathway towards it, and you interpreted it as indicating that pedestrian access is not allowed.",
+      "C": "Upon approaching the \"no pedestrian access\" sign, you interpreted it as a directive to choose another path, as indicated by your continued movement through the space.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer captures key elements of the ground-truth answer, particularly the idea of the buildings creating a clear pathway to follow. It also adds additional context about how the structure and illumination might aid navigation and security in the dark. While the additional details about security and familiarity are not mentioned in the ground truth, they are reasonable interpretations of guiding movement in an environment. Therefore, the prediction is mostly aligned with the ground truth."
+    },
+    {
+      "Q": "What was the possible significance of the buildings' arrangement in guiding my path?  ",
+      "A": "The possible significance of the buildings' arrangement in guiding your path was to create a structured and familiar environment, making it easier to navigate and find your way. The consistent pattern of the buildings and the illuminated pathways helped to create a sense of direction and security, especially in the dark. The light from the windows and streetlights also provided a clear contrast to the surrounding darkness, making it easier to see where you were going.",
+      "C": "The linear arrangement of the buildings guided you forward, creating a clear pathway to follow.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'No' aligns with the ground truth answer indicating that there were no stops to observe or interact with objects and the movement was continuous. Both answers effectively convey the same information."
+    },
+    {
+      "Q": "Did I make any stops to observe or interact with any objects in the area?  ",
+      "A": "No",
+      "C": "You did not appear to make any stops to observe or interact with objects; your movement was continuous.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer accurately captures the strategic purpose behind the decision to pass by certain signs, mentioning the avoidance of potential hazards or obstacles, which aligns with the ground truth of moving in an alternative safe direction. However, it does not specifically mention the \"warning sign\" indicated in the ground truth."
+    },
+    {
+      "Q": "Was there a strategic purpose behind my decision to pass by certain signs?  ",
+      "A": "The video suggests that there was a strategic purpose behind your decision to pass by certain signs. The darkness and the limited visibility imply that you were likely trying to avoid potential hazards or obstacles in the area. The strategic purpose could have been to ensure your safety while navigating through the dark environment.",
+      "C": "Passing certain signs, such as the warning sign, likely influenced your decision to keep moving in an alternative safe direction.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer focuses on assessing lighting conditions and the presence of artificial lights, while the ground truth specifies assessing potential routes and obstacles using signage. These are distinct aspects of environmental assessment and do not align well, leading to a largely incorrect prediction."
+    },
+    {
+      "Q": "What kind of information was I attempting to gather or assess about the environment?  ",
+      "A": "You were attempting to gather or assess the lighting conditions and the presence of artificial lights in the environment.",
+      "C": "You seemed to be assessing potential routes and obstacles, using signage to guide decisions.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there was no influence from the urban setting on the decision-making, which contradicts the ground truth answer. The ground truth specifies that signage and building layout influenced navigation. The predicted answer missed these elements entirely, resulting in a fully incorrect evaluation."
+    },
+    {
+      "Q": "Was there any element of the urban setting that seemed to influence my decision-making?  ",
+      "A": "No, there was no element of the urban setting that seemed to influence your decision-making.",
+      "C": "The signage and layout of the buildings influenced your navigation through the alley, providing cues on where to proceed.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies the presence of a moving shadow that indicates a person behind the camera, which aligns with the ground-truth answer. The minor differences in wording do not affect the accuracy of the prediction."
+    },
+    {
+      "Q": "Can you see a moving shadow, indicating there is a person behind the camera?",
+      "A": "Yes, I can see a moving shadow, indicating there is a person behind the camera.",
+      "C": "Yes, there is a moving shadow, indicating there is a person behind the camera, visible within the frames.",
+      "M": "Dynamic",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The ground truth answer states that the other person is walking in the opposite direction, whereas the predicted answer states the person is walking towards the camera. These are contradictory directions, making the prediction incorrect."
+    },
+    {
+      "Q": "In what direction is the other person in the frames walking?",
+      "A": "The other person in the frames is walking towards the camera.",
+      "C": "The other person in the frames is walking in the opposite direction as you.",
+      "M": "Dynamic",
+      "start_idx": 4,
+      "end_idx": 6
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately matches the ground-truth answer in terms of content and meaning. Both indicate that there are no visible vehicles in the distance."
+    },
+    {
+      "Q": "Can you spot any vehicles in the distances?",
+      "A": "No, there are no vehicles visible in the distance.",
+      "C": "No, there are no visible vehicles in the distance.",
+      "M": "Dynamic",
+      "start_idx": 13,
+      "end_idx": 15
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there were no people passing by, while the ground truth indicates that 1 person did pass by. The predicted answer does not fall within the range of the ground truth answer and therefore is incorrect."
+    },
+    {
+      "Q": "How many people did you see passing by?",
+      "A": "I did not see any people passing by in the video.",
+      "C": "I saw 1 person passing by.",
+      "M": "Dynamic Counting",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'None' conveys the same meaning as '0 vehicles passed by', as both denote that no vehicles passed by. Therefore, the prediction is fully correct."
+    },
+    {
+      "Q": "How many vehicles passed by?",
+      "A": "None",
+      "C": "0 vehicles passed by.",
+      "M": "Dynamic Counting",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly states that no people entered or exited the building, which matches the ground-truth answer."
+    },
+    {
+      "Q": "How many people entered or exited the building?",
+      "A": "The video shows that no people entered or exited the building.",
+      "C": "0 people entered or exited the building.",
+      "M": "Dynamic Counting",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer '0' matches exactly with the ground truth answer '0 bicycles passed by me', indicating a fully correct prediction."
+    },
+    {
+      "Q": "How many, if any, bicycles passed by you?",
+      "A": "0",
+      "C": "0 bicycles passed by me.",
+      "M": "Dynamic Counting",
+      "start_idx": 0,
+      "end_idx": 37
+    }
+  ]
+]

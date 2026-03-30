@@ -1,0 +1,707 @@
+[
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer does not match the ground truth at all, with completely different scenes and sequence. The sequence described in the predicted answer is entirely different from the dark room to lounge area sequence in the ground truth."
+    },
+    {
+      "Q": "What was the sequence of scenes before I reached the window overlooking the city?",
+      "A": "Based on the sampled images, the sequence of scenes before you reached the window overlooking the city was as follows:\n\n1. You started in a waiting area with two red chairs, a small table, and a printer.\n2. You walked down a hallway with brown and black stripes on the carpet, passing several doors.\n3. You continued down the hallway, passing a kitchen area with blue cabinets and a wooden floor.\n4. You proceeded further down the hallway, passing more doors and entering another corridor.\n5. You entered an office room (door labeled 25) with a desk, chair, whiteboard, and large windows.\n6. You moved through the office toward the window, approaching the desk and the view outside.\n7. You reached the window overlooking the city, with a clear view of the buildings and landscape outside.",
+      "C": "The sequence was: dark room \u2192 hallway with exit sign \u2192 corridor with closed doors and bins \u2192 turn into extended hallway \u2192 lounge area \u2192 city-facing window.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer identifies an 'EXIT' sign which partially matches the ground-truth specifying a 'green emergency exit sign'. However, the prediction does not mention the color or provide the detail that it was an 'emergency exit' sign, which are significant descriptive elements present in the ground truth."
+    },
+    {
+      "Q": "Which type of sign was visible as I moved through the hallway?",
+      "A": "The type of sign visible as you moved through the hallway was an \"EXIT\" sign.",
+      "C": "A green emergency exit sign was visible above the hallway.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer lists specific furniture items that were passed, such as chairs, table, a bookshelf, but also includes items like a printer/copier on a wooden stand, kitchen cabinets, and a coat rack which are not directly mentioned in the ground truth. The core elements like small tables, chairs, and a bookshelf are included, but significant extraneous items are also listed, leading to partial correctness."
+    },
+    {
+      "Q": "What furniture items did I pass before arriving at the lounge area?",
+      "A": "Before arriving at the lounge area, you passed the following furniture items:\n- Two red chairs and a small round black table (near the entrance area)\n- A printer/copier on a wooden stand\n- A wooden bookshelf (in the hallway)\n- Kitchen cabinets and countertop (in the kitchenette area)\n- A coat rack (in the office room)\n- A desk and office chair (in the office room)",
+      "C": "You passed furniture like small tables, chairs, and possibly a low shelf or cabinet along the corridor.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer describes a kitchen area with light blue cabinets and a countertop, while the ground truth states the next area was a lounge space with casual seating and warmer lighting. These are different settings, hence the prediction is fully wrong."
+    },
+    {
+      "Q": "After the corridor with closed doors, what was the next area I entered?",
+      "A": "After the corridor with closed doors, the next area you entered was a kitchen area with light blue cabinets and a countertop.",
+      "C": "The next area was a lounge space with casual seating and warmer lighting.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer correctly identifies the location as a hallway before reaching the lounge area. However, it misses important elements of the scene described in the ground truth, such as 'dim', 'lined with closed doors, bins, and wall-mounted radiators'. Instead, it adds a specific detail about a door labeled '24' which is not mentioned in the ground truth. Hence, the prediction partially matches but lacks completeness regarding key details."
+    },
+    {
+      "Q": "What did I see in the scene immediately before reaching the lounge area?",
+      "A": "Immediately before reaching the lounge area, you saw a hallway with a door labeled \"24\" on the right side.",
+      "C": "You saw a dim hallway lined with closed doors, bins, and wall-mounted radiators before entering the lounge area.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer mentions noticing a black bean bag chair in front of a brown couch, while the ground truth states that the first thing noticed was 'Hello world' being written on a whiteboard. These are completely different observations, resulting in a fully incorrect prediction. Thus the score is 0."
+    },
+    {
+      "Q": "What was the first thing I noticed as the final scene concluded?",
+      "A": "As the final scene concluded, the first thing you noticed was the black bean bag chair in front of the brown couch.",
+      "C": "The first thing you noticed at the conclusion was someone writing \"Hello world\" on the whiteboard.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies the lounge area as the spot with mixed seating options and a modern lamp, matching the ground-truth answer. The additional details provided in the predicted answer do not contradict the ground truth and further describe the area accurately."
+    },
+    {
+      "Q": "Which spot had a mix of seating options and a modern lamp?",
+      "A": "The spot with a mix of seating options and a modern lamp is the lounge area with a sofa, a yellow bean bag, a white round table, and a tall modern floor lamp. This area is visible in images 120\u2013132.",
+      "C": "The lounge area had the mixed seating and modern lamp.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer describes a corridor with specific features and a door, which does not match the ground truth answer of a whiteboard and tables with writing tools. There is no overlap between the elements mentioned in both answers."
+    },
+    {
+      "Q": "What did I encounter just before entering the room with the large window?",
+      "A": "Just before entering the room with the large window, you encountered a corridor with a brown and black striped carpet, light blue kitchen cabinets on the right, and a door labeled \"25\" on the left.",
+      "C": "Just before entering the room with the window, you passed a whiteboard and tables with writing tools.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer describes an elaborate process of writing on a whiteboard, including using a marker, which aligns with the core requirement of the ground truth answer: 'Use the marker'. However, it includes additional context that is not necessary. Despite the extra details, the core component of using a marker to write is correct, therefore it is rated highly."
+    },
+    {
+      "Q": "How you manage to write something on the whiteboard?",
+      "A": "To write something on the whiteboard, you first walk from the hallway into a meeting room with a large whiteboard. You sit at a table, pick up a blue marker, stand up, approach the whiteboard, and start writing on it with your right hand. You write \"Hello world!\" on the whiteboard.",
+      "C": "Use the marker.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the use of 'red arrow signs placed on the floor' as navigation tools, which aligns with the ground truth answer of 'labels with red arrow on the ground'. Both describe using red arrows on the ground for navigation."
+    },
+    {
+      "Q": "What objects did you use to navigate through the hallway?",
+      "A": "To navigate through the hallway, you used the red arrow signs placed on the floor as visual guides.",
+      "C": "Some labels with red arrow on the ground.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground-truth answer precisely, including the content written on the whiteboard."
+    },
+    {
+      "Q": "What did you write on the whiteboard?",
+      "A": "You wrote \"Hello world!\" on the whiteboard.",
+      "C": "I wrote 'Hello world!' on the whiteboard.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately identifies the color of the marker as blue, which matches the ground-truth answer. Therefore, the prediction is correct."
+    },
+    {
+      "Q": "What color of the marker did you use?",
+      "A": "The color of the marker you used is blue.",
+      "C": "I used a blue marker.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there are 5 tables visible in the footage, while the ground truth states there are 3 tables visible. The predicted answer does not fall within the range of the ground truth answer, thus it is incorrect."
+    },
+    {
+      "Q": "What is the total number of tables visible in the footage?",
+      "A": "The total number of tables visible in the footage is **5**.",
+      "C": "Tables Visible: 3",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there are 8 chairs encountered, while the ground truth specifies 5 chairs. The prediction does not match the ground truth, and since 8 is not in a possible range near to 5, it is considered incorrect."
+    },
+    {
+      "Q": "How many chairs do I encounter throughout the video?",
+      "A": "You encounter a total of **8 chairs** throughout the video.",
+      "C": "Chairs Encountered: 5",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that only one sofa is observed, whereas the ground truth indicates three sofas. The prediction does not match the exact count required by the ground truth, and one is not in the range of three."
+    },
+    {
+      "Q": "How many sofas are observed during the walkthrough?",
+      "A": "One sofa is observed during the walkthrough.",
+      "C": "Sofas Observed: 3",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there are two floor lamps, whereas the ground-truth answer indicates there is only one. The predicted number does not fall within the correct count, making the answer fully incorrect."
+    },
+    {
+      "Q": "Can you count the number of floor lamps seen in the video?",
+      "A": "There are two floor lamps seen in the video.",
+      "C": "Floor Lamps Seen: 1",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer states that 3 exit signs are passed, which does not fall within the range of the ground truth answer of 5 exit signs. Thus, the prediction is incorrect."
+    },
+    {
+      "Q": "How many exit signs do I pass by as I move around?",
+      "A": "You pass by **3 exit signs** as you move around.",
+      "C": "Exit Signs Passed: 5",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer states that there are 2 whiteboards, which matches the ground truth answer of 2 whiteboards. Therefore, the prediction is fully correct."
+    },
+    {
+      "Q": "What's the count of whiteboards that appear in the scenes?",
+      "A": "There are 2 whiteboards that appear in the scenes.",
+      "C": "Whiteboards in Scenes: 2",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that three separate rooms are entered in the video, while the ground truth indicates that six rooms are entered. The predicted number does not match the ground truth, and thus it is deemed incorrect."
+    },
+    {
+      "Q": "How many separate rooms are entered in the video?",
+      "A": "Based on the visual cues in the images, three separate rooms are entered in the video:\n1. The first room is a small office or waiting area with two red chairs and a table.\n2. The second room is a kitchen or break room with blue cabinets and a kitchenette.\n3. The third room is an office with a desk, chair, computer, and a large window with a city view.\n\nTherefore, the answer is: **Three separate rooms are entered in the video.**",
+      "C": "Separate Rooms Entered: 6",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer provides a detailed step-by-step path that ultimately matches the ground truth's simpler instruction to head straight until reaching the intersection. All the instructions in the predicted answer lead directly to the same intersection mentioned in the ground truth."
+    },
+    {
+      "Q": "What path should I follow to reach the intersection from the starting point?",
+      "A": "1. Move forward down the hallway, passing the glass-walled room on your left and the red chairs on your right.\n2. Continue straight, following the brown and black striped carpet path.\n3. Walk past several doors on both sides, keeping to the main hallway.\n4. When you reach the area with the kitchen (blue cabinets) on your right, continue straight.\n5. Keep following the brown and black carpet path as it curves slightly.\n6. Continue straight until you reach the open intersection area with couches, bean bags, and tables\u2014this is the intersection.",
+      "C": "To reach the intersection from the starting point: Head straight down the corridor until you see the intersection.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer indicates there are three distinct seating areas, while the ground truth specifies there are only two. Since the predicted count does not match the ground truth and does not fall within a range defined by the ground truth, the prediction is considered incorrect."
+    },
+    {
+      "Q": "How many distinct seating areas (combination of sofas or chairs around a table) are shown?",
+      "A": "There are **three distinct seating areas** (combinations of sofas or chairs around a table) shown in the image set.",
+      "C": "Distinct Seating Areas: 2",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground truth answer in terms of the direction needed to enter the lounge area, which is turning right at the intersection. There is no discrepancy between the predicted and ground truth answers, making the prediction fully correct."
+    },
+    {
+      "Q": "After reaching the intersection, where should I turn to enter the lounge area?",
+      "A": "After reaching the intersection, you should turn right to enter the lounge area.",
+      "C": "To enter the lounge area from the intersection: Turn right at the intersection, and you'll enter the lounge area.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer provides a different route from the whiteboard to the nearest exit. The ground-truth answer specifies turning right and following the corridor, whereas the predicted answer suggests walking straight, passing various objects, and exiting through glass doors. This indicates that the predicted path does not align with the ground-truth route, leading to a low accuracy in the prediction."
+    },
+    {
+      "Q": "If I want to go from the whiteboard to the nearest exit, what steps should I take?",
+      "A": "To go from the whiteboard to the nearest exit, follow these steps:\n\n1. Turn away from the whiteboard and walk straight toward the glass wall.\n2. Pass the round table and yellow bean bag on your right.\n3. Continue straight, passing the brown couch on your left.\n4. Walk toward the glass doors at the end of the open area.\n5. Exit through the glass doors, which lead to the main hallway and the nearest exit.\n\nThis is the shortest and most direct route to the nearest exit from the whiteboard.",
+      "C": "To go from the whiteboard to the nearest exit: Turn right from the whiteboard and follow the corridor down to the exit.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer provides a more detailed route description compared to the ground truth. While the essential direction - turning around and walking straight to reach the starting point - aligns with the ground truth, additional details about passing specific objects and areas create a more complex route that wasn't specified in the ground truth. Therefore, while the direction is roughly correct, the extra details make it not fully aligned."
+    },
+    {
+      "Q": "How can I find my way back to the starting corridor from the whiteboard?",
+      "A": "To find your way back to the starting corridor from the whiteboard:\n\n1. Turn around so the whiteboard is behind you and walk straight toward the glass wall and yellow bean bag.\n2. Pass the round table and sofa on your left, and continue straight ahead.\n3. Enter the corridor through the door on your right.\n4. Walk straight down the corridor, passing several doors on your left and right.\n5. Continue straight until you reach the area with the blue kitchen cabinets on your right.\n6. Keep walking straight, passing the kitchen area, until you reach the corridor intersection with the brown and black carpet stripes.\n7. Turn left at the intersection and you will be back in the starting corridor with the two red chairs and the printer.\n\nFollow the colored carpet stripes as a visual guide to retrace your steps.",
+      "C": "To find your way back to the starting corridor from the whiteboard: Turn around, walk straight down the corridor, and you\u2019ll reach the starting point.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer provides a detailed and step-by-step guide that aligns well with the ground truth answer. Both answers describe navigating straight down a corridor and turning towards an area with a soft seating arrangement. The predicted answer adds additional details about the surroundings, like the carpet stripes and glass walls, which may not affect the navigational outcome but provide extra context. This additional detail does not contradict the ground truth and supports the navigation description."
+    },
+    {
+      "Q": "How do I navigate from the corridor to the soft seating area in the lounge?",
+      "A": "1. Start in the corridor facing the direction where the brown and black carpet stripes lead toward a more open area.\n2. Walk straight down the corridor, following the brown and black carpet stripes.\n3. Continue past several doors on your left and right, moving toward the area where the corridor opens up.\n4. As you approach the end of the corridor, you will see the lounge area with glass walls and a soft seating area (couch, bean bag, and round tables) ahead.\n5. Enter the open lounge area directly in front of you, where the soft seating is located.",
+      "C": "To navigate from the corridor to the soft seating area in the lounge: Proceed straight down the corridor, turning right at the intersection. You'll find the soft seating area within the lounge.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer matches the ground truth answer in essence. It correctly identifies the action of entering the lounge and walking straight to reach the sofa. The additional details about slightly moving to the left and bypassing objects do not detract from the overall correctness since they are not contradictory and merely add context. Thus, the prediction aligns well with the required action to reach the sofa."
+    },
+    {
+      "Q": "What is the quickest way to get to the sofa once inside the lounge?",
+      "A": "The quickest way to get to the sofa once inside the lounge is to enter the lounge, then walk straight ahead and slightly to the left, bypassing the round table and yellow bean bag, to reach the sofa directly.",
+      "C": "To get to the sofa once inside the lounge: Walk straight into the lounge area; the sofa will be directly ahead.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer provides additional and specific directions that are not present in the ground truth answer. While both the predicted and ground-truth answers align on the key action of turning around and proceeding down the corridor, the predicted answer includes specific landmarks and a detailed path description not mentioned in the ground truth. The essential instruction (turn around and return down the corridor) is correct, but the added details make it not fully aligned with the ground truth direction."
+    },
+    {
+      "Q": "From the whiteboard, how should I proceed to return to the corridor where I began?",
+      "A": "To return to the corridor where you began from the whiteboard:\n\n1. Turn around and walk straight toward the glass wall and the yellow bean bag.\n2. Pass the round table and sofa on your left.\n3. Continue straight, passing the bookshelf on your right.\n4. Enter the corridor and keep walking straight, following the brown and black carpet path.\n5. Continue straight down the corridor, passing several doors on your left and right.\n6. When you reach the end of the corridor, you will arrive at the area with the two red chairs and the printer, which is where you began.",
+      "C": "To return to the corridor where you began from the whiteboard: Turn around, proceed forward, and continue down the corridor until you reach the starting area.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer 'The text visible on the whiteboard in frame 58 is: \"Hello world!\"' does not match the ground truth. The ground truth indicates that the text is hard to see and consists of mathematical notations and graphs, not 'Hello world!'. The predicted answer is entirely different from the information provided by the ground truth."
+    },
+    {
+      "Q": "What text is visible on the whiteboard in frame 58?",
+      "A": "The text visible on the whiteboard in frame 58 is: \"Hello world!\".",
+      "C": "A whiteboard with some mathematical notations and graphs. I can hardly see what is the text.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground-truth answer exactly, indicating that the color of the chair in the right foreground is correctly identified as red."
+    },
+    {
+      "Q": "What color is the chair in the right foreground?",
+      "A": "The chair in the right foreground is red.",
+      "C": "The chair in the right foreground is red.",
+      "M": "Object Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes what is visible through the glass panel. Both the predicted answer and the ground truth identify tables and chairs indicating a meeting or conference room, which aligns correctly with each other."
+    },
+    {
+      "Q": "What is visible through the glass panel at the end of the corridor?",
+      "A": "Through the glass panel at the end of the corridor, a table and several chairs are visible, indicating a meeting or conference room.",
+      "C": "Through the glass panel at the end of the corridor, you can see a room with chairs and tables, suggesting it may be a meeting or conference room.",
+      "M": "Object Recognition",
+      "start_idx": 10,
+      "end_idx": 12
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that a fire alarm pull station is mounted next to the fire extinguishers, which differs from the ground truth answer indicating a white cabinet with exit signs. The two answers describe completely different objects, hence the prediction is fully incorrect."
+    },
+    {
+      "Q": "What is mounted on the wall next to the fire extinguishers?",
+      "A": "A fire alarm pull station is mounted on the wall next to the fire extinguishers.",
+      "C": "There is a white cabinet indicating the exits sign mounted on the wall next to the fire extinguishers.",
+      "M": "Object Recognition",
+      "start_idx": 20,
+      "end_idx": 22
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer provides a detailed and accurate route that aligns with the ground truth. It describes the path from the corridor entrance to the lounge area and specifies reaching the whiteboard, which matches the ground truth's mention of reaching the lounge area at the end."
+    },
+    {
+      "Q": "Describe the route I need to take to reach the whiteboard from the corridor entrance.",
+      "A": "1. Enter the corridor and walk straight, passing the glass-walled office area on your left.\n2. Continue forward, passing several doors on both sides and following the brown-and-black striped carpet.\n3. When you reach the open lounge area with couches, beanbags, and a round table, veer slightly left to enter this space.\n4. Head toward the far wall, where you will see a large whiteboard on your right.\n5. Approach the whiteboard directly; you have arrived at your destination.",
+      "C": "To reach the whiteboard from the corridor entrance: Walk forward, passing the intersections, until you reach the lounge area at the end.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer correctly identifies one object, the potted plant, from the ground truth answer. However, it incorrectly lists other objects such as a computer monitor, keyboard, mouse, and water bottle that are not in the ground truth. It also misses the laptop and mug from the ground truth answer."
+    },
+    {
+      "Q": "What objects are visible on the desk inside the room?",
+      "A": "On the desk inside the room, there are visible objects including a computer monitor, a keyboard, a mouse, a water bottle, and a potted plant.",
+      "C": "On the desk inside the room, you can see a laptop, a potted plant, and a mug.",
+      "M": "Object Recognition",
+      "start_idx": 30,
+      "end_idx": 32
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there are two light-colored garments or cloth items hanging on a coat rack on the left wall in the corridor, whereas the ground truth states that there's nothing hanging on the left wall. Therefore, the predicted answer contradicts the ground truth and is incorrect."
+    },
+    {
+      "Q": "What items are hanging on the left wall in the corridor?",
+      "A": "There are two light-colored garments or cloth items hanging on a coat rack on the left wall in the corridor.",
+      "C": "There's nothing hanging on the left wall in the corridor.",
+      "M": "Object Recognition",
+      "start_idx": 40,
+      "end_idx": 42
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer is correct as it matches the ground-truth answer both qualitatively and quantitatively, stating that the phrase \"Hello world!\" appears once on the whiteboard."
+    },
+    {
+      "Q": "How many times does the phrase \"Hello world!\" appear on the whiteboard?",
+      "A": "The phrase \"Hello world!\" appears once on the whiteboard.",
+      "C": "1 time.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately matches the ground truth answer in terms of content and detail. Both state that the bean bag in the seating area is yellow."
+    },
+    {
+      "Q": "What color is the bean bag in the seating area?",
+      "A": "The bean bag in the seating area is yellow.",
+      "C": "Yellow.",
+      "M": "Object Recognition",
+      "start_idx": 50,
+      "end_idx": 52
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer \"The beanbag chair in the room is yellow.\" matches exactly with the ground truth answer, indicating a correct prediction."
+    },
+    {
+      "Q": "What color is the beanbag chair in the room?",
+      "A": "The beanbag chair in the room is yellow.",
+      "C": "The beanbag chair in the room is yellow.",
+      "M": "Object Recognition",
+      "start_idx": 70,
+      "end_idx": 72
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly states that there is a small round black table next to the chair on the right. This matches the ground truth answer, which also describes a black round table in the same position."
+    },
+    {
+      "Q": "What is positioned right next to the chair on the right?",
+      "A": "Right next to the chair on the right, there is a small round black table.",
+      "C": "There is a black round table next to the chair on the right.",
+      "M": "Spatial Reasoning",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer describes a ceiling light panel rather than a ceiling tile. The two are related as they can both be found on ceilings, but they are distinct items. Therefore, the prediction does not match the ground truth answer."
+    },
+    {
+      "Q": "What is directly above the exit sign?",
+      "A": "Directly above the exit sign is a ceiling light panel.",
+      "C": "Directly above the exit sign is a ceiling tile.",
+      "M": "Spatial Reasoning",
+      "start_idx": 10,
+      "end_idx": 12
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer of needing approximately 2 additional steps to reach the table is within the range of 1-2 steps as stated in the ground truth answer. Therefore, it is considered correct."
+    },
+    {
+      "Q": "If you start at the black chair and walk toward the lamp, how many additional steps are needed to reach the table from the lamp?",
+      "A": "Based on the images, after reaching the lamp from the black chair, you would need to take approximately 2 additional steps to reach the table.",
+      "C": "1. **Start at the Black Chair:** The black chair is positioned near the seating area.\n2. **Walk Toward the Lamp:** The lamp is quite close to the black chair, so the number of steps to the lamp is minimal.\n3. **From the Lamp to the Table:** The table is positioned near the lamp alongside the sofa and other furniture.\n\nIt looks like the table is very close to the lamp, essentially adjacent to it. Therefore, it would take approximately 1-2 steps to reach the table from the lamp.",
+      "M": "Spatial Reasoning",
+      "start_idx": 20,
+      "end_idx": 22
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer only mentions potted plants, whereas the ground truth specifies several objects including a laptop, a plant, a cup, and some papers or notebooks. The prediction is partially correct but incomplete, leading to a middle score."
+    },
+    {
+      "Q": "What object is situated on top of the desk?",
+      "A": "On top of the desk, there are some potted plants.",
+      "C": "On top of the desk, there is a laptop, a plant, a cup, and some papers or notebooks.",
+      "M": "Spatial Reasoning",
+      "start_idx": 30,
+      "end_idx": 32
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly describes the position of \"Hello world\" relative to the equation \\(SQ(G)\\) as being above it, which matches the ground truth answer. The action of \"being written\" does not contradict the position and thus is considered correct."
+    },
+    {
+      "Q": "What is the position of \"Hello world\" relative to the equation \\(SQ(G)\\)?",
+      "A": "\"Hello world\" is being written above the equation \\(SQ(G)\\).",
+      "C": "\"Hello world\" is written above the equation \\(SQ(G)\\) on the whiteboard.",
+      "M": "Spatial Reasoning",
+      "start_idx": 60,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'Hello world!' matches the ground-truth answer 'Hello World!' with only a slight variation in capitalization, which does not affect the correctness of the content."
+    },
+    {
+      "Q": "What did I right on the whiteboard?",
+      "A": "You wrote \"Hello world!\" on the whiteboard.",
+      "C": "\"Hello World!\"",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer states that the microwave oven is the object directly visible through the open door, which aligns with part of the ground truth answer. However, the ground truth also mentions cabinets as part of the visible kitchenette area. Since the predicted answer only partially matches the ground truth by excluding the cabinets, it is considered partially correct."
+    },
+    {
+      "Q": "When standing near the coat rack, which object is directly visible through the open door?",
+      "A": "When standing near the coat rack, the object directly visible through the open door is a microwave oven.",
+      "C": "When standing near the coat rack, I can directly see a kitchenette area through the open door. There are cabinets and a microwave visible.",
+      "M": "Spatial Reasoning",
+      "start_idx": 40,
+      "end_idx": 42
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies the yellow bean bag as being directly behind the table, which is part of the ground truth answer. However, it misses the additional detail about the white sign/board with the word \"INSAIT\" on it, which is also directly behind the table according to the ground truth."
+    },
+    {
+      "Q": "What object is directly behind the table?",
+      "A": "The object directly behind the table is a yellow bean bag.",
+      "C": "Directly behind the table, there is a yellow bean bag and a white sign/board with the word \"INSAIT\" on it.",
+      "M": "Spatial Reasoning",
+      "start_idx": 50,
+      "end_idx": 52
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer describes a black backpack positioned beside an orange bean bag, which contradicts the ground-truth statement that specifies a white circular table is positioned beside a yellow bean bag. The spatial relationships in the predicted answer do not match those described in the ground truth. Therefore, the prediction is fully incorrect."
+    },
+    {
+      "Q": "What object is positioned beside the orange bean bag, according to the spatial relationships described?",
+      "A": "The object positioned beside the orange bean bag is a black backpack.",
+      "C": "First, it is a yellow bean bag. The object positioned beside the yellow bean bag is a white circular table.",
+      "M": "Spatial Reasoning",
+      "start_idx": 70,
+      "end_idx": 72
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer \"Hello world!\" is completely different from the ground-truth answer, which mentions \"Some blocks and process figure\" and \"MHA\" for multi-head attention. Hence, it is fully incorrect."
+    },
+    {
+      "Q": "What did I write on the whiteboard in the room?",
+      "A": "You wrote \"Hello world!\" on the whiteboard in the room.",
+      "C": "Some blocks and process figure. It seems like a deep learning data flow process. I can see from the right corner of the whiteboard, it writes \"MHA\" for multi-head attention.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 73
+    }
+  ]
+]

@@ -1,0 +1,827 @@
+[
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer states that there are 13 chairs visible, while the ground truth states there are 12 chairs. Since the predicted number is close but not within an acceptable range for counting questions, it is considered mostly incorrect, but partially correct due to proximity."
+    },
+    {
+      "Q": "How many chairs are visible in the video?  ",
+      "A": "There are 13 chairs visible in the video.",
+      "C": "12 chairs  are visible .",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches exactly with the ground truth answer, indicating that the prediction is fully correct."
+    },
+    {
+      "Q": "How many beds did I walk past during the video?  ",
+      "A": "You walked past 2 beds during the video.",
+      "C": "You walked past 2 beds. ",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that 4 rooms were entered, while the ground truth states 6 rooms were entered. The difference in the count is outside the accepted range of correctness for counting questions."
+    },
+    {
+      "Q": "How many rooms did I enter throughout the video?  ",
+      "A": "You entered 4 rooms throughout the video.",
+      "C": "You entered 6 rooms.  ",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer of 7 doors does not fall within the range of the ground truth answer of 5 doors. While the prediction does involve counting and the numbers are close, it is still incorrect, as the prediction is not within an acceptable range of the ground truth."
+    },
+    {
+      "Q": "Count the number of visible doors throughout the video.  ",
+      "A": "There are 7 visible doors throughout the video.",
+      "C": "5 doors are visible. ",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer states six tables, which matches the ground truth answer of six tables. Additionally, the detailed breakdown of the tables corresponds logically to how one might categorize different tables across rooms in such a context."
+    },
+    {
+      "Q": "How many tables can be seen in different rooms across the video?  ",
+      "A": "Based on the provided image set, there are **six tables** visible in different rooms across the video:\n\n1. A long white console table in the hallway/entrance area (visible in the first few images).\n2. A kitchen counter/bar table with two high stools (visible in the kitchen area).\n3. A small dining table with four red chairs (visible in the dining/living area).\n4. A black coffee table in front of the sofas in the living room.\n5. A small bedside table in the first bedroom (next to the bed).\n6. A white desk/table in the study/office room (with a computer and chair).\n\nSo, the answer is: **Six tables** can be seen in different rooms across the video.",
+      "C": "6 tables  can be seen.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately identifies a 'large wall-mounted mirror' in the center-right of the images, which matches the ground truth of 'a mirror mounted on the wall.' The mention of 'possibly indicating a wall fixture or furniture piece' does not detract from the correctness of identifying the mirror, thus fully correct."
+    },
+    {
+      "Q": "What object is visible in the center-right, possibly indicating a wall fixture or furniture piece?  ",
+      "A": "In the center-right of the images, a large wall-mounted mirror is visible, possibly indicating a wall fixture or furniture piece.",
+      "C": "In the center-right of the images, there is a mirror mounted on the wall.",
+      "M": "Object Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer mentions only one pot with a lid, while the ground truth specifies there are 2 pots, with one having a lid. Therefore, the predicted answer is partially correct, describing part of the scene accurately."
+    },
+    {
+      "Q": "What is placed on top of the stove?  ",
+      "A": "On top of the stove, there is a pot with a lid placed on one of the burners.",
+      "C": "On top of the stove, there are 2 pots, one of which is with a lid.",
+      "M": "Object Recognition",
+      "start_idx": 11,
+      "end_idx": 13
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies the stove, which is directly beneath the range hood, as mentioned in the ground truth. While it adds additional detail about a pot with a lid, the main object (the stove) is correctly identified. The prediction is slightly less detailed because it omits 'kitchen counter', hence a score of 4."
+    },
+    {
+      "Q": "What object is directly beneath the range hood?  ",
+      "A": "The object directly beneath the range hood is a pot with a lid on a stovetop.",
+      "C": "Directly beneath the range hood, there is the stove and the kitchen counter.",
+      "M": "Object Recognition",
+      "start_idx": 22,
+      "end_idx": 24
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer of three windows does not fall within the ground truth range of 5 to 8 windows. Therefore, it is incorrect."
+    },
+    {
+      "Q": "How many windows did I pass by or view through in the video?  ",
+      "A": "You passed by or viewed through **three** windows in the video.",
+      "C": "Between 5 and  8 windows are visible. ",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer identifies an item similar in type to the ground truth answer (toilet paper instead of paper towels), both of which typically have cylindrical shapes. However, they are not the same item, making the prediction partially correct."
+    },
+    {
+      "Q": "What item on the table resembles a cylinder in shape?  ",
+      "A": "The item on the table that resembles a cylinder in shape is the roll of toilet paper.",
+      "C": "The item on the table that resembles a cylinder in shape is the roll of paper towels.",
+      "M": "Object Recognition",
+      "start_idx": 33,
+      "end_idx": 35
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'The door handle is made of metal.' precisely matches the ground-truth answer's description that the door handle appears to be made of metal, which indicates they are the same type of material."
+    },
+    {
+      "Q": "What material is the door handle made of?  ",
+      "A": "The door handle is made of metal.",
+      "C": "The door handle appears to be made of metal.",
+      "M": "Object Recognition",
+      "start_idx": 55,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer aligns closely with the ground-truth correct answer. Both indicate that the reflections suggest a smooth and glossy surface, likely polished tile, with high reflectivity, as indicated by the clarity of the reflections. The essential attributes and conclusions about the texture are accurately captured in the predicted answer."
+    },
+    {
+      "Q": "What do the reflections in the second frame suggest about the surface\u2019s texture?  ",
+      "A": "The reflections in the second frame suggest that the surface (the floor) is smooth and glossy, likely polished tile, as it clearly reflects light and objects from the surroundings.",
+      "C": "The reflections in the second frame suggest that the surface is smooth and polished, likely made of a material like tile or a glossy finish. The clarity of the reflections indicates a high level of reflectivity, which is typical of smooth textures.",
+      "M": "Object Recognition",
+      "start_idx": 77,
+      "end_idx": 79
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the item is a wooden door, which is different from the ground-truth answer specifying the item is a bed. Therefore, the prediction is fully incorrect."
+    },
+    {
+      "Q": "What furniture item is at the center of the first frame?  ",
+      "A": "The furniture item at the center of the first frame is a wooden door.",
+      "C": "In the first frame, the furniture item at the center appears to be a bed.",
+      "M": "Object Recognition",
+      "start_idx": 88,
+      "end_idx": 90
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer identifies several items correctly, such as the remote control and cables. However, it also includes items not mentioned in the ground truth, such as a green bottle and a wallet or small pouch, and it describes the plastic sphere as a white spherical lamp. The predicted answer roughly matches the ground truth in terms of the presence of various objects, but the specific items mentioned are not all correct."
+    },
+    {
+      "Q": "What items are visible on the tabletop in the red-lit scene?  ",
+      "A": "The items visible on the tabletop in the red-lit scene are:\n- A white spherical lamp\n- A green bottle\n- Some cables or earphones\n- A wallet or small pouch\n- A remote control (being held by the person)\n- A small round object (possibly a coin or button)\n- A rectangular object (possibly a phone or power bank)",
+      "C": "On the tabletop, you can see the following items: a remote control, various cables, a plastic sphere, other small objects and gadgets.",
+      "M": "Object Recognition",
+      "start_idx": 99,
+      "end_idx": 101
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer falls within the range of the ground truth answer (7-10 electronic devices) with a minimum count of 7 devices. The detailed enumeration matches the requirement for correctness as per the instructions."
+    },
+    {
+      "Q": "How many electronic devices are visible in the video?  ",
+      "A": "Based on the provided images, there are at least **7 electronic devices** visible in the video:\n1. TV in the living room.\n2. Microwave in the kitchen.\n3. Electric stove in the kitchen.\n4. Air conditioner in the study/office room.\n5. Computer monitor in the study/office room.\n6. Laptop on the dining room cabinet.\n7. Smartphone in the hand of the person recording the video.",
+      "C": "There are  7-10 electronic devices.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted count of 17 bottles or containers is lower than the ground truth of at least 19. The prediction is close but does not meet the minimum requirement stated in the ground truth."
+    },
+    {
+      "Q": "How many bottles or containers can be seen on the surfaces in the video?  ",
+      "A": "Based on the provided image set, I counted the following bottles or containers visible on surfaces throughout the video:\n\n1. Kitchen counter near the stove: At least 7 bottles/containers (various oil, vinegar, and sauce bottles).\n2. Kitchen counter near the sink: 2 containers (dish soap and a spray bottle).\n3. Kitchen counter near the stove (right side): 2 containers (one yellow, one pink).\n4. Kitchen counter near the stove (left side): 1 bottle (green).\n5. Kitchen hood: 2 containers (one yellow, one green).\n6. Dining table: 2 containers (one white rice cooker, one plastic container).\n7. Bedroom dresser: 1 container (green bag, possibly a container).\n8. Desk in the study/office: 2 containers (one green vase, one white lamp).\n\n**Total bottles or containers visible on surfaces: 17**",
+      "C": "There are at least 19 bottles and containers.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer identified 5 distinct rooms or areas, which does not match the ground-truth answer of 8 distinct rooms or areas. The prediction did identify some rooms correctly, but missed three additional areas, leading to partial correctness."
+    },
+    {
+      "Q": "Count the number of distinct rooms or areas that I explored in this video.  ",
+      "A": "Based on the visual cues in the sampled images, you explored 5 distinct rooms or areas in this video:\n1. Hallway/Entrance area\n2. Kitchen\n3. Dining/Living room area\n4. Bedroom 1 (with a double bed)\n5. Bedroom 2/Office (with a single bed and a desk)",
+      "C": "8 distinct rooms or areas have been explored.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the same area mentioned in the ground truth: both refer to the dining space/area connecting the living room to the kitchen. The additional detail about the table and red chairs does not change the correctness of the connection between the living room and the kitchen."
+    },
+    {
+      "Q": "Which area connects the living room to the kitchen in the sequence?",
+      "A": "The area that connects the living room to the kitchen in the sequence is the dining area with the table and red chairs.",
+      "C": "A dining space connects the living room to the kitchen.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that a bedroom follows the narrow hallway, whereas the ground truth answer specifies that the kitchen comes right after the narrow hallway. Since the predicted answer does not match the ground truth, it is deemed incorrect."
+    },
+    {
+      "Q": "Can you identify the room that comes right after the narrow hallway?",
+      "A": "The room that comes right after the narrow hallway is a bedroom.",
+      "C": "The kitchen comes right after the narrow hallway.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer 'hallway/entrance area' covers the essential part of the ground-truth answer 'narrow hallway'. While the prediction does not specify 'narrow', it still correctly identifies the area as a hallway, which matches the ground-truth contextually."
+    },
+    {
+      "Q": "Before entering the kitchen, which scene do I pass through?",
+      "A": "Before entering the kitchen, you pass through the hallway/entrance area.",
+      "C": "You pass through the narrow hallway.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer accurately identifies the initial sequence of scenes: starting in a hallway, moving to the kitchen, and then to the living area. However, it does not correctly capture the transition through another hallway or the opening and closing of the bathroom door. The predicted answer ends in the study/office, which aligns with the ground-truth ending location with a workspace and window. Due to these missing elements and the sequence alignment, the prediction is partially correct."
+    },
+    {
+      "Q": "What is the sequence of scenes in the video from start to finish?",
+      "A": "1. The video starts in a hallway, facing towards the end of the corridor.\n2. The person walks down the hallway, passing a shoe rack, mirror, and wall art.\n3. The person turns left into the kitchen area, passing a black cabinet.\n4. The person continues through the kitchen, passing the counter and bar stools, and moves towards the dining area.\n5. The person enters the dining area, where a table with red chairs and some dishes is visible.\n6. The person walks past the dining table into the living room, where beige and red sofas and a TV are visible.\n7. The person circles around the living room, showing the coffee table, sofas, and TV area.\n8. The person returns to the dining area and heads back towards the hallway.\n9. The person walks down the hallway, passing the same shoe rack and mirror, and heads towards the doors at the end.\n10. The person opens a door and enters a bedroom with a double bed, armchair, and dresser.\n11. The person explores the bedroom, showing the bed, armchair, dresser, and wardrobe.\n12. The person exits the bedroom and enters another room, which is a smaller bedroom with a single bed and white furniture.\n13. The person explores the smaller bedroom, showing the bed, chair, and wardrobe.\n14. The person exits the smaller bedroom and enters a third room, which is a study or office with desks, chairs, and a computer.\n15. The person picks up a remote control from the desk and points it at the air conditioner, turning it on.\n16. The person looks around the study/office, showing the desk, chair, and window.\n17. The video ends in the study/office, with the person holding the remote and facing the window.",
+      "C": "Start in the narrow hallway. Enter the kitchen. Move to the seating/living area. Transition through another hallway. Open the bathroom door, then close it. Enter the bedroom. Move to the next bedroom. End in the room with the workspace and window.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer identifies the living area, which includes a dining section, as the next location after the kitchen scene, matching the ground-truth answer's mention of the seating/living area."
+    },
+    {
+      "Q": "What room am I in after the kitchen scene?",
+      "A": "After the kitchen scene, you are in the dining/living room area.",
+      "C": "You visit the seating/living area.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer incorrectly identifies the item as a 'pot with a lid' instead of the 'set of hanging ladles and kitchen utensils' stated in the ground truth. Additionally, the estimated distance of 'less than 1 foot' doesn't match the '20 to 30 centimeters' specified in the ground truth."
+    },
+    {
+      "Q": "What item is positioned directly above the stove control panel, and how far away is it estimated to be?",
+      "A": "The item positioned directly above the stove control panel is a pot with a lid. It is estimated to be less than 1 foot away from the control panel.",
+      "C": "The item positioned directly above the stove control panel is a set of hanging ladles and kitchen utensils. They are estimated to be about 20 to 30 centimeters away from the control panel.",
+      "M": "Spatial Reasoning",
+      "start_idx": 11,
+      "end_idx": 13
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies the presence of several bottles to the left of the stove, aligning with the ground truth. However, it incorrectly specifies a green bottle and a metallic container instead of a jar and a container of plastic wrap. Therefore, while partially correct, the prediction is not fully accurate."
+    },
+    {
+      "Q": "What objects are to the left of the stove?",
+      "A": "To the left of the stove, there are several bottles (likely oil and other condiments), a green bottle, and a metallic container.",
+      "C": "To the left of the stove, there are bottles, a jar, and a container of plastic wrap.",
+      "M": "Spatial Reasoning",
+      "start_idx": 22,
+      "end_idx": 24
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer includes several items matching those in the ground-truth answer, such as a rice cooker, bowls and plates, a cup/mug, and a roll of toilet paper. However, it also includes items like napkins or tissues, and cutlery which are not mentioned in the ground truth. Conversely, the ground truth includes a vegetable peeler and headphones, which are not clearly identified in the prediction. The prediction partially matches the ground truth, but discrepancies are significant enough to consider it incorrect."
+    },
+    {
+      "Q": "What items are positioned on the table?",
+      "A": "The items positioned on the table are:\n- A rice cooker with the lid open\n- Several bowls and plates\n- A cup/mug\n- A roll of toilet paper\n- Some cutlery (spoon, fork, knife)\n- Food packaging or containers\n- A tube (possibly food or condiment)\n- Napkins or tissues\n- A black item (possibly headphones or a small appliance)\n- Some paper or receipts",
+      "C": "On the table, there are the following items: a rice cooker with a serving spoon, a vegetable peeler, several plates, a roll of toilet paper, couple of bowls, a pair of headphones, a  cup or mug, a rectangular container or box.",
+      "M": "Spatial Reasoning",
+      "start_idx": 33,
+      "end_idx": 35
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer is accurate and matches the ground-truth answer. Both identify the object being grasped as a door handle."
+    },
+    {
+      "Q": "What object is your hand grasping?",
+      "A": "The object your hand is grasping is a door handle.",
+      "C": "Your hand is grasping a door handle.",
+      "M": "Spatial Reasoning",
+      "start_idx": 55,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer is in agreement with the ground-truth answer. Both identify the object on top of the chair as a pile of clothes. The wording \"appears to be\" does not introduce uncertainty that contradicts the ground truth."
+    },
+    {
+      "Q": "What is the object on top of the chair?",
+      "A": "The object on top of the chair appears to be a pile of clothes.",
+      "C": "The object on top of the chair is a pile of clothes.",
+      "M": "Spatial Reasoning",
+      "start_idx": 66,
+      "end_idx": 68
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer, stating that it would take approximately 2 to 3 steps, does not fall within the range provided by the ground truth answer, which is 5 to 7 steps. Therefore, the prediction is not accurate and is considered incorrect."
+    },
+    {
+      "Q": "How many steps would it take to reach the door from the beginning of the hallway based on the visible distance?",
+      "A": "Based on the visible distance and the progression between frames (each representing 0.5 seconds at 2 fps), it would take approximately 2 to 3 steps to reach the door from the beginning of the hallway.",
+      "C": "From the given images, if the door at the end of the hallway is your target, it looks like it would take about 5 to 7 steps to reach it from your starting position. ",
+      "M": "Spatial Reasoning",
+      "start_idx": 77,
+      "end_idx": 79
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer only mentions a desk as the object opposite to the window, missing out on the additional details in the ground-truth answer which includes a chair and various objects. Hence, it is partially correct."
+    },
+    {
+      "Q": "What object is directly opposite to the window?",
+      "A": "The object directly opposite to the window is a desk.",
+      "C": "The desk with a chair and various objects are directly opposite the window.",
+      "M": "Spatial Reasoning",
+      "start_idx": 99,
+      "end_idx": 101
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies that there is a scene showcasing an exterior view through a window. It accurately describes the location as being in the room with a workspace or desk and computer, which aligns with the ground truth answer of \"In the room with the workspace.\" However, the predicted answer provides additional details about the sequence and actions, which are not necessary for the correctness of identifying the scene but do not contradict the ground truth. The minor discrepancy regarding the description of the scene sequence does not affect the correctness significantly, so a score of 4 is appropriate."
+    },
+    {
+      "Q": "Is there a scene that showcases an exterior view through a window? If so, where does it occur?",
+      "A": "Yes, there is a scene that showcases an exterior view through a window. It occurs in the room with a desk and computer, starting from the 6th image from the end of the set and continuing for several frames as the person points a remote control toward the window and air conditioner.",
+      "C": "In the room with the workspace (last scene).",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that after the bedroom, you transition into the hallway, whereas the ground truth states you transition into another bedroom. The prediction is completely different from the ground truth."
+    },
+    {
+      "Q": "After the bedroom, which area do I transition into next?",
+      "A": "After the bedroom, you transition into the hallway.",
+      "C": "Another bedroom.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly advises taking a left turn upon entering the narrow hallway, which matches the ground truth answer indicating this direction leads to the kitchen."
+    },
+    {
+      "Q": "After entering the narrow hallway, which turn should I take to reach the kitchen?",
+      "A": "After entering the narrow hallway, you should take a left turn to reach the kitchen.",
+      "C": "Upon entering the narrow hallway, turn left into the area where the kitchen is located.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies the next area seen after the living room scene as a 'hallway area', which aligns with the ground truth answer that specifies 'another hallway leading to different rooms'. Both answers indicate the presence of a hallway next, thus making the prediction fully correct."
+    },
+    {
+      "Q": "After the living room scene, what area do I see next?",
+      "A": "After the living room scene, you next see the hallway area.",
+      "C": "Another hallway leading to different rooms.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the path from the kitchen to the living room by mentioning the necessary locations to pass through, such as the archway and dining table, and matches the overall sequence of the ground truth."
+    },
+    {
+      "Q": "From the kitchen, what\u2019s the quickest way to the living room?",
+      "A": "From the kitchen, the quickest way to the living room is to exit the kitchen through the open archway, walk straight past the dining table with red chairs, and continue forward into the living room area with the beige couches and TV.",
+      "C": "Leave the kitchen and go straight through the archway into the dining area, then continue forward into the living room.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer suggests turning right at the end of the hallway and approaching the first door on the right, while the ground truth answer specifies that the bathroom door is on the right as you walk towards the back without mentioning a right turn at the end. Despite this discrepancy, both descriptions ultimately guide the individual to finding the bathroom, albeit with slight variations in direction. Therefore, the prediction is not fully correct but largely aligns with the ground truth."
+    },
+    {
+      "Q": "If I'm in the hallway and want to find the bathroom, what path should I follow?",
+      "A": "To find the bathroom from the hallway, follow this path:\n\n1. Walk straight down the hallway.\n2. When you reach the end of the hallway, turn right.\n3. Approach the first door on your right.\n4. Open this door and enter\u2014the bathroom is inside.",
+      "C": "Walk down the hallway towards the back. The bathroom door will be on your right.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer provides a step-by-step description of the process to navigate from the bedroom to the hallway, which matches the ground truth answer. It includes all necessary actions, resulting in a fully accurate prediction."
+    },
+    {
+      "Q": "How do I navigate from the bedroom to the hallway?",
+      "A": "To navigate from the bedroom to the hallway:\n\n1. Start in the bedroom facing the door.\n2. Walk towards the door and open it.\n3. Exit the bedroom through the door.\n4. Step out into the hallway.\n\nYou are now in the hallway.",
+      "C": "Exit the bedroom and you will immediately be in the hallway.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer suggests moving to the left, which contradicts the ground truth that indicates moving towards the dining area with the counter on the right in the kitchen area. Therefore, the prediction is largely incorrect since it gives a different direction."
+    },
+    {
+      "Q": "To move from the living room to the open space with a counter, which direction should I take?",
+      "A": "To move from the living room to the open space with a counter, you should head toward the left.",
+      "C": "Move towards the dining area and the counter will be to your right in the kitchen area.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer provides a correct method to reach the hallway from the desk. While it includes additional details about turning after exiting the door, the core actions of leaving the room and entering the hallway align with the ground truth. Thus, it is mostly correct with a minor discrepancy in detail."
+    },
+    {
+      "Q": "If standing at the desk, how can I reach the hallway again?",
+      "A": "To reach the hallway from the desk, turn around and walk straight toward the door. Exit the room through the door, then turn left to enter the hallway.",
+      "C": "Leave the room with the desk, and you will enter the hallway.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer accurately describes the initial exit from the kitchen and the turn sequence, but it incorrectly states that the turn is made at the end of the hallway. The ground truth specifies taking a right after entering the hallway and then finding the bedroom on the left. The sequence is similar, but not identical, leading to a slight deviation in the navigation steps provided."
+    },
+    {
+      "Q": "What sequence of turns should I make to go from the kitchen to the bedroom?",
+      "A": "1. Exit the kitchen and go straight down the hallway.\n2. When you reach the end of the hallway, turn right.\n3. Continue straight and then turn left into the bedroom.",
+      "C": "Exit the kitchen, proceed to the hallway, take a right, and continue down the hallway. The bedroom entrance will be on your left.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the path from the room with the couch to the kitchen-like area. It includes all necessary steps, and aligns with the ground truth by mentioning the dining area and passing through the open archway to enter the kitchen-like area."
+    },
+    {
+      "Q": "From the room with the couch, how do I get to the kitchen-like area?",
+      "A": "1. Start in the room with the couches.\n2. Move toward the dining table with red chairs.\n3. Walk past the dining table, keeping it on your left.\n4. Continue straight ahead through the open space/archway.\n5. Enter the kitchen-like area directly ahead.",
+      "C": "Exit the room with the couch, head through the dining area, and enter the kitchen through the open archway.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer provides a clear path from the narrow hallway to the broader living room space. It includes additional details such as passing the kitchen entrance, which is not mentioned in the ground truth answer but does not contradict it. Both answers ultimately guide through the dining area to reach the living room, ensuring the overall correctness of the predicted path. Hence, the prediction is mostly correct but slightly more detailed than the ground-truth answer."
+    },
+    {
+      "Q": "How can I move from the narrow hallway to the broader living room space?",
+      "A": "To move from the narrow hallway to the broader living room space, walk straight down the hallway, passing the kitchen entrance on your left. Continue forward until you reach the end of the hallway, then turn left into the dining area. From there, proceed forward and you will enter the broader living room space.",
+      "C": "Head towards the dining area and proceed into the living room through the open space.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground truth answer with only a minor formatting difference in the text ('CocaCola' vs 'Coca-Cola'). The specific text content provided is essentially the same, and therefore, the prediction is considered correct."
+    },
+    {
+      "Q": "What specific text is visible in frame 24 of the video?  ",
+      "A": "In frame 24 of the video, the visible text is: \"ICE COLD CocaCola SOLD HERE\".",
+      "C": "In frame 24 of the video, the specific text visible is \"ICE COLD Coca-Cola SOLD HERE.\"  ",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer mentions a residential apartment or home environment, which is in line with part of the ground truth implying a non-commercial, home-like setting. However, the predicted answer lacks specific details about the vintage or retro style that is emphasized in the ground truth and does not specifically mention kitchens or dining areas as potential environments. Therefore, the prediction is partially correct but misses key aspects of the ground-truth answer."
+    },
+    {
+      "Q": "Based on the text observed, what kind of environment or type of place might you be in?  ",
+      "A": "Based on the text observed in the images, such as \"ICE COLD CocaCola SOLD HERE\" on wall signs, and the visual cues of a kitchen, dining area, living room, hallway, and bedrooms, it appears you are in a residential apartment or home environment.",
+      "C": "Based on the text observed, the environment might be a kitchen or dining area, possibly resembling a casual, vintage style, as the sign is often associated with old-fashioned or retro decor, sometimes found in home bars or themed areas rather than commercial settings.  ",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer mentions signs with \"ICE COLD CocaCola SOLD HERE,\" while the ground truth refers to signs or stickers with \"Atlanta\" or \"KFC.\" The information provided in the prediction does not match the ground truth labels, indicating a significant discrepancy in the content of the signs or labels identified."
+    },
+    {
+      "Q": "Can you find any other signs or labels in the video, and if so, what do they say?  ",
+      "A": "Yes, there are signs/labels visible in the video. In the kitchen area, there are two vintage-style signs on the wall above the stove/hood. Both signs say \"ICE COLD CocaCola SOLD HERE.\"",
+      "C": "There are also signs or stickers with text such as \u201cAtlanta\u201d or \u201cKFC\u201d written on them.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the text appears three times, while the ground truth states it appears twice. There is a discrepancy in the count, and the predicted count does not fall within the range of the ground truth count."
+    },
+    {
+      "Q": "How many times do you encounter the text \"ice cold sold here\" throughout the video?  ",
+      "A": "The text \"ice cold sold here\" appears **three times** throughout the video.",
+      "C": "The text \"ice cold sold here\" is encountered twice throughout the video.  ",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies the brand as Coca-Cola, consistent with the ground-truth answer. Additional information about wall signs in the kitchen area does not detract from its correctness."
+    },
+    {
+      "Q": "Is there any indication of a specific brand associated with the text?  ",
+      "A": "Yes, there is an indication of a specific brand associated with the text. In the kitchen area, there are multiple wall signs with the \"Coca-Cola\" brand clearly visible.",
+      "C": "Yes, the specific brand associated with the text is Coca-Cola.  ",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies the purpose of the \"ice cold sold here\" sign as decorative, with a retro or vintage aesthetic, similar to the ground truth. It also mentions it as a nostalgic decor choice, which aligns with the ground-truth purpose of evoking a nostalgic aesthetic."
+    },
+    {
+      "Q": "What might be the purpose of the \u201cice cold sold here\u201d sign in a home setting?  ",
+      "A": "The \u201cice cold sold here\u201d sign in a home setting is likely used as a decorative item, adding a retro or vintage aesthetic to the kitchen area. It is not functional for selling cold items but serves as a nostalgic or playful decor choice.",
+      "C": "In a home setting, the purpose of the \u201cice cold sold here\u201d sign might be decorative, evoking a nostalgic or retro aesthetic, or simply to add a unique touch to the kitchen or dining area.  ",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies the setting as residential, mentioning key elements that support this interpretation, such as specific furniture and personal items typical of a home. The rationale aligns with the ground truth answer, which focuses on home decor and setting. Both emphasize the characteristics that suggest a residential environment."
+    },
+    {
+      "Q": "Could the text imply a commercial or residential setting, and why?  ",
+      "A": "The text and visual cues imply a **residential setting**. This is evident from the presence of personal items such as a dining table with dishes, a kitchen with cooking utensils, a living room with couches and a TV, bedrooms with beds and personal belongings, and a bathroom. The layout, decor, and objects are typical of a private home rather than a commercial space.",
+      "C": "The text implies a residential setting due to the home decor style and placement. While these signs can be found in commercial settings, their use in home decor is often for aesthetic purposes, adding character to kitchens or dining spaces.  ",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer suggests that the lettering on the yellow candy packaging is in Greek, while the ground truth states it is in Chinese. Since these are distinctly different languages and nationalities, the predicted answer does not align with the ground truth."
+    },
+    {
+      "Q": "Based on the lettering on the yellow candy packaging in t frame 24, of what nationality might the owner of the house be?",
+      "A": "Based on the lettering on the yellow candy packaging in frame 24, which appears to use the Greek alphabet, the owner of the house might be Greek.",
+      "C": "The lettering on the yellow candy packaging is written in Chinese, suggesting that could be the possible nationality of the house habitant.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately matches the ground truth by mentioning the prevention of hazards, saving energy, and reducing electricity costs. It provides additional context about when ensuring devices are off is important, which is consistent with the ground truth."
+    },
+    {
+      "Q": "As you're interacting with different objects, why might you be ensuring that certain devices or appliances are off?",
+      "A": "You might be ensuring that certain devices or appliances are off for safety reasons (to prevent fire hazards or accidents), to save energy, and to reduce electricity costs. This is especially important when leaving a room or preparing to leave the house, as it helps ensure that nothing is left running unnecessarily.",
+      "C": "Turning off devices and appliances helps prevent electrical hazards, reduce electricity bills, and preserve the life of the appliance.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer describes actions where the stove is being turned on and used for cooking, which is contrary to the ground truth, where the stove is being turned off to prevent a fire hazard. The prediction doesn't align with the ground-truth actions or purpose."
+    },
+    {
+      "Q": "In the kitchen, what actions are you taking with the stove, and what could be the purpose behind them?",
+      "A": "In the kitchen, you are seen turning the stove knob to switch on a burner, placing a pot on the burner, and then adjusting the knob to control the heat. You also turn on the range hood above the stove. The likely purpose behind these actions is to start cooking or boiling something on the stove, as indicated by the presence of the pot and the activation of the burner and range hood.",
+      "C": "I am turning off the stove, likely to prevent any fire hazard.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the hood is being turned on, citing visual indicator lights as evidence. However, the ground-truth answer specifies that the hood is being turned off because its job is done, indicating a complete discrepancy between the predicted and ground-truth answers."
+    },
+    {
+      "Q": "Are you turning the hood above the stove on or off and why?",
+      "A": "You are turning the hood above the stove **on**. This is evident because, in the sequence of images, your hand is seen reaching up to the hood controls, and the indicator lights on the hood change from off to illuminated as you press the button, which visually signals that the hood is being activated.",
+      "C": "I am turning the hood off, as its job to work while the stove is on is done.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies the door that was opened and closed without further exploration as the bathroom door. The wording is slightly different but conveys the same information as the ground truth answer."
+    },
+    {
+      "Q": "Which room\u2019s door did you open and close without further exploration?",
+      "A": "The door you opened and closed without further exploration is the door to the bathroom.",
+      "C": "I opened and closed the door of the bathroom, without further exploration.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies that the presence of numerous electronic devices, cables, and similar appliances suggests personal hobbies or career related to technology, computing, or electronics. This closely aligns with the ground truth answer, which mentions computer, science, or technology. The additional details provided in the prediction further enrich the interpretation without deviating from the core inference."
+    },
+    {
+      "Q": "Based on the number of electronic devices, cables and other similar appliances, what would you assume of the career or personal hobbies of the people living here?",
+      "A": "Based on the number of electronic devices, cables, and similar appliances visible in the images, it can be assumed that at least one of the people living here likely has a career or personal hobbies related to technology, computing, or electronics. This could include fields such as IT, software development, engineering, gaming, or content creation. The presence of multiple computers, monitors, cables, and other tech equipment suggests a strong interest or professional involvement in technology.",
+      "C": "Based on the number of electronic devices, cables and other similar appliances, I would assume the personal hobbies or the career of the people living here is somehow related to computer, science or technology.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer aligns closely with the ground truth by ultimately assuming that the people living in the house are men, based on the state of tidiness. It considers both the similarities and differences in tidiness perceptions between genders and concludes with the same gender assumption as the ground truth. However, it introduces more detail and hesitation before making the assumption, which slightly reduces the directness of correctness."
+    },
+    {
+      "Q": "Based on the state of tidiness bedrooms and the overall apartment cleanness, would you assume the people living in the house are men or women?",
+      "A": "Based on the state of tidiness in the bedrooms and the overall apartment cleanliness, the apartment appears somewhat cluttered and untidy, with clothes left on chairs, unmade beds, and items scattered on desks and tables. This level of tidiness does not strongly indicate a particular gender, as both men and women can maintain or neglect cleanliness to similar degrees. However, stereotypically, such a level of untidiness is often more associated with male living spaces. Therefore, if I had to make an assumption based solely on these visual cues, I would lean towards the people living in the house being men.",
+      "C": "Based on the not very tidy bedrooms and the overall apartment cleanness, I would assume the people, living here, are men.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 106
+    }
+  ]
+]

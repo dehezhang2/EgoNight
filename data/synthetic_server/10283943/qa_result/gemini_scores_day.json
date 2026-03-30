@@ -1,0 +1,827 @@
+[
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer is verbatim identical to the ground truth, indicating perfect alignment and accuracy."
+    },
+    {
+      "Q": "Is there more than one table in the video?  ",
+      "A": "Yes, there is more than one table in the video.",
+      "C": "Yes, there is more than one table in the video",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer identifies 5 different rooms, while the correct ground truth answer specifies only 4 rooms are identifiable in the video sequence. The prediction includes an additional room, which makes it mostly incorrect."
+    },
+    {
+      "Q": "How many different rooms can you identify in the video sequence?  ",
+      "A": "Based on the visual evidence in the video sequence, I can identify 5 different rooms:\n\n1.  **Kitchen:** Seen at the beginning, with purple and white checkered flooring and an electric stove.\n2.  **Dining Room:** An area with blue walls, a large dining table, and hexagonal floor tiles.\n3.  **Living Room:** A dimly lit room with greenish walls, a dark patterned floor, a large rug, and a sofa.\n4.  **Bedroom:** A room with polished wooden floors, beige tiled walls, a bed, and a circular rug.\n5.  **Bathroom/Utility Room:** A smaller room with hexagonal floor tiles, containing a toilet and sink in one part of the sequence and storage cabinets in another.",
+      "C": "There are 4 different rooms identifiable in the video sequence.  ",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there are 8 chairs, whereas the ground truth states there are 6. There is a discrepancy in the number reported so the prediction is fully incorrect."
+    },
+    {
+      "Q": "How many chairs are there in total?  ",
+      "A": "8",
+      "C": "There are 6 chairs in total.  ",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer states there are 11 windows, whereas the ground-truth answer specifies 18 windows. The prediction is incorrect as it does not match the ground truth. However, the number provided is not entirely arbitrary and shows partial correctness."
+    },
+    {
+      "Q": "Can you count the total number of windows throughout the space?  ",
+      "A": "There are a total of 11 windows throughout the space.",
+      "C": "There are 18 windows throughout the space.  ",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer is 16, which is close to the ground truth answer of 18 but not fully correct. The prediction is partially correct in terms of being close to the right number, hence the score of 3."
+    },
+    {
+      "Q": "How many shelving units are visible in the entire video?  ",
+      "A": "16",
+      "C": "There are 18 shelving units visible in the entire video.  ",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there are 6 lamps, whereas the ground truth indicates there are 9 lamps present throughout the video. The prediction does not match the ground truth."
+    },
+    {
+      "Q": "How many lamps are present throughout the video?  ",
+      "A": "6",
+      "C": "There are 9 lamps present throughout the video.  ",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there are 4 mirrors visible, whereas the ground truth answer specifies there are 2 mirrors visible. Since the predictions do not match, the prediction is incorrect."
+    },
+    {
+      "Q": "How many mirrors are visible across the different rooms?  ",
+      "A": "There are 4 mirrors visible across the different rooms.",
+      "C": "There are two mirrors visible across the different rooms.  ",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there are 2 shelving units, while the ground truth states there are 5 shelving units. The prediction does not match the ground truth at all."
+    },
+    {
+      "Q": "How many shelving units do you observe in the second room?  ",
+      "A": "2",
+      "C": "In the second room, I observe 5 shelving units.  ",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies the kitchen location relative to the dining area and describes the visible features of the kitchen (purple and white checkered floor and the stove). However, it does not specify the action of turning around as detailed in the ground truth answer. Therefore, the predicted answer misses a key directional detail, leading to a partial match."
+    },
+    {
+      "Q": "How do I reach the kitchen from the dining area?  ",
+      "A": "To reach the kitchen from the dining area, walk forward through the large opening connecting the two rooms. The kitchen is the area with the purple and white checkered floor and the stove.",
+      "C": "From the dining area turn around and walk directly into the kitchen.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly describes the path from the kitchen to the bathroom as specified in the ground truth answer. It accurately details passing through the dining area, entering the living room, turning right, and proceeding to the bathroom."
+    },
+    {
+      "Q": "What is the path to take from the kitchen to the bathroom?  ",
+      "A": "To get from the kitchen to the bathroom, you would take the following path:\n\n1.  Start in the kitchen and walk forward into the dining room area.\n2.  Continue straight past the dining table on your left.\n3.  Go through the open doorway into the living room.\n4.  Once in the living room, proceed towards the open doorway on the right.\n5.  Enter through that doorway to arrive in the bathroom.",
+      "C": "From the kitchen pass through the dining area, then enter the living room, turn right and go ahead until you reach the bathroom door.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the steps mentioned in the ground truth answer. It details exiting the bathroom, crossing the living room, and passing through the dining area to reach the kitchen. Although there are additional descriptive elements about the room appearances, the core steps align perfectly with the ground truth."
+    },
+    {
+      "Q": "What steps should I follow to move from the bathroom back to the kitchen?  ",
+      "A": "Based on the video provided, here are the steps to move from the bathroom back to the kitchen:\n\n1.  Start in the bathroom and exit through the red door into the living room, which has a colorful rug on the floor.\n2.  Walk across the living room and go through the open doorway into the dining room with blue walls.\n3.  Continue walking straight through the dining area to enter the kitchen, identifiable by its purple and white checkered floor.",
+      "C": "From the bathroom go across the living room and turn left, when you reach the dining area, go through it and you\u2019ll have arrived in the kitchen.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the process of getting from the bedroom to the dining area. It includes all key steps mentioned in the ground truth answer: exiting the bedroom, passing through the living room, and reaching the dining area, which matches the instructions perfectly."
+    },
+    {
+      "Q": "If I'm in the bedroom, how do I get to the dining area?  ",
+      "A": "To get from the bedroom to the dining area, you would take the following steps:\n\n1.  Exit the bedroom through the wooden door.\n2.  Walk across the living room area.\n3.  Go through the open doorway on the other side of the living room, which leads directly into the dining area.",
+      "C": "Leave the bedroom, pass through the living room and turn right to enter the dining area.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the correct route from the kitchen to the living room. It includes the key details of moving past the dining area and through the doorway, which aligns with the ground truth answer."
+    },
+    {
+      "Q": "What is the direction to take from the kitchen to the living room?  ",
+      "A": "To get from the kitchen to the living room, you should walk straight ahead, moving past the dining area and through the open doorway.",
+      "C": "From the kitchen head through the dining area and exit the doorway which leads directly to the living room.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer describes a path from the bedroom to the dining area that is generally consistent with the ground-truth answer. Both involve passing through the living room to reach the dining area. However, the predicted answer provides more specific instructions on passing through doors and an opening, while the ground-truth focuses on making a right turn. The essentials of moving from the bedroom, through the living room, to the dining area are maintained."
+    },
+    {
+      "Q": "What is the quickest path from the bedroom to the dining area?  ",
+      "A": "To get from the bedroom to the dining area, you would take the following path:\n\n1.  Exit the bedroom through the wooden door.\n2.  Walk straight through the living room.\n3.  Continue forward through the wide opening into the dining area, where the dining table and chairs are located.",
+      "C": "From the bedroom go to the living room and make a right turn towards the door, that leads to the dining area.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer provides a detailed path from the room with the purple ceiling through the house to reach the bathroom, which aligns with the ground-truth answer's requirement of exiting the room and going straight across the living room. While the predicted answer offers additional detail about the path, it ultimately directs the user to the correct destination as described by the ground-truth."
+    },
+    {
+      "Q": "If I'm in the room with the purple ceiling, how do I find my way to the bathroom?  ",
+      "A": "Starting in the room with the purple ceiling and checkered floor, walk forward into the adjoining dining room, which has light blue walls. Continue straight through the dining room and go through the doorway into a living room with pale green walls. Once in the living room, go through the doorway on your right into a small hallway. The bathroom is the first door on your right, which has a reddish, shiny surface.",
+      "C": "Exit the room with the purple ceiling and go straight across the living room to reach the bathroom.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there are 2 beds shown in the video sequence, while the ground truth states that there is only one bed. The predicted answer does not match the ground truth, leading to a score of 0."
+    },
+    {
+      "Q": "How many beds are shown in the video sequence?  ",
+      "A": "2",
+      "C": "There is one bed shown in the video sequence.  ",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer provides a step-by-step path that matches the ground truth. It correctly describes exiting the dining area, turning left in the living room, and proceeding to the room with the purple ceiling. Both answers describe the same sequence of actions, ensuring the prediction is entirely correct."
+    },
+    {
+      "Q": "How do I get from the dining area to the room with the purple ceiling?  ",
+      "A": "To get from the dining area to the room with the purple ceiling, you would perform the following actions:\n\n1.  From the dining area with the blue walls, walk straight ahead through the open doorway into the dimly lit living room.\n2.  Once in the living room, turn left and walk through the next open doorway.\n3.  You will then be in the room with the purple ceiling.",
+      "C": "Exit the dining area and turn left in the living room to reach the room with the purple ceiling.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the pattern on the left wall of the kitchen as a 'hexagonal (or honeycomb) tile pattern,' which matches the ground truth answer."
+    },
+    {
+      "Q": "What pattern is visible on the left wall of the kitchen?  ",
+      "A": "A hexagonal (or honeycomb) tile pattern is visible on the left wall of the kitchen.",
+      "C": "The pattern visible on the left wall of the kitchen is a hexagonal tile pattern.",
+      "M": "Object Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer guides the navigation from the bathroom to the living room effectively, mentioning specific turns and landmarks (the shiny red door and the pink sofa with a desk and computer) which the ground truth does not, but the overall direction and destination are correct. Therefore, it scores high on correctness."
+    },
+    {
+      "Q": "Can you guide me from the bathroom to the living room?  ",
+      "A": "Starting from the bathroom with the toilet and sink, turn around and walk straight through the shiny red door. You will immediately enter the living room, which contains a pink sofa and a desk with a computer.",
+      "C": "Exit the bathroom and the doorway will lead you directly to the living room.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there are 10 shelves visible on the right side of the room, while the ground-truth answer states there are 3 shelves. The predicted number does not match the ground truth at all."
+    },
+    {
+      "Q": "How many shelves are visible on the right side of the room?  ",
+      "A": "10",
+      "C": "There are 3 shelves visible on the right side of the room.",
+      "M": "Object Recognition",
+      "start_idx": 9,
+      "end_idx": 11
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground truth answer exactly, both stating that the tiles on the floor are hexagonal."
+    },
+    {
+      "Q": "What shape are the tiles on the floor?  ",
+      "A": "The tiles on the floor are hexagonal.",
+      "C": "The tiles on the floor are hexagonal.",
+      "M": "Object Recognition",
+      "start_idx": 18,
+      "end_idx": 20
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the ceiling as having no pattern, which aligns with the ground-truth answer stating it has a plain pattern. Both imply a lack of ornamentation or design on the ceiling."
+    },
+    {
+      "Q": "What pattern is on the ceiling of the room?  ",
+      "A": "Based on the visual information from the images, there is no pattern on the ceiling of the room; it is a solid color.",
+      "C": "The ceiling of the room has a plain pattern.",
+      "M": "Object Recognition",
+      "start_idx": 36,
+      "end_idx": 38
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'A mirror.' correctly identifies the key element mentioned in the ground truth, which is 'a mirror mounted on the left wall that reflects part of the scene.' Although the predicted answer is shorter, it includes the essential information needed to match the ground truth answer."
+    },
+    {
+      "Q": "What is mounted on the left wall of the room that reflects part of the scene?",
+      "A": "A mirror.",
+      "C": "On the left wall of the room, there is a mirror mounted that reflects part of the scene.",
+      "M": "Object Recognition",
+      "start_idx": 27,
+      "end_idx": 29
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer describes the rug as featuring a cowhide pattern, which consists of large irregular patches of white and black on a gray base. However, the ground truth describes the rug's pattern as abstract with scattered dark and light patches that create a mottled effect. The two descriptions differ significantly in the nature of the pattern. Therefore, the prediction is deemed incorrect, but there is some partial overlapping in terms of describing irregular patches, thus earning a score of 2."
+    },
+    {
+      "Q": "What pattern is featured on the rug near the bed?  ",
+      "A": "The rug near the bed features a cowhide pattern, with large, irregular patches of white and black on a gray base.",
+      "C": "The pattern on the rug near the bed is abstract with scattered dark and light patches that create a mottled effect.",
+      "M": "Object Recognition",
+      "start_idx": 45,
+      "end_idx": 47
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there are 6 doors, whereas the ground truth states there are 4 doors. The prediction does not match the ground truth at all."
+    },
+    {
+      "Q": "Can you count the total number of doors in the entire video?  ",
+      "A": "6",
+      "C": "There are 4 doors in the entire video.  ",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer partially matches the ground truth answer. Both answers mention 'green' as a dominating color. However, the predicted answer states 'black' instead of 'white,' which is stated in the ground truth. As one color is correct and one is incorrect, the prediction is partially correct."
+    },
+    {
+      "Q": "What colors dominate the interface on the illuminated screen in the room?  ",
+      "A": "Based on the visual evidence, the colors that dominate the interface on the illuminated screen are green and black.",
+      "C": "The colors dominating the interface on the illuminated screen are green and white.",
+      "M": "Object Recognition",
+      "start_idx": 63,
+      "end_idx": 65
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies the hexagonal tile pattern but does not mention the alternating dark and light colors, which is a significant detail in the ground truth."
+    },
+    {
+      "Q": "What pattern does the floor have in the small room?  ",
+      "A": "The floor in the small room has a hexagonal tile pattern.",
+      "C": "The floor in the small room has a hexagonal pattern with alternating dark and light colors.",
+      "M": "Object Recognition",
+      "start_idx": 72,
+      "end_idx": 74
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 4,
+      "reason": "The predicted answer closely matches the ground truth in terms of describing the light color and tile-like texture. However, the predicted pattern 'diamond' differs slightly from the 'square' pattern in the ground-truth answer, leading to a small deduction in the score."
+    },
+    {
+      "Q": "What texture is present on the room's walls in the video?  ",
+      "A": "Based on the visual evidence, the walls in the room are covered with light-colored, square tiles arranged in a diagonal grid, creating a diamond pattern.",
+      "C": "The room's walls have a tiled texture with a light color and square pattern.",
+      "M": "Object Recognition",
+      "start_idx": 54,
+      "end_idx": 56
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'Dining room' is semantically equivalent to the ground-truth answer 'After the kitchen followed the dining area.' Both indicate the same location immediately after the kitchen."
+    },
+    {
+      "Q": "What room did you enter immediately after leaving the kitchen?  ",
+      "A": "Dining room.",
+      "C": "After the kitchen followed the dining area.  ",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly lists most rooms in the correct order: Kitchen, Dining room, Living room, Bedroom. However, it incorrectly includes the Living room again before the Bathroom, which does not match the ground truth. Hence, the primary sequence of rooms is mostly correct but has an additional incorrect transition."
+    },
+    {
+      "Q": "Can you list the sequence of rooms you passed through from beginning to end?  ",
+      "A": "Based on the visual information, the sequence of rooms passed through is:\n\n1.  Kitchen\n2.  Dining room\n3.  Living room\n4.  Bedroom\n5.  Living room\n6.  Bathroom",
+      "C": "Sequence of rooms: Kitchen, dining area, living room, bedroom, bathroom.  ",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'The kitchen' correctly identifies the area with windows allowing outside visibility, which aligns perfectly with the ground truth answer. Therefore, the prediction is fully correct."
+    },
+    {
+      "Q": "Which area contains windows that allow outside visibility towards the beginning of the sequence?  ",
+      "A": "The kitchen.",
+      "C": "The kitchen contains windows that allow outside visibility towards the beginning of the sequence.  ",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies the bathroom as the next main room after the bedroom, but it omits the fact that the living room is passed through before reaching the bathroom."
+    },
+    {
+      "Q": "What room follows right after the bedroom?  ",
+      "A": "The bathroom follows right after the bedroom.",
+      "C": "After the bedroom you pass through the living room to reach the bathroom.  ",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately reflects the ground-truth answer. Both indicate that the space traversed before reaching the bedroom was the living room. The slight difference in phrasing does not affect the correctness of the information."
+    },
+    {
+      "Q": "Before reaching the bedroom, which space did you traverse?  ",
+      "A": "Before reaching the bedroom, I traversed a living room.",
+      "C": "Before bedroom I explored the living room.  ",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies the living room as connected to the dining area, which is part of the ground truth. However, it omits the kitchen, which is also mentioned in the ground-truth answer. Therefore, the prediction is partially correct."
+    },
+    {
+      "Q": "Which room is directly connected to the dining area?  ",
+      "A": "Based on the visual evidence from the video, the living room is directly connected to the dining area.",
+      "C": "Connected to dining area are the kitchen and the living room.  ",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground-truth answer. Both identify the third space after leaving the initial kitchen area as the bedroom, demonstrating complete accuracy."
+    },
+    {
+      "Q": "After leaving the initial kitchen area, what is the third space you enter?  ",
+      "A": "The third space you enter is a bedroom.",
+      "C": "The third space after the kitchen is the bedroom.  ",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies the living room as the room that leads directly to the bathroom, matching the ground truth. The additional details about the living room, such as green walls and a large, colorful rug, do not contradict the correctness of the answer."
+    },
+    {
+      "Q": "Which room leads directly to the bathroom?  ",
+      "A": "Based on the visual evidence, the living room with the green walls and the large, colorful rug leads directly to the bathroom.",
+      "C": "The living room leads directly to the bathroom.  ",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer 'A white shelf' accurately identifies the primary object directly beside the stove on the left, as specified in the ground truth. However, it lacks detail about the shelf having 'several objects on it', which reduces the score slightly but doesn't make the prediction incorrect."
+    },
+    {
+      "Q": "What object is directly beside the stove on the left?  ",
+      "A": "A white shelf.",
+      "C": "Directly beside the stove on the left is a small white shelf with several objects on it.  ",
+      "M": "Spatial Reasoning",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer captures part of the transition from the living room into the bedroom, which aligns with the ground truth. However, it introduces additional details about starting in a kitchen and dining area, as well as another transition into a bathroom, which are not mentioned in the ground truth. While it partially captures the correct transition, the extra details make it not fully accurate."
+    },
+    {
+      "Q": "How does the sequence transition from the living space to the personal space?  ",
+      "A": "The sequence transitions from the living space to the personal space by moving from a kitchen and dining area, through a connecting living room, and then passing through an open doorway into a bedroom. It later transitions from the living room into another personal space, the bathroom, again by moving through a doorway.",
+      "C": "The sequence transitions from the living space to the personal space by going from the living room into the bedroom.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the position of the curtains in relation to the windows, stating that they are open and gathered at the sides of the windows, which aligns well with the ground truth stating that the curtains are drawn to the sides, partially covering the windows. Both answers convey that the curtains are positioned at the sides, allowing for the windows to be at least partially uncovered."
+    },
+    {
+      "Q": "What is the position of the curtains in relation to the windows in the room?  ",
+      "A": "The curtains are open and gathered at the sides of the windows.",
+      "C": "The curtains are drawn to the sides, partially covering the windows.  ",
+      "M": "Spatial Reasoning",
+      "start_idx": 9,
+      "end_idx": 11
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer explicitly states that the bed is directly opposite the large window, which matches the ground truth answer perfectly."
+    },
+    {
+      "Q": "What piece of furniture is directly opposite the large window?  ",
+      "A": "Based on the visual information from the images, the bed is the piece of furniture directly opposite the large window.",
+      "C": "The piece of furniture directly opposite the large window is a bed.  ",
+      "M": "Spatial Reasoning",
+      "start_idx": 36,
+      "end_idx": 38
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies shelving units as being located against the right wall near the window, which aligns with the ground truth. However, the predicted answer mentions two shelving units (white and black), while the ground-truth specifies only one shelving unit with various items. Despite this discrepancy, the prediction sufficiently captures the essence of the ground truth description, leading to a high, but not perfect, score."
+    },
+    {
+      "Q": "What is located against the right wall near the window?  ",
+      "A": "A white shelving unit and a black shelving unit are located against the right wall near the window.",
+      "C": "Against the right wall near the window, there is a shelving unit with various items on it, including books and some decorative objects.  ",
+      "M": "Spatial Reasoning",
+      "start_idx": 18,
+      "end_idx": 20
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer provides additional information about another mirror to the right, which is not stated in the ground-truth answer. However, the part about the mirror being \"on the wall to the left of the rug\" is accurate and matches the ground-truth."
+    },
+    {
+      "Q": "What is the position of the mirror relative to the rug?  ",
+      "A": "The long, rectangular mirror is on the wall to the left of the rug. There is another mirror on the wall to the right of the rug.",
+      "C": "The mirror is on the wall to the left of the rug.  ",
+      "M": "Spatial Reasoning",
+      "start_idx": 27,
+      "end_idx": 29
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer identifies the key object mentioned in the ground truth, which is the table described as long and thin. Although there is a mention of a mirror, this does not contradict the presence of the table, and thus the prediction is largely correct with a small discrepancy."
+    },
+    {
+      "Q": "What objects are directly in front of the windows?  ",
+      "A": "Based on the visual evidence provided, the objects directly in front of the windows are a long, thin black table or bench and a mirror on the wall.",
+      "C": "In front of the windows, there is a narrow table on the right side of the room.  ",
+      "M": "Spatial Reasoning",
+      "start_idx": 54,
+      "end_idx": 56
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is \"A toilet,\" which does not match the ground truth answer, \"a sink.\" Therefore, the prediction is incorrect."
+    },
+    {
+      "Q": "What object is positioned directly below the window on the left wall in frame 75?  ",
+      "A": "A toilet.",
+      "C": "Directly below the window, there is a sink.  ",
+      "M": "Spatial Reasoning",
+      "start_idx": 72,
+      "end_idx": 74
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'A towel ring' does not match the ground truth answer 'two white cabinets'. The predicted object is entirely different from the correct objects specified in the ground-truth."
+    },
+    {
+      "Q": "What is located below the wall shelf at the far end of the room?  ",
+      "A": "A towel ring.",
+      "C": "Below the wall shelf at the far end of the room, there are two white cabinets.  ",
+      "M": "Spatial Reasoning",
+      "start_idx": 81,
+      "end_idx": 83
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that a digital clock showing time was visible, which directly contradicts the ground-truth answer. The ground-truth explicitly mentions that there was no text to grab attention, making the predicted answer fully incorrect."
+    },
+    {
+      "Q": "Did any text grab your attention at any point throughout the video?",
+      "A": "Yes, the digital clock on the oven, which reads \"12:01\", is visible at the beginning of the video.",
+      "C": "No, there was no text to grab my attention at any point throughout the video.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'The white shelving unit' does not match the ground truth answer 'The bed is directly parallel and closest to the rug when entering the room'. The prediction completely misses the correct piece of furniture."
+    },
+    {
+      "Q": "Which piece of furniture is directly parallel and closest to the rug?  ",
+      "A": "The white shelving unit.",
+      "C": "The bed is directly parallel and closest to the rug when entering the room.  ",
+      "M": "Spatial Reasoning",
+      "start_idx": 45,
+      "end_idx": 47
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there was visible text on two screens, while the ground truth specifically mentions that there was no visible text on a screen or monitor. This is a direct contradiction, so the prediction is fully incorrect."
+    },
+    {
+      "Q": "Was there any visible text on a screen or monitor?",
+      "A": "Yes, there was visible text on two screens:\n- The digital clock on the stove in the kitchen displayed \"12:01\".\n- In the living room, a computer monitor was on and displayed some green and white text/graphics.",
+      "C": "There was no visible text on a screen or monitor.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground-truth answer in terms of the presence of piles of books. The prediction provides additional details about the location, which does not contradict the ground truth."
+    },
+    {
+      "Q": "Were there any piles of books anywhere?",
+      "A": "Yes, there were piles of books in the bedroom on top of a gray bookshelf and a white cube storage unit.",
+      "C": "Yes, there were a few instances where I could see piles of books.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately matches the intent and content of the ground-truth answer, as both indicate the inability to read the book titles."
+    },
+    {
+      "Q": "Did you read any of the titles of the books you saw?",
+      "A": "No, the titles of the books were not legible.",
+      "C": "I couldn't read any of the titles of the books.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer mentions that the pillows are deflating and changing shape over time, while the ground truth states that the pillows are floating in the air. These are two different observations about the state of the pillows, making the predicted answer incorrect."
+    },
+    {
+      "Q": "What\u2019s wrong with the pillows on the bed?",
+      "A": "Based on the provided images, the pillows on the bed are deflating over time. In the first image, there appears to be one long pillow, which then separates into two and progressively loses its shape and volume in the subsequent images.",
+      "C": "The pillows on the bed are floating in the air.",
+      "M": "Non Common",
+      "start_idx": 42,
+      "end_idx": 44
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly states that there were no posters with written text on them, which aligns with the ground truth answer. The additional information about framed art not containing discernible text does not contradict the correctness of the answer."
+    },
+    {
+      "Q": "Did you see any posters with written text on them?",
+      "A": "No, I did not see any posters with written text on them. While there are several pieces of framed art, they appear to be abstract or pictorial with no discernible text.",
+      "C": "No, there were no posters with text on them.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer does not address the core aspect highlighted in the ground truth, which focuses on the material being see-through as the strange element. The prediction instead discusses the mechanism or behavior of the door, which is unrelated to the strangeness identified in the ground truth."
+    },
+    {
+      "Q": "What seems a bit strange about the door?",
+      "A": "Based on the visual cues, what seems strange about the door is that it doesn't open on hinges. Instead, it appears to slide or vanish as the camera moves past it, revealing the toilet and sink behind it, acting more like a moving divider or a partition than a conventional door.",
+      "C": "The door is made out of a see-through material, which is a bit strange choice of a material for a door.",
+      "M": "Non Common",
+      "start_idx": 88,
+      "end_idx": 90
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer states that there are out of place objects in the dining area, contrasting the ground truth which asserts there are none. The prediction describes specific objects enhancing the impression of them being out of place, but since this contradicts the ground truth, the prediction is largely incorrect."
+    },
+    {
+      "Q": "Are there any out of place objects in the dining area?",
+      "A": "Yes, there are a few objects that seem out of place due to their positioning. A small, low black shelving unit is sitting on the floor under the window on the right, and two spare chairs are pushed against the back wall between the taller shelving units, making the area look more like a storage space than a dining room.",
+      "C": "There are no out of place objects in the dining area.",
+      "M": "Non Common",
+      "start_idx": 13,
+      "end_idx": 15
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer is basically a paraphrase of the ground truth answer and provides additional details, confirming there are no unusual objects in the bedroom."
+    },
+    {
+      "Q": "Is there an unusual object in the bedroom?",
+      "A": "No, there are no unusual objects in the bedroom. All the items visible, such as a bed, shelves, a lamp, and a rug, are commonly found in a bedroom.",
+      "C": "There seems to be no unusual objects in the bedroom.",
+      "M": "Non Common",
+      "start_idx": 47,
+      "end_idx": 49
+    }
+  ]
+]

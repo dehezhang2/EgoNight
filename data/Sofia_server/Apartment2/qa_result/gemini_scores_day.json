@@ -1,0 +1,902 @@
+[
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly states the number of different rooms shown in the video as 4, which matches the ground-truth answer. There are no discrepancies between the predicted and ground-truth answers."
+    },
+    {
+      "Q": "How many different rooms are shown throughout the entire video?  ",
+      "A": "4",
+      "C": "4 rooms are visible: a small hallway or foyer, a living room/kitchen area, a bathroom, and a bedroom.  ",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer '1' matches the ground truth answer that 'one bed is visible in the video.'. Therefore, the prediction is correct and fully aligns with the ground truth."
+    },
+    {
+      "Q": "How many beds can be seen in the video?  ",
+      "A": "1",
+      "C": "One bed is visible in the video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer states that there is 1 window observed, whereas the ground truth mentions there are 2 windows visible: one in the living room and one in the bedroom. The predicted count does not fall within the range specified by the ground truth."
+    },
+    {
+      "Q": "Count the number of windows observed in the different rooms throughout the video.  ",
+      "A": "There is 1 window observed in the video.",
+      "C": "Two windows are visible: one in the living room and one in the bedroom.  ",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer lists 18 electronic devices, but the ground truth answer specifies specific devices and implicitly suggests a much smaller count by enumerating them. The predicted count is significantly higher than the number implied by the ground truth answer."
+    },
+    {
+      "Q": "Count the number of electronic devices visible in the video.  ",
+      "A": "There are 18 electronic devices visible in the video:\n1. Light switches\n2. Intercom system\n3. Laptop\n4. External computer monitor\n5. Monitor light bar\n6. Electric kettle (on the dining table)\n7. Microwave oven\n8. Refrigerator\n9. Electric stove\n10. Range hood\n11. Television\n12. Air conditioner\n13. Smartphone\n14. WiFi router\n15. Washing machine\n16. Electric kettle (on the bedside table)\n17. Air purifier/humidifier\n18. Smartwatch",
+      "C": "Four devices are visible: a telephone, a television, an air conditioner, a microwave, a laptop, a monitor, a smart watch",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer of 7 does not fall within the ground truth answer of 5 doors being visible. For counting tasks, the predicted number must match the ground truth or fall within an accepted range around it, but here it does not, leading to a fully wrong score."
+    },
+    {
+      "Q": "What is the number of doors that were captured in the video?  ",
+      "A": "7",
+      "C": "5 doors are visible.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer indicates the object is a door handle based on the description of the reflections, while the ground-truth answer identifies the surface as a type of tile or glossy flooring material. The predicted answer does not align with the ground-truth because it infers a different object entirely."
+    },
+    {
+      "Q": " What type of object or surface can be inferred from the faint reflections visible at the lower section of the frames?  ",
+      "A": "Based on the faint reflections visible on the shiny, brass-colored surface at the lower section of the frames, the object that can be inferred is the **door handle**. The reflection of a hand and keys becomes more apparent in the final frame.",
+      "C": "Based on the reflections visible in the lower section of the frames, the object or surface is likely a tile or a similar glossy flooring material.",
+      "M": "Object Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there are 2 pillows visible, whereas the ground-truth answer mentions that no pillows are visible on the bed. Therefore, the prediction is incorrect."
+    },
+    {
+      "Q": "How many pillows are on display on the bed?  ",
+      "A": "2",
+      "C": "No pillows are visible on the bed, as they are covered by the quilt but there\u2019s a stuffed animal.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer states that there are 13 bottles visible, while the ground truth states about 15 bottles. Given that 'about 15' allows for some flexibility, 13 is reasonably close to the ground truth estimate. Therefore, the prediction is considered mostly correct, awarding it a score of 4."
+    },
+    {
+      "Q": "How many bottles are visible on the shelves or counters during the video?  ",
+      "A": "There are 13 bottles visible on the shelves or counters during the video.",
+      "C": "About 15 bottles are visible throughout the video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there are 14 wall-mounted decorations, which significantly exceeds the ground truth answer of 6. The count provided in the prediction does not match the ground truth, and there is no overlap in the range. Therefore, the prediction is incorrect."
+    },
+    {
+      "Q": "What is the total number of wall-mounted decorations seen across all rooms?  ",
+      "A": "Based on a thorough review of the video frames, the total number of wall-mounted decorations seen across all rooms is 14. Here is the breakdown:\n\n*   **Hallway:** 1 (a round, decorative plaque).\n*   **Living Room / Kitchenette:** 8 (three pictures above the sofa, two floating shelves, and three small pictures next to the shelves).\n*   **Bathroom:** 2 (two decorative items hanging on hooks).\n*   **Bedroom:** 3 (one decorative mirror and two photos clipped to the wall next to it).",
+      "C": "6 wall-mounted decorations are visible.  ",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer identifies a laptop on a desk as the object emitting a white glow, while the ground-truth specifies a computer monitor on the wall. Although the prediction correctly identifies an emitting device, it misidentifies the specific type and location of the device compared to the ground-truth answer."
+    },
+    {
+      "Q": "What object is seen emitting a white glow in the corner of the room?  ",
+      "A": "Based on the visual information in the images, the object emitting a white glow in the corner of the room is a laptop on a desk.",
+      "C": ": In the corner of the room, on the wall, a computer monitor is emitting a white glow.",
+      "M": "Object Recognition",
+      "start_idx": 10,
+      "end_idx": 12
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer states 'A black pen', which aligns with the ground-truth answer that specifies a 'black pen or marker'. The essence of the item ('black pen') is captured in the prediction, and although it does not mention 'marker', the prediction is mostly correct. Hence, a score of 4 reflects this near-completeness in identification."
+    },
+    {
+      "Q": "What item is positioned next to the document on the desk?  ",
+      "A": "A black pen.",
+      "C": "Next to the document on the desk, there is a black pen or marker.",
+      "M": "Object Recognition",
+      "start_idx": 30,
+      "end_idx": 32
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer is correct as it matches the ground truth answer in all relevant aspects. Both mention small, square tiles arranged in a grid pattern, and the predicted answer provides additional detail by specifying the tiles as light-colored ceramic, which does not contradict the ground truth."
+    },
+    {
+      "Q": "What type of tiles cover the kitchen walls?  ",
+      "A": "The kitchen walls are covered with small, square, light-colored ceramic tiles, arranged in a grid pattern.",
+      "C": "The kitchen walls are covered with small, square tiles arranged in a grid pattern.",
+      "M": "Object Recognition",
+      "start_idx": 20,
+      "end_idx": 22
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately matches the ground-truth answer in terms of both the information provided and the terminology used. \"Circle\" and \"circular\" are essentially equivalent in describing the geometric shape, making the prediction fully correct."
+    },
+    {
+      "Q": "What geometric shape is the fixture, visible on the ceiling?  ",
+      "A": "Based on the visual information in the images, the geometric shape of the fixture visible on the ceiling is a circle.",
+      "C": "The geometric shape of the fixture, visible on the ceiling, is circular.",
+      "M": "Object Recognition",
+      "start_idx": 50,
+      "end_idx": 52
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer states there are 5 chairs visible, whereas the ground truth is that there are 4 chairs visible. The prediction doesn't fall within the range specified by the ground truth, thus making it incorrect. Given that it is a counting task, any deviation from the ground truth count is critical, leading to a score of 1."
+    },
+    {
+      "Q": "Count the number of chairs visible in the entire video.  ",
+      "A": "There are a total of 5 chairs visible in the video.",
+      "C": "Four chairs are visible around the dining table.   ",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the background of the code editor on the upper monitor. It specifies that the background color is dark, aligning with the ground truth answer. Additionally, the mention of it appearing to be black or very dark gray does not contradict the description of 'dark,' providing further detail that is consistent with the ground-truth answer."
+    },
+    {
+      "Q": "What color is the background of the code editor on the upper monitor?  ",
+      "A": "The background of the code editor on the upper monitor is dark, appearing to be black or a very dark gray.",
+      "C": "The background of the code editor on the upper monitor is dark.",
+      "M": "Object Recognition",
+      "start_idx": 40,
+      "end_idx": 42
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is 69, which does not match the ground truth answer of 98. Therefore, the prediction is incorrect."
+    },
+    {
+      "Q": "What number is prominently displayed on the shirt?  ",
+      "A": "69",
+      "C": "The number prominently displayed on the shirt is 98.",
+      "M": "Object Recognition",
+      "start_idx": 60,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the rug's design as a geometric pattern of squares and blocks, which aligns very closely with the ground truth answer describing a pattern of squares and rectangles."
+    },
+    {
+      "Q": "What type of design is featured on the rug near the foot of the bed?  ",
+      "A": "Based on the visual cues in the images, the rug near the foot of the bed features a geometric pattern of squares and blocks.",
+      "C": "The rug near the foot of the bed features a pattern of squares and rectangles in various colors.",
+      "M": "Object Recognition",
+      "start_idx": 70,
+      "end_idx": 72
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer describes the blinds as having a 'horizontal pleated or accordion-style pattern,' which is different from the ground truth's 'horizontal slatted pattern.' While both mention a horizontal aspect, the specific descriptors 'pleated or accordion-style' and 'slatted' refer to different patterns, leading to a partial match."
+    },
+    {
+      "Q": "What pattern do the blinds on the window or door have?  ",
+      "A": "The blinds have a horizontal pleated or accordion-style pattern.",
+      "C": "The blinds on the window or door have a horizontal slatted pattern.",
+      "M": "Object Recognition",
+      "start_idx": 90,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer states the navigation is from the 'hallway to the living room', while the ground truth mentions moving 'from the hallway into the kitchen, which is connected to the living area'. The predicted path skips the kitchen, which is explicitly mentioned in the ground truth. As the prediction partially captures the destination but misses an important step in the sequence, it is partially correct."
+    },
+    {
+      "Q": "What sequence of areas did I navigate to get to the living area?  ",
+      "A": "I navigated from the hallway to the living room.",
+      "C": "You moved from the hallway into the kitchen, which is connected to the living area.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer includes additional rooms such as 'Entryway/Living room/Kitchen' which were not present in the ground truth answer, which only mentions 'hallway'. Therefore, the prediction is not fully correct. However, it does correctly include 'hallway' as one of the rooms."
+    },
+    {
+      "Q": "What rooms did I pass through before reaching the bathroom?  ",
+      "A": "Based on the video frames, you passed through the following rooms before reaching the bathroom:\n\n1.  **Entryway/Hallway**\n2.  **Living room/Kitchen**",
+      "C": "You passed through the hallway before reaching the bathroom.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer accurately captures the starting point from the hallway and ending in the kitchen. It includes an additional detail about passing through an open-plan living room which contains the kitchen, which does not contradict the ground truth and adds further context."
+    },
+    {
+      "Q": "What was the progression of rooms leading to the kitchen?  ",
+      "A": "The person starts in the hallway by the front door, walks down the hallway, and then enters the open-plan living room which contains the kitchen.",
+      "C": "You started in the hallway and from there, you entered the kitchen.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies the hallway as a passage but differs in specifying the destination as the living room instead of the room with electronic devices. The ground truth mentions passing through both a hallway and kitchen area, but the predicted answer does not mention the kitchen area."
+    },
+    {
+      "Q": "What did I pass through to reach the room with electronic devices?  ",
+      "A": "Based on the video frames, you passed through a hallway to reach the living room, where the electronic devices are located.",
+      "C": "You went through the hallway and the kitchen area to reach the room with electronic devices.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer mentions multiple areas explored before entering the bedroom, whereas the ground truth only specifies the hallway. The prediction partially matches the ground truth by including the hallway, but it adds additional areas not present in the ground truth."
+    },
+    {
+      "Q": "Before entering the bedroom, which areas did I explore?  ",
+      "A": "Based on the visual evidence, before entering the bedroom, you explored the following areas:\n\n1.  The entrance hallway.\n2.  The combined living room and kitchen area.\n3.  The bathroom.",
+      "C": "You were in the hallway before entering the bedroom.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer mentions the entryway and the living room and kitchen area, which are not mentioned in the ground truth. It also omits the computer in the living area and the action of washing hands in the bathroom. Additionally, the sequence differs: the ground truth specifies starting at the front door, and ending at the big mirror in the hallway, with other specific details in sequence."
+    },
+    {
+      "Q": "What was the sequence of areas from the beginning to when I saw the big mirror?  ",
+      "A": "The sequence of areas is: the entryway, the living room and kitchen area, the bathroom, and finally, the hallway where the big mirror is located.",
+      "C": "You started at the front door, went to the kitchen, passed the living area with the computer, returned to the hallway, went to the bathroom to wash your hands and then you passed the big mirror in the hallway.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer mentions a paper towel roll on a holder, while the ground-truth answer specifies a frying pan. These are two different objects, leading to a fully incorrect prediction."
+    },
+    {
+      "Q": "What object is positioned on top of the counter, beside the sink?",
+      "A": "Based on the visual cues from the images, a paper towel roll on a holder is positioned on top of the counter, beside the sink.",
+      "C": "The object positioned on top of the counter, beside the sink, is a frying pan.",
+      "M": "Spatial Reasoning",
+      "start_idx": 10,
+      "end_idx": 12
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'An under-cabinet light' does not match the ground-truth answer 'Directly above the countertop, there is a wall-mounted cabinet'. The predicted item is a different object altogether and doesn't align with the specified location of 'directly above the countertop'."
+    },
+    {
+      "Q": "What is located directly above the countertop?",
+      "A": "An under-cabinet light.",
+      "C": "Directly above the countertop, there is a wall-mounted cabinet.",
+      "M": "Spatial Reasoning",
+      "start_idx": 20,
+      "end_idx": 22
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer mentions the base of a coat rack, while the ground-truth focuses on a white stand or stool. These are considered two distinct objects, thus the prediction does not match the ground-truth answer."
+    },
+    {
+      "Q": "What object is closest to the ground near the bottom of the frame?",
+      "A": "Based on the visual cues, the object closest to the ground near the bottom of the frame is the base of the coat rack on the left.",
+      "C": "The object closest to the ground near the bottom of the frame is the white stand or stool on the left side.",
+      "M": "Spatial Reasoning",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'A white electric kettle' matches the ground truth answer in terms of identifying the correct object. Both answers specify a white electric kettle to the right of the laptop and closer to the edge of the table. Therefore, the prediction is fully correct."
+    },
+    {
+      "Q": "What object is to the right of the laptop and closer to the edge of the table?",
+      "A": "A white electric kettle.",
+      "C": "To the right of the laptop and closer to the edge of the table, there is a white electric kettle.",
+      "M": "Spatial Reasoning",
+      "start_idx": 30,
+      "end_idx": 32
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies the journey starting in the hallway and ending in the bedroom before looking outside through a window. However, it includes additional areas (Living Room/Kitchen and Bathroom) that are not part of the ground truth sequence. The presence of accurate elements (hallway to bedroom to outdoor view) warrants partial credit, but the extra steps mark it as incorrect overall."
+    },
+    {
+      "Q": "What sequence of areas led me to the final view of the outdoors?  ",
+      "A": "Based on the visual evidence, the sequence of areas that led to the final view of the outdoors is as follows:\n\n1.  **Hallway:** The journey begins in the apartment's main hallway, starting at the front door.\n2.  **Living Room/Kitchen:** The person walks from the hallway into the combined living room and kitchen area, moving towards a workspace at the far end.\n3.  **Bathroom:** After leaving the living area and returning to the hallway, the person briefly enters the bathroom.\n4.  **Bedroom:** Finally, the person walks from the hallway into the bedroom.\n5.  **Window/Balcony:** From inside the bedroom, the person opens a curtain and a glass door, which leads to the final view of the outdoors at night.",
+      "C": "You went from the hallway into the bedroom, and then looked outside through the window.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies the initial spatial relationship of the mug being to the right of the monitor. However, it adds additional information about the mug being picked up and moved, which is not relevant to the question. The primary spatial relationship given in the ground truth is correctly identified, but the additional details make the prediction only partially correct."
+    },
+    {
+      "Q": "What is the spatial relationship between the mug and the monitor?",
+      "A": "The mug is initially on the table, in front of and to the right of the monitor. A person then picks up the mug and moves it out of the frame.",
+      "C": "The mug is to the right of the monitor from my perspective.",
+      "M": "Spatial Reasoning",
+      "start_idx": 40,
+      "end_idx": 42
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies a toothbrush holder with toothbrushes and a green bottle, which matches part of the ground-truth answer. However, it misses the toothpaste and the bottle of hand soap or lotion and instead inaccurately mentions a purple bottle with a pump dispenser. These discrepancies affect the complete accuracy of the prediction."
+    },
+    {
+      "Q": "What is on the counter in front of the mirror?",
+      "A": "Based on the visual information in the images, the items on the counter in front of the mirror are: a toothbrush holder with toothbrushes, a green bottle, and a purple bottle with a pump dispenser.",
+      "C": "On the counter in front of the mirror, there are several items: a toothbrush holder with a toothbrush and a toothpaste, a bottle of hand soap or lotion, a green bottle, possibly a cleanser or another toiletry item.",
+      "M": "Spatial Reasoning",
+      "start_idx": 60,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer identified a similar concept (a window) but with different elements (blinds instead of a curtain and glass door). The overall impression of an object between the viewer and the dark space aligns, however, the specific elements differ. Hence, the answer is partially correct."
+    },
+    {
+      "Q": "What object is positioned between you and the dark space outside?",
+      "A": "Based on the visual cues, a window with blinds is positioned between me and the dark space outside.",
+      "C": "A curtain and a glass door are positioned between you and the dark space outside.",
+      "M": "Spatial Reasoning",
+      "start_idx": 90,
+      "end_idx": 92
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer lists several objects, one of which is a 'white cylindrical device (possibly an air purifier or smart speaker)', which closely aligns with the ground truth's 'white cylindrical object'. Despite other objects being listed, the core object in question matches the ground truth, indicating a high level of correctness. Minor discrepancies due to additional objects lower the score slightly."
+    },
+    {
+      "Q": "Which object is located directly on the table next to the bed?",
+      "A": "Based on the visual information from the images, the following objects are located directly on the table next to the bed:\n\n*   A picture frame\n*   A white teapot\n*   A box of \"Fitness\" cereal\n*   A white tube (like lotion or cream)\n*   A white cylindrical device (possibly an air purifier or smart speaker)\n*   A box of tissues (on the lower shelf)",
+      "C": "A white cylindrical object is directly on the table next to the bed.",
+      "M": "Spatial Reasoning",
+      "start_idx": 80,
+      "end_idx": 82
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the position of the nightstand as being against the wall and next to the bed, which aligns with the ground truth description."
+    },
+    {
+      "Q": "How is the nightstand positioned in relation to the wall?",
+      "A": "The nightstand is positioned against the wall, next to the head of the bed.",
+      "C": "The nightstand is positioned against the wall beside the bed.",
+      "M": "Spatial Reasoning",
+      "start_idx": 70,
+      "end_idx": 72
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer correctly identifies moving through a hallway, but it incorrectly specifies taking a left into the main living area and then finding the kitchen on the right. The ground truth simply mentions proceeding through a door from the hallway directly to the kitchen. Hence, there is some deviation in the path described by the predicted answer compared to the ground truth."
+    },
+    {
+      "Q": "How do I reach the kitchen from the entrance?",
+      "A": "After opening the entrance door, you will enter a hallway. Proceed forward down the hallway and take the first doorway on your left. This will lead you into the main living area, where the kitchen is located on the right side.",
+      "C": "To reach the kitchen, proceed through the door leading from the hallway directly it.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer provides a detailed step-by-step explanation that aligns with the ground truth answer. Both the ground truth and predicted answers describe exiting the bathroom, turning right into the hallway, and entering the bedroom. The additional details in the predicted answer about the mirrored closet do not contradict the ground truth and can be considered as additional context, hence the prediction is fully correct."
+    },
+    {
+      "Q": "How do I navigate from the bathroom to the bedroom?",
+      "A": "To navigate from the bathroom to the bedroom, you would perform the following steps:\n1. Exit the bathroom and enter the hallway.\n2. Turn right and walk down the hallway, passing a large mirrored closet on your left.\n3. Enter the open doorway on your right, which leads into the bedroom.",
+      "C": "To navigate from the bathroom to the bedroom, exit the bathroom, turn right into the hallway, and enter the bedroom.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the necessary action to take from the kitchen to the bathroom, including exiting the kitchen and turning left as described in the ground truth answer."
+    },
+    {
+      "Q": "Which direction should I take to get from the kitchen to the bathroom?",
+      "A": "Exit the kitchen into the hallway, and the bathroom will be the door on your left.",
+      "C": "To get from the kitchen to the bathroom, exit the kitchen and turn to your left, then enter the bathroom door.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the layout by stating that the kitchen and living room are part of the same open-plan space. It provides detailed steps to move from the kitchen sink area directly to the living room, which is consistent with the ground truth answer stating they are directly attached. Thus, the prediction is correct and complete."
+    },
+    {
+      "Q": "What's the quickest route to return to the living room from the kitchen area?",
+      "A": "Based on the video, the kitchen and living room are in the same open-plan space. The quickest route is to:\n\n1.  From the kitchen sink area (seen at `00:00:16.016`), turn away from the counter.\n2.  Walk straight ahead for a few steps into the area with the grey sofa, which is the living room (as shown in the camera movement between `00:00:24.524` and `00:00:27.027`).",
+      "C": "Walk straight from the kitchen into the living area, which is directly attached to it.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer suggests a route from the hallway to the dining table through the living room, which contradicts the ground truth. The ground truth specifies that the shortest route is through the kitchen to the workstation area in the living room. The prediction does not align with the ground truth path and provides an entirely different route."
+    },
+    {
+      "Q": "What's the shortest way to reach the workstation from the hallway?",
+      "A": "From the hallway, enter the living room through the first doorway on the left and walk straight to the dining table at the far end of the room.",
+      "C": "The shortest way to reach the workstation from the hallway is to enter the kitchen and proceed to the workstation area, located in the living room.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly describes the direct path from the bedroom to the hallway without making any detours. It includes additional descriptive details about the surroundings that align with the ground truth answer while maintaining accuracy regarding the primary requirement of not getting sidetracked."
+    },
+    {
+      "Q": "How can I find my way from the bedroom to the hallway without getting sidetracked?",
+      "A": "To get from the bedroom to the hallway without getting sidetracked, follow these steps:\n\n1.  **Start in the bedroom.** Turn away from the bed and the window with the dark curtains.\n2.  **Walk towards the wooden door**, located next to a dark wardrobe.\n3.  **Go through the doorway** to exit the room.\n4.  **You are now in the hallway.** You will see a tiled floor and a large mirrored wardrobe on the wall opposite the bedroom door.",
+      "C": "To find your way from the bedroom to the hallway, exit the bedroom door directly into the hallway without making any detours.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly details the route from the bedside table to the living area. It includes turning towards the bedroom door, exiting into the hallway, and entering the living room, aligning perfectly with the ground-truth answer."
+    },
+    {
+      "Q": "How should I proceed from the bedside table to return to the living area?",
+      "A": "From the bedside table, turn around and walk towards the bedroom door. Exit the bedroom into the hallway. Proceed down the hallway, with the mirrored closet on your left. The open doorway on your right leads directly into the living area.",
+      "C": "To proceed from the bedside table to the living area, head towards the bedroom door, exit into the hallway, and enter the living room",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer claims that the programming language is Python based on various code characteristics, but the ground truth indicates that the programming language cannot be determined from the images. Thus, the prediction is incorrect as it provides a definitive answer where uncertainty is clearly stated in the ground truth."
+    },
+    {
+      "Q": "What programming language is visible on the computer screen, and how can you identify it?  ",
+      "A": "The programming language visible on the computer screen is **Python**.\n\nYou can identify it by these visual cues in the code:\n*   The use of the keyword `def` to define functions.\n*   The use of the keyword `class` to define classes.\n*   The use of `self` as the first parameter in class methods.\n*   Statements like `import` and `from ... import` for including modules.\n*   The reliance on indentation to structure code blocks, which is a defining feature of Python syntax.",
+      "C": "The programming language visible on the computer screen is not clear from the images, so I'm unable to identify it.  ",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the steps needed to move from the opened window back to the workstation, matching the path outlined in the ground-truth answer. Both answers describe exiting the bedroom into the hallway, continuing to the living room, and proceeding to the workstation area, ensuring clear and complete guidance."
+    },
+    {
+      "Q": "What steps do I follow to move from the window I opened back to the workstation?",
+      "A": "Based on the visual information, here are the steps to move from the opened window back to the workstation:\n\n1.  Turn away from the window, walk past the bed, and exit the bedroom into the hallway.\n2.  Once in the hallway, turn right and walk towards the main living area.\n3.  Enter the living room through the doorway on your right, passing the kitchen area.\n4.  Walk forward to the round white table in the recessed dining area, which is set up as the workstation with a laptop and an external monitor.",
+      "C": "To move from the window I opened back to the workstation, exit the bedroom into the hallway, continue through the hallway into the living room, and proceed to the workstation area.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer states that it would take approximately 4 steps to reach the kitchen counter from the entrance. This falls within the range provided by the ground truth answer, which estimated 3 to 4 steps. Therefore, the prediction is consistent with the ground truth."
+    },
+    {
+      "Q": "How many steps would it take to reach the kitchen counter from the entrance?",
+      "A": "Based on the visual evidence provided in the sequence of images, it would take approximately **4 steps** to reach the kitchen counter from the entrance. Here is the breakdown:\n\n1.  The first image is taken from what appears to be the entrance area of the small apartment or studio, looking towards the kitchen. The first step would be from the doorway into this main living space.\n2.  The second step would move the person forward, past the small television stand on the right.\n3.  The third step would bring the person to the edge of the kitchen area, a position similar to where the second photo was taken.\n4.  The final, fourth step would place the person directly in front of the kitchen counter and sink, as seen in the third image.",
+      "C": "To reach the kitchen counter from the entrance, it would approximately take 3 to 4 steps, depending on your stride length.",
+      "M": "Spatial Reasoning",
+      "start_idx": 50,
+      "end_idx": 52
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer specifies Visual Studio Code (VS Code) as the coding environment based on certain interface features. However, the ground truth indicates that the specific software cannot be identified. Since the prediction does not align with the ground truth, it is considered incorrect. Some features mentioned might resemble VS Code, but without definitive identification, the prediction lacks accuracy."
+    },
+    {
+      "Q": "Based on the code editor's interface, can you determine which coding environment or software is being used?  ",
+      "A": "Based on the interface visible on the computer monitor, which includes a distinct activity bar with icons for the explorer, search, source control, and extensions on the far left, the coding environment is **Visual Studio Code (VS Code)**.",
+      "C": "The images show computer screens with code, possibly using a common code editor, but the specific software is not identifiable.  ",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately reflects the ground truth by stating that it is not possible to identify any debugging information or error messages due to the blurriness and distortion, aligning with the ground truth note of the images not clearly showing any debugging information or error messages."
+    },
+    {
+      "Q": "Can you identify any debugging information or error messages in the code displayed on the screen?  ",
+      "A": "Based on the visual information from the provided images, it is not possible to identify any specific debugging information or error messages in the code displayed on the screens. The text is too blurry and distorted by the fisheye lens to be legible.",
+      "C": "The images do not clearly show any debugging information or error messages.  ",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground-truth answer for the brand name of the detergent, 'Pur'."
+    },
+    {
+      "Q": "In the kitchen area beside the sink can you read the brand name of the detergent, used for dishwashing?",
+      "A": "Pur",
+      "C": "The detergent is from the brand \u201cPur\u201d.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The ground truth states that there is no wall chart or picture contributing significantly to understanding the workspace or environment. The predicted answer describes several pictures and a framed quote providing significant context, contradicting the ground truth."
+    },
+    {
+      "Q": "How does the presence of a wall chart or picture contribute to understanding the context of this workspace or environment?  ",
+      "A": "The presence of several pictures and a framed quote provides significant context about the environment, establishing it as a personalized home rather than a generic workspace.\n\n1.  **Personal Photos:** In the main living/kitchen area, several small, square photos are pinned to the wall. This is a common way to display personal memories with friends or family, indicating that this is a living space filled with personal history and relationships, not a formal office.\n\n2.  **Framed Quote:** On the bedside table in the bedroom, there is a framed picture with text in what appears to be an East Asian language (likely Chinese). This offers a specific cultural clue about the occupant, suggesting their heritage, interests, or a connection to that culture. The text is likely a personal motto or inspirational quote, further personalizing the space and offering insight into the inhabitant's values.\n\nTogether, these elements transform the perception of the area from a simple place of work into an intimate home environment, revealing aspects of the occupant's personal life, relationships, and cultural background.",
+      "C": "There doesn't appear to be a wall chart or picture visible in a way that contributes significantly to understanding the workspace or environment.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 4,
+      "reason": "The predicted answer identifies numbers incorrectly as 89 instead of the correct 98, but it is partially correct as both answers identify numbers in the same order and form."
+    },
+    {
+      "Q": "What letters or numbers are written on my shirt, visible in the bathroom mirror and the big hallway mirror?",
+      "A": "The number 89 is written on your shirt.",
+      "C": "On your shirt there is the number 98.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer 'Fitness Your Life Grain Mix' includes the exact word 'Fitness' as in the ground truth answer. The additional text does not contradict the ground-truth but provides more detail about the packaging, hence the prediction is mostly correct."
+    },
+    {
+      "Q": "What text can be recognized on the blue food packaging on the bedside table?",
+      "A": "Fitness\nYour Life\nGrain Mix",
+      "C": "The word \u201cFitness\u201d can be recognized on the blue food packaging on the bedside table.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately matches the ground truth answer. Both indicate that the text on the decorative frame on the bedstand is written in Chinese, confirming the prediction is fully correct."
+    },
+    {
+      "Q": "In what language is the text written on the decorative frame on the bedstand?",
+      "A": "Based on the visual evidence, the text on the decorative frame on the bedstand is written in Chinese.",
+      "C": "The text on the decorative frame on the bedstand is in Chinese.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer does not accurately reflect the process of securing the doors and windows as stated in the ground-truth answer. The ground-truth emphasizes checking the handles to confirm locking and ensuring windows are properly closed. The predicted answer includes using a key for locking and does not address the checking of window handles specifically, nor ensuring windows are closed properly. Therefore, the predicted answer partially aligns with the locking part but misses key details about the checking process for both doors and windows."
+    },
+    {
+      "Q": "How do you ensure the doors and windows are secure during your routine check?  ",
+      "A": "Based on the visual information, here is how the doors and windows are secured during the routine check:\n\n1.  **Main Entrance Door:** I use a key to operate the lock on the main entrance door and then physically test the handle to confirm that it is securely locked.\n2.  **Bedroom Balcony Door:** I go to the bedroom, pull aside the dark curtain covering the glass balcony door, and open it to visually inspect the exterior before closing it.",
+      "C": "I check by trying the handles on the doors to confirm they are locked and make sure the windows are closed properly.  ",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer partially aligns with the ground-truth answer by mentioning inspecting items on the nightstand. However, it diverges by discussing organizing curtains and opening windows, which are not mentioned in the ground truth. The key focus on the bed and electronic devices was missed, resulting in a partially correct but overall incorrect prediction."
+    },
+    {
+      "Q": "When you are in the bedroom, what items do you focus on inspecting or organizing?  ",
+      "A": "Based on the video frames, in the bedroom, I focus on inspecting the items on the nightstand and then organizing the curtains and opening the window/balcony door.",
+      "C": "I focus on inspecting the bed, ensuring the blankets are tidy, and checking any electronic devices on the bedside table.  ",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer does not provide a specific location for the keys after locking the door. The ground truth specifies that the keys were placed on a side shelf of the kitchen cabinet, whereas the predicted answer only states that the keys were put away without confirming the exact location, resulting in a lack of accuracy and completeness."
+    },
+    {
+      "Q": "What did you do with your keys, after securely locking the door?",
+      "A": "Based on the video, after using the keys to unlock the door, I put them away, as they are no longer visible in my hand for the remainder of the clip.",
+      "C": "I put the keys on a side shelf of the kitchen cabinet.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer claims the person opened the window themselves, while the ground truth answer states that the window was already opened. These are contradictory statements."
+    },
+    {
+      "Q": "Was the bedroom window already opened, or did you open it yourself?",
+      "A": "I opened the bedroom window myself.",
+      "C": "The bedroom window was already opened, I just pulled the curtains.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer provides specific examples of why items may need to be adjusted, aligning with the ground truth reasons of ensuring organization and ease of movement. While the prediction gives detailed scenarios, the underlying reasoning corresponds well with the organization and safety motives described in the ground truth. Therefore, it is mostly correct but slightly less direct than the generalized statement in the ground truth, leading to a score of 4."
+    },
+    {
+      "Q": "Is there any reason for adjusting any items or furniture in the spaces you navigate through?  ",
+      "A": "Based on the visual evidence, here are some reasons why items or furniture might be adjusted:\n\n*   **In the hallway:** A pair of crutches is leaning against the mirrored wardrobe next to the front door. This could be an obstruction and might be better stored inside the wardrobe or in a less-trafficked area to prevent them from being knocked over.\n*   **In the living area/kitchen:** The dining table is being used as a computer workstation, which is crowded with a large monitor, a laptop, a kettle, and other items. This setup makes the table unavailable for dining and could be reorganized for better space utilization.\n*   **In the bedroom:** There are charging cables and a power strip on the floor next to the nightstand. These could be a tripping hazard, especially at night. It would be safer to manage these cables by securing them or using a different charging location.",
+      "C": "I may adjust items to ensure they are organized or positioned correctly for ease of movement or aesthetics.  ",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer identifies the gender as female, which aligns with the ground truth. Both mention the presence of items typically associated with women, such as cosmetic products and personal items like scrunchies. Although the predicted answer emphasizes reflections in the mirror and personal appearance, which the ground truth does not, it adds additional evidence without contradicting the key elements provided in the ground truth. Therefore, the prediction is mostly correct, but with a slight deviation in focus."
+    },
+    {
+      "Q": "What do you think is the gender of the person living here and why?",
+      "A": "Based on the visual evidence, the person living here is likely a woman. Here's why:\n\n1.  **Reflection in the Mirror:** In the bathroom, a reflection shows a person with long, dark hair wearing a baseball cap and a sweatshirt.\n2.  **Personal Items:** In the bathroom, there are hair accessories like scrunchies hanging on the wall. The person is also seen wearing a beaded bracelet on their wrist at various points in the video.\n3.  **Overall Appearance:** The person's figure, as seen in the reflections, and the appearance of their hands suggest they are female.",
+      "C": "I think there\u2019s a woman living here, based on the tidy spaces, the cosmetic products seen in the bathroom and bedroom and the choice of decorations, visible throughout the rooms.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer was \"1\" while the ground truth was \"twice\" (2 times). The predicted answer does not fall within the range of the ground truth answer, resulting in a fully incorrect prediction."
+    },
+    {
+      "Q": "How many times did you wash your hands throughout the entire video sequence?",
+      "A": "1",
+      "C": "I washed my hands twice throughout the entire video sequence.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 4,
+      "reason": "The predicted answer is mostly in line with the ground truth, as both conclude the person is likely Chinese based on observed Chinese characters. However, the prediction includes additional details about physical appearance, which were not part of the ground truth. This addition does not affect the correctness greatly but introduces additional assumptions beyond the ground truth evidence."
+    },
+    {
+      "Q": "What do you think is the nationality of the person living here and what do you base this assumption on?",
+      "A": "Based on the visual evidence, the person living here is likely of Chinese nationality. This assumption is based on the following clues:\n\n1.  **Written Language:** In the bedroom, on the bedside table, there is a framed picture with a motivational phrase written in simplified Chinese characters: \"\u52aa\u529b\u5411\u4e0a \u70ed\u7231\u81ea\u7531\" (visible in frames 93-97). There is also a book with a Chinese character on its spine.\n2.  **Physical Appearance:** The person's reflection in the bathroom mirror (frames 71-76) shows an individual who appears to be of East Asian descent.\n\nThe combination of the person's appearance and, most definitively, the use of the Chinese language for personal decor strongly suggests they are Chinese.",
+      "C": "I assume the person living here might be Chinese, based on the Chinese characters, seen on the decorative frame in the bedroom.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately identifies that the opened files indicate a career or hobby related to coding and technology. It also specifies software development and mentions a code editor or IDE, which aligns well with the ground truth answer that assumes the person works in coding and technology."
+    },
+    {
+      "Q": "Based on the opened files on the computer monitor and laptop, what would you assume of this person\u2019s career or personal hobby?",
+      "A": "Based on the content displayed on the computer monitor and laptop, the person's career or personal hobby is likely related to computer programming or software development. The screens show a dark-themed application with multiple lines of code, typical of a code editor or Integrated Development Environment (IDE) used by developers.",
+      "C": "Based on the opened files, which look like some sort of programming software, I would assume this person works in the field of coding and technology, or has personal hobbies in that area.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 93
+    }
+  ]
+]

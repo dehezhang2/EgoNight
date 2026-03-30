@@ -1,0 +1,962 @@
+[
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground truth answer exactly, both identifying 3 benches along the path."
+    },
+    {
+      "Q": "How many benches do you notice along the path?",
+      "A": "I notice 3 benches along the path.",
+      "C": "I notice 3 benches along the path.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer states there are 4 buildings visible, which is outside the range of 5-10 buildings given in the ground-truth answer. Thus, the prediction does not fall within the acceptable range, resulting in an incorrect judgment. However, the prediction is relatively close to the lower bound of the given range."
+    },
+    {
+      "Q": "How many buildings are visible in the video?",
+      "A": "There are 4 buildings visible in the video.",
+      "C": "I can see 5-10 buildings.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer of 28 does not fall within the ground truth range of 70-80 bike racks. Hence, the prediction is incorrect as it significantly underestimates the count."
+    },
+    {
+      "Q": "What is the total number of bike racks observed from start to end?",
+      "A": "28",
+      "C": "There are 70-80 bike racks.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 4,
+      "reason": "The predicted answer \"4 different pathways\" is close but not matching the ground truth \"5 different pathways\". The predicted count is only one less than the actual count, signifying a slight underestimation. Since the number of pathways is not in the correct range, it cannot be fully correct, but the error is small enough to provide a score of 4 out of 5."
+    },
+    {
+      "Q": "How many different pathways or sidewalks are shown in this video?",
+      "A": "Based on the visual evidence in the video, there are 4 different pathways or sidewalks shown.",
+      "C": "There are 5 different pathways or sidewalks shown.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately matches the ground truth answer. Both state that no streetlights turned off during the scene, indicating a complete agreement in their assessments."
+    },
+    {
+      "Q": "Did any streetlights turn off as you walked through the scene?",
+      "A": "No, none of the streetlights turned off during the scene.",
+      "C": "No streetlights turned off as I walked through the scene.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer claims that there are moments when the overall scene becomes darker, specifically stating a transition on the stairs, which contradicts the ground truth answer indicating that the scene did not become significantly darker at any point."
+    },
+    {
+      "Q": "Are there moments when the overall scene becomes darker?",
+      "A": "Yes, there are moments when the overall scene becomes darker. The sequence starts in a relatively well-lit area with several light sources. However, from around image 43 onwards, as the camera moves up a set of stairs and onto an upper walkway, the scene becomes significantly darker and remains so for the rest of the sequence.",
+      "C": "No, the overall scene did not become significantly darker at any point.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer generally aligns with the ground truth by noting that the reflections became brighter. However, it provides additional details by mentioning that the reflections also became dimmer later, which is not mentioned in the ground truth. Despite this, the core observation of the reflections becoming brighter during movement is consistent with the ground-truth answer."
+    },
+    {
+      "Q": "Did reflections on the ground seem to become brighter or dimmer at any point?",
+      "A": "Yes, the reflections on the ground become brighter and then dimmer. Initially, the reflections on the narrow walkway are minimal. As the person recording moves into a wider plaza area around frame 16, the reflections from the lights on the patterned ground become significantly brighter and more distinct. After passing this plaza, the ground surface changes again, and the reflections become much dimmer towards the end of the sequence.",
+      "C": "Yes, reflections on the ground seemed to become slightly brighter as I moved.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer \"No\" is incorrect because the ground truth states that lights in the store windows turned on during the video."
+    },
+    {
+      "Q": "Did any lights in building windows turn on during the video?",
+      "A": "No",
+      "C": "Yes, the lights in the store windows turned on during the video.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately states that the subject moved closer to specific light sources, making them appear brighter, which aligns with the ground truth answer. Additionally, the prediction provides detailed examples of when and where this occurred, enhancing its credibility."
+    },
+    {
+      "Q": "Did you move closer to any specific light source, making it appear brighter?",
+      "A": "Yes, I moved closer to several light sources. For example, between the first few frames and frame 15, I moved closer to the lights on the building on the right. Later, around frame 30, I moved closer to a lamppost near a bench and some flowering bushes, making it appear significantly brighter.",
+      "C": "Yes, I moved closer to specific light sources, making them appear brighter.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted number of bicycles, 27, is significantly outside the range of the ground truth answer, which is 12-15 bicycles. Therefore, the prediction does not match the ground truth."
+    },
+    {
+      "Q": "How many bicycles can you count throughout the entire video?",
+      "A": "Based on a careful review of the video frames, there are a total of 27 bicycles visible.",
+      "C": "I see 12-15 bicycles throughout the video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer states that there are at least 10 distinct street lamps and outdoor lights visible, which matches the ground-truth answer of 10 street lamps being visible."
+    },
+    {
+      "Q": "Can you determine the number of street lamps that appear throughout the sequence?",
+      "A": "Based on the visual evidence in the image sequence, at least 10 distinct street lamps and prominent outdoor lights appear. They can be categorized as follows:\n*   At least 4 wall-mounted lights are visible along the building on the right side of the initial pathway.\n*   At least 3 pole-style street lamps are visible in the courtyard/area to the left of the initial pathway.\n*   1 shorter, decorative lamp post is located in a planter in the main plaza area.\n*   At least 2 more wall-mounted lights are visible on the building with the large glass entrance in the plaza.",
+      "C": "There are 10 street lamps visible.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer directly contradicts the ground truth answer. While the ground truth states that certain areas became illuminated as movement occurred, the predicted answer claims there was no change in illumination, which is incorrect."
+    },
+    {
+      "Q": "Were there any areas that suddenly became illuminated as you moved?",
+      "A": "No, there were no areas that suddenly became illuminated in the video sequence. The lighting remained consistent from fixed sources throughout the movement.",
+      "C": "Yes, certain areas became illuminated as I moved closer to light sources.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately reflects the ground truth by confirming that shadows on the ground noticeably changed and shifted. It further provides additional context by mentioning the movement of the shadow of the person filming and changes in shadows cast by stationary objects, aligning well with the ground truth."
+    },
+    {
+      "Q": "Did any shadows on the ground noticeably change or shift in the scene?",
+      "A": "Yes, shadows on the ground noticeably change and shift throughout the scene. The shadow of the person filming is visible and moves as they walk, particularly in the middle section of the video. Additionally, the shadows cast by stationary objects like bike racks, benches, and railings change their position and length on the ground as the camera moves past them and alters its perspective relative to the light sources.",
+      "C": "Yes, the shadows on the ground noticeably shifted as I moved.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately reflects the ground truth answer by stating that it did not appear like a car's headlights passed by. Additionally, it provides extra detail about the light changes being due to fixed light sources, which does not contradict the ground truth but rather adds context. Therefore, the prediction is fully correct."
+    },
+    {
+      "Q": "Did it appear like a car\u2019s headlights passed by, altering the light dynamics?",
+      "A": "No, it does not appear like a car's headlights passed by. The lighting changes seem to be caused by the camera moving past fixed light sources like streetlights and lights from the buildings, rather than a moving light source sweeping across the scene.",
+      "C": "No, it didn't appear like a car\u2019s headlights passed by.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer is '3', which falls within the range of the ground-truth answer '2-3'. Therefore, the prediction is correct."
+    },
+    {
+      "Q": "How many streetlights are visibly illuminating the path?  ",
+      "A": "3",
+      "C": "There are 2-3 streetlights visibly illuminating the path.",
+      "M": "Light Recognition",
+      "start_idx": 8,
+      "end_idx": 10
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer states that the light emitted is 'warm white or yellowish-white', which does not match exactly with the ground truth which specifies 'warm yellow color'. The inclusion of 'white' or 'yellowish-white' introduces divergence from the ground truth answer, affecting the accuracy."
+    },
+    {
+      "Q": "What is the color of the light emitted by the street lamps lining the pathway?  ",
+      "A": "The light emitted by the street lamps lining the pathway is warm white or yellowish-white.",
+      "C": "The light emitted by the street lamps lining the pathway is a warm yellow color.",
+      "M": "Light Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer mentions the primary colors of the glow (warm yellow and white) that are part of the ground truth answer. However, it misses the additional gray-green tone mentioned in the ground truth. Therefore, it captures most of the detail but is not fully complete."
+    },
+    {
+      "Q": "What color is the glow emitted by the building's illuminated windows in the background?  ",
+      "A": "The glow emitted by the building's illuminated windows is a mix of warm yellow and white.",
+      "C": "The glow emitted by the building's illuminated windows in the background appears to be in different colors in different rooms/ floors: warm yellow-orange color, white and gray-green tone.",
+      "M": "Light Recognition",
+      "start_idx": 24,
+      "end_idx": 26
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer correctly identifies the design with curved lines affecting reflections but attributes this mainly to the surface being wet or glossy, which is not mentioned in the ground truth. The ground truth specifies roundish geometric shapes made from a more reflective material, which is not directly addressed in the prediction."
+    },
+    {
+      "Q": "What feature in the ground\u2019s design affects the way light reflects off of it?",
+      "A": "Based on the visual evidence, the ground is designed with a pattern of interlocking, curved lines. This pattern, especially because the surface is wet or glossy, breaks up the reflections from the overhead lights, causing them to appear as wavy, distorted lines rather than smooth, straight reflections.",
+      "C": "The design features that affects the way light reflects off of the ground are the roundish geometric shapes, made from a different and more reflective material that the base.",
+      "M": "Light Recognition",
+      "start_idx": 16,
+      "end_idx": 18
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the light patches are rectangular or elongated, appearing as horizontal bands, whereas the ground truth states that they are circular. The shapes described in the prediction do not match the ground truth, making the prediction incorrect."
+    },
+    {
+      "Q": "What is the primary shape of the light patches created by the street lamps on the ground?  ",
+      "A": "The primary shape of the light patches created by the street lamps on the ground is rectangular or elongated, appearing as horizontal bands across the steps.",
+      "C": "The primary shape of the light patches created by the street lamps on the ground is circular.",
+      "M": "Light Recognition",
+      "start_idx": 40,
+      "end_idx": 42
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer \"you should approach a set of stairs\" does not match the ground truth \"approach another open area with a tree and lamp posts.\" There is no overlap or resemblance between these descriptions of what should be approached after turning right. Therefore, the prediction is incorrect with a score of 0."
+    },
+    {
+      "Q": "When the path ends and I turn right, what should I approach next?  ",
+      "A": "After the path ends and you turn right, you should approach a set of stairs.",
+      "C": "Approach another open area with a tree and lamp posts.  ",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer accurately describes the action of continuing straight on the pathway after walking past the bike racks, which aligns with the ground truth answer. However, it adds the detail about directly entering the open area with lamps and planters, which is somewhat implied but not directly stated in the ground truth. Despite this, the primary direction and context are correct."
+    },
+    {
+      "Q": "After walking straight on the pathway lined with bike racks, where do I go to reach the open area with lamps and planters?  ",
+      "A": "After walking straight on the pathway lined with bike racks, continue walking straight ahead. The pathway opens directly into the open area with lamps and planters.",
+      "C": "Continue forward as the path remains flanked by bike racks and buildings on the right.  ",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer suggests heading to the left to find the benches and flowerbeds, which aligns with the ground-truth answer implying that these are on the left after moving straight across the open area. The main directional intent has been conveyed correctly, therefore only one point is deducted for the slight deviation in how the navigation is expressed."
+    },
+    {
+      "Q": "Upon reaching the open area with the glass building entrance, in which direction should I head to find the benches and flowerbeds?  ",
+      "A": "Upon reaching the open area with the glass building entrance, you should head to your left to find the benches and flowerbeds.",
+      "C": "Move straight across the open area, noting benches and flowerbeds to the left.  ",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer describes the pattern as consisting of interlocking or overlapping circles, while the ground truth describes it as intersecting curved lines creating a series of interconnected loops or arcs. There is some similarity between the descriptions, as both involve curved forms and interconnected designs, but the specifics do not completely align, and thus the prediction is partially correct."
+    },
+    {
+      "Q": "What pattern is visible on the paved area in the foreground",
+      "A": "The pattern visible on the paved area in the foreground consists of interlocking or overlapping circles.",
+      "C": "The pattern visible on the paved area in the foreground is composed of intersecting curved lines, creating a series of interconnected loops or arcs.",
+      "M": "Object Recognition",
+      "start_idx": 24,
+      "end_idx": 26
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer describes noticing a white sticker with a black symbol near a handrail, whereas the ground truth specifies noticing a garden area. The elements observed are entirely different, thus the prediction is fully incorrect."
+    },
+    {
+      "Q": "After turning left towards the building with large windows, what should I notice on my right as I follow the path?  ",
+      "A": "As you follow the path, on your right, you should notice a white sticker with a black symbol on the corner of a low wall where a metal handrail is mounted, just before a set of stairs.",
+      "C": "Notice a garden area on the right.  ",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer inaccurately describes the texture as louvered or slatted with horizontal panels, whereas the ground-truth answer states that the texture is primarily characterized by vertical lines or panels. The general idea of texture is partially captured, but the directionality and specific type of panels described do not match."
+    },
+    {
+      "Q": "What type of texture is visible on the wall of the building on the right side",
+      "A": "Based on the visual cues in the images, the wall of the building on the right side has a **louvered or slatted texture**, created by horizontal panels.",
+      "C": "The wall of the building on the right side has a textured surface, primarily characterized by vertical lines or panels.",
+      "M": "Object Recognition",
+      "start_idx": 8,
+      "end_idx": 10
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the features of the louvers or shutters on the windows as horizontal, which matches the ground truth. Both the prediction and the ground truth mention horizontal louvers or shutters, indicating complete correctness."
+    },
+    {
+      "Q": "What type of shutters or louvers are visible on the windows of the building along the pathway",
+      "A": "Based on the visual information, the building along the pathway features fixed, horizontal louvers or louvered panels on its windows. These consist of multiple parallel slats arranged horizontally.",
+      "C": "The windows on the building along the pathway have horizontal louvers or shutters.",
+      "M": "Object Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer describes the path and mentions an elevated walkway alongside a building, which does not align with the ground truth indicating the final area as having more greenery. The predicted answer is partially correct in describing the route but does not accurately capture the destination."
+    },
+    {
+      "Q": "When following the narrow path around the corner to the left, what is the final area I should be heading towards?  ",
+      "A": "After following the narrow path up the stairs and turning left, you are heading down an elevated walkway that runs alongside a building.",
+      "C": "You will be heading to a final area with more greenery.  ",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately identifies the structure as a ramp, which matches the ground truth answer. Both answers describe the structure's location and features, such as being adjacent to the concrete steps and topped with a metal handrail."
+    },
+    {
+      "Q": "What type of structure is visible adjacent to the concrete steps, topped with a metal handrail?  ",
+      "A": "Based on the visual information, a ramp is visible adjacent to the concrete steps, topped with a metal handrail.",
+      "C": "The structure adjacent to the concrete steps and topped with a metal handrail appears to be a ramp.",
+      "M": "Object Recognition",
+      "start_idx": 40,
+      "end_idx": 42
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer mentions a swing set, which does not match the ground truth answer of a bench and a railing being adjacent to the grass patch near the pathway."
+    },
+    {
+      "Q": "What is located adjacent to the grass patch near the pathway?  ",
+      "A": "A swing set is located adjacent to the grass patch near the pathway.",
+      "C": "Adjacent to the grass patch near the pathway, there is a bench and a railing.",
+      "M": "Object Recognition",
+      "start_idx": 56,
+      "end_idx": 58
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer mentions a 'downspout' which is not mentioned in the ground truth answer. The ground truth specifically describes 'white grid-like framing on the glass doors' as the visible feature, which is completely different from what the prediction states. Therefore, the prediction does not align with the ground truth."
+    },
+    {
+      "Q": "What feature is visible on the left side of the frames near the doors or windows?  ",
+      "A": "A downspout is visible on the wall to the left of the door.",
+      "C": "The feature visible on the left side of the frames near the doors or windows is white grid-like framing on the glass doors.",
+      "M": "Object Recognition",
+      "start_idx": 48,
+      "end_idx": 50
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the scenario immediately after the bike racks and pathway scene. The details of an open plaza with patterned paving align well with the ground truth's description of an open area with interesting floor design. Both answers convey the transition to an open space with a notable design feature."
+    },
+    {
+      "Q": "What did I see immediately after the bike racks and pathway scene?  ",
+      "A": "Immediately after the bike racks and pathway scene, you saw an open plaza with patterned paving, a building with a glass entrance, and a long bench.",
+      "C": "You approached the open area with interesting floor design after the bike racks and pathway scene.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer describes a different destination than the ground truth answer. The predicted answer mentions an elevated walkway next to a building, whereas the ground truth mentions a secluded area with greenery and benches."
+    },
+    {
+      "Q": "Once I reached the staircases and ramps, what did they lead to?  ",
+      "A": "The staircases and ramps led to an elevated walkway next to a building.",
+      "C": "The staircases and ramps lead to a secluded area with greenery and benches.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer describes different features like paving, landscaping, seating, architecture, and lighting, whereas the ground truth focuses on railings, stairs, and foliage. There is little overlap between the predicted and ground truth features."
+    },
+    {
+      "Q": "What features characterized the courtyard area I entered?  ",
+      "A": "Based on the visual evidence, the courtyard area you entered is characterized by the following features:\n\n*   **Paving:** The ground is paved with tiles that have a distinctive, reflective geometric pattern of interlocking circles.\n*   **Landscaping:** There are raised planters containing shrubs, flowering plants (including some that appear to be white tulips), and at least one tree.\n*   **Seating:** A long wooden bench is situated next to one of the planters.\n*   **Architecture:** The courtyard is surrounded by modern buildings with large glass windows and entrances, some of which are covered by an overhang.\n*   **Lighting:** The area is illuminated at night by multiple outdoor lights, including lampposts and lights mounted on the surrounding buildings.",
+      "C": "The courtyard is characterized by the railings on either side of the pathways as well as the stairs and the distinct foliage in the distance of the scene.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 4,
+      "reason": "The predicted answer captures the 'stairs and ramps' part of the ground-truth answer, but it misses mentioning 'narrow passageways', which is also part of the correct answer. As a result, the predicted answer is mostly correct but not fully complete."
+    },
+    {
+      "Q": "After the courtyard, what kind of pathways provided access to different levels?  ",
+      "A": "After the courtyard, stairs and ramps provided access to different levels.",
+      "C": "After the courtyard ramps, stairs and narrow passageways provide access to different levels.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer describes an upper-level terrace or walkway next to a building, while the ground-truth mentions an area with greenery and narrow passageways. The predicted answer does not align with the key elements of the ground-truth answer."
+    },
+    {
+      "Q": "What type of area marked the end of the video sequence?  ",
+      "A": "The video sequence ends on an upper-level terrace or walkway next to a building.",
+      "C": "The area with greenery and narrow passageways after the ramps and stairs marked the end of the video sequence.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer describes different elements such as raised planter beds, shrubs, flowers, trees, and benches marking the transition. However, the ground truth specifies a 'narrow passageway' as the defining transition, which is not mentioned in the predicted answer. Therefore, while the predicted answer mentions features that could define a transition, it does not align with the ground truth, resulting in a low score."
+    },
+    {
+      "Q": "How is the transition marked between the open area with a patterned stone surface and the courtyard?  ",
+      "A": "The transition between the open area with a patterned stone surface and the surrounding walkways or courtyard areas is marked by raised planter beds containing shrubs, flowers, and trees. In some places, a long wooden bench is integrated into these planters, further defining the edge. There is also a distinct change in the ground surface from plain concrete paths to the decorative patterned stone of the open area.",
+      "C": "The transition between the open area with a patterned stone surface and the courtyard is marked by the narrow passageway that connects them.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'A bench' does not match the ground truth answer 'a shrub or a small bush'. The objects mentioned are different, resulting in a fully incorrect prediction."
+    },
+    {
+      "Q": "What object is located to your right immediately after passing the glass wall?  ",
+      "A": "A bench.",
+      "C": "Upon passing the glass wall, the object located immediately to your right is a shrub or a small bush.",
+      "M": "Spatial Reasoning",
+      "start_idx": 16,
+      "end_idx": 18
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies bike racks as objects parallel to both the building and the sidewalk, which aligns with the ground truth. However, the inclusion of additional objects such as curbs and bicycles may affect the highest score, as these were not mentioned in the ground truth. Overall, the main component of the ground truth (bike racks) is correctly identified."
+    },
+    {
+      "Q": "What objects are parallel to both the building and the sidewalk?  ",
+      "A": "Based on the visual cues in the images, the following objects are parallel to both the building and the sidewalk:\n\n*   The rows of bike racks.\n*   The curbs or edging along the sides of the sidewalk.\n*   The bicycles parked in the racks.",
+      "C": "The bike racks are objects that are parallel to both the building and the sidewalk.",
+      "M": "Spatial Reasoning",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer provides additional detail by mentioning a handrail, but it does not contradict the ground truth. The core element, the wall being adjacent to the left side of the steps, matches the ground truth."
+    },
+    {
+      "Q": "What is directly adjacent to the left side of the steps?  ",
+      "A": "A wall with a handrail is directly adjacent to the left side of the steps.",
+      "C": "A wall is directly adjacent to the left side of the steps.",
+      "M": "Spatial Reasoning",
+      "start_idx": 40,
+      "end_idx": 42
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer describes a geometric pattern projected by light, whereas the ground truth specifies a tiled pathway with a distinct pattern. Both mention a pattern, but one is a projected light pattern and the other is a physical tile pattern. Thus, while there is some overlap in the concept of a pattern, the nature of the object is different."
+    },
+    {
+      "Q": "What is directly in front of the building entrance in the images?  ",
+      "A": "Directly in front of the building entrance is a geometric pattern projected by a light onto the pavement.",
+      "C": "Directly in front of the building entrance is a tiled pathway with a distinct pattern.",
+      "M": "Spatial Reasoning",
+      "start_idx": 32,
+      "end_idx": 34
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer estimates 4-6 steps whereas the ground truth states approximately 3 steps. Since the predicted range does not directly include 3, it indicates a deviation from the ground truth, hence not a correct match. However, the prediction is not far off and is relatively close to the ground truth, thus partially correct."
+    },
+    {
+      "Q": "How many steps approximately would you take to reach the bench from your current position?  ",
+      "A": "Based on the progression shown in the images, it would take approximately 4-6 steps to reach the bench.",
+      "C": "Based on the frames from the video, it appears you would need to take approximately 3  steps to reach the bench from your current position.",
+      "M": "Spatial Reasoning",
+      "start_idx": 24,
+      "end_idx": 26
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies that there is no legible text on signs or placards, aligning with the ground truth answer. The mention of a white sticker with an unreadable symbol does not contradict the ground truth, as it is not identified as text."
+    },
+    {
+      "Q": "Can you identify and read any visible text on signs or placards along the bicycle path?  ",
+      "A": "Based on a careful examination of the provided images, there is no legible text visible on any signs or placards along the path. While a white sticker with a black symbol is briefly visible on a railing post in a few frames, it is not readable as text.",
+      "C": "There is no visible text that can be identified on signs or placards in the video frames provided.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer identifies a symbol appearing once, while the ground truth states that the symbol appears in multiple frames. The prediction partially aligns with the presence of a symbol but inaccurately reports its frequency, leading to an incorrect assessment."
+    },
+    {
+      "Q": "How often does the same piece of text or symbol appear throughout the video?  ",
+      "A": "A unique, black, stylized symbol on a white sticker appears once in the video, placed on a concrete ledge next to a staircase railing.",
+      "C": "There is a black and white square symbol visible in multiple frames; however, no readable text repeats throughout the video.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The ground truth states that there is no visible text providing specific instructions or information. The predicted answer acknowledges that there is a sticker with a barcode, but explicitly mentions that the specific information or instructions contained within this code cannot be determined visually. Therefore, while the predicted answer identifies the presence of a barcode, it aligns with the ground truth in terms of not being able to provide specific instructions or information from visible text."
+    },
+    {
+      "Q": "What specific instructions or information does any visible text provide in this area?",
+      "A": "Based on the visual information from the images, there is a white sticker with a black, scannable 2D barcode (similar to a QR or Data Matrix code) attached to a concrete railing post next to a set of stairs. The specific information or instructions contained within this code cannot be determined visually.",
+      "C": "There is no visible text providing specific instructions or information.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies that there are no visible signs or markers indicating the name of the surrounding buildings. It matches the ground truth answer in both content and meaning, thereby reflecting full accuracy."
+    },
+    {
+      "Q": "Are there any signs or markers indicating the name of the surrounding buildings?  ",
+      "A": "No, there are no visible signs or markers in the images that indicate the name of the surrounding buildings.",
+      "C": "No signs or markers indicating the name of the surrounding buildings are visible.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer is almost identical in meaning to the ground truth answer. Both indicate that the purpose of the area cannot be determined based on any visible text."
+    },
+    {
+      "Q": "Can you determine the purpose of the area based on any visible text?  ",
+      "A": "The purpose of the area cannot be determined based on any visible text.",
+      "C": "No specific purpose can be determined from visible text.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer states that there is no visible text that suggests the presence of nearby facilities or services, aligning directly with the ground truth answer which also states there is no such visible text. The additional details provided about potential objects are consistent with maintaining the core statement about the lack of visible text indicating nearby facilities."
+    },
+    {
+      "Q": "Is there any visible text that suggests the presence of nearby facilities or services?  ",
+      "A": "No, there is no visible text in the images that suggests the presence of nearby facilities or services. While there are objects that might contain text, such as a sign in the distance or a sticker on a railing, any potential text is illegible due to the low light, distance, and image quality.",
+      "C": "No visible text suggests the presence of nearby facilities or services.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately reflects the ground truth by stating that there is no visible text indicating rules or regulations for parking bicycles in the area."
+    },
+    {
+      "Q": "Is there any text that indicates rules or regulations for parking bicycles in this area?  ",
+      "A": "No, there is no visible text that indicates rules or regulations for parking bicycles in this area.",
+      "C": "No text indicating rules or regulations for parking bicycles is visible.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer aligns perfectly with the ground-truth answer. Both state that it is not possible to infer the office or building type from any signage or text present. The predicted answer provides additional context about the visibility and legibility of the signs, but this does not contradict the ground-truth. Thus, the prediction is correct and deserves a full score."
+    },
+    {
+      "Q": "Can you infer the office or building type from any signage or text?  ",
+      "A": "No, it is not possible to infer the office or building type from any signage or text. While a small sign with a black symbol on a white background is visible on a railing in some frames, it is an abstract logo or marker, not legible text, and its meaning cannot be determined from the images provided. Other potential signs are too blurry, distant, or obscured by the darkness to be read.",
+      "C": "The building type cannot be inferred from any signage or text present.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly infers that the presence of many bicycle racks suggests the location is frequented by people who use bicycles for transportation, aligning with the idea of commuters. It also accurately identifies potential locations such as a university campus, corporate headquarters, or transit hub, which match the context of the ground-truth answer that mentions a university or office building where cycling is common."
+    },
+    {
+      "Q": "How do the bicycle racks suggest the purpose of this location?",
+      "A": "The large number and extensive rows of bicycle racks lining the walkways indicate that this is a location frequented by a large population of people who use bicycles for transportation. This high-capacity bike parking is typical of a university campus, a large corporate headquarters, or a major public transit hub, suggesting the location is designed to accommodate a high volume of students, employees, or commuters.",
+      "C": "The presence of many bicycle racks suggests the location is frequented by commuters, possibly a university or office building, where cycling is a common mode of transportation.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies the area as a university campus or a modern corporate/office park, similar to the ground truth, by describing the presence of bicycle racks, pedestrian pathways, and modern architectural features. It provides specific details and rationale that align with the ground truth answer."
+    },
+    {
+      "Q": "What type of area are you navigating through, and how can you tell from the objects present?",
+      "A": "I am navigating through what appears to be a university campus or a modern corporate/office park.\n\nThis can be determined by several objects and features present in the images:\n*   **Extensive Bicycle Racks:** The most telling feature is the long rows of bicycle racks seen at the beginning of the sequence. This indicates a location with a large number of students or employees who commute by bike, which is very common on university campuses and at large tech or research parks.\n*   **Institutional Buildings:** The buildings have a modern, institutional architectural style with features like large glass entrances and louvered windows, which are characteristic of academic buildings, libraries, or corporate offices rather than residential or retail spaces.\n*   **Pedestrian Pathways and Courtyards:** The area is designed for pedestrians, with paved walkways, landscaped planters, and open courtyards. There is also a bench visible, further suggesting a public or communal space.\n*   **Outdoor Lighting:** The pathways are illuminated by lampposts and lights mounted on the buildings, which is typical for ensuring safety in a public-access area like a campus after dark.",
+      "C": "The area seems to be a campus or office complex, indicated by the presence of bicycle racks, benches, and landscaping, suggesting it's a place where people gather or work.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer adds details about bicycle racks and decorative patterns on a plaza area, which are not mentioned in the ground-truth answer. While both answers describe features that guide pedestrian traffic, the predicted answer includes elements that deviate from the straightforward pathway with defined edges and adjacent planters described in the ground truth."
+    },
+    {
+      "Q": "Describe any patterns or features you notice on the pathway. How might they guide your journey?",
+      "A": "The journey begins on a straight, narrow, paved pathway defined by rows of bicycle racks on either side, which create a clear corridor to walk through.\n\nFurther along, the path opens into a wider plaza area. The ground here features a prominent pattern of large, interlocking circles made of a lighter, reflective material. At night, these lines catch the light from the surrounding lamps, glowing faintly and guiding the way across the open space towards the main entrance of the building. They serve as a decorative and functional form of wayfinding, breaking up the large paved area and directing movement towards key destinations.",
+      "C": "The pathway is straightforward with defined edges and adjacent planters, guiding pedestrian traffic efficiently towards the building.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer identifies large glass-fronted entrance and modern, institutional architecture, which align with the ground truth answer's elements of large glass windows and modern design. It further adds additional architectural elements like extensive bicycle racks and landscaped plaza that also suggest the type of facility described in the ground truth. While not an exact match, the prediction aligns well with the key aspects of openness, accessibility, and modern design related to institutional or office buildings."
+    },
+    {
+      "Q": "What architectural elements of the building entrance help in identifying the type of facility you are approaching?",
+      "A": "Based on the visual cues in the image sequence, the following architectural elements of the building entrance help in identifying the type of facility:\n\n*   **Extensive Bicycle Racks:** The long rows of bicycle racks lining the pathway leading to the building are a primary indicator. This suggests the facility serves a large population that commutes by bike, which is common for a university campus, a large corporate office, or a public library.\n*   **Large Glass-Fronted Entrance:** The entrance consists of multiple wide glass doors under a covered awning. This design is typical for public or institutional buildings meant to accommodate a high flow of people, such as an academic building, a research center, or a modern office complex.\n*   **Modern, Institutional Architecture:** The building itself has a modern design with a grid-like facade, large windows, and what appear to be louvered sun shades. This style is often used for educational, governmental, or corporate buildings rather than residential or small commercial properties.\n*   **Landscaped Plaza and Seating:** The area in front of the entrance is a paved plaza with integrated landscaping and benches. This creates a public gathering space, further suggesting a campus-like environment or a public-access building.",
+      "C": "The large glass windows and modern design of the building entrance suggest it might be an institutional or office building, emphasizing openness and accessibility.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer aligns well with the ground truth by identifying that the outdoor spaces serve as areas for relaxation and social interaction. Additionally, the prediction expands on the ground truth by providing detailed purposes like circulation and aesthetics, which further enrich the understanding of the outdoor spaces' roles. The core aspect of serving as relaxation or social areas is effectively captured, hence the prediction is largely correct with minor enhancements beyond the central idea."
+    },
+    {
+      "Q": "Why might there be a series of outdoor spaces before reaching the entrance? What purposes might these spaces serve?",
+      "A": "Based on the visual evidence, the series of outdoor spaces before the entrance likely serves several purposes related to architectural design, functionality, and user experience:\n\n*   **Circulation and Access Management:** The long pathway lined with bike racks is designed to accommodate and organize a large number of people arriving by bicycle, which is common in places like university campuses or corporate parks. It channels foot traffic from bike parking areas and other parts of the campus towards the entrance in an orderly manner.\n\n*   **Creating a Transitional Zone:** The sequence of spaces\u2014from the functional bike path to the more decorative plaza\u2014creates a gradual transition from the open, public campus to the semi-public entrance of the building. This \"decompression zone\" allows people to slow down and prepare to enter.\n\n*   **Amenity and Social Gathering:** The open plaza with benches, patterned paving, and landscaped planters provides a welcoming public space. It's designed to be a place where people can sit, wait for friends, socialize, or simply enjoy the outdoors before going inside or after leaving.\n\n*   **Aesthetics and Placemaking:** The designed landscape, including the plants, lighting, and patterned ground, enhances the architectural appeal of the building. It creates a distinct and pleasant \"sense of place\" and a positive first impression for visitors.",
+      "C": "The outdoor spaces likely serve as relaxation or social areas, providing places to sit and enjoy the surroundings before entering the building.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer provides several detailed observations that suggest frequent use of the route at night, like lighting and people presence. However, only the lighting aligns directly with the ground truth answer. The ground truth specifically mentions streetlights and well-maintained paths, which are partially captured by the predicted answer. Other details like bicycle parking and active buildings, while plausible indicators, are not mentioned in the ground truth."
+    },
+    {
+      "Q": "What indicators are there that this route is frequently used, even at night?",
+      "A": "Based on the visual evidence in the image set, here are the indicators that this route is frequently used, even at night:\n\n*   **Lighting:** The entire pathway is well-lit by a series of streetlights and external building lights, which is a common feature for routes designed for safe pedestrian traffic after dark.\n*   **Bicycle Parking:** There is extensive bicycle parking infrastructure along the path, and several bicycles are parked there, suggesting regular comings and goings of people who use the area.\n*   **Active Buildings:** Lights are on inside the adjacent buildings, indicating that they are occupied and in use during the night.\n*   **Pedestrian Presence:** In one of the images, another person can be seen walking near a building entrance, directly showing that the area is being used by others at night.",
+      "C": "Streetlights and well-maintained paths suggest the route is used frequently, even at night, by individuals transitioning between buildings.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies the number of people behind the camera as one, which matches the ground truth answer. The explanation provided in the predicted answer aligns with the ground truth, as both mention the presence of shadows associated with stationary objects rather than additional people. Thus, the prediction is fully correct."
+    },
+    {
+      "Q": "Based on the shadows moving on the ground how many people would you assume are behind the camera?",
+      "A": "Based on the shadows moving on the ground, I would assume there is **one** person behind the camera.\n\nThere are no distinct, moving human-shaped shadows visible on the ground that would suggest the presence of additional people walking with the person operating the camera. The shadows that are visible and moving are those cast by stationary objects (like the bicycles and building) as the single camera operator moves forward.",
+      "C": "Based on the shadows moving on the ground I would assume there is 1 person behind the camera.",
+      "M": "Dynamic",
+      "start_idx": 4,
+      "end_idx": 6
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer encompasses multiple aspects of how the design of the outdoor area contributes to its functionality, similar to the ground truth. Both responses emphasize the inviting nature created by landscaping and seating. While the predicted answer goes into more detail about the facilitation of transportation and the aesthetic contribution of landscaping, these elements still align with the ground truth concepts of making the space inviting and functional for congregation and casual meetings."
+    },
+    {
+      "Q": "How does the design of the outdoor area, including landscaping and seating, contribute to the functionality of the space?",
+      "A": "Based on the visual evidence, the design of the outdoor area contributes to its functionality in several ways:\n\n*   **Facilitating Transportation and Access:** The space is designed around a clear, paved pathway that guides pedestrian traffic between buildings. The presence of numerous bike racks along the path indicates a primary function of providing secure and organized bicycle parking, which is crucial for a location like a campus or office park. Stairs with handrails are also integrated to navigate changes in elevation safely.\n\n*   **Providing Areas for Rest and Socializing:** Benches are strategically placed alongside the pathways and in the more open plaza area. They are often situated next to landscaped planters, offering pleasant spots for people to sit, rest, or socialize away from the main flow of foot traffic. The open plaza in front of the building entrance serves as a natural meeting point.\n\n*   **Enhancing Ambiance and Defining Spaces:** Landscaping, including planters with ornamental grasses, flowers, and shrubs, is used to soften the hardscape of the buildings and pavement. It also helps to delineate different zones, such as separating the bike parking areas from the main walkway. In the plaza, decorative patterns on the pavement add visual interest and, along with the outdoor lighting, create a welcoming atmosphere at night.",
+      "C": "Landscaping with plants and seating areas makes the space inviting, encouraging people to congregate and use the outdoor environment for breaks or casual meetings",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately states that there are no moving vehicles in the video, which aligns with the ground-truth answer indicating no moving vehicles are seen in the frames."
+    },
+    {
+      "Q": "Are there any moving vehicles?",
+      "A": "There are no moving vehicles present in this video.",
+      "C": "There are no moving vehicles seen in the frames.",
+      "M": "Dynamic",
+      "start_idx": 30,
+      "end_idx": 32
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there is a moving bicycle, which directly contradicts the ground-truth answer that states there are no moving bicycles. Therefore, the prediction is fully incorrect."
+    },
+    {
+      "Q": "Can you see any moving bicycles alongside with the parked ones?",
+      "A": "Yes, a bicycle on the right is being moved. In the first image, it is parked in a rack. In the second image, its front wheel has been turned. In the third image, it has been removed from the rack and a portion of it is visible moving at the bottom right of the frame.",
+      "C": "No, there are no moving bicycles alongside with the parked ones.",
+      "M": "Dynamic",
+      "start_idx": 11,
+      "end_idx": 13
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer states that the lights did not turn on, which contradicts the question and the context given in the ground truth. However, the predicted answer correctly captures that there were no people seen walking in or out of the store, aligning partially with the ground truth."
+    },
+    {
+      "Q": "As the lights turned on in the store, did you see any people walk in or out?",
+      "A": "No, based on the provided images, the lights in the building did not turn on, and no people were seen walking in or out.",
+      "C": "There are no visible people walking in or out the store.",
+      "M": "Dynamic",
+      "start_idx": 12,
+      "end_idx": 14
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer states seeing more moving people, which is consistent with the main point of the ground truth answer. The ground truth specifies more people than vehicles, and the predicted answer also implied seeing more people, though less explicitly contrasting with vehicles."
+    },
+    {
+      "Q": "Did you see more moving people or vehicles?",
+      "A": "I saw more moving people.",
+      "C": "I saw more moving people than vehicles.",
+      "M": "Dynamic Counting",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer of '0' matches exactly with the ground truth answer of 'There were 0 bicycles passing by'. Therefore, the prediction is fully correct."
+    },
+    {
+      "Q": "How many bicycles did you see passing by?",
+      "A": "0",
+      "C": "There were 0 bicycles passing by.",
+      "M": "Dynamic Counting",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly matches the number of people indicated in the ground truth answer, which is 1 person. As the prediction falls within the acceptable range of the ground truth, it is considered fully correct."
+    },
+    {
+      "Q": "How many people did you see walking in the area?",
+      "A": "1",
+      "C": "There were 1person visible walking in the area.",
+      "M": "Dynamic Counting",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately reflects the ground-truth. Both indicate that there are no people walking their dogs in the frames."
+    },
+    {
+      "Q": "Are there any people walking their dogs in the frames?",
+      "A": "No, there are no people walking their dogs in the frames.",
+      "C": "There are 0 people walking their dogs in the frames.",
+      "M": "Dynamic Counting",
+      "start_idx": 0,
+      "end_idx": 61
+    }
+  ]
+]

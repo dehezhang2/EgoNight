@@ -1,0 +1,677 @@
+[
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer 'waiting area' does not accurately describe the first space encountered in the video sequence as described in the ground truth. The ground truth specifies an 'initial hallway space with large windows on the left and some seating ahead.' There is a mismatch in the type and description of the space, indicating the prediction is mostly incorrect."
+    },
+    {
+      "Q": "What is the first space I encountered in the video sequence?",
+      "A": "waiting area",
+      "C": "You first encountered an initial hallway space with large windows on the left and some seating ahead.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 40
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer mentions the colors of the chairs but does not describe the seating area as the ground truth answer does, which includes information about chairs, small tables, and their position near windows for outside viewing. Thus, the prediction is partially correct, focusing only on the color aspect but missing other important details."
+    },
+    {
+      "Q": "Can you describe the seating area that comes after the initial hallway?",
+      "A": "the chairs are red and black",
+      "C": "After the hallway, there's a seating area with chairs and small tables positioned near the windows, allowing you to view outside.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 40
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer 'display' is too vague and does not accurately capture the detail provided in the ground truth answer. The ground truth specifies a store with a lattice gate and various items, which is not mentioned in the predicted answer."
+    },
+    {
+      "Q": "What did I see on the right side after I first turn right?",
+      "A": "display",
+      "C": "After I first turned right, on the right side, there is a store with a lattice gate displaying various items behind the gate.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 40
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer \"coffee shop\" does not match the ground-truth answer \"small shop for sushi\". Therefore, it is fully wrong."
+    },
+    {
+      "Q": "What did I see on the right side after I passed the store with a lattice gate?",
+      "A": "coffee shop",
+      "C": "It is a small shop for sushi.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 40
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'display' does not accurately describe the ground truth answer, which is 'It is another small store, with lots of drinks and some snacks.' There is no correlation between the predicted answer and the ground truth."
+    },
+    {
+      "Q": "What did I see on the right side after I passed the sushi store?",
+      "A": "display",
+      "C": "It is a another small store, with lots of drinks and some snacks.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 40
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'Akira Sushi' does not match the ground truth answer 'It is a coffee shop.' The predicted answer is entirely different from the correct answer, leading to a score of 0."
+    },
+    {
+      "Q": "What's the last store did I see on the right side?",
+      "A": "Akira Sushi",
+      "C": "It is a coffee shop.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 40
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted sequence differs entirely from the ground truth sequence in terms of the order of the shops. The ground truth starts with a small gocerios shop, while the prediction starts with a coffee shop. Additionally, the positions of the other shops are incorrect, compared to the ground truth."
+    },
+    {
+      "Q": "What's the correct sequence of the shops including coffee shop, sushi shop, small gocerios shop, drink shop, did I see?",
+      "A": "coffee shop, sushi shop, small gocerios shop, drink shop",
+      "C": "It is first small gocerios shop, sushi shop, drink shop, and lastly coffee shop.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 40
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies the number of right turns as 1, which matches the ground truth answer."
+    },
+    {
+      "Q": "How many times did I turn right during the walking, with viewpoint change doesn't count?",
+      "A": "1",
+      "C": "You turned right once at the beinging of the video.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 40
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer '2' does not match the ground truth answer, which states that the subject turned right once close to the end of the video. The predicted number of '2' left turns is completely unrelated to the right turn described in the ground truth."
+    },
+    {
+      "Q": "How many times did I turn left during the walking, with viewpoint change doesn't count?",
+      "A": "2",
+      "C": "You turned right once close to the end of the video.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 40
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 4,
+      "reason": "The predicted answer is 4, which is close to the ground truth of 3. Although it is not the exact correct count, it suggests the assistant was very close to the ground-truth answer. Since the task involves counting, a small deviation might still indicate that the AI perceived the situation fairly accurately."
+    },
+    {
+      "Q": "How many times did I changed my viewpoingt to the right side from 6th to 31th frame?",
+      "A": "4",
+      "C": "You changed your viewpoint to your right side for 3 times.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 40
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'no' matches the ground truth answer 'No, you didn't', indicating that both answers convey that nothing was touched during the video. The predicted answer is accurate and complete in the context of the question."
+    },
+    {
+      "Q": "Did I touch anything during the whole video?",
+      "A": "no",
+      "C": "No, you didn't.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 40
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is 4, while the ground truth answer is 7. The prediction does not fall within the range of the ground truth answer, therefore it is considered incorrect."
+    },
+    {
+      "Q": "How many chairs are visible in the 1st frame.",
+      "A": "4",
+      "C": "There are a total of 7 chairs.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 40
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer is 5 chairs, while the ground truth is 8 chairs. The prediction does not fall within the range of the ground truth, as the question asks for the exact number of visible chairs with red backs."
+    },
+    {
+      "Q": "How many chairs are visible with red back from 1st frame to 12th frame?",
+      "A": "5",
+      "C": "There are a total of 8 chairs with red back.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 40
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground truth answer exactly, indicating that the prediction is fully correct."
+    },
+    {
+      "Q": "Can you infer how many high stools are placed in the scene in total?",
+      "A": "12",
+      "C": "There are a total of 12 high stools.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 40
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'two' is far from the ground-truth answer '15'. There is no overlap or range that makes the prediction correct."
+    },
+    {
+      "Q": "Can you count how many tables are in use in the entire video?",
+      "A": "two",
+      "C": "There are 15 tables in use in the entire video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 40
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there are 2 fire extinguishers visible, whereas the ground truth states that there are 3 fire extinguishers visible. Since the predicted number does not match the ground truth and does not fall within a permissible range that could be considered, the prediction is incorrect."
+    },
+    {
+      "Q": "What is the total number of fire extinguishers visible?",
+      "A": "2",
+      "C": "Three fire extinguishers are visible in the video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 40
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'two' matches the ground truth answer of encountering two exit signs. Therefore, the prediction is fully correct."
+    },
+    {
+      "Q": "How many exit signs did you encounter throughout the video?",
+      "A": "two",
+      "C": "I encountered two exit signs throughout the video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 40
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is 1, which does not match the ground truth answer of 9 visible plant pots. Additionally, for counting objects, the prediction does not fall within a permissible range around the ground truth."
+    },
+    {
+      "Q": "Can you determine the number of visible plant pots indoor?",
+      "A": "1",
+      "C": "There are nine visible plant pots.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 40
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there are three sections or rooms, whereas the ground truth states there are four. The predicted answer does not fall within the range of the ground truth answer, and as such, it is incorrect."
+    },
+    {
+      "Q": "How many distinct sections or rooms did you observe in the video?",
+      "A": "three",
+      "C": "I observed four distinct sections or rooms in the video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 40
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer differs significantly from the ground-truth answer. The ground-truth answer describes the movement as first walking straight and then slightly turning right, while the predicted answer suggests turning left, which is the opposite direction. Therefore, the predicted answer leads to an entirely different path and is fully incorrect."
+    },
+    {
+      "Q": "How do I reach the larger open space with seating arrangements from the 1st frame?",
+      "A": "Turn left and walk forward.",
+      "C": "First walk straght and then slighly turn right.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 40
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'right' does not align with the ground truth answer, which specifies a route involving walking straight for 30 seconds and then turning left. There is no mention of turning right at all."
+    },
+    {
+      "Q": "If I want to go back to the starting point from the coffee shop, which direction should I take?",
+      "A": "right",
+      "C": "To go back to the starting point from the coffee shop, first walk straight passing for around 30 seconds and then turn left. ",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 40
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'Right' is incorrect because the ground-truth answer indicates that the closest exit is on the left. There is no alignment between the predicted answer and the ground-truth answer, leading to a score of 0."
+    },
+    {
+      "Q": "If I am standing on the standing point, which exit is the cloest to me?",
+      "A": "Right",
+      "C": "The closest exit to your standing point is on your left hand, only several steps to go.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 40
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer directs to turn around and head to the right, which contradicts the ground truth answer where it specifies moving ahead and then turning left. The directions given do not align with each other at all."
+    },
+    {
+      "Q": "If I am standing on the standing point, how can I leave the building using the closest exit?",
+      "A": "Turn around and head to the right.",
+      "C": "Move several steps ahead and then turn left, the door is exatcly in front of you.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 40
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer suggests going to the left, which is the opposite direction of the ground-truth answer that specifies turning right for the closest exit. This leads to a completely incorrect prediction."
+    },
+    {
+      "Q": "If I am standing near the coffee shop, how can I leave the building using the closest exit?",
+      "A": "Go to the left",
+      "C": "The closest exit to the coffee shop is on your right hand, so turn right and go stragight there.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 40
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer is \"1\" while the ground truth answer is \"2\". The prediction does not match the ground truth, so it is incorrect. Since the predicted answer is close to the ground truth, a score of 2 is given."
+    },
+    {
+      "Q": "I saw the text \"EXIT\" in the video. How many times did it appear?",
+      "A": "1",
+      "C": "The text \"EXIT\" appeared twice.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 40
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies that the location is a restaurant, which aligns with the implication that it offers sushi as denoted by the text \"Akira Sushi\". However, it lacks the specificity of indicating it is a sushi restaurant or bar, which is why it is not fully correct."
+    },
+    {
+      "Q": "What does the text \"Akira Sushi\" imply about the type of service offered at that location?",
+      "A": "It is a restaurant",
+      "C": "The text \"Akira Sushi\" implies that the location offers sushi, indicating it's likely a sushi restaurant or bar.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 40
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer \"The beginning\" is consistent with the ground truth answer \"The \"EXIT\" sign was first noticed at the beginning of the video when you enter the building.\" Both indicate that the \"EXIT\" sign was first seen at the beginning of the video, although the predicted answer lacks the context of entering the building."
+    },
+    {
+      "Q": "In which part of the video did you first notice the \"EXIT\" sign?",
+      "A": "The beginning",
+      "C": "The \"EXIT\" sign was first noticed at the beginning of the video when you enter the building.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 40
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer \"To the left\" aligns with the ground truth since both indicate the direction as \"left\" for exiting the building. However, the prediction lacks specific detail about the \"door on my left hand at the beginning of the video,\" which was mentioned in the ground truth, resulting in a partial deduction of points."
+    },
+    {
+      "Q": "According to the first \"EXIT\" sign, can you infer where should you go to exit the building?",
+      "A": "To the left",
+      "C": "The \"EXIT\" sign indicates the exit is the door on my left hand which shows at the begining of the video.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 40
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer \"cafe\" correctly matches the inferred type of place from the ground truth answer, which suggests \"La Coquette\" seems like it could be a cafe. The prediction is accurate and fully aligned with the ground truth."
+    },
+    {
+      "Q": "Can you determine the kind of place \"La Coquette\" might be from the text alone?",
+      "A": "cafe",
+      "C": "From the text \"La Coquette,\" it seems like it could be a cafe.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 40
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer includes 'English', which is part of the ground-truth answer, but it incorrectly identifies 'Russian' instead of 'Bulgaria'. Therefore, it is partially correct."
+    },
+    {
+      "Q": "What different language fonts can be observed in the video?",
+      "A": "Russian and English",
+      "C": "There is English and Bulgaria.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 40
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'Russia' does not match the ground-truth answer which indicates Bulgaria. The prediction fails to consider the evidence from the text ('English and Bulgaria') which suggests the location is most likely Bulgaria."
+    },
+    {
+      "Q": "From the texts in the video, can you infer which country I am.",
+      "A": "Russia",
+      "C": "There is English and Bulgaria, most likely you are in Bulgaria.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 40
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer identifies a 'ladder', which is a different object from 'metal pipes or tubes' mentioned in the ground truth answer. There's no overlap between the predicted object and the ground truth description."
+    },
+    {
+      "Q": "What type of object is located next to the metal scaffold on the right side?",
+      "A": "ladder",
+      "C": "Next to the metal scaffold on the right side, there are several metal pipes or tubes stacked on the scaffold.",
+      "M": "Object Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'curved' does not match the ground truth answer, which describes the pattern on the glass wall as a 'metal grid or mesh'. There is no overlap or similarity between the predicted and ground truth answers."
+    },
+    {
+      "Q": "What pattern is on the glass wall separating the seating area from the retail space?",
+      "A": "curved",
+      "C": "The glass wall separating the seating area from the retail space has a pattern of a metal grid or mesh.",
+      "M": "Object Recognition",
+      "start_idx": 5,
+      "end_idx": 7
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer \"Sushi Samba\" does not match the ground truth answer \"Akira Sushi\". There is no partial correctness as they are entirely different names."
+    },
+    {
+      "Q": "What is the name of the sushi restaurant mentioned in the video?",
+      "A": "Sushi Samba",
+      "C": "The name of the sushi restaurant is Akira Sushi.",
+      "M": "Object Recognition",
+      "start_idx": 10,
+      "end_idx": 12
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer of 'Books and magazines' does not match any of the items listed in the ground truth answer, which includes snacks, fruits, beverages, decorative items, flowers, and bags of chips. The predicted items are completely unrelated to those mentioned in the ground truth."
+    },
+    {
+      "Q": "What types of items are visible on the shelves in the retail section?",
+      "A": "Books and magazines",
+      "C": "In the retail section, you can see:\n\n1. Various packaged snacks and bars on the shelves.\n2. A display with different fruits like oranges and bananas.\n3. Bottles of water and other beverages.\n4. Some decorative items and flowers.\n5. Bags of chips or snacks hanging on displays.",
+      "M": "Object Recognition",
+      "start_idx": 15,
+      "end_idx": 17
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'tiles' is synonymous with the ground-truth answer 'tile'. Both refer to the same type of flooring material, thus making the prediction accurate."
+    },
+    {
+      "Q": "What type of flooring is used in the caf\u00e9 or lounge area?",
+      "A": "tiles",
+      "C": "The flooring in the caf\u00e9 or lounge area is tile.",
+      "M": "Object Recognition",
+      "start_idx": 20,
+      "end_idx": 22
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer only mentions \"black,\" which is one of the colors of the chairs. However, it fails to mention that the chairs are also blue and red. Therefore, it is an incomplete answer compared to the ground truth, which lists all the colors."
+    },
+    {
+      "Q": "What is the color of the upholstered chairs in the caf\u00e9?",
+      "A": "black",
+      "C": "The upholstered chairs in the caf\u00e9 are blue, red, and black.",
+      "M": "Object Recognition",
+      "start_idx": 25,
+      "end_idx": 27
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'high' does not match or relate to the description of seating around the tables provided in the ground truth answer. There is no mention of high chairs or any attribute implying height that could be misconstrued as correct."
+    },
+    {
+      "Q": "What type of seating surrounds the round wooden tables in the space?",
+      "A": "high",
+      "C": "The round wooden tables are surrounded by chairs with armrests.",
+      "M": "Object Recognition",
+      "start_idx": 30,
+      "end_idx": 32
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the high-backed bar stools are white, whereas the ground truth states they are blue. These are completely different colors, thus making the prediction fully incorrect."
+    },
+    {
+      "Q": "What is the color of the high-backed bar stools next to the rectangular table?",
+      "A": "white",
+      "C": "The high-backed bar stools next to the rectangular table are blue.",
+      "M": "Object Recognition",
+      "start_idx": 35,
+      "end_idx": 37
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer \"An emergency exit sign\" aligns closely with the ground truth answer \"Above the door, there is an illuminated green exit sign.\" The key element \"exit sign\" is identified correctly. The prediction misses the detail \"illuminated green,\" but the main concept of an exit sign being above the door is accurately captured."
+    },
+    {
+      "Q": "What is located directly above the door?",
+      "A": "An emergency exit sign",
+      "C": "Above the door, there is an illuminated green exit sign.",
+      "M": "Spatial Reasoning",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer is 5, which falls outside the ground truth range of 6-10 steps. Therefore, the prediction is not aligned with the ground-truth answer."
+    },
+    {
+      "Q": "How many steps forward from your position to reach the corner where the fire extinguisher is mounted?",
+      "A": "5",
+      "C": "To reach the corner where the fire extinguisher is mounted, you need to take approximately 6-10 steps forward from your current position.",
+      "M": "Spatial Reasoning",
+      "start_idx": 5,
+      "end_idx": 7
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer '2' does not fall within the range of the ground truth answer '5-8 steps'. Therefore, it is considered incorrect."
+    },
+    {
+      "Q": "How many steps would you approximately take to reach the cloest table with high stool",
+      "A": "2",
+      "C": "You would need to take approximately 5-8 steps.",
+      "M": "Spatial Reasoning",
+      "start_idx": 15,
+      "end_idx": 17
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer \"plants on rubish bins\" does not match the ground-truth answer, which specifies \"tables\" as the object passed first. Therefore, the prediction is fully incorrect."
+    },
+    {
+      "Q": "Considering the layout, if you start walking from the coffee counter towards the entrance door, which object will you pass first: the plants on rubish bins or the high chairs?",
+      "A": "plants on rubish bins",
+      "C": "As you start walking from the coffee counter towards the entrance door, you will pass the tables first.",
+      "M": "Spatial Reasoning",
+      "start_idx": 20,
+      "end_idx": 22
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there is a table beside the glass wall, while the ground truth states there is a potted plant. These are completely different objects, hence the prediction is fully incorrect."
+    },
+    {
+      "Q": "What is located directly beside the glass wall?",
+      "A": "A table",
+      "C": "Beside the glass wall, there is a potted plant.",
+      "M": "Spatial Reasoning",
+      "start_idx": 30,
+      "end_idx": 32
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'display' does not match or relate to the ground truth answer 'To the left of the round table, there is a dark-colored armchair.' Additionally, the question asks for an object located to the 'upper right side' of the round table, while the ground truth describes an object 'to the left.' There is a complete mismatch between the predicted answer and both the question and ground truth answer."
+    },
+    {
+      "Q": "What object is located directly to the upper right side of the round table?",
+      "A": "display",
+      "C": "To the left of the round table, there is a dark-colored armchair.",
+      "M": "Spatial Reasoning",
+      "start_idx": 35,
+      "end_idx": 37
+    }
+  ]
+]

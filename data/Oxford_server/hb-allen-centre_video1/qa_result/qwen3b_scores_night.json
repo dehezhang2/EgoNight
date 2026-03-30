@@ -1,0 +1,977 @@
+[
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer specifies \"brick\" which is within the range of the ground-truth answer \"brick or tiles\". The prediction is not fully correct because it does not account for the possibility of tiles, but it correctly identifies one of the given materials."
+    },
+    {
+      "Q": "What material is used for the wall beside the entrance?  ",
+      "A": "The wall beside the entrance is made of brick.",
+      "C": "The wall beside the entrance is made of brick or tiles.",
+      "M": "Object Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer identifies the ground surface material as concrete, whereas the ground truth answer identifies it as tiles or pavers. These materials are distinct but can be visually similar in dim lighting, leading to a partially correct assumption. However, without further clarification, it cannot be deemed fully correct."
+    },
+    {
+      "Q": "What is the material of the ground surface in the outdoor nighttime scene?  ",
+      "A": "The ground surface in the outdoor nighttime scene appears to be made of concrete.",
+      "C": "The ground surface in the outdoor nighttime scene appears to be made of tiles or pavers.",
+      "M": "Object Recognition",
+      "start_idx": 20,
+      "end_idx": 22
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the low wall encloses a parking area, which is not consistent with the ground truth answer indicating that it encloses a garden or landscaped area with plants. The content of the enclosure is entirely different."
+    },
+    {
+      "Q": "What is enclosed by the low wall on the left side of the pathway?  ",
+      "A": "The low wall on the left side of the pathway encloses a parking area.",
+      "C": "The low wall on the left side of the pathway encloses a garden or landscaped area with plants.",
+      "M": "Object Recognition",
+      "start_idx": 40,
+      "end_idx": 42
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there are 10 windows visible, which does not fall within the ground truth range of 40-50 windows. Therefore, the prediction is incorrect."
+    },
+    {
+      "Q": "How many windows are visible in total during the video?",
+      "A": "There are 10 windows visible in total during the video.",
+      "C": "There are approximately 40-50 windows visible during the video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer \"15\" does not fall within the ground truth range of \"20-30\", making it an incorrect prediction."
+    },
+    {
+      "Q": "How many individual lights are visible on the paths in the video?",
+      "A": "15",
+      "C": "I can see 20-30 individual lights lining the paths.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is 1, which does not fall within the ground truth range of 6-10 doors visible. Therefore, the prediction is not consistent with the ground truth."
+    },
+    {
+      "Q": "How many doors can be seen throughout the video?",
+      "A": "1",
+      "C": "There are 6-10 doors visible throughout the video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies the number of different plant structures as 2, which matches the numerical aspect of the ground truth answer. However, it lacks the specific details of the plant structures (shrubs and potted young trees) provided in the ground truth. Therefore, it is correct in counting but not fully detailed, resulting in a score of 4."
+    },
+    {
+      "Q": "How many different plant structures are visible during the video?",
+      "A": "There are 2 different plant structures visible during the video.",
+      "C": "There are 2 distinct plant structure visible in the video \u2013 shrubs and potted young trees.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer states that there are three separate railing sections, which does not fall within the range of the ground-truth answer that mentions approximately 5 sections. However, the prediction is not entirely off and could represent an undercount, deserving some partial credit."
+    },
+    {
+      "Q": "How many separate railing sections can be counted throughout the video?",
+      "A": "There are three separate railing sections that can be counted throughout the video.",
+      "C": "There are approximately 5 separate railing sections visible throughout the video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there are four staircases in the video, while the ground truth indicates that there are only two. Since the predicted number does not fall into the range specified by the ground truth, the prediction is incorrect."
+    },
+    {
+      "Q": "How many staircases are in the entire video?",
+      "A": "There are four staircases in the entire video.",
+      "C": "There are 2 staircases visible in the video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer of 1 does not fall within the range of the ground truth answer (5-8 distinct buildings). Therefore, it is considered fully incorrect."
+    },
+    {
+      "Q": "How many distinct buildings can be counted throughout the video?",
+      "A": "1",
+      "C": "There are 5-8 distinct buildings visible throughout the video.",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer 'metal' is one of the materials mentioned in the ground-truth answer, which states that the handrail appears to be made of 'metal or plastic'. Although it does not cover the full scope of the ground-truth, it accurately identifies one of the possible materials, deeming the prediction correct with a slight deduction for incompleteness."
+    },
+    {
+      "Q": "What material is the handrail on the left side of the staircase made from?  ",
+      "A": "metal",
+      "C": "The handrail appears to be made of metal or plastic.",
+      "M": "Object Recognition",
+      "start_idx": 50,
+      "end_idx": 52
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer states that the material is stone, whereas the ground truth indicates it is concrete. While both are common building materials, they are distinct, making the prediction incorrect. However, due to the possible visual similarity, a partial credit of 2 is given."
+    },
+    {
+      "Q": "What material is prominently featured on the wall beside the steps?  ",
+      "A": "The material prominently featured on the wall beside the steps is stone.",
+      "C": "The material prominently featured on the wall beside the steps appears to be concrete.",
+      "M": "Object Recognition",
+      "start_idx": 60,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer indicates that the low walls are made of concrete or a similar material. The ground truth confirms they are made of concrete. The prediction is mostly aligned with the ground truth, although it adds some uncertainty by mentioning 'or a similar material.' Hence, it is considered mostly correct but not fully precise, leading to a score of 4."
+    },
+    {
+      "Q": "What material are the low walls bordering the pathway?  ",
+      "A": "The low walls bordering the pathway appear to be made of concrete or a similar material, given their smooth, flat surface and the way they are integrated into the overall design of the pathway.",
+      "C": "The low walls bordering the pathway are made of concrete.",
+      "M": "Object Recognition",
+      "start_idx": 70,
+      "end_idx": 72
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer is incorrect because it describes encountering a staircase and a path illuminated by streetlights, which are not mentioned in the ground truth. The ground truth describes a corridor-like pathway with contrasting dark and light elements and a recessed entrance area with brick walls and a glass door, which is not captured in the prediction. Only the destination of the recessed entrance area matches between the prediction and the ground truth, but specifics leading to that point are incorrect."
+    },
+    {
+      "Q": "What sequence of structures and pathways did I encounter from the beginning to the recessed entrance area?",
+      "A": "You encountered a staircase, followed by a path illuminated by streetlights, and then you reached a recessed entrance area.",
+      "C": "You began by following a corridor-like pathway with contrasting dark and light elements, leading to a recessed entrance area with brick walls and a glass door.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer mentioned a staircase, while the ground truth mentioned an outdoor area with large windows and a landscaped path, which are two different architectural features."
+    },
+    {
+      "Q": "After passing the glass doors, what was the next major architectural feature that I reached?",
+      "A": "The next major architectural feature that you reached after passing the glass doors was a staircase.",
+      "C": "After passing through the glass doors, you reached an outdoor area with a view of large windows and a landscaped path.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 4,
+      "reason": "The predicted answer mentioned an additional feature, a 'railing', which was not included in the ground truth. While both answers acknowledged the presence of plants, the addition of 'railing' makes the prediction slightly different from the ground truth. However, it still largely agrees with the key aspect of having plants, so the score is close to fully correct."
+    },
+    {
+      "Q": "Between the glass doors and the courtyard, what was the notable feature that indicated a landscaped area?",
+      "A": "The notable feature that indicated a landscaped area between the glass doors and the courtyard was the presence of plants and a railing.",
+      "C": "Landscaped Area Feature: Between the glass doors and the courtyard, the presence of a small plants or shrubs indicated the landscaped area.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer mentions ascending a staircase, which does not align with the ground truth. The ground truth describes passing glass doors, moving along a pathway, and descending stairs before entering the courtyard, which suggests a sequence and direction not captured by the prediction. While there is a reference to stairs in both, the context and sequence differ, resulting in a partially correct answer."
+    },
+    {
+      "Q": "What sequence of elements did I pass from the outdoor walkway to the enclosed courtyard?",
+      "A": "You passed from the outdoor walkway to the enclosed courtyard by ascending a staircase.",
+      "C": "Elements from Walkway to Courtyard: You passed the glass doors, moved along the pathway, down the stairs and entered the enclosed courtyard.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies the start and end point of the movement from a better-lit area to an area with more pronounced decorative lighting along the pathway. However, it lacks specific details present in the ground truth regarding the sequence involving 'a straight path leading to a staircase', which is not mentioned in the prediction."
+    },
+    {
+      "Q": "What sequence did I follow from the better-lit area to where the decorative lighting became more pronounced along the pathway?",
+      "A": "You followed the path from the better-lit area to where the decorative lighting became more pronounced along the pathway.",
+      "C": "From the better-lit area, you moved towards the pathway with embedded lighting along a straight path leading to a staircase.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer mentions a 'sidewalk', while the ground truth specifies a 'straight walkway, bordered by walls with horizontal railings'. The prediction is partially correct in describing a walking path, but it lacks the details given in the ground truth and may imply a different environment."
+    },
+    {
+      "Q": "After the staircase with embedded lights, what was the next part of the path I traveled?",
+      "A": "The next part of the path you traveled was a sidewalk.",
+      "C": "After the staircase, the path continued along a straight walkway, bordered by walls with horizontal railings.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer correctly identifies a transition involving movement relative to the stairs, and an eventual upward view. However, it incorrectly describes the sequence by mentioning stepping back and lacks detail about going up a set of stairways illuminated with embedded lights leading into another lit corridor, which are essential to the ground-truth description."
+    },
+    {
+      "Q": "How did the scene transition from the ambient-lit walkway to the final upward view?",
+      "A": "The scene transitioned from the ambient-lit walkway to the final upward view by first moving closer to the stairs, then gradually stepping back and looking upwards.",
+      "C": "The scene transitioned from the ambient-lit walkway to an upward view by moving up a set of stairways, each illuminated with embedded lights, leading upwards into another lit corridor.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there is a door mat beneath the light fixture, while the ground truth specifies that there is a sign on the door. These are two distinct objects, and thus the prediction does not match the ground truth."
+    },
+    {
+      "Q": "What is located directly beneath the light fixture?  ",
+      "A": "A door mat.",
+      "C": "Directly beneath the light fixture, there is a sign on the door. ",
+      "M": "Spatial Reasoning",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the object parallel to the edge of the floor is the railing, whereas the ground truth specifies it as the illuminated strip along the side of the raised platform. These are two different objects, making the prediction incorrect."
+    },
+    {
+      "Q": "What object is parallel to the edge of the floor?  ",
+      "A": "The object parallel to the edge of the floor is the railing.",
+      "C": "The object that is parallel to the edge of the floor is the illuminated strip along the side of the raised platform.",
+      "M": "Spatial Reasoning",
+      "start_idx": 20,
+      "end_idx": 22
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately states the relative position of the planter to the handrail along the pathway as being to the left, which matches exactly with the ground truth answer."
+    },
+    {
+      "Q": "What is the relative position of the planter to the handrail along the pathway?  ",
+      "A": "The planter is located to the left of the handrail along the pathway.",
+      "C": "The planter is positioned to the left of the handrail along the pathway.  ",
+      "M": "Spatial Reasoning",
+      "start_idx": 40,
+      "end_idx": 42
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there are lights on either side of the steps, which does not match the ground-truth answer that specifies handrails on either side. The predicted feature is completely different from the ground-truth feature, resulting in a score of 0."
+    },
+    {
+      "Q": "What features are present on either side of the steps?  ",
+      "A": "There are lights on either side of the steps.",
+      "C": "On either side of the steps, there is a handrail.",
+      "M": "Spatial Reasoning",
+      "start_idx": 50,
+      "end_idx": 52
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer 'stair' is vaguely related but not precise enough to match the ground-truth answer, which specifically identifies 'the illuminated edge of the steps' as being parallel to the ramp."
+    },
+    {
+      "Q": "What object is parallel to the ramp in the second image  ",
+      "A": "stair",
+      "C": "In the second image, the object parallel to the ramp is the illuminated edge of the steps.  ",
+      "M": "Spatial Reasoning",
+      "start_idx": 60,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately matches the ground truth answer in terms of both content and structure. Both answers specify that a metal railing runs parallel to the left side of the walkway as you look towards the building. Therefore, the prediction is fully correct."
+    },
+    {
+      "Q": "What feature runs parallel to the left side of the walkway as you look towards the building?  ",
+      "A": "The feature that runs parallel to the left side of the walkway as you look towards the building is a metal railing.",
+      "C": "A metal railing runs parallel to the left side of the walkway as you look towards the building.",
+      "M": "Spatial Reasoning",
+      "start_idx": 70,
+      "end_idx": 72
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately captures the action needed to reach the glass door, which is walking straight ahead. Both the predicted answer and the ground truth convey the same essential information needed to navigate from the starting point to the glass door."
+    },
+    {
+      "Q": "How do I reach the glass door from my starting point at the dimly lit entrance area?",
+      "A": "Walk straight ahead towards the glass door.",
+      "C": "To reach the glass door from the dimly lit entrance area move straight ahead from the entrance towards the glass door visible directly ahead.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer suggests taking the path on the left, which directly contradicts the ground-truth answer that specifies going straight along the pathway by the building facade. Therefore, the prediction is fully wrong."
+    },
+    {
+      "Q": "Which path should I take through the courtyard to find the staircase descent?",
+      "A": "You should take the path on the left to find the staircase descent.",
+      "C": "Go straight along the pathway by the building facade, and you will see the staircase on your right.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer describes a sequence of movements involving ascending and descending stairs, which is not mentioned or needed in the ground truth answer. The ground truth mentions simply turning back and walking straight along the pathway, indicating a more straightforward route directly on the ground level without involving stairs. Thus, the predicted answer does not match the simplicity and directness of the ground truth."
+    },
+    {
+      "Q": "To return to the starting point from the ground level path, what sequence of movements should I follow?",
+      "A": "To return to the starting point from the ground level path, you should follow these movements: \n1. Ascend the stairs to the upper level.\n2. Continue walking on the path until you reach the top of the stairs.\n3. Walk back down the stairs to return to the starting point.",
+      "C": "To return to the starting point from the ground level path, turn back and walk straight along the pathway, keeping close to the building facade, which will lead you back to the starting point.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer does not accurately reflect the ground truth. The ground truth describes a pathway after descending and mentions a direction to the right, while the predicted answer talks about ascending again, which contradicts the sequence mentioned in the ground truth."
+    },
+    {
+      "Q": "After descending the staircase, how can I proceed to the final pathway with the stair ascent?",
+      "A": "To proceed to the final pathway with the stair ascent, you need to continue descending the staircase until you reach the bottom. From there, you will need to ascend the staircase again to reach the final pathway.",
+      "C": "After descending the staircase, proceed to the final pathway with the stair ascent continue moving forward along the pathway passing by building facades until you reach the final pathway with the stair ascent on your right.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'To the right' is completely different from the ground-truth answer 'Move straight and slightly left'. There is no overlap in direction, making the prediction fully wrong."
+    },
+    {
+      "Q": "From the courtyard, which direction should I take to reach the ground level path passing by building facades and trees?",
+      "A": "To the right.",
+      "C": "Move straight and slightly left from the courtyard, going along the evident pathway.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the action of following the pathway lights to reach the enclosed wall area with stairs. The essential information about navigating the pathway using the lights to reach the destination is present in both the predicted and ground truth answers."
+    },
+    {
+      "Q": "How should I navigate the pathway lights to successfully reach the enclosed wall area with stairs?",
+      "A": "Follow the pathway lights to navigate the area and reach the enclosed wall area with stairs.",
+      "C": "Follow the lights along the pathway, which will guide you directly to the area with stairs enclosed by walls.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately reflects the ground truth answer. Both state the inability to identify specific text elements on the doors or signs from the video, demonstrating a full match in meaning and detail."
+    },
+    {
+      "Q": "Can you identify any specific text elements on the doors or signs in the building from the video?  ",
+      "A": "No, I cannot identify any specific text elements on the doors or signs in the building from the video.",
+      "C": " I can't identify specific text elements on the doors or signs from the video.  ",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately matches the ground-truth answer, both stating that there is no text visible indicating the name of the building."
+    },
+    {
+      "Q": "Is there any text visible that might indicate the name of the building you're outside of?  ",
+      "A": "No, there is no text visible that might indicate the name of the building.",
+      "C": "There's no visible text indicating the name of the building.  ",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly states that there are no indications or symbols on the wall that provide emergency information, which aligns with the ground truth answer that no emergency information symbols or indications were noticed on the walls."
+    },
+    {
+      "Q": "Are there any indications or symbols on the wall that provide emergency information?  ",
+      "A": "No, there are no indications or symbols on the wall that provide emergency information.",
+      "C": "I didn't notice any emergency information symbols or indications on the walls.  ",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately reflects the ground truth answer, confirming the absence of any identifiable directional signs or maps."
+    },
+    {
+      "Q": "Can you identify any directional signs or maps that guide you to different areas?  ",
+      "A": "No, I cannot identify any directional signs or maps that guide you to different areas in the video.",
+      "C": "There are no identifiable directional signs or maps visible guiding towards different areas.  ",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The ground truth specifies that there's no repeated text visible on labels or signs in the video, and the predicted answer 'No' aligns with this information. Therefore, the prediction is entirely accurate."
+    },
+    {
+      "Q": "Is there any repeated text visible on labels or signs in the images?  ",
+      "A": "No",
+      "C": "There's no repeated text visible on labels or signs in the video.  ",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately states that there are no signs providing information about the building's opening hours or restrictions, which aligns with the ground truth answer."
+    },
+    {
+      "Q": "Do any of the signs provide information about the building's opening hours or restrictions?  ",
+      "A": "No, the signs do not provide information about the building's opening hours or restrictions.",
+      "C": "I didn't see any signs providing information on the building's opening hours or restrictions.  ",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer states that it is not possible to determine the organization or institution based on the visible text, which aligns perfectly with the ground truth answer. Both indicate the inability to determine the organization from the visual information provided."
+    },
+    {
+      "Q": "Based on any visible text, can you determine which organization or institution occupies this building?  ",
+      "A": "No, I cannot determine which organization or institution occupies this building based on the visible text in the image.",
+      "C": "I can't determine which organization or institution occupies the building based on visible text.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer mentions well-lit steps and railing lights for navigation, which is not specified in the ground truth. The ground truth specifically refers to embedded lights along the sides of the walkway. While both answers involve lighting aiding navigation, the specific features described do not fully align. Therefore, the prediction is partially correct."
+    },
+    {
+      "Q": "What specific features of the walkway help you navigate safely through the space?  ",
+      "A": "The specific features of the walkway that help navigate safely through the space are the well-lit steps and the railing. The lights on the steps and along the railing provide clear visibility, making it easier to see where you are going and preventing accidents.",
+      "C": "The walkways have embedded lights along the sides, which outline the path clearly and help in maintaining direction.  ",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies the role of doors and windows as access points and providing visibility. It also notes how they contribute to the design and function of the area by allowing natural light, defining the layout, and guiding movement. However, it slightly deviates from the ground truth by emphasizing the aesthetic aspects and strategic placement rather than linking indoor and outdoor spaces and natural monitoring. Still, the core functions mentioned align well with the ground truth."
+    },
+    {
+      "Q": "How do the doors and windows you pass by contribute to the design or function of the area?  ",
+      "A": "The doors and windows you pass by in the video contribute to the design and function of the area by providing access and visibility. The doors likely serve as entry points to the building, ensuring that individuals can safely and easily access the interior spaces. The windows, on the other hand, allow for natural light to enter the building, enhancing the ambiance and potentially providing views of the surroundings. Additionally, the strategic placement of these elements helps to define the layout and flow of the area, guiding the movement of people and ensuring that the space is both functional and aesthetically pleasing.",
+      "C": "The doors and windows provide access points and natural monitoring of the surroundings. They add functionality by linking indoor and outdoor spaces.  ",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies that the railings provide safety and guidance as one moves through the space, which is a key element of the ground truth answer. Although it doesn't explicitly mention 'support' or 'stability', it captures the essence of ensuring safety and securing movement, which are core functions of railings mentioned in the ground truth."
+    },
+    {
+      "Q": "What purpose do the railings serve as you move through the space?  ",
+      "A": "The railings serve to guide and secure movement through the space, providing a sense of safety and direction as the person moves along the path.",
+      "C": "The railings provide support and ensure safety, especially when navigating stairs and ramps, offering stability.  ",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies some aspects of the layout influencing movement, such as structured guidance and safety through lighting and railings, which align with the ground truth's mention of facilitating smooth movement. However, it focuses significantly on lighting and safety features, which are not mentioned in the ground truth answer, and does not directly address the linear and well-defined aspect emphasized in the ground truth."
+    },
+    {
+      "Q": "How does the overall layout of the walkways influence your movement through the space?  ",
+      "A": "The overall layout of the walkways, with their well-lit edges and stairwell, guides the movement through the space in a structured and safe manner. The lighting helps to illuminate the path, making it easier to navigate, and the presence of railings provides a sense of security and direction. The slight incline of the stairs and the illuminated edges of the walkways suggest a thoughtful design that balances functionality with aesthetic appeal.",
+      "C": "The linear and well-defined layout facilitates smooth movement, guiding you seamlessly from one section to another.  ",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately captures the main points of the ground truth answer by highlighting how the embedded lights improve visibility, enhance safety, and provide visual guidance. It also mentions additional benefits like creating a more inviting environment, which aligns with making navigation easier and safer. Therefore, the prediction is fully correct."
+    },
+    {
+      "Q": "How do the embedded lights in the walkways improve your experience during this movement?  ",
+      "A": "The embedded lights in the walkways enhance visibility and safety during the movement. They provide clear illumination, making it easier to see the steps and edges of the walkway. This improves the overall experience by reducing the risk of slips and falls, ensuring a safer path. Additionally, the lighting creates a more inviting and well-lit environment, contributing to a more pleasant experience as you navigate through the area.",
+      "C": "The lights provide visual guidance, highlighting the edges of the path, and making navigation easier and safer.  ",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'square' accurately matches the ground-truth answer 'The light emitted by the wall-mounted fixture is square in shape.' Both identify the shape of the light as square, which is the key information needed."
+    },
+    {
+      "Q": "What shape is the light emitted by the wall-mounted fixture?  ",
+      "A": "square",
+      "C": "The light emitted by the wall-mounted fixture is square in shape.",
+      "M": "Light Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the pathway lighting emits a bright white color, while the ground truth answer specifies that it emits a yellow color. The colors do not match, making the prediction incorrect."
+    },
+    {
+      "Q": "What color is emitted by the pathway lighting in the scene?  ",
+      "A": "The pathway lighting in the scene emits a bright white color.",
+      "C": "The pathway lighting in the scene emits a yellow color.",
+      "M": "Light Recognition",
+      "start_idx": 10,
+      "end_idx": 12
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer accurately describes the shape and linearity of the lights as horizontal, which matches the ground truth. However, it does not specify the placement of the lights as being 'at the lower edge of the pathway, close to the ground.' While it mentions that the lights are placed at regular intervals along the pathway's edges, it does not include the specific placement detail provided in the ground truth, hence reducing the score."
+    },
+    {
+      "Q": "What shape and placement are the lights that illuminate the pathway along its edges?  ",
+      "A": "The lights that illuminate the pathway along its edges are in a linear, horizontal shape. They are placed at regular intervals along the pathway's edges, providing a continuous and uniform illumination.",
+      "C": "The lights illuminating the pathway along its edges are linear and placed at the lower edge of the pathway, close to the ground.",
+      "M": "Light Recognition",
+      "start_idx": 40,
+      "end_idx": 42
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there are 5 step lights, whereas the ground truth states there are 4. For counting questions, the numbers must match unless specified otherwise in a range; thus, the prediction is incorrect."
+    },
+    {
+      "Q": "How many step lights are embedded along the stairway?  ",
+      "A": "5",
+      "C": "There are four step lights embedded along the stairway.",
+      "M": "Light Recognition",
+      "start_idx": 50,
+      "end_idx": 52
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is 14, which does not match the ground truth answer of 3. The predicted answer does not fall within the range of the ground truth answer, indicating it is fully incorrect."
+    },
+    {
+      "Q": "How many linear light sources are visible on the stairway in the images?  ",
+      "A": "14",
+      "C": "There are 3 visible linear light sources on the stairway in the images.",
+      "M": "Light Recognition",
+      "start_idx": 60,
+      "end_idx": 62
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer states there is only 1 type of lighting source, whereas the ground truth indicates there are 2 types. The prediction misses mentioning any type of lighting source, leading to a significant discrepancy with the ground truth."
+    },
+    {
+      "Q": "How many types of lighting sources are used to illuminate the pathway area?  ",
+      "A": "1",
+      "C": "The pathway area is illuminated by two types of lighting sources. There are lights embedded in the steps and along the pathway edges for direct illumination, and wall-mounted lights providing ambient lighting.",
+      "M": "Light Recognition",
+      "start_idx": 70,
+      "end_idx": 72
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'No lights turned on or off during the video.' accurately matches the ground-truth answer 'No, the lights remain consistent in all frames.' Both indicate that there was no change in the lighting throughout the video."
+    },
+    {
+      "Q": "Did any lights turn on or off during the video?",
+      "A": "No lights turned on or off during the video.",
+      "C": "No, the lights remain consistent in all frames.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately reflects the ground truth by affirming that the environment becomes brighter as the video progresses. Both answers indicate a transition to a brighter environment, capturing the essential detail of increased illumination."
+    },
+    {
+      "Q": "Is the overall environment getting brighter as the video progresses?",
+      "A": "Yes, the overall environment is getting brighter as the video progresses.",
+      "C": "Yes, the environment appears to become brighter as I move through more illuminated areas.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies that the pathway lights became more pronounced, which aligns with the ground truth answer. Both address the key aspect of the lights appearing more prominent. The minor difference in phrasing does not affect the overall correctness of the prediction."
+    },
+    {
+      "Q": "Did the pathway lights become more pronounced at any point?",
+      "A": "Yes, the pathway lights became more pronounced at one point.",
+      "C": "Yes, the pathway lights appear more prominent as I proceed along the path.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is \"Yes\", which is directly opposite to the ground truth answer \"No, the lights from inside are not approaching closer to the exterior\". This makes the prediction fully wrong."
+    },
+    {
+      "Q": "Are there lights from inside approaching closer to the exterior through windows?",
+      "A": "Yes",
+      "C": "No, the lights from inside are not approaching closer to the exterior.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that a car's headlights altered the illumination, which directly contradicts the ground truth answer indicating no signs of car headlights affecting the illumination."
+    },
+    {
+      "Q": "Did a car\u2019s headlights pass by, altering the illumination?",
+      "A": "Yes, a car's headlights passed by, altering the illumination.",
+      "C": "No, there are no signs of car headlights affecting the illumination.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the intensity of the interior ambient lights increases, which contradicts the ground truth answer indicating that the intensity remains constant. Therefore, the prediction is fully incorrect."
+    },
+    {
+      "Q": "Does the intensity of interior ambient lights increase?",
+      "A": "Yes",
+      "C": "No, the intensity of the interior lights remains constant, though my proximity to them changes.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately reflects the ground truth answer, stating that there is a shift from darker to brighter areas as you move through the space. Both the predicted and ground-truth answers confirm the transition and the increase in visibility, leading to a fully correct evaluation."
+    },
+    {
+      "Q": "Is there a shift from darker to brighter areas as I move through the space?",
+      "A": "Yes, there is a shift from darker to brighter areas as you move through the space. The lighting gradually becomes more visible as you progress, revealing details in the surroundings.",
+      "C": "Yes, there is a transition from darker areas to brighter ones along the path.",
+      "M": "Light Change",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches exactly with the ground-truth answer, thereby providing a fully correct response."
+    },
+    {
+      "Q": "Are there any people visible inside any of the surrounding buildings?",
+      "A": "No, there are no people visible inside any of the surrounding buildings.",
+      "C": "No, there are no people visible inside any of the surrounding buildings.",
+      "M": "Dynamic",
+      "start_idx": 9,
+      "end_idx": 11
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states 'no', which directly contradicts the ground truth answer stating that a person could be seen walking in the background. Therefore, the prediction is fully incorrect."
+    },
+    {
+      "Q": "Did you see a person or people walking in the background?",
+      "A": "no",
+      "C": "Yes, I could see a person walking in the background.",
+      "M": "Dynamic",
+      "start_idx": 13,
+      "end_idx": 15
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer, 'no', matches the essence and conclusion of the ground-truth answer, 'No, there seemed to be no one else walking up or down the stairs'. Both answers communicate the same information that there was nobody else on the stairs."
+    },
+    {
+      "Q": "Did anyone else walk up or down the staircase?",
+      "A": "no",
+      "C": "No, there seemed to be no one else walking up or down the stairs.",
+      "M": "Dynamic",
+      "start_idx": 18,
+      "end_idx": 20
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'No' accurately matches the ground truth answer 'No, there are no cars in the distance.' Both indicate that there are no cars in the distance, reflecting a complete agreement with the ground truth."
+    },
+    {
+      "Q": "Did you see any cars driving in the distance?",
+      "A": "No",
+      "C": "No, there are no cars in the distance.",
+      "M": "Dynamic",
+      "start_idx": 33,
+      "end_idx": 36
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that no people were seen walking around, while the ground truth answer mentions seeing 1 person. There is a discrepancy between both answers, as the prediction does not match the observed count."
+    },
+    {
+      "Q": "How many people did you see walking around?",
+      "A": "I did not see any people walking around.",
+      "C": "I saw 1 person walking around.",
+      "M": "Dynamice Counting",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer '0' exactly matches the ground truth answer '0', indicating that the prediction is fully correct."
+    },
+    {
+      "Q": "How many cars or moving vehicles did you come across?",
+      "A": "0",
+      "C": "I came across 0 cars or moving vehicles.",
+      "M": "Dynamice Counting",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer 'None' does not provide a clear numerical value or explicit statement that corresponds to the ground truth '0 people entered or exited the building'. While 'None' could imply zero, it is an ambiguous term without explicit context, thus making the prediction largely incorrect."
+    },
+    {
+      "Q": "How many people entered or exited the building?",
+      "A": "None",
+      "C": "0 people entered or exited the building.",
+      "M": "Dynamice Counting",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer '0' correctly indicates that no people besides the subject walked up/down any stairs, which matches the ground truth answer that explicitly states 'No people besides you walked up/down any stairs.' The numerical value '0' accurately represents 'no people.'"
+    },
+    {
+      "Q": "How many people besides me walked up/down any stairs?",
+      "A": "0",
+      "C": "No people besides you walked up/down any stairs.",
+      "M": "Dynamice Counting",
+      "start_idx": 0,
+      "end_idx": 76
+    }
+  ]
+]

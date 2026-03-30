@@ -1,0 +1,842 @@
+[
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is 2, whereas the ground truth answer states there are 3 window blinds visible in the video. The prediction does not match the exact count provided in the ground truth, and since it is a counting question, this is considered incorrect."
+    },
+    {
+      "Q": "How many window blinds appear throughout the video?  ",
+      "A": "2",
+      "C": "There are 3 window blinds visible in the video.  ",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 88
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies the total number of rooms shown in the video as 5. The ground truth states that 5 different rooms are shown, and the predicted number matches this count. Thus, the prediction is fully correct."
+    },
+    {
+      "Q": "What is the total number of rooms shown in the video?  ",
+      "A": "5",
+      "C": "The video shows a total of 5 different rooms - a kitchen, dining room, living room, bedroom and bathroom.  ",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 88
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'six' correctly matches the number of chairs specified in the ground truth answer 'There are 6 chairs around the dining table'. Both indicate the same quantity."
+    },
+    {
+      "Q": "How many chairs are around the dining table?  ",
+      "A": "six",
+      "C": "There are 6 chairs around the dining table.  ",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 88
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there are 3 lamps visible in the video, whereas the ground truth states there are 12. The predicted answer does not fall in the range of the ground truth answer, thus it is incorrect. Counting errors that are significantly off the ground truth result in a score of 0 as there is no partial correctness here."
+    },
+    {
+      "Q": "How many lamps are visible in the entire video?  ",
+      "A": "3",
+      "C": "There are 12 lamps in the video.  ",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 88
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is 4 bookshelves, which does not fall within the range specified by the ground truth answer of 15 bookshelves. Since there is no overlap in the count, the prediction is fully incorrect."
+    },
+    {
+      "Q": "Can you count the number of bookshelves across all the rooms?  ",
+      "A": "4",
+      "C": "There are 15 bookshelves across all the rooms.  ",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 88
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that a television or computer screen appears 2 times, while the ground truth states it appears 3 times. The prediction does not fall within the range of the ground truth answer, indicating that it is incorrect."
+    },
+    {
+      "Q": "How many times does a television or computer screen appear in different rooms?  ",
+      "A": "2",
+      "C": "A television or computer screen appears 3 times.  ",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 88
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer of 7 windows does not match the ground truth answer of 13 windows. Since the predicted number is not within the range of the ground truth answer, the prediction is fully incorrect."
+    },
+    {
+      "Q": "How many windows are shown in total?  ",
+      "A": "7",
+      "C": "A total of 13 windows are shown in the rooms.  ",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 88
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is 3, while the ground truth answer states there are 4 different tables. The values do not match, and since this involves counting distinct objects, the prediction is incorrect."
+    },
+    {
+      "Q": "What is the total number of different tables observed throughout the video?  ",
+      "A": "3",
+      "C": "There are 4 different tables in the video.  ",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 88
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states there are 2 doorways visible, while the ground-truth answer indicates there are 4 doorways visible. As the predicted number does not match the ground-truth and is significantly off, the prediction is considered incorrect."
+    },
+    {
+      "Q": "How many doorways are visible between the rooms?  ",
+      "A": "2",
+      "C": "There are 4 doorways visible between the rooms.  ",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 88
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer, 'turn around', doesn't match the ground truth answer. The ground truth provides specific directions to move straight and then turn right, which is significantly different from simply turning around. Thus, the predicted answer is fully incorrect in terms of providing directions."
+    },
+    {
+      "Q": "How can I reach the dining room from the kitchen area?  ",
+      "A": "turn around",
+      "C": "Move straight ahead toward the kitchen, then turn right into the dining room.  ",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 88
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer does not specify turning left or going through the dining area, which are key parts of the navigation path to reach the kitchen. The prediction simply mentions going to the door, which lacks sufficient detail to match the ground truth. Therefore, the prediction is partially correct but not fully accurate."
+    },
+    {
+      "Q": "If I am at the computer monitor, how do I get back to the kitchen?  ",
+      "A": "turn around and go to the door",
+      "C": "Turn around and exit the living room, passing through the dining area, turn left, and head straight to the kitchen.  ",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 88
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer does not accurately describe the path as it only mentions turning around and going to the right, which lacks steps like walking past the dining table and entering the living room before turning left. The key steps and direction do not align with the correct path provided in the ground truth."
+    },
+    {
+      "Q": "What path should I take to explore the room with the bed after reaching the dining room?  ",
+      "A": "turn around and go to the right",
+      "C": "Walk past the dining table, enter the living room, and turn left to enter the door of the room where the bed is located.  ",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 88
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted sequence of movements does not match the ground truth. The ground truth describes a specific path through the kitchen, dining room, and living room to reach the computer monitor, while the predicted answer describes a different set of movements that do not align with this path at all."
+    },
+    {
+      "Q": "From the starting point, what is the sequence of movements to get to the computer monitor?  ",
+      "A": "walk to the right, turn left and walk to the door, turn right and walk to the door, turn left and walk to the bed, turn right and walk to the table",
+      "C": "Move straight forward through the kitchen, turn right into the dining room, continue forward, pass through the doorway into the living room, head across through the living room to approach the area where the computer monitor is located.  ",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 88
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer 'turn around and walk to the door' is partially correct as it starts with the correct initial action of turning around. However, it lacks key details present in the ground truth, such as specifying which door to walk to and the subsequent steps required to reach the initial room, including exiting to the living room and then turning to the dining area connected to the kitchen."
+    },
+    {
+      "Q": "How do I return from the bed to the initial room?  ",
+      "A": "turn around and walk to the door",
+      "C": "Turn around, exit the room with the bed into the living room, turn to the dining area, which is connected directly to the kitchen.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 88
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer only mentions going from the kitchen to the dining table, missing several additional steps needed to complete the loop through all the rooms as described in the ground truth answer."
+    },
+    {
+      "Q": "What steps should I follow to make a complete loop through all the rooms?  ",
+      "A": "Walk into the kitchen, turn right and walk to the dining room table.",
+      "C": "Start in the kitchen, move toward the dining table, turn right to pass it, enter living the room, go to the bedroom, return to the living room and visit the bathroom, after that through the living room return to the dining area and the kitchen to make a complete loop through all the rooms.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 88
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer suggests moving to the right, which does not align with the ground truth answer that specifies walking past the dining table directly towards the doorway. The direction provided in the prediction is not consistent with the instructions given in the ground truth."
+    },
+    {
+      "Q": "How do I reach the open doorway after entering the dining room?  ",
+      "A": "Go to the right",
+      "C": "Walk past the dining table directly towards the doorway.  ",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 88
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer \"right, right, left\" does not match the sequence of turns described in the ground truth correct answer, which is \"turn left, exit the room into the dining area, continue forward and make a right turn into the kitchen, leading to the initial room.\" The two sequences of directions are entirely different."
+    },
+    {
+      "Q": "What sequence of turns is required to navigate from the computer monitor back to the original window?  ",
+      "A": "right, right, left",
+      "C": "After viewing the computer monitor, turn left, exit the room into the dining area, continue forward and make a right turn into the kitchen, leading to the initial room.  ",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 88
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer suggests turning left and heading to the door, but it lacks detail on the complete route navigation like exiting the room and turning right to reach the dining room, as specified in the ground truth. Consequently, the prediction is partially correct but incomplete."
+    },
+    {
+      "Q": "How do I accurately navigate to the dining room if I have reached the computer room?  ",
+      "A": "turn left and head to the door",
+      "C": "Retrace your steps by turning left, exiting the room, and turning right to re-enter the dining room",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 88
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer lacks specificity and detail present in the ground-truth answer. It mentions 'go to the door, go forward, turn right at the door,' but does not specify key areas like 'through the kitchen,' 'into the dining room,' or 'past the dining table.' Also, it does not clearly indicate arriving at the room with the bed. Therefore, the prediction is only partially correct by capturing the action of going forward and turning right but fails to accurately describe the complete route."
+    },
+    {
+      "Q": "What is the most direct route from the starting point to the room with the bed?  ",
+      "A": "go to the door, go forward, turn right at the door",
+      "C": "Head straight through the kitchen, turn right into the dining room, walk past the dining table, enter the next room through the open doorway, and then explore to the left to reach the room with the bed.  ",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 88
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'wood' does not match the ground-truth answer, which describes the wall finish as being made of small square tiles. There is no overlap or partial correctness between 'wood' and 'tiles'."
+    },
+    {
+      "Q": "What type of finish is visible on the section of the wall where the stove or oven is located?",
+      "A": "wood",
+      "C": "The wall behind the stove has a finish made of small square tiles.",
+      "M": "Object Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer \"carpet\" does not match the ground truth answer, which describes the floor as likely being made of a smooth, polished material such as concrete. The predicted answer suggests a soft, textured material which is fundamentally different from the described sleek, reflective surface. Therefore, the prediction is fully wrong."
+    },
+    {
+      "Q": "What material is the floor likely made of?",
+      "A": "carpet",
+      "C": "The floor appears to be made of a smooth, polished material, likely concrete or a similar type of surface that reflects light and has a sleek finish.",
+      "M": "Object Recognition",
+      "start_idx": 9,
+      "end_idx": 11
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer \"white\" matches the ground truth answer \"The border separating the two different wall colors is white.\" exactly. Therefore, the prediction is correct with no discrepancy."
+    },
+    {
+      "Q": "What color is the border separating the two different wall colors?",
+      "A": "white",
+      "C": "The border separating the two different wall colors is white.",
+      "M": "Object Recognition",
+      "start_idx": 18,
+      "end_idx": 20
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer only mentions \"Books\" while the ground truth specifies a small stack of books or magazines and a small decorative piece or electronic device. The predicted answer partially matches the ground truth, hence the score is 2."
+    },
+    {
+      "Q": "What objects are visible on the cabinet next to the table lamp?",
+      "A": "Books",
+      "C": "On the cabinet next to the table lamp, there are a few visible objects such as a small stack of books or magazines and a small item that resembles a decorative piece or perhaps a small electronic device.",
+      "M": "Object Recognition",
+      "start_idx": 27,
+      "end_idx": 29
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'a white cabinet' does not match the ground-truth answer 'a shelf'. The objects are different, thus making the prediction completely incorrect."
+    },
+    {
+      "Q": "What is located directly opposite the illuminated screen?",
+      "A": "a white cabinet",
+      "C": "Directly opposite the illuminated screen is a shelf.",
+      "M": "Object Recognition",
+      "start_idx": 36,
+      "end_idx": 38
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the lamp reflects light on the floor, which is different from the ground truth answer stating that the computer screen reflects light. There is no overlap in the objects mentioned, making the prediction incorrect."
+    },
+    {
+      "Q": "What object reflects light on the floor in the third frame?",
+      "A": "lamp",
+      "C": "In the third frame, the object reflecting light on the floor is the computer screen, which is on the desk near the window.",
+      "M": "Object Recognition",
+      "start_idx": 45,
+      "end_idx": 47
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer 'Books' is incomplete. The ground truth answer specifies both 'books' and 'a set of green bottles' on the top shelf, but the predicted answer only mentions 'Books'."
+    },
+    {
+      "Q": "What type of items are found on the top shelf of the shelving unit?",
+      "A": "Books",
+      "C": "On the top shelf of the shelving unit, there are books standing upright on the right side, and a set of green bottles on the left side.",
+      "M": "Object Recognition",
+      "start_idx": 54,
+      "end_idx": 56
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The ground truth answer describes the furniture piece as a shelving unit or cabinet with storage space. The predicted answer is 'table', which does not match the description of having storage space. Therefore, the prediction is mostly incorrect."
+    },
+    {
+      "Q": "What is the furniture piece located below the windows?",
+      "A": "table",
+      "C": "I can see a piece of furniture below the windows; it appears to be a shelving unit or cabinet with storage space.",
+      "M": "Object Recognition",
+      "start_idx": 63,
+      "end_idx": 65
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer 'brown' captures the main characteristic of the ground truth answer 'dark brown'. The core color identification is correct, but it lacks the specificity of 'dark'."
+    },
+    {
+      "Q": "What is the main color of the open door that leads to the neighboring room?",
+      "A": "brown",
+      "C": "The main color of the open door leading to the neighboring room is dark brown.",
+      "M": "Object Recognition",
+      "start_idx": 72,
+      "end_idx": 74
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer mentions \"hexagonal,\" which partially describes the texture of the floor, as it matches the hexagonal pattern. However, it misses the aspect of it being tiled, which is crucial to fully match the ground-truth answer. Thus, it partially captures the ground truth answer."
+    },
+    {
+      "Q": "What is the texture of the floor in the room with the window blinds and furniture?",
+      "A": "hexagonal",
+      "C": "The floor in the room has a tiled texture, featuring a hexagonal pattern.",
+      "M": "Object Recognition",
+      "start_idx": 81,
+      "end_idx": 83
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 4,
+      "reason": "The predicted answer correctly lists the kitchen, dining room, living room, and bedroom, which matches with the start and sequence of the rooms mentioned in the ground truth. However, it is missing the bathroom at the end, resulting in a deduction. The score of 4 reflects that the majority of the sequence was correctly predicted."
+    },
+    {
+      "Q": "What's the sequence of rooms I passed from start to finish?  ",
+      "A": "kitchen, dining room, living room, bedroom",
+      "C": "From start to finish you passed through the kitchen, the dining area, living room, the bedroom and the bathroom.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 88
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'dining room' aligns with the ground truth answer 'dining area'. Despite the slight difference in wording, the meaning is identical, indicating that the prediction is fully correct."
+    },
+    {
+      "Q": "Which room did I transition to after the initial room with the brown walls?  ",
+      "A": "dining room",
+      "C": " You transitioned into the dining area after the initial room.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 88
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'kitchen' matches the ground truth answer, indicating that the prediction is fully correct."
+    },
+    {
+      "Q": "Before reaching the dining area, which room did I pass through?  ",
+      "A": "kitchen",
+      "C": "You passed through the kitchen before reaching the dining area.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 88
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer \"dining table\" accurately matches the key information provided in the ground truth answer \"You encountered a dining table in the dining area.\" Both answers explicitly identify the same type of table."
+    },
+    {
+      "Q": "What kind of table did I encounter in the dining area?  ",
+      "A": "dining table",
+      "C": "You encountered a dining table in the dining area.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 88
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'Living room' matches the key information in the ground truth answer 'You encountered the living room after the dining area'. Both indicate the next room entered after the dining area was the living room."
+    },
+    {
+      "Q": "After the dining area, which room did I enter next?  ",
+      "A": "Living room",
+      "C": "You encountered the living room after the dining area.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 88
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer 'computer' is partly correct as it aligns with the ground-truth answer which mentions 'a TV or computer monitor'. While not fully specifying 'monitor', 'computer' implies a related item, thus making the prediction largely correct but slightly less specific."
+    },
+    {
+      "Q": "When I entered the bedroom, what was prominently displayed on the desk?  ",
+      "A": "computer",
+      "C": "A TV or computer monitor was prominently displayed on the desk.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 88
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer only correctly identifies the sequence 'living room, bedroom, bathroom'. It misses the initial part of the sequence: 'kitchen, dining room, living room', and a repeat visit to the 'living room'."
+    },
+    {
+      "Q": "What sequence did I follow to reach the bathroom at the end?  ",
+      "A": "You went to the living room, then the bedroom, and finally the bathroom.",
+      "C": "You went through the kitchen, dining room, living room, bedroom, living room again and you arrived at the bathroom.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 88
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer \"Window\" indicates the presence of something directly next to the stove, whereas the ground truth states there is nothing directly next to the stove. Hence, the prediction is completely incorrect."
+    },
+    {
+      "Q": "What is located directly next to the stove?  ",
+      "A": "Window",
+      "C": "In the images, there is nothing directly next to the stove.",
+      "M": "Spatial Reasoning",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The ground truth states there is no floor lamp in the frames, while the predicted answer states the table is next to a floor lamp. This directly contradicts the ground truth."
+    },
+    {
+      "Q": "What is the relationship between the table and the floor lamp in the space?  ",
+      "A": "The table is next to the floor lamp.",
+      "C": "There is no floor lamp in these frames.",
+      "M": "Spatial Reasoning",
+      "start_idx": 9,
+      "end_idx": 11
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer \"2\" falls within the range of the ground truth answer \"about 2-3 steps\". This aligns with the provided instructions for evaluating counting-based answers, where the predicted answer falls within the range of the ground truth answer."
+    },
+    {
+      "Q": "How many steps do I need to take to reach the window from my current position?  ",
+      "A": "2",
+      "C": "To reach the window from your current position, you would likely need to take about 2-3 steps, estimating based on typical room dimensions and perspective in the frames.",
+      "M": "Spatial Reasoning",
+      "start_idx": 18,
+      "end_idx": 20
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'cabinet' does not accurately describe the object to the left of the TV on the cabinet. According to the ground-truth answer, the object is a 'lamp'. Since the predicted answer fails to identify the correct object, it is considered incorrect."
+    },
+    {
+      "Q": "What object is located to the left of the TV on the cabinet?  ",
+      "A": "cabinet",
+      "C": "To the left of the TV on the cabinet, there is a lamp.",
+      "M": "Spatial Reasoning",
+      "start_idx": 27,
+      "end_idx": 29
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer \"table\" captures the essential part of the ground truth answer \"a small table\", although it omits the detail about the table being small. The core information that an object between the computer and the doorway is a table is correct, allowing for a high score."
+    },
+    {
+      "Q": "What object is positioned between the computer and the doorway?  ",
+      "A": "table",
+      "C": "A small table is positioned between the computer and the doorway.",
+      "M": "Spatial Reasoning",
+      "start_idx": 36,
+      "end_idx": 38
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer includes only part of the ground truth answer. It identifies the desk but leaves out the computer, which is also specified in the ground truth as being part of the object next to the window."
+    },
+    {
+      "Q": "What object is positioned directly next to the window?  ",
+      "A": "A desk",
+      "C": "A desk with a computer is positioned directly next to the window.",
+      "M": "Spatial Reasoning",
+      "start_idx": 45,
+      "end_idx": 47
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'A lamp' matches the ground truth answer 'To the right of the monitor on the desk, there is a lamp'. Despite the lack of detail, the core object identified by both answers is the same: a lamp. Thus, the prediction is correct."
+    },
+    {
+      "Q": "What is to the right of the monitor on the desk?  ",
+      "A": "A lamp",
+      "C": "To the right of the monitor on the desk, there is a lamp.",
+      "M": "Spatial Reasoning",
+      "start_idx": 54,
+      "end_idx": 56
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer \"table\" does not match the ground truth answer, which is a piece of furniture described as a \"bookshelf or a cabinet\". The objects mentioned are not similar, making the prediction fully incorrect."
+    },
+    {
+      "Q": "What object is directly in front of the windows?  ",
+      "A": "table",
+      "C": "The object directly in front of the windows is a piece of furniture, possibly a bookshelf or a cabinet.",
+      "M": "Spatial Reasoning",
+      "start_idx": 63,
+      "end_idx": 65
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer 'bookshelf' is partially correct as it identifies the main object correctly. However, it lacks more detailed information provided in the ground truth, such as the description of the bookshelf having several compartments and a lamp on top of it."
+    },
+    {
+      "Q": "What object is located directly to the right of the desk?  ",
+      "A": "bookshelf",
+      "C": "Directly to the right of the desk is a wooden bookshelf with several compartments. A lamp is placed on top of the bookshelf.",
+      "M": "Spatial Reasoning",
+      "start_idx": 72,
+      "end_idx": 74
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer \"toilet\" matches the ground truth answer \"The object positioned in front of the shelf in the room is a toilet.\" Both indicate that a toilet is positioned in front of the shelf, making the prediction fully correct."
+    },
+    {
+      "Q": "What object is positioned in front of the shelf in the room?  ",
+      "A": "toilet",
+      "C": "The object positioned in front of the shelf in the room is a toilet.",
+      "M": "Spatial Reasoning",
+      "start_idx": 81,
+      "end_idx": 83
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer \"GIMP\" does not match any part of the ground-truth answer, which specifies the text as \"amftzKzd69\" and \"jBvRiGr\". There is no partial credit applicable as there is no overlap or similarity between the predicted and ground-truth answers."
+    },
+    {
+      "Q": "What is the text, visible on the computer in the bedroom?",
+      "A": "GIMP",
+      "C": "The text on the computer in the bedroom says \"amftzKzd69\" and \"jBvRiGr\".",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 88
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states the color of the text as green, whereas the ground truth states it is white and purple. The predicted color does not match any of the colors mentioned in the ground truth."
+    },
+    {
+      "Q": "What is the color of the text on the computer?",
+      "A": "green",
+      "C": "The text on the computer is white and purple.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 88
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states 'no', which is the opposite of the ground truth answer that confirms the presence of piles of books. Therefore, the prediction is completely incorrect."
+    },
+    {
+      "Q": "Were there any piles of books anywhere?",
+      "A": "no",
+      "C": "Yes, there were a few instances where I could see piles of books.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 88
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'No, I did not read any of the titles of the books' is semantically equivalent to the ground truth answer 'I couldn't read any of the titles of the books'. Both indicate that the titles of the books were not read."
+    },
+    {
+      "Q": "Did you read any of the titles of the books you saw?",
+      "A": "No, I did not read any of the titles of the books.",
+      "C": "I couldn't read any of the titles of the books.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 88
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The ground truth answer indicates that there were no posters with text, while the predicted answer incorrectly states that there were. This directly contradicts the ground truth, resulting in a score of 0."
+    },
+    {
+      "Q": "Did you see any posters with written text on them?",
+      "A": "yes",
+      "C": "No, there were no posters with text on them.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 88
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'The table is moving' does not address the specific oddity mentioned in the ground-truth answer, which is 'The table only has 2 legs'. The movement of the table is unrelated to the noted characteristic, hence the prediction is fully incorrect."
+    },
+    {
+      "Q": "What's odd about the table?",
+      "A": "The table is moving.",
+      "C": "The table only has 2 legs.",
+      "M": "Non Common",
+      "start_idx": 14,
+      "end_idx": 16
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer states that the door is broken, which is not addressed by the ground-truth answer. The ground-truth specifically mentions the issue of the door having a rounded top part which does not fit in the door frame, indicating a fitting problem rather than being broken. The incorrect interpretation leads to a low score."
+    },
+    {
+      "Q": "What's the issue with the door?",
+      "A": "The door is broken.",
+      "C": "The door has a rounded top part and it cannot fit in the door frame.",
+      "M": "Non Common",
+      "start_idx": 17,
+      "end_idx": 19
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that there is nothing strange with the small table, whereas the ground-truth answer points out that the small table has only 2 legs instead of 4. This discrepancy indicates that the prediction is fully wrong."
+    },
+    {
+      "Q": "Is there anything strange with the small table?",
+      "A": "No",
+      "C": "The small table has only 2 legs instead of 4.",
+      "M": "Non Common",
+      "start_idx": 45,
+      "end_idx": 47
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer is about the bedding being torn, which does not match the ground truth answer about the bed covers merging into each other."
+    },
+    {
+      "Q": "What's wrong with the bedding?",
+      "A": "The bedding is torn",
+      "C": "The brown and the pink bed covers are merging into each other.",
+      "M": "Non Common",
+      "start_idx": 49,
+      "end_idx": 50
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'no' aligns with the ground truth answer indicating that there are no out of place objects in the bathroom. Both convey the same meaning that everything is in its place."
+    },
+    {
+      "Q": "Are there any out of place objects in the bathroom?",
+      "A": "no",
+      "C": "There seem to be no out of place objects in the bathroom.",
+      "M": "Non Common",
+      "start_idx": 76,
+      "end_idx": 78
+    }
+  ]
+]

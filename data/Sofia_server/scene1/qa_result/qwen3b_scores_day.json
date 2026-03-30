@@ -1,0 +1,647 @@
+[
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer claims that a contactless payment was attempted but unsuccessful, whereas the ground truth specifies that no contactless payment was made, indicating a complete contradiction."
+    },
+    {
+      "Q": "Did you decide to use the contactless payment method, and if so, was it successful?",
+      "A": "I decided to use the contactless payment method. Unfortunately, it was not successful.",
+      "C": "I did not make a contactless payment; I was just observing the options.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately reflects the key elements of the ground-truth answer, stating that the person was browsing without a specific choice in mind. Both answers convey the same intent and information."
+    },
+    {
+      "Q": "Were you considering a particular item from the vending machine, or were you browsing without a specific choice in mind?",
+      "A": "I was browsing without a specific choice in mind.",
+      "C": "I was browsing the options without a specific choice in mind.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer states that the items were reasonably priced and that the user didn't feel they were overpriced. However, the ground truth indicates uncertainty about the prices because the user didn't focus on them. The predicted answer gives a definitive assessment of the pricing, which doesn't align with the uncertainty in the ground truth."
+    },
+    {
+      "Q": "After examining the vending machine options, did you feel any items were overpriced compared to what you expected?",
+      "A": "No, I didn't feel any items were overpriced. The prices seemed reasonable based on what I expected.",
+      "C": "I didn't focus on the prices, so I'm not sure if any items felt overpriced.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The ground truth answer states that there were signs on the vending machine, but they didn't appear to be special promotions or offers. The predicted answer states that no promotional signs or special offers were noticed. While both agree that there were no promotional signs, the prediction does not acknowledge the presence of any signs at all, which reduces its correctness."
+    },
+    {
+      "Q": "Did you notice any promotional signs or special offers on the vending machine?",
+      "A": "No, I did not notice any promotional signs or special offers on the vending machine.",
+      "C": "I noticed some signs on the vending machine, but they didn't appear to be special promotions or offers.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly states that both drinks and snacks were available in the vending machines, but it does not accurately address the specific observation about the number of options. The ground truth indicates that the snacks machine had more options overall, which the predicted answer does not clarify. The predicted answer partially aligns with the ground truth by mentioning both drinks and snacks but misses the crucial detail about the quantity of options, leading to a partial credit score."
+    },
+    {
+      "Q": "As you approached the vending machine, did you notice if there were more drinks or snacks available for selection?",
+      "A": "As I approached the vending machine, I noticed that there were both drinks and snacks available for selection. The machine displayed a variety of beverages on one side and a selection of snacks on the other.",
+      "C": "There were two vending machines, one primarily for drinks and the other for snacks. The snacks machine seemed to have more options overall.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer 'No, I did not take note of any expiration dates on the items inside the vending machine' aligns perfectly with the ground truth answer 'I didn't check for expiration dates on the items'. Both indicate that no expiration dates were noted, making the prediction fully correct."
+    },
+    {
+      "Q": "Did you take note of any expiration dates on the items inside the vending machine?",
+      "A": "No, I did not take note of any expiration dates on the items inside the vending machine.",
+      "C": "I didn't check for expiration dates on the items.",
+      "M": "Action",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that three trash bins appear throughout the video, which is incorrect as per the ground truth answer stating seven trash bins. The prediction does not fall within the range of the ground truth answer; therefore, it is considered fully wrong."
+    },
+    {
+      "Q": "How many trash bins appear throughout the video?",
+      "A": "Three trash bins appear throughout the video.",
+      "C": "7",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer '1' does not match the ground truth answer '2'. For questions involving counting, the predicted answer should either match or fall within the range specified by the ground truth. Since the predicted answer does not fall in the correct range, it is considered incorrect."
+    },
+    {
+      "Q": "How many benches can be counted from the beginning to the end of the video?",
+      "A": "1",
+      "C": "2",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer is incorrect as the predicted number of vending machines (2) does not match the ground truth answer (3). The prediction is fairly close but does not fall within the range to be considered correct."
+    },
+    {
+      "Q": "Count the number of vending machines you see during the video.",
+      "A": "During the video, there are two vending machines visible.",
+      "C": "3",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer states that there are two signs visible, while the ground truth states there are three. However, there is only a difference of one sign between the predicted and ground truth answers, which warrants a nearly correct evaluation but not complete accuracy."
+    },
+    {
+      "Q": "How many different signs or pieces of signage are visible in the video?",
+      "A": "There are two different signs or pieces of signage visible in the video.",
+      "C": "3",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies the presence of one bicycle or bike rack, matching the ground truth answer about a bike rack, thus satisfying the condition for being correct."
+    },
+    {
+      "Q": "How many bicycles or bike racks can you identify throughout the video?",
+      "A": "There is one bicycle or bike rack identified throughout the video.",
+      "C": "1 bike rack",
+      "M": "Counting",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer specifies a distance of 12 meters, which falls within the range of the ground truth answer (10~15m), so it is correct."
+    },
+    {
+      "Q": "How far do I need to continue straight to reach the vending machine area from the initial path?",
+      "A": "You need to continue straight for 12 meters to reach the vending machine area from the initial path.",
+      "C": "Around 10~15m.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer 'You should continue straight ahead' does not match the ground truth answer, which indicates either taking a right or left direction is correct. The prediction is fully wrong as it suggests a different direction that is not part of the ground truth options."
+    },
+    {
+      "Q": "After passing the vending machine, which direction should I take at the fork to stay on the main walkway?",
+      "A": "You should continue straight ahead.",
+      "C": "After passing the vending machine, either right or left directions keep myself along the main path.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer 'You should choose the left direction.' correctly identifies the direction as 'left', which aligns with the ground truth's 'turn left'. However, it lacks the additional detail provided in the ground truth about it being towards the quieter residential area."
+    },
+    {
+      "Q": "If I want to visit the residential or quieter areas from the intersection, which direction should I choose?",
+      "A": "You should choose the left direction.",
+      "C": "At the intersection, turn left to head towards the quieter residential area.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer is aligned with the ground truth answer. Both indicate moving forward/past the vending machine area to reach the intersection. The additional detail of walking straight down the cobblestone path provides clarity but does not contradict the ground truth."
+    },
+    {
+      "Q": "How do I proceed after reaching the vending machine area to continue towards the intersection?",
+      "A": "To proceed after reaching the vending machine area and continue towards the intersection, you should walk straight down the cobblestone path. This path will take you past the vending machines and eventually lead you to the intersection.",
+      "C": "After reaching the vending machine area, continue moving forward to reach the intersection.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer suggests to look to the left to find the bike rack, whereas the ground truth states that the bike rack is directly in front of the vending machines. The predicted answer suggests a different location and does not match the ground-truth information accurately."
+    },
+    {
+      "Q": "When I'm at the vending machines, where should I look to find the bike rack?",
+      "A": "You should look to your left to find the bike rack.",
+      "C": "The bike rack is directly in front of the vending machines.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer suggests turning left, which contradicts the ground truth answer that specifies moving forward. The predicted path direction is entirely different from the correct answer, therefore, the prediction is fully incorrect."
+    },
+    {
+      "Q": "After the vending machine area, how do I proceed to reach the path divergence?",
+      "A": "Turn left.",
+      "C": "Keep moving forward past the vending machine area until you reach the point where the path diverges.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer gives an incorrect method of locating the main road by mentioning a white line, which is not indicated in the ground truth. The ground truth simply states that the main road is visible ahead and runs parallel to the path. The presence of a white line is not addressed in the ground truth, and thus the prediction deviates from what is specified in the answer."
+    },
+    {
+      "Q": "Once at the intersection, how can I find the main road if it's visible from the path I'm on?",
+      "A": "Once at the intersection, you can find the main road by looking for a white line that marks the direction of the main road. Follow the white line straight ahead to reach the main road.",
+      "C": "From the intersection, the main road is visible ahead, running parallel to the path.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer is mostly correct as it suggests turning left at the intersection, which aligns with the ground truth's direction to explore more urban settings. However, it lacks the additional detail about heading towards the urban area with visible buildings, which prevents it from being fully correct."
+    },
+    {
+      "Q": "What is my next step if I want to explore more urban settings from the intersection?",
+      "A": "Your next step should be to turn left at the intersection.",
+      "C": "From the intersection, take the path that leads left towards the urban area with visible buildings.",
+      "M": "Navigation",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies a building as the main structure, which matches the ground truth, but adds additional details about a blue sign that is not mentioned in the ground truth. The main structure identification is correct, but the extra detail introduces uncertainty about whether it is the same building. Therefore, the prediction is partially correct."
+    },
+    {
+      "Q": "What was the main structure visible at the start of the path?",
+      "A": "The main structure visible at the start of the path was a building with a blue sign that read \"FOOD & DRINKS.\"",
+      "C": "At the start of the path, the main structure visible was a building on the right side.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer mentioned the path leading to a tree and a bench, which does not match the ground truth, where the path led to an area with trash bins. Therefore, the predicted answer does not align with the ground-truth answer."
+    },
+    {
+      "Q": "After examining the vending machines, where did the path lead next?",
+      "A": "The path led next to a tree and a bench.",
+      "C": "After examining the vending machines, the path led to an area with trash bins.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately states that the pathway after leaving the vending area was made of cobblestones, which matches the ground truth answer. Both answers convey the same material for the pathway, demonstrating complete correctness."
+    },
+    {
+      "Q": "What type of surface was the pathway made of after leaving the vending area?",
+      "A": "The pathway was made of cobblestones after leaving the vending area.",
+      "C": "The pathway after leaving the vending area was made of cobblestones.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 4,
+      "reason": "The predicted answer mentions vending machines, which aligns with the ground truth concerning the type of machines. However, it lacks the detail about vending machines offering food and drinks, as specified in the ground truth answer."
+    },
+    {
+      "Q": "What type of machines did I observe in detail during the walk?",
+      "A": "During your walk, you observed vending machines.",
+      "C": "The machines observed in detail were vending machines offering food and drinks.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes that a trash bin was enclosed by a small fence towards the end of the path, which is consistent with the ground truth answer."
+    },
+    {
+      "Q": "Describe what was enclosed by a small fence towards the end of the path.",
+      "A": "The video shows a small fence enclosing a trash bin towards the end of the path.",
+      "C": "Towards the end of the path, the trash bins were enclosed by a small fence.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that a signboard was encountered after the vending machines, while the ground truth states that a bicycle rack was encountered. There is no overlap between the predicted answer and the ground truth answer, making the prediction incorrect."
+    },
+    {
+      "Q": "What did I encounter immediately after the vending machines?",
+      "A": "You encountered a signboard after the vending machines.",
+      "C": "Immediately after the vending machines, there was a bicycle rack.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 2,
+      "reason": "The predicted answer mentions that the path curves to the right, while the ground truth states the path transitions to a cobblestone surface and continues towards trash bins. While both describe the path after passing the vending machines, the details about the cobblestone surface and direction towards the trash bins were not included in the predicted answer. Therefore, it lacks some key elements and context provided in the ground truth."
+    },
+    {
+      "Q": "What happened to the path after moving past the vending machines?",
+      "A": "The path curves to the right after moving past the vending machines.",
+      "C": "After moving past the vending machines, the path transitioned to a cobblestone surface and continued towards the trash bins.",
+      "M": "Scene Sequence",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer provides detailed information on the instructions for recycling as mentioned in the ground truth. Both answers convey the idea that the sign includes guidelines on separating different types of materials, though the predicted answer is slightly more detailed about the types of materials and their disposal. The core understanding of the recycling instructions and their purpose aligns well with the ground truth."
+    },
+    {
+      "Q": "What instructions are provided on the sign in Frame 64, and how do they relate to proper recycling practices?",
+      "A": "The sign in Frame 64 provides instructions on proper recycling practices. It mentions the types of materials that can and cannot be recycled, such as plastic bottles and metal cans. The sign also includes a section about the importance of separating recyclables from non-recyclables and disposing of waste properly. It emphasizes the need to follow these instructions to ensure that recyclables are collected and processed correctly, contributing to a more sustainable environment.",
+      "C": "The sign in Frame 64 provides waste-sorting instructions, likely indicating how to properly separate items such as plastics, paper, and general waste. These directions are designed to encourage users to place their trash in the correct bins, which directly supports recycling efficiency and reduces contamination of recyclable materials.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately describes the significance of the text \"FOOD & DRINKS\" on the vending machine, indicating its purpose to dispense both food and drinks. It also appropriately mentions the convenience aspect in a public setting, aligning with the ground truth answer."
+    },
+    {
+      "Q": "How is the text \"FOOD & DRINKS\" in Frame 022 significant to the location, and what does it indicate about the vending machine?",
+      "A": "The text \"FOOD & DRINKS\" in Frame 022 is significant as it indicates that the vending machine in the image is designed to dispense both food and drinks. This suggests that the machine is likely located in a public area where people can conveniently purchase quick snacks or beverages, possibly in a park or an outdoor event. The presence of this text implies that the vending machine is well-equipped to cater to various dietary preferences, making it a versatile option for on-the-go consumption.",
+      "C": "The phrase \u201cFOOD & DRINKS\u201d in Frame 022 highlights the vending machine\u2019s purpose: it dispenses both snacks and beverages. This labeling is significant because it helps users immediately identify the machine\u2019s offerings, ensuring convenience in a busy public or workplace setting. It also suggests the machine caters to a variety of needs, not just single-category items.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer identifies that the multilingual text makes the vending machine more accessible to non-native speakers by allowing them to understand the interface, which aligns with the ground truth regarding inclusivity and user-friendliness. However, it introduces an additional perspective that the non-commonly spoken language in the area might hinder user interaction, which is not mentioned in the ground-truth. This additional negative aspect diverges from the ground-truth focus on accessibility and satisfaction. Therefore, while the core idea of enhanced accessibility is present, the extra considerations make the prediction not fully aligned with the ground truth."
+    },
+    {
+      "Q": "In Frame 039, the vending machine displays text in another language. How might this multilingual text affect user interaction compared to an English-only interface?",
+      "A": "The multilingual text on the vending machine could potentially make it more accessible to a wider range of users, as it allows non-native speakers to understand the interface. However, if the language is not commonly spoken in the area, it might also make the interface less intuitive and confusing for some users. The user interaction could be affected by the readability and comprehensibility of the text, potentially slowing down the process or requiring additional effort to navigate.",
+      "C": "The multilingual text in Frame 039 makes the vending machine more inclusive and user-friendly, particularly in an international environment. Non-English speakers can better navigate the machine, reducing confusion when selecting products or making payments. Compared to an English-only interface, this multilingual design improves accessibility, confidence, and overall user satisfaction for a wider audience.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer accurately reflects the role and the frequency of appearance of the 'FOOD & DRINKS' text in the video as described in the ground truth. While the predicted answer does not specify the exact frames, it correctly identifies the text as a central navigational cue and aligns with the function it serves in the context of the video."
+    },
+    {
+      "Q": "Considering the text visibility in different frames, how often does the \"FOOD & DRINKS\" text appear, and how central is this to navigating choices in the video context?",
+      "A": "The \"FOOD & DRINKS\" text appears in multiple frames, indicating its importance and frequency in the video context. It is a central element for navigating choices, as it likely represents a vending machine or food and drink station in the area.",
+      "C": "The text \u201cFOOD & DRINKS\u201d appears in multiple frames, with clear prominence from Frame 022 to Frame 034. Its repeated visibility makes it a central navigational cue, consistently orienting viewers to the machine\u2019s purpose throughout the video. By reinforcing what the vending machine provides, it simplifies choices and ensures that users immediately recognize its function.",
+      "M": "Text Recognition",
+      "start_idx": 0,
+      "end_idx": 85
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer \"The path is made of brick\" captures the main material of the surface, which aligns with the ground truth answer describing interlocking brick pavers. While it lacks the detail of \"interlocking\" and \"pavers,\" the core material is correctly identified as brick."
+    },
+    {
+      "Q": "What type of surface is the path made of?",
+      "A": "The path is made of brick.",
+      "C": "The path is made of interlocking brick pavers.",
+      "M": "Object Recognition",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer partially covers the ground truth. It mentions bricks, but misses the mention of cobblestones, which is a significant portion of the ground-truth answer describing the different materials used on the path."
+    },
+    {
+      "Q": "What are the materials used for the surface of the paved path?",
+      "A": "The surface of the paved path is made of bricks.",
+      "C": "The surface of the paved path is made of brick pavers and cobblestones. The area directly in front of you consists of brick pavers, while the path leading away has cobblestones.",
+      "M": "Object Recognition",
+      "start_idx": 11,
+      "end_idx": 13
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer matches the ground-truth answer exactly, both stating that the predominant color of the caps on the bottles located on the vending machine's top shelf is blue."
+    },
+    {
+      "Q": "What is the predominant color of the caps on the bottles located on the vending machine's top shelf?",
+      "A": "The predominant color of the caps on the bottles located on the vending machine's top shelf is blue.",
+      "C": "The predominant color of the caps on the bottles located on the vending machine's top shelf is blue.",
+      "M": "Object Recognition",
+      "start_idx": 22,
+      "end_idx": 24
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 4,
+      "reason": "The predicted answer correctly identifies that the ground near the vending machine has a textured surface that is likely made of cobblestone or a similar material. Although the prediction lacks the details about the arrangement of the cobblestones mentioned in the ground truth answer, it captures the essential information about the texture and material."
+    },
+    {
+      "Q": "What texture is visible on the ground near the vending machine?",
+      "A": "The ground near the vending machine has a textured surface, likely made of cobblestone or a similar material.",
+      "C": "The texture on the ground near the vending machine is composed of small cobblestone tiles. They are arranged in a pattern typical of paved walkways.",
+      "M": "Object Recognition",
+      "start_idx": 33,
+      "end_idx": 35
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies that the path has a cobblestone pattern but lacks detail about the arrangement of the cobblestones in a curved, interlocking, and arch pattern."
+    },
+    {
+      "Q": "What type of pattern is visible on the path next to the sidewalk?",
+      "A": "The path next to the sidewalk has a cobblestone pattern.",
+      "C": "The pattern visible on the path next to the sidewalk consists of curved, interlocking cobblestones arranged in an arch pattern.",
+      "M": "Object Recognition",
+      "start_idx": 66,
+      "end_idx": 68
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer mentions only \"white lines,\" while the ground truth specifies \"a line of white and brown markings.\" The prediction captures part of the ground truth but is incomplete as it omits the brown markings. Therefore, the prediction is partially correct."
+    },
+    {
+      "Q": "What type of markings separates the cobblestone street from the sidewalk?",
+      "A": "The markings that separate the cobblestone street from the sidewalk are white lines.",
+      "C": "The cobblestone street is separated from the sidewalk by a line of white and brown markings.",
+      "M": "Object Recognition",
+      "start_idx": 77,
+      "end_idx": 79
+    }
+  ],
+  [
+    {
+      "pred": "correct",
+      "score": 5,
+      "reason": "The predicted answer correctly identifies the first object on the right as 'a tree', which matches the ground truth answer. Both the predicted and ground truth answers are semantically the same, and there is no discrepancy in the details provided."
+    },
+    {
+      "Q": "If you continue walking straight along the path, what object will you first encounter on your right?",
+      "A": "The object you will first encounter on your right if you continue walking straight along the path is a tree.",
+      "C": "If you continue walking straight along the path, the first object you will encounter on your right is a tree.",
+      "M": "Spatial Reasoning",
+      "start_idx": 0,
+      "end_idx": 2
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer lists a different sequence of objects compared to the ground-truth answer. The objects and order between the bench and trash bins do not match. According to the ground-truth, there should be a tree in a raised planter, a bike rack, and a vending machine, which are not mentioned in the predicted answer. Instead, the predicted answer mentions a brick pathway, bench, and parking lot, which are not correct according to the ground-truth."
+    },
+    {
+      "Q": "If you walk from the bench towards the trash bins, which objects do you pass in order?",
+      "A": "In the image, if you walk from the bench towards the trash bins, you would pass the following objects in order:\n\n1. A tree\n2. A brick pathway\n3. A bench\n4. A trash bin\n5. Another trash bin\n6. A parking lot\n\nThe brick pathway serves as the central pathway, with the tree on one side and the trash bins on the other side of the pathway.",
+      "C": "As you walk from the bench towards the trash bins, you pass the following objects in order:\n\n1. A tree on the right in a raised planter.\n2. A bike rack on the left.\n3. A vending machine on the right.\n\nYou'll then reach the trash bins.",
+      "M": "Spatial Reasoning",
+      "start_idx": 11,
+      "end_idx": 13
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted answer states that the row with blue bottles above the row with orange bottles is the second row from the bottom, whereas the ground truth specifies it is the second row from the top. These are different locations in the video, making the prediction fully incorrect."
+    },
+    {
+      "Q": "Which row contains blue bottles directly above the row with orange bottles?",
+      "A": "The row that contains blue bottles directly above the row with orange bottles is the second row from the bottom.",
+      "C": "The row that contains blue bottles directly above the row with orange bottles is the second row from the top.",
+      "M": "Spatial Reasoning",
+      "start_idx": 22,
+      "end_idx": 24
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer states that directly below the top row are more chocolates, which contradicts the ground truth indicating the presence of various snacks, including bags of chips or similar packaged items. The predicted answer is not aligned with the ground truth description of what is located directly below the top row."
+    },
+    {
+      "Q": "What is positioned directly below the top row of chocolates in the vending machine?",
+      "A": "The chocolates directly below the top row in the vending machine are chocolate bars.",
+      "C": "Directly below the top row of chocolates in the vending machine, there's a row of various snacks, including bags of chips or similar packaged items.",
+      "M": "Spatial Reasoning",
+      "start_idx": 33,
+      "end_idx": 35
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 3,
+      "reason": "The predicted answer correctly identifies the presence of trash bins in front of the signpost, which matches the ground truth. However, it does not mention their color or alignment as stated in the ground truth. The predicted answer also inaccurately states the signpost is to the right, whereas the ground truth specifies the bins are directly in front of the signpost."
+    },
+    {
+      "Q": "What is located directly in front of the signpost?",
+      "A": "The video shows a sequence of images that depict a row of trash bins lined up on a paved path or sidewalk. The trash bins are arranged in a neat row, with some bins being closer to the foreground and others further back. The signpost is located to the right side of the trash bins.",
+      "C": "Directly in front of the signpost, there are several gray garbage bins aligned next to each other.",
+      "M": "Spatial Reasoning",
+      "start_idx": 55,
+      "end_idx": 57
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 0,
+      "reason": "The predicted number of steps (3) is significantly lower than the ground truth estimate of 30 to 40 steps. Since the prediction falls outside the range provided by the ground truth, it is considered incorrect."
+    },
+    {
+      "Q": "How many steps would it take to walk from the tree to the next streetlight along the pathway?",
+      "A": "It would take 3 steps to walk from the tree to the next streetlight along the pathway.",
+      "C": "To estimate the number of steps from the tree to the next streetlight along the pathway, I would say it\u2019s about 30 to 40 steps based on the visible distance.",
+      "M": "Spatial Reasoning",
+      "start_idx": 66,
+      "end_idx": 68
+    }
+  ],
+  [
+    {
+      "pred": "incorrect",
+      "score": 1,
+      "reason": "The predicted answer incorrectly states that the manhole cover is on the sidewalk near the curb and slightly to the left of the tree. However, the ground truth specifies that the manhole cover is on the cobblestone path and the tree is on the right side, further back in the frame. The predicted spatial relationship between the manhole cover and the tree does not match the ground truth."
+    },
+    {
+      "Q": "What is the spatial relationship between the manhole cover and the tree?",
+      "A": "The manhole cover is located on the sidewalk, near the curb, and slightly to the left of the tree.",
+      "C": "The manhole cover is located on the ground in the middle area of the cobblestone path, while the tree is on the right side of the path. The tree is further back in the frame compared to the manhole cover.",
+      "M": "Spatial Reasoning",
+      "start_idx": 77,
+      "end_idx": 79
+    }
+  ]
+]

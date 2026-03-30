@@ -317,7 +317,19 @@ The output JSON (via `--output`) includes `per_dataset`, `overall`, `per_dataset
 - Individual QA pair drill-down: question, ground truth, model prediction, score, correct/incorrect
 - Paginated results table with color-coded rows
 
-**Start the server:**
+**Using the bundled local data (recommended):**
+
+The repository includes pre-computed score files under `data/` for 10 models (gpt, gemini, intern_vl, qwen3b, qwen7b, qwen72b, glm4v, video_llama3, llava_next_video, egogpt):
+
+```bash
+python evaluation/server.py \
+    --sofia_path data/Sofia_server \
+    --oxford_path data/Oxford_server \
+    --synthetic_path data/synthetic_server \
+    [--model gpt] [--port 5000]
+```
+
+**Using your own score files:**
 
 ```bash
 python evaluation/server.py \
