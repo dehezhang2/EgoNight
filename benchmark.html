@@ -136,6 +136,8 @@
     .bx-bar-table tr:hover td { background: var(--color-surface); }
     .bx-bar-wrap { width: 100%; background: #e9ecef; border-radius: 99px; overflow: hidden; height: 14px; }
     .bx-bar-fill { height: 14px; border-radius: 99px; background: linear-gradient(90deg, #4f46e5, #818cf8); transition: width 0.4s ease; }
+    .bx-bar-fill-day { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+    .bx-bar-fill-night { background: linear-gradient(90deg, #4f46e5, #818cf8); }
     .bx-bar-pct { font-weight: 600; color: var(--color-accent); min-width: 48px; text-align: right; }
     .bx-section-head { font-size: 0.85rem; font-weight: 700; color: var(--color-text-muted); padding: 12px 10px 4px; text-transform: uppercase; letter-spacing: 0.06em; }
 
@@ -189,7 +191,7 @@
       <img src="fig/icon.png" alt="EgoNight" style="width:36px;height:36px;object-fit:contain;">
       <h1 style="margin:0">EgoNight — Benchmark Explorer</h1>
     </div>
-    <p>Interactive exploration of benchmark results. Use filters to drill down by model, split, dataset, difficulty, and QA type.</p>
+    <p>Interactive exploration of benchmark results. Sofia and Synthetic compare Day vs Night side-by-side; Oxford shows Night only.</p>
   </div>
 
   <!-- Server config banner -->
@@ -211,14 +213,6 @@
       <div class="bx-filter-group">
         <label>Model</label>
         <select id="f-model"></select>
-      </div>
-      <div class="bx-filter-group">
-        <label>Split</label>
-        <select id="f-split">
-          <option value="all">All (Day + Night)</option>
-          <option value="day">Day</option>
-          <option value="night">Night</option>
-        </select>
       </div>
       <div class="bx-filter-group">
         <label>Dataset</label>
@@ -272,10 +266,11 @@
         <div class="table-card" style="background:#fff;border:1px solid var(--color-border);border-radius:10px;padding:1.25rem;">
           <table class="bx-bar-table" id="summary-bar-table">
             <thead><tr>
+              <th>Dataset</th>
               <th>QA Type</th>
-              <th>Accuracy</th>
-              <th style="width:50%">Progress</th>
-              <th>Correct / Total</th>
+              <th style="width:24%">Day</th>
+              <th style="width:24%">Night</th>
+              <th>Counts (Day / Night)</th>
             </tr></thead>
             <tbody id="summary-bar-body"></tbody>
           </table>
@@ -306,6 +301,8 @@
     var SERVER_URL = localStorage.getItem('bx_server_url') || 'https://dehezhang2-egonight.hf.space';
     var currentPage = 1;
     var totalPages = 1;
+    var DATASET_ORDER = ['sofia', 'synthetic', 'oxford'];
+    var SPLIT_ORDER = ['day', 'night'];
 
     (function init() {
       var saved = localStorage.getItem('bx_server_url');
@@ -345,11 +342,23 @@
     function getFilters() {
       return {
         model:      document.getElementById('f-model').value,
-        split:      document.getElementById('f-split').value,
         dataset:    document.getElementById('f-dataset').value,
         difficulty: document.getElementById('f-difficulty').value,
         qatype:     document.getElementById('f-qatype').value
       };
+    }
+
+    function titleCase(s) {
+      return s.charAt(0).toUpperCase() + s.slice(1);
+    }
+
+    function getRequestedDatasets(datasetFilter) {
+      if (datasetFilter && datasetFilter !== 'all') return [datasetFilter];
+      return DATASET_ORDER.slice();
+    }
+
+    function getSplitsForDataset(dataset) {
+      return dataset === 'oxford' ? ['night'] : ['day', 'night'];
     }
 
     function qs(params) {
@@ -372,20 +381,65 @@
     function fetchSummary() {
       var f = getFilters();
       showLoading('summary');
-      fetch(api('/api/summary' + qs(f)))
-        .then(function(r){ if(!r.ok) throw new Error(r.statusText); return r.json(); })
-        .then(function(d){ renderSummary(d); })
+      var requests = [];
+
+      getRequestedDatasets(f.dataset).forEach(function(dataset){
+        getSplitsForDataset(dataset).forEach(function(split){
+          var params = {
+            model: f.model,
+            dataset: dataset,
+            split: split,
+            difficulty: f.difficulty,
+            qatype: f.qatype
+          };
+          requests.push(
+            fetch(api('/api/summary' + qs(params)))
+              .then(function(r){ if (!r.ok) throw new Error(r.statusText); return r.json(); })
+              .then(function(data){
+                return {
+                  dataset: dataset,
+                  split: split,
+                  data: data
+                };
+              })
+          );
+        });
+      });
+
+      Promise.all(requests)
+        .then(function(results){ renderSummary(results); })
         .catch(function(e){ showError('summary', 'Could not connect to server: ' + e.message + '. Check the server URL above.'); });
     }
 
     function fetchPairs(page) {
       var f = getFilters();
+      var effectiveSplit = f.dataset === 'oxford' ? 'night' : 'all';
+      var params = {
+        model: f.model,
+        dataset: f.dataset,
+        split: effectiveSplit,
+        difficulty: f.difficulty,
+        qatype: f.qatype,
+        page: page || currentPage,
+        per_page: 100
+      };
       f.page = page || currentPage;
-      f.per_page = 25;
       showLoading('pairs');
-      fetch(api('/api/pairs' + qs(f)))
+      fetch(api('/api/pairs' + qs(params)))
         .then(function(r){ if(!r.ok) throw new Error(r.statusText); return r.json(); })
-        .then(function(d){ renderPairs(d); })
+        .then(function(d){
+          if (f.dataset === 'all') {
+            d.pairs = (d.pairs || []).filter(function(p){
+              return String(p.dataset || '').toLowerCase() !== 'oxford' || String(p.split || '').toLowerCase() === 'night';
+            });
+            d.total = d.pairs.length;
+            d.pages = Math.max(1, Math.ceil(d.total / params.per_page));
+            d.page = 1;
+            d.per_page = params.per_page;
+            d.pairs = d.pairs.slice(0, params.per_page);
+          }
+          renderPairs(d);
+        })
         .catch(function(e){ showError('pairs', 'Could not connect to server: ' + e.message + '. Check the server URL above.'); });
     }
 
@@ -415,9 +469,13 @@
 
     function pct(v) { return typeof v === 'number' ? (v*100).toFixed(1)+'%' : '-'; }
 
-    function renderSummary(data) {
-      var overall = data.overall || {};
-      var byDiff  = data.by_difficulty || {};
+    function renderSummary(results) {
+      var summaryByDataset = {};
+      results.forEach(function(item){
+        if (!summaryByDataset[item.dataset]) summaryByDataset[item.dataset] = {};
+        summaryByDataset[item.dataset][item.split] = item.data || {};
+      });
+
       var statRow = document.getElementById('summary-stat-row');
       statRow.innerHTML = '';
 
@@ -426,26 +484,49 @@
         return '<div class="bx-stat-card"><div class="bx-stat-label">'+label+'</div><div class="bx-stat-val">'+acc+'</div>'+(sub?'<div class="bx-stat-sub">'+sub+'</div>':'')+'</div>';
       }
 
-      var ov = overall['OVERALL'] || {};
-      statRow.innerHTML += makeCard('Overall', ov.accuracy, (ov.correct||0)+' / '+(ov.total||0)+' correct');
-      ['easy','medium','hard'].forEach(function(lvl){
-        var d = (byDiff[lvl] || {})['OVERALL'] || {};
-        statRow.innerHTML += makeCard(lvl.charAt(0).toUpperCase()+lvl.slice(1), d.accuracy, (d.correct||0)+' / '+(d.total||0)+' correct');
+      getRequestedDatasets(getFilters().dataset).forEach(function(dataset){
+        getSplitsForDataset(dataset).forEach(function(split){
+          var payload = ((summaryByDataset[dataset] || {})[split] || {});
+          var ov = ((payload.overall || {})['OVERALL']) || {};
+          var label = titleCase(dataset) + ' ' + titleCase(split);
+          statRow.innerHTML += makeCard(label, ov.accuracy, (ov.correct||0)+' / '+(ov.total||0)+' correct');
+        });
       });
 
       var tbody = document.getElementById('summary-bar-body');
       tbody.innerHTML = '';
-      var types = Object.keys(overall).filter(function(k){ return k !== 'OVERALL'; });
-      types.sort();
-      types.forEach(function(t){
-        var row = overall[t] || {};
-        var fillPct = typeof row.accuracy === 'number' ? (row.accuracy*100).toFixed(1) : 0;
-        tbody.innerHTML += '<tr>'
-          + '<td style="font-weight:500">'+t+'</td>'
-          + '<td class="bx-bar-pct">'+fillPct+'%</td>'
-          + '<td><div class="bx-bar-wrap"><div class="bx-bar-fill" style="width:'+fillPct+'%"></div></div></td>'
-          + '<td style="color:var(--color-text-muted)">'+((row.correct||0)+' / '+(row.total||0))+'</td>'
-          + '</tr>';
+
+      function renderBarCell(row, barClass) {
+        if (!row || typeof row.accuracy !== 'number') return '<span style="color:var(--color-text-muted)">N/A</span>';
+        var fillPct = (row.accuracy * 100).toFixed(1);
+        return '<div style="display:flex;align-items:center;gap:10px">'
+          + '<div class="bx-bar-wrap"><div class="bx-bar-fill ' + barClass + '" style="width:'+fillPct+'%"></div></div>'
+          + '<span class="bx-bar-pct">'+fillPct+'%</span>'
+          + '</div>';
+      }
+
+      getRequestedDatasets(getFilters().dataset).forEach(function(dataset){
+        var dayOverall = ((summaryByDataset[dataset] || {}).day || {}).overall || {};
+        var nightOverall = ((summaryByDataset[dataset] || {}).night || {}).overall || {};
+        var typeSet = {};
+        Object.keys(dayOverall).forEach(function(k){ if (k !== 'OVERALL') typeSet[k] = true; });
+        Object.keys(nightOverall).forEach(function(k){ if (k !== 'OVERALL') typeSet[k] = true; });
+        var types = Object.keys(typeSet).sort();
+
+        types.forEach(function(t, idx){
+          var dayRow = dayOverall[t];
+          var nightRow = nightOverall[t];
+          var counts = (dayRow ? ((dayRow.correct||0)+'/'+(dayRow.total||0)) : 'N/A')
+            + ' / '
+            + (nightRow ? ((nightRow.correct||0)+'/'+(nightRow.total||0)) : 'N/A');
+          tbody.innerHTML += '<tr>'
+            + '<td style="font-weight:600">' + (idx === 0 ? titleCase(dataset) : '') + '</td>'
+            + '<td style="font-weight:500">'+t+'</td>'
+            + '<td>'+renderBarCell(dayRow, 'bx-bar-fill-day')+'</td>'
+            + '<td>'+renderBarCell(nightRow, 'bx-bar-fill-night')+'</td>'
+            + '<td style="color:var(--color-text-muted)">'+counts+'</td>'
+            + '</tr>';
+        });
       });
 
       showContent('summary');
